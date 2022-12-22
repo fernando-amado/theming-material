@@ -39,7 +39,7 @@ export class SizeDirective {
           );
         } else if (typeElement === 'button') {
           SetStyle(this.el.nativeElement,
-            '32px','13px','13px',
+            '32px','13px','undefined',
             'undefined','undefined','undefined'
           );
         } else if (typeElement === 'mat-form-field') {
@@ -49,7 +49,7 @@ export class SizeDirective {
           );
         } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-slider' ||
           typeElement === 'mat-radio-button' || typeElement === 'mat-spinner' ||
-          typeElement === 'table'
+          typeElement === 'table' || typeElement === 'mat-table'
         ) {
           SetStyle(this.el.nativeElement,
             'undefined','undefined','undefined',
@@ -65,7 +65,7 @@ export class SizeDirective {
       case 'large':
         if (typeElement === 'button') {
           SetStyle(this.el.nativeElement,
-            'undefined','15px','17px',
+            'undefined','15px','udenfined',
             'undefined','20px 18px','undefined'
           );
         } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-radio-button'
