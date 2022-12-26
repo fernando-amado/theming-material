@@ -10,12 +10,12 @@ export default {
       imports: [MatButtonModule],
     }),
   ],
-  argTypes:{
-    tipo:{
-      options:[ 'raised' ],
-      control:{type:'radio'}
-    }
-  }
+  argTypes: {
+    tipo: {
+      options: ['raised'],
+      control: { type: 'radio' },
+    },
+  },
 } as Meta;
 
 const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
@@ -25,8 +25,5 @@ export const size = Template.bind({});
 size.args = {
   size: 'medium',
   label: 'Button',
-  tipo:'raised'
+  tipo: 'raised',
 };
-
-
-

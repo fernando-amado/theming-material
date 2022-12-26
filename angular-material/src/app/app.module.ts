@@ -6,22 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonComponent } from './components/button/button.component';
 
-
-
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    SizeDirective,
-    ButtonComponent,
-
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-  ],
+  declarations: [AppComponent, SizeDirective, ButtonComponent],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
