@@ -41,12 +41,12 @@
     "directives": [
         {
             "name": "SizeDirective",
-            "id": "directive-SizeDirective-9fe90d425e3607bfb121694cdaf34984475d38689cc4dafd24009133a60af967195180929e522280ba1015c60baa15159bfd47f78c1e7a52dccf858934b46b87",
+            "id": "directive-SizeDirective-ea31c42c19afb1855c21663203854642dfb63ef6ba5089c80f1d84984d165fe696fb000c9bb90656ab375858ef9cf0e2360a686d50d8ce5041423854700d258f",
             "file": "src/app/Directivas/size.directive.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\n@Directive({\n  selector: '[size]',\n})\nexport class SizeDirective {\n  constructor(private el: ElementRef) {\n    el.nativeElement.style.customProperty = true;\n  }\n  @Input() size: any;\n  ngOnChanges() {\n    let typeElement = this.el.nativeElement.localName;\n    function SetStyle(element: {\n        style: {height: string;paddingInline: string;\n        fontSize: string;padding: string;width: string;};\n        classList: { add: (arg0: string) => void };\n      },\n      heightCase: string,fontSizeCase: string,paddingInlineCase: string,\n      classCase: string,paddingCase: string,widthCase: string\n    ) {\n      if (heightCase) {element.style.height = heightCase;}\n      if (paddingInlineCase) {element.style.paddingInline = paddingInlineCase;}\n      if (fontSizeCase) {element.style.fontSize = fontSizeCase;}\n      if (classCase) {element.classList.add(classCase);}\n      if (paddingCase) {element.style.padding = paddingCase;}\n      if (widthCase) {element.style.width = widthCase;}\n    }\n    switch (this.size) {\n      case 'small':\n        if (typeElement === 'mat-chip') {\n          SetStyle(this.el.nativeElement,\n            '24px','13px','8px',\n            'undefined','undefined','undefined'\n          );\n        }\n        if (typeElement === 'mat-chip-option') {\n          SetStyle(this.el.nativeElement,\n            '24px','13px','8px',\n            'undefined','undefined','undefined'\n          );\n        } else if (typeElement === 'button') {\n          SetStyle(this.el.nativeElement,\n            '32px','13px','undefined',\n            'undefined','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-form-field') {\n          SetStyle(this.el.nativeElement,\n            '70px','16px','undefined',\n            'small','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-slider' ||\n          typeElement === 'mat-radio-button' || typeElement === 'mat-spinner' ||\n          typeElement === 'table' || typeElement === 'mat-table'\n        ) {\n          SetStyle(this.el.nativeElement,\n            'undefined','undefined','undefined',\n            'small','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-icon') {\n          SetStyle(this.el.nativeElement,\n            'undefined','20px','undefined',\n            'undefined','undefined','undefined'\n          );\n        }\n        return;\n      case 'large':\n        if (typeElement === 'button') {\n          SetStyle(this.el.nativeElement,\n            'undefined','15px','udenfined',\n            'undefined','20px 18px','undefined'\n          );\n        } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-radio-button'\n        ) {\n          SetStyle(this.el.nativeElement,\n            'undefined','undefined','undefined',\n            'large','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-icon') {\n          SetStyle(this.el.nativeElement,\n            '30px','35px','undefined',\n            'undefined','undefined','33px'\n          );\n        }\n        return;\n      default:\n        return;\n    }\n  }\n}\n",
+            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\r\n@Directive({\r\n  selector: '[size]',\r\n})\r\nexport class SizeDirective {\r\n  constructor(private el: ElementRef) {\r\n    el.nativeElement.style.customProperty = true;\r\n  }\r\n  @Input() size: any;\r\n  ngOnChanges() {\r\n    let typeElement = this.el.nativeElement.localName;\r\n    function SetStyle(element: {\r\n        style: {height: string;paddingInline: string;\r\n        fontSize: string;padding: string;width: string;};\r\n        classList: { add: (arg0: string) => void };\r\n      },\r\n      heightCase: string,fontSizeCase: string,paddingInlineCase: string,\r\n      classCase: string,paddingCase: string,widthCase: string\r\n    ) {\r\n      if (heightCase) {element.style.height = heightCase;}\r\n      if (paddingInlineCase) {element.style.paddingInline = paddingInlineCase;}\r\n      if (fontSizeCase) {element.style.fontSize = fontSizeCase;}\r\n      if (classCase) {element.classList.add(classCase);}\r\n      if (paddingCase) {element.style.padding = paddingCase;}\r\n      if (widthCase) {element.style.width = widthCase;}\r\n    }\r\n    switch (this.size) {\r\n      case 'small':\r\n        if (typeElement === 'mat-chip') {\r\n          SetStyle(this.el.nativeElement,\r\n            '24px','13px','8px',\r\n            'undefined','undefined','undefined'\r\n          );\r\n        }\r\n        if (typeElement === 'mat-chip-option') {\r\n          SetStyle(this.el.nativeElement,\r\n            '24px','13px','8px',\r\n            'undefined','undefined','undefined'\r\n          );\r\n        } else if (typeElement === 'button') {\r\n          SetStyle(this.el.nativeElement,\r\n            '32px','13px','undefined',\r\n            'undefined','undefined','undefined'\r\n          );\r\n        } else if (typeElement === 'mat-form-field') {\r\n          SetStyle(this.el.nativeElement,\r\n            '70px','16px','undefined',\r\n            'small','undefined','undefined'\r\n          );\r\n        } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-slider' ||\r\n          typeElement === 'mat-radio-button' || typeElement === 'mat-spinner' ||\r\n          typeElement === 'table' || typeElement === 'mat-table'\r\n        ) {\r\n          SetStyle(this.el.nativeElement,\r\n            'undefined','undefined','undefined',\r\n            'small','undefined','undefined'\r\n          );\r\n        } else if (typeElement === 'mat-icon') {\r\n          SetStyle(this.el.nativeElement,\r\n            'undefined','20px','undefined',\r\n            'undefined','undefined','undefined'\r\n          );\r\n        }\r\n        return;\r\n      case 'large':\r\n        if (typeElement === 'button') {\r\n          SetStyle(this.el.nativeElement,\r\n            'undefined','15px','udenfined',\r\n            'undefined','20px 18px','undefined'\r\n          );\r\n        } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-radio-button'\r\n        ) {\r\n          SetStyle(this.el.nativeElement,\r\n            'undefined','undefined','undefined',\r\n            'large','undefined','undefined'\r\n          );\r\n        } else if (typeElement === 'mat-icon') {\r\n          SetStyle(this.el.nativeElement,\r\n            '30px','35px','undefined',\r\n            'undefined','undefined','33px'\r\n          );\r\n        }\r\n        return;\r\n      default:\r\n        return;\r\n    }\r\n  }\r\n}\r\n",
             "selector": "[size]",
             "providers": [],
             "inputsClass": [
@@ -178,135 +178,11 @@
                 }
             ],
             "stylesData": "",
-            "templateData": "<button mat-raised-button size=\"small\" color=\"primary\">Hola</button>\r\n<button mat-raised-button color=\"primary\">Hola</button>\r\n<button mat-raised-button size=\"large\" color=\"primary\">Hola</button>\r\n<!-- <mat-table [dataSource]=\"dataSource\" size=\"small\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"position\">\r\n    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"name\">\r\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"weight\">\r\n    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"symbol\">\r\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n</mat-table> -->\r\n\r\n<table mat-table size=\"small\" [dataSource]=\"transactions\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"item\">\r\n    <th mat-header-cell *matHeaderCellDef> Item </th>\r\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\r\n    <td mat-footer-cell *matFooterCellDef> Total </td>\r\n  </ng-container>\r\n<button class=\"large\"></button>\r\n  <!-- Cost Column -->\r\n  <ng-container matColumnDef=\"cost\">\r\n    <th mat-header-cell *matHeaderCellDef> Cost </th>\r\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\r\n    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  <tr mat-footer-row *matFooterRowDef=\"displayedColumns\"></tr>\r\n</table>\r\n\r\n<app-button></app-button>\r\n"
+            "templateData": ""
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-8ceaf520f96e5437b08eeda244d84efb29effe62ddca4fc38eaa229085c2a1126c5715e61445bae741505aca1e4d377b350cb05fadd1dc45d9b2bbf7527029f1",
-            "file": "src/app/stories/button.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-button",
-            "styleUrls": [
-                "./button.css"
-            ],
-            "styles": [],
-            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
-            "templateUrl": [],
-            "viewProviders": [],
-            "inputsClass": [
-                {
-                    "name": "backgroundColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nWhat background color to use\n",
-                    "description": "<p>What background color to use</p>\n",
-                    "line": 26,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Button'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "pos": 747,
-                            "end": 761,
-                            "flags": 4227072,
-                            "modifierFlagsCache": 0,
-                            "transformFlags": 0,
-                            "kind": 325,
-                            "tagName": {
-                                "pos": 748,
-                                "end": 756,
-                                "flags": 4227072,
-                                "modifierFlagsCache": 0,
-                                "transformFlags": 0,
-                                "kind": 79,
-                                "escapedText": "required"
-                            },
-                            "comment": ""
-                        }
-                    ],
-                    "rawdescription": "\n\nButton contents\n\n",
-                    "description": "<p>Button contents</p>\n",
-                    "line": 40,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "primary",
-                    "defaultValue": "false",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
-                    "description": "<p>Is this the principal call to action on the page?</p>\n",
-                    "line": 20,
-                    "type": "boolean",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'medium'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nHow large should the button be?\n",
-                    "description": "<p>How large should the button be?</p>\n",
-                    "line": 32,
-                    "type": "\"small\" | \"medium\" | \"large\"",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "rawdescription": "\n\nOptional click handler\n",
-                    "description": "<p>Optional click handler</p>\n",
-                    "line": 46,
-                    "type": "EventEmitter"
-                }
-            ],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".storybook-button {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
-                    "styleUrl": "./button.css"
-                }
-            ],
-            "stylesData": "",
-            "accessors": {
-                "classes": {
-                    "name": "classes",
-                    "getSignature": {
-                        "name": "classes",
-                        "type": "[]",
-                        "returnType": "string[]",
-                        "line": 48
-                    }
-                }
-            }
-        },
-        {
-            "name": "ButtonComponent",
-            "id": "component-ButtonComponent-bc6c0c901930fd26afb956b0636a556ac1682346f7da36834a5cab3c093037d505b7f19e6026e946832c80d778c8f905642f061cdcf53344d7c5cca41da87355-1",
+            "id": "component-ButtonComponent-03975ba1dc48c162bbd03d35705cf8e04246a47ffcbb0dcbe6a0901df62f204e52db135f0991c8eb03b51a6017535c3d7c0df4c511f35b20f6fb1b11e608ef47",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -318,11 +194,40 @@
                 "./button.component.scss"
             ],
             "styles": [],
+            "template": "<button mat-button [ngClass]=\"classes\">{{label}}</button>",
             "templateUrl": [
                 "./button.component.html"
             ],
             "viewProviders": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                },
+                {
+                    "name": "tipo",
+                    "defaultValue": "'raised'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -333,31 +238,39 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  template: `<button mat-button [ngClass]=\"classes\">{{label}}</button>`,\r\n  styleUrls: ['./button.component.scss']\r\n})\r\n\r\n\r\nexport class ButtonComponent {\r\n  @Input() label = 'Button'\r\n\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  @Input() tipo:  'raised'  = 'raised';\r\n\r\n  public get classes(): string[] {\r\n\r\n\r\n    return  ['app-button', `app-button--${this.size}` || 'app-button', `app-button--${this.tipo}`]\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".app-button--small {\r\n  font-size: 13px;\r\n  height: 32px;\r\n  padding-inline: 8px;\r\n}\r\n.app-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.app-button--large {\r\n  font-size: 15px;\r\n  padding: 19px 18px;\r\n}\r\n.app-button--raised {\r\n  background-color: #3f51b5;\r\n  color: white !important;\r\n  \r\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),\r\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);\r\n}\r\n",
                     "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "ButtonComponent-1",
-            "templateData": "<button mat-raised-button >Button</button>\n"
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 18
+                    }
+                }
+            },
+            "templateData": ""
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-a1626e6d622bd0a7171379b8e08347ed2a036f4bb58d6a8881674933ebdc9029adfc46b7f106778b7b6947da87cf3a36826e7e24313c0662d546d39245085227",
+            "id": "module-AppModule-9f319c93d3ce397c1b9aa11c0a54364d47a040669df99b7a402b70ff882f23fc3fa64e42a7cc0cf8dc2f2adae41ae94110527c9e332658db91c458a7590999fc",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\nimport { SizeDirective } from './Directivas/size.directive';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\n\r\nimport {MatButtonModule} from '@angular/material/button'\r\nimport {MatTableModule} from '@angular/material/table';\nimport { ButtonComponent } from './components/button/button.component';\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    SizeDirective,\r\n    ButtonComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MatButtonModule,\r\n    MatTableModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\nimport { SizeDirective } from './Directivas/size.directive';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\n\r\nimport {MatButtonModule} from '@angular/material/button'\r\nimport {MatTableModule} from '@angular/material/table';\r\nimport { ButtonComponent } from './components/button/button.component';\r\n\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    SizeDirective,\r\n    ButtonComponent,\r\n\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MatButtonModule,\r\n    MatTableModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -368,6 +281,9 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "ButtonComponent"
                         },
                         {
                             "name": "SizeDirective"
@@ -440,40 +356,10 @@
     "miscellaneous": {
         "variables": [
             {
-                "name": "Large",
+                "name": "size",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Secondary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/stories/Button.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Small",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/stories/Button.stories.ts",
+                "file": "src/app/components/button/button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -483,53 +369,23 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/stories/Button.stories.ts",
+                "file": "src/app/components/button/button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/app/stories/Button.stories.ts": [
+            "src/app/components/button/button.component.stories.ts": [
                 {
-                    "name": "Large",
+                    "name": "size",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Secondary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/stories/Button.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Small",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/stories/Button.stories.ts",
+                    "file": "src/app/components/button/button.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -539,11 +395,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/stories/Button.stories.ts",
+                    "file": "src/app/components/button/button.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
+                    "type": "Story<ButtonComponent>",
+                    "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
                 }
             ]
         },
@@ -566,7 +422,7 @@
         ]
     },
     "coverage": {
-        "count": 10,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -597,56 +453,17 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/components/button/button.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/stories/Button.stories.ts",
+                "filePath": "src/app/components/button/button.component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Large",
+                "name": "size",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/app/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Primary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Secondary",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/stories/Button.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Small",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "src/app/stories/Button.stories.ts",
+                "filePath": "src/app/components/button/button.component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -656,13 +473,13 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/stories/button.component.ts",
+                "filePath": "src/app/components/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
-                "coveragePercent": 83,
-                "coverageCount": "5/6",
-                "status": "very-good"
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
             }
         ]
     }

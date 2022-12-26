@@ -16,8 +16,6 @@ export class ButtonComponent {
   @Input() tipo:  'raised'  = 'raised';
 
   public get classes(): string[] {
-
-
     return  ['app-button', `app-button--${this.size}` || 'app-button', `app-button--${this.tipo}`]
   }
 }
