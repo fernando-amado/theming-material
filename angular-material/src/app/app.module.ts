@@ -11,18 +11,20 @@ import { ButtonComponent } from './components/button/button.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     SizeDirective,
-    ButtonComponent
+    ButtonComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatTableModule
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
