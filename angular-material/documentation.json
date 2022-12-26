@@ -1,15 +1,114 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "Transaction",
+            "id": "interface-Transaction-3fa738f9d16b58dc25984b44cdda6a0ddffcbb8de2a6af55ff61f0fe9d109d4d6950b9c672aaa0ff092e19d4114df08f4be7ea4cd25697fa6b53d913f407ecd8",
+            "file": "src/app/app.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component } from '@angular/core';\r\ninterface Transaction {\r\n  item: string;\r\n  cost: number;\r\n}\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  displayedColumns: string[] = ['item', 'cost'];\r\n  transactions: Transaction[] = [\r\n    {item: 'Beach ball', cost: 4},\r\n    {item: 'Towel', cost: 5},\r\n    {item: 'Frisbee', cost: 2},\r\n    {item: 'Sunscreen', cost: 4},\r\n    {item: 'Cooler', cost: 25},\r\n    {item: 'Swim suit', cost: 15},\r\n  ];\r\n\r\n  /** Gets the total cost of all transactions. */\r\n  getTotalCost() {\r\n    return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);\r\n  }\r\n}\r\n",
+            "properties": [
+                {
+                    "name": "cost",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "item",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
     "classes": [],
-    "directives": [],
+    "directives": [
+        {
+            "name": "SizeDirective",
+            "id": "directive-SizeDirective-9fe90d425e3607bfb121694cdaf34984475d38689cc4dafd24009133a60af967195180929e522280ba1015c60baa15159bfd47f78c1e7a52dccf858934b46b87",
+            "file": "src/app/Directivas/size.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\n@Directive({\n  selector: '[size]',\n})\nexport class SizeDirective {\n  constructor(private el: ElementRef) {\n    el.nativeElement.style.customProperty = true;\n  }\n  @Input() size: any;\n  ngOnChanges() {\n    let typeElement = this.el.nativeElement.localName;\n    function SetStyle(element: {\n        style: {height: string;paddingInline: string;\n        fontSize: string;padding: string;width: string;};\n        classList: { add: (arg0: string) => void };\n      },\n      heightCase: string,fontSizeCase: string,paddingInlineCase: string,\n      classCase: string,paddingCase: string,widthCase: string\n    ) {\n      if (heightCase) {element.style.height = heightCase;}\n      if (paddingInlineCase) {element.style.paddingInline = paddingInlineCase;}\n      if (fontSizeCase) {element.style.fontSize = fontSizeCase;}\n      if (classCase) {element.classList.add(classCase);}\n      if (paddingCase) {element.style.padding = paddingCase;}\n      if (widthCase) {element.style.width = widthCase;}\n    }\n    switch (this.size) {\n      case 'small':\n        if (typeElement === 'mat-chip') {\n          SetStyle(this.el.nativeElement,\n            '24px','13px','8px',\n            'undefined','undefined','undefined'\n          );\n        }\n        if (typeElement === 'mat-chip-option') {\n          SetStyle(this.el.nativeElement,\n            '24px','13px','8px',\n            'undefined','undefined','undefined'\n          );\n        } else if (typeElement === 'button') {\n          SetStyle(this.el.nativeElement,\n            '32px','13px','undefined',\n            'undefined','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-form-field') {\n          SetStyle(this.el.nativeElement,\n            '70px','16px','undefined',\n            'small','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-slider' ||\n          typeElement === 'mat-radio-button' || typeElement === 'mat-spinner' ||\n          typeElement === 'table' || typeElement === 'mat-table'\n        ) {\n          SetStyle(this.el.nativeElement,\n            'undefined','undefined','undefined',\n            'small','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-icon') {\n          SetStyle(this.el.nativeElement,\n            'undefined','20px','undefined',\n            'undefined','undefined','undefined'\n          );\n        }\n        return;\n      case 'large':\n        if (typeElement === 'button') {\n          SetStyle(this.el.nativeElement,\n            'undefined','15px','udenfined',\n            'undefined','20px 18px','undefined'\n          );\n        } else if (typeElement === 'mat-checkbox' || typeElement === 'mat-radio-button'\n        ) {\n          SetStyle(this.el.nativeElement,\n            'undefined','undefined','undefined',\n            'large','undefined','undefined'\n          );\n        } else if (typeElement === 'mat-icon') {\n          SetStyle(this.el.nativeElement,\n            '30px','35px','undefined',\n            'undefined','undefined','33px'\n          );\n        }\n        return;\n      default:\n        return;\n    }\n  }\n}\n",
+            "selector": "[size]",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "any",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnChanges",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 10,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 5,
+                "jsdoctags": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-0023012fe875717a39fd6a81eb76df92d366cebabeacad73a7bb4c6c567da6220dc1a721c6a135eb8a8e0929cfad2c4082a160db6ebe8747bb977b77ab1ab8f7",
+            "id": "component-AppComponent-3fa738f9d16b58dc25984b44cdda6a0ddffcbb8de2a6af55ff61f0fe9d109d4d6950b9c672aaa0ff092e19d4114df08f4be7ea4cd25697fa6b53d913f407ecd8",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -27,6 +126,154 @@
             "viewProviders": [],
             "inputsClass": [],
             "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "displayedColumns",
+                    "defaultValue": "['item', 'cost']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "transactions",
+                    "defaultValue": "[\r\n    {item: 'Beach ball', cost: 4},\r\n    {item: 'Towel', cost: 5},\r\n    {item: 'Frisbee', cost: 2},\r\n    {item: 'Sunscreen', cost: 4},\r\n    {item: 'Cooler', cost: 25},\r\n    {item: 'Swim suit', cost: 15},\r\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Transaction[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getTotalCost",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\nGets the total cost of all transactions.",
+                    "description": "<p>Gets the total cost of all transactions.</p>\n"
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\ninterface Transaction {\r\n  item: string;\r\n  cost: number;\r\n}\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n  displayedColumns: string[] = ['item', 'cost'];\r\n  transactions: Transaction[] = [\r\n    {item: 'Beach ball', cost: 4},\r\n    {item: 'Towel', cost: 5},\r\n    {item: 'Frisbee', cost: 2},\r\n    {item: 'Sunscreen', cost: 4},\r\n    {item: 'Cooler', cost: 25},\r\n    {item: 'Swim suit', cost: 15},\r\n  ];\r\n\r\n  /** Gets the total cost of all transactions. */\r\n  getTotalCost() {\r\n    return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<button mat-raised-button size=\"small\" color=\"primary\">Hola</button>\r\n<button mat-raised-button color=\"primary\">Hola</button>\r\n<button mat-raised-button size=\"large\" color=\"primary\">Hola</button>\r\n<!-- <mat-table [dataSource]=\"dataSource\" size=\"small\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"position\">\r\n    <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.position}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"name\">\r\n    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"weight\">\r\n    <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.weight}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <ng-container matColumnDef=\"symbol\">\r\n    <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>\r\n    <mat-cell *matCellDef=\"let element\"> {{element.symbol}} </mat-cell>\r\n  </ng-container>\r\n\r\n  <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\r\n  <mat-row *matRowDef=\"let row; columns: displayedColumns;\"></mat-row>\r\n</mat-table> -->\r\n\r\n<table mat-table size=\"small\" [dataSource]=\"transactions\" class=\"mat-elevation-z8\">\r\n  <ng-container matColumnDef=\"item\">\r\n    <th mat-header-cell *matHeaderCellDef> Item </th>\r\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\r\n    <td mat-footer-cell *matFooterCellDef> Total </td>\r\n  </ng-container>\r\n<button class=\"large\"></button>\r\n  <!-- Cost Column -->\r\n  <ng-container matColumnDef=\"cost\">\r\n    <th mat-header-cell *matHeaderCellDef> Cost </th>\r\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\r\n    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  <tr mat-footer-row *matFooterRowDef=\"displayedColumns\"></tr>\r\n</table>\r\n\r\n<app-button></app-button>\r\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-8ceaf520f96e5437b08eeda244d84efb29effe62ddca4fc38eaa229085c2a1126c5715e61445bae741505aca1e4d377b350cb05fadd1dc45d9b2bbf7527029f1",
+            "file": "src/app/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 747,
+                            "end": 761,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 748,
+                                "end": 756,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 40,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 32,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 46,
+                    "type": "EventEmitter"
+                }
+            ],
             "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
@@ -36,28 +283,81 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-button',\r\n  template: ` <button\r\n    type=\"button\"\r\n    (click)=\"onClick.emit($event)\"\r\n    [ngClass]=\"classes\"\r\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n  >\r\n    {{ label }}\r\n  </button>`,\r\n  styleUrls: ['./button.css'],\r\n})\r\nexport default class ButtonComponent {\r\n  /**\r\n   * Is this the principal call to action on the page?\r\n   */\r\n  @Input()\r\n  primary = false;\r\n\r\n  /**\r\n   * What background color to use\r\n   */\r\n  @Input()\r\n  backgroundColor?: string;\r\n\r\n  /**\r\n   * How large should the button be?\r\n   */\r\n  @Input()\r\n  size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  /**\r\n   * Button contents\r\n   *\r\n   * @required\r\n   */\r\n  @Input()\r\n  label = 'Button';\r\n\r\n  /**\r\n   * Optional click handler\r\n   */\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\r\n\r\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  font-weight: 700;\r\n  border: 0;\r\n  border-radius: 3em;\r\n  cursor: pointer;\r\n  display: inline-block;\r\n  line-height: 1;\r\n}\r\n.storybook-button--primary {\r\n  color: white;\r\n  background-color: #1ea7fd;\r\n}\r\n.storybook-button--secondary {\r\n  color: #333;\r\n  background-color: transparent;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\r\n}\r\n.storybook-button--small {\r\n  font-size: 12px;\r\n  padding: 10px 16px;\r\n}\r\n.storybook-button--medium {\r\n  font-size: 14px;\r\n  padding: 11px 20px;\r\n}\r\n.storybook-button--large {\r\n  font-size: 16px;\r\n  padding: 12px 24px;\r\n}\r\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 48
+                    }
+                }
+            }
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-bc6c0c901930fd26afb956b0636a556ac1682346f7da36834a5cab3c093037d505b7f19e6026e946832c80d778c8f905642f061cdcf53344d7c5cca41da87355-1",
+            "file": "src/app/components/button/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-button",
+            "styleUrls": [
+                "./button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-button',\n  templateUrl: './button.component.html',\n  styleUrls: ['./button.component.scss']\n})\nexport class ButtonComponent {\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
                     "data": "",
-                    "styleUrl": "./app.component.scss"
+                    "styleUrl": "./button.component.scss"
                 }
             ],
             "stylesData": "",
-            "templateData": ""
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ButtonComponent-1",
+            "templateData": "<button mat-raised-button >Button</button>\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-0380eb99dc933726a298e8346c6bccd22e1b5cc04b104327b1338c34576989e47a18332184e6619667ea44cdcc8415094943c57e1610f717c21a145170f5c250",
+            "id": "module-AppModule-a1626e6d622bd0a7171379b8e08347ed2a036f4bb58d6a8881674933ebdc9029adfc46b7f106778b7b6947da87cf3a36826e7e24313c0662d546d39245085227",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\nimport { SizeDirective } from './Directivas/size.directive';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\n\r\nimport {MatButtonModule} from '@angular/material/button'\r\nimport {MatTableModule} from '@angular/material/table';\nimport { ButtonComponent } from './components/button/button.component';\r\n\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    SizeDirective,\r\n    ButtonComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MatButtonModule,\r\n    MatTableModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -68,6 +368,9 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "SizeDirective"
                         }
                     ]
                 },
@@ -99,13 +402,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -134,7 +437,120 @@
             ]
         }
     ],
-    "miscellaneous": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\r\n  props: args,\r\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
     "routes": {
         "name": "<root>",
         "kind": "module",
@@ -150,17 +566,103 @@
         ]
     },
     "coverage": {
-        "count": 0,
+        "count": 10,
         "status": "low",
         "files": [
+            {
+                "filePath": "src/app/Directivas/size.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "SizeDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
             {
                 "filePath": "src/app/app.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 25,
+                "coverageCount": "1/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Transaction",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/button/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
+            },
+            {
+                "filePath": "src/app/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
             }
         ]
     }
