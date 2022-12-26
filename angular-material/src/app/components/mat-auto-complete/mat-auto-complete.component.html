@@ -1,0 +1,34 @@
+
+  <div class="container-component ">
+    
+    <div class="text-container-component text-container-component__border-Right  text-container-component__widht_50">
+      <h6>Auto complete</h6>
+      <br>
+      <p class="mat-subtitle-1">nivel de elevavion nativa en react:<span class="mat-body-strong"> 1</span> </p> 
+      <br>
+      <p class="mat-subtitle-1">nivel de elevavion nativa en angular: <span class="mat-body-strong"> 8</span></p>
+      <br>
+      <p class="mat-subtitle-1">nivel de de elevacion actual: <span class="mat-body-strong">1</span></p>
+
+    </div>
+
+    <div class="text-container-component centered text-container-component__widht_50">
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Number</mat-label>
+          <input type="text"
+                 placeholder="Pick one"
+                 aria-label="Number"
+                 matInput
+                 formControl="myControl"
+                 [matAutocomplete]="auto">
+          <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+              {{option}}
+            </mat-option>
+          </mat-autocomplete>
+        </mat-form-field>
+      </form>
+      
+    </div>
+  </div>
