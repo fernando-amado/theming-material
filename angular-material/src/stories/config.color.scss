@@ -1,0 +1,51 @@
+$light-text: #fff;
+$primary: #1e62a1;
+$accent: #0cbbe2;
+$warn: #d14343;
+$success: #8fc93a;
+$info: #2d9fc5;
+$warning: #fb8500;
+
+@mixin color-Config($textColor, $background) {
+  color: $textColor !important;
+  background-color: $background !important;
+}
+
+.app-mat-button--primary {
+  @include color-Config($light-text, $primary);
+}
+.app-mat-button--accent {
+  @include color-Config($light-text, $accent);
+}
+.app-mat-button--warn {
+  @include color-Config($light-text, $warn);
+}
+.app-mat-button--success {
+  @include color-Config($light-text, $success);
+}
+.app-mat-button--info {
+  @include color-Config($light-text, $info);
+}
+.app-mat-button--warning {
+  @include color-Config($light-text, $warning);
+}
+
+.app-mat-progress-bar--primary {
+  --mdc-linear-progress-active-indicator-color: #1e62a1;
+}
+.app-mat-progress-bar--accent {
+  --mdc-linear-progress-active-indicator-color: #0cbbe2;
+}
+.app-mat-progress-bar--warn {
+  --mdc-linear-progress-active-indicator-color: #d14343;
+}
+.app-mat-progress-bar--success {
+  --mdc-linear-progress-active-indicator-color: #8fc93a;
+}
+.app-mat-progress-bar--info {
+  --mdc-linear-progress-active-indicator-color: #2d9fc5;
+}
+.app-mat-progress-bar--warning {
+  --mdc-linear-progress-active-indicator-color: #fb8500;
+}
+
