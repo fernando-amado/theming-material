@@ -8,7 +8,7 @@
   align-items: center;
   padding-block: 2rem;
   @include elevation(1);
-  margin: 3rem auto;
+  margin: 2rem auto;
   background-color: rgb(254, 255, 255);
   &__column {
     flex-direction: column;
@@ -66,4 +66,9 @@
 .font-weight-700 {
   font-weight: 700 !important;
 }
-
+.subtitle-color{
+  color: rgba(0, 0, 0, 0.47);
+}
+.text-color{
+  color: black;
+}

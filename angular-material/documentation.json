@@ -8,8 +8,41 @@
     "directives": [],
     "components": [
         {
+            "name": "AllElevationsLevelComponent",
+            "id": "component-AllElevationsLevelComponent-029cd836bc74265e0cddf5a242753dd1f95f74c6cc56511acaa4fb12eb671820e015e7bed2b0e1d68af8ed48e49cd9288acca99eb7f2e6d55efe293d6eaf59c2",
+            "file": "src/app/components/documentation/all-elevations-level/all-elevations-level.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-all-elevations-level",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./all-elevations-level.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-all-elevations-level',\r\n  templateUrl: './all-elevations-level.component.html',\r\n})\r\nexport class AllElevationsLevelComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "templateData": "<!-- <app-shadows-components-list></app-shadows-components-list> -->\r\n\r\n<div class=\"container-elevations\">\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z1\">mat-elevation-z1</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z2\">mat-elevation-z2</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z3\">mat-elevation-z3</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z4\">mat-elevation-z4</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z5\">mat-elevation-z5</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z6\">mat-elevation-z6</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z7\">mat-elevation-z7</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z8\">mat-elevation-z8</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z9\">mat-elevation-z9</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z10\">mat-elevation-z10</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z11\">mat-elevation-z11</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z12\">mat-elevation-z12</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z13\">mat-elevation-z13</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z14\">mat-elevation-z14</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z15\">mat-elevation-z15</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z16\">mat-elevation-z16</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z17\">mat-elevation-z17</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z18\">mat-elevation-z18</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z19\">mat-elevation-z19</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z20\">mat-elevation-z20</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z21\">mat-elevation-z21</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z22\">mat-elevation-z22</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z23\">mat-elevation-z23</div>\r\n    <div class=\"elevation-example mat-subtitle-2 mat-elevation-z24\">mat-elevation-z24</div>\r\n</div>"
+        },
+        {
             "name": "AppComponent",
-            "id": "component-AppComponent-0023012fe875717a39fd6a81eb76df92d366cebabeacad73a7bb4c6c567da6220dc1a721c6a135eb8a8e0929cfad2c4082a160db6ebe8747bb977b77ab1ab8f7",
+            "id": "component-AppComponent-5cdec6dc2fc3039a5efda3bb87dec908a84c48974feee8dc20e698da36638e15b232a8bd017f6f330b0b8ca1872e34f6bb04dfbc81d7476ded8d5fdff516b455",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -36,7 +69,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -45,19 +78,931 @@
                 }
             ],
             "stylesData": "",
+            "templateData": "<!-- <app-shadows-components-list></app-shadows-components-list>\r\n<app-all-elevations-level></app-all-elevations-level> -->\r\n<app-typography></app-typography>"
+        },
+        {
+            "name": "BootmSheetBodyComponent",
+            "id": "component-BootmSheetBodyComponent-e53cdee17bc4996d2ed22a74815c6db2c046e1fde0f8a44c6348bdf308bb5988a8021ab9c06ec4680b0c1d373d72bc6ca53106d48dc5a56bedbf4464d754863a",
+            "file": "src/app/components/mat-bottom-sheet/bootm-sheet-body/bootm-sheet-body.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-bootm-sheet-body",
+            "styleUrls": [
+                "./bootm-sheet-body.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./bootm-sheet-body.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n\r\n@Component({\r\n  selector: 'app-bootm-sheet-body',\r\n  templateUrl: './bootm-sheet-body.component.html',\r\n  styleUrls: ['./bootm-sheet-body.component.scss']\r\n})\r\nexport class BootmSheetBodyComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./bootm-sheet-body.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<mat-nav-list>\r\n    <a href=\"https://keep.google.com/\" mat-list-item >\r\n      <span matListItemTitle>Google Keep</span>\r\n      <span matLine>Add to a note</span>\r\n    </a>\r\n  \r\n    <a href=\"https://docs.google.com/\" mat-list-item >\r\n      <span matListItemTitle>Google Docs</span>\r\n      <span matLine>Embed in a document</span>\r\n    </a>\r\n  \r\n    <a href=\"https://plus.google.com/\" mat-list-item >\r\n      <span matListItemTitle>Google Plus</span>\r\n      <span matLine>Share with your friends</span>\r\n    </a>\r\n  \r\n    <a href=\"https://hangouts.google.com/\" mat-list-item >\r\n      <span matListItemTitle>Google Hangouts</span>\r\n      <span matLine>Show to your coworkers</span>\r\n    </a>\r\n  </mat-nav-list>\r\n  "
+        },
+        {
+            "name": "DialogBoxComponent",
+            "id": "component-DialogBoxComponent-b789873905d156f783e44af0509e6a7d030f1cd8b343bfa4824c6a242b9ed24c75e325bc3278c7e47c58e28556dc1381c6fc05a99c42f7b09dc52dac9bcd101c",
+            "file": "src/app/components/mat-dialog/dialog-box/dialog-box.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dialog-box",
+            "styleUrls": [
+                "./dialog-box.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./dialog-box.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-dialog-box',\r\n  templateUrl: './dialog-box.component.html',\r\n  styleUrls: ['./dialog-box.component.scss']\r\n})\r\nexport class DialogBoxComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./dialog-box.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<h4 mat-dialog-title>Install Angular</h4>\r\n<mat-dialog-content class=\"mat-typography\">\r\n  <h6>Develop across all platforms</h6>\r\n  <p>Learn one way to build applications with Angular and reuse your code and abilities to build\r\n    apps for any deployment target. For web, mobile web, native mobile and native desktop.</p>\r\n\r\n  <h6>Speed &amp; Performance</h6>\r\n  <p>Achieve the maximum speed possible on the Web Platform today, and take it further, via Web\r\n    Workers and server-side rendering. Angular puts you in control over scalability. Meet huge\r\n    data requirements by building data models on RxJS, Immutable.js or another push-model.</p>\r\n\r\n  <h6>Incredible tooling</h6>\r\n  <p>Build features quickly with simple, declarative templates. Extend the template language with\r\n    your own components and use a wide array of existing components. Get immediate Angular-specific\r\n    help and feedback with nearly every IDE and editor. All this comes together so you can focus\r\n    on building amazing apps rather than trying to make the code work.</p>\r\n\r\n  <h6>Loved by millions</h6>\r\n  <p>From prototype through global deployment, Angular delivers the productivity and scalable\r\n    infrastructure that supports Google's largest applications.</p>\r\n\r\n  <h6>What is Angular?</h6>\r\n\r\n  <p>Angular is a platform that makes it easy to build applications with the web. Angular\r\n    combines declarative templates, dependency injection, end to end tooling, and integrated\r\n    best practices to solve development challenges. Angular empowers developers to build\r\n    applications that live on the web, mobile, or the desktop</p>\r\n\r\n  <h6>Architecture overview</h6>\r\n\r\n  <p>Angular is a platform and framework for building client applications in HTML and TypeScript.\r\n  Angular is itself written in TypeScript. It implements core and optional functionality as a\r\n  set of TypeScript libraries that you import into your apps.</p>\r\n\r\n  <p>The basic building blocks of an Angular application are NgModules, which provide a compilation\r\n  context for components. NgModules collect related code into functional sets; an Angular app is\r\n  defined by a set of NgModules. An app always has at least a root module that enables\r\n  bootstrapping, and typically has many more feature modules.</p>\r\n\r\n  <p>Components define views, which are sets of screen elements that Angular can choose among and\r\n  modify according to your program logic and data. Every app has at least a root component.</p>\r\n\r\n  <p>Components use services, which provide specific functionality not directly related to views.\r\n  Service providers can be injected into components as dependencies, making your code modular,\r\n  reusable, and efficient.</p>\r\n\r\n  <p>Both components and services are simply classes, with decorators that mark their type and\r\n  provide metadata that tells Angular how to use them.</p>\r\n\r\n  <p>The metadata for a component class associates it with a template that defines a view. A\r\n  template combines ordinary HTML with Angular directives and binding markup that allow Angular\r\n  to modify the HTML before rendering it for display.</p>\r\n\r\n  <p>The metadata for a service class provides the information Angular needs to make it available\r\n  to components through Dependency Injection (DI).</p>\r\n\r\n  <p>An app's components typically define many views, arranged hierarchically. Angular provides\r\n  the Router service to help you define navigation paths among views. The router provides\r\n  sophisticated in-browser navigational capabilities.</p>\r\n</mat-dialog-content>\r\n<mat-dialog-actions align=\"end\">\r\n  <button mat-button mat-dialog-close>Cancel</button>\r\n  <button mat-button [mat-dialog-close]=\"true\" cdkFocusInitial>Install</button>\r\n</mat-dialog-actions>\r\n"
+        },
+        {
+            "name": "MatAutoCompleteComponent",
+            "id": "component-MatAutoCompleteComponent-9fbfcaf101e9c10d0c6d16d6c2e98feab241ad48c42f2f44200c3e450c1413e250c0f507caa769982be288e7db7837ea98092f8201326f3121ebf75b84ecbd25",
+            "file": "src/app/components/mat-auto-complete/mat-auto-complete.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-auto-complete",
+            "styleUrls": [
+                "./mat-auto-complete.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-auto-complete.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "filteredOptions",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<string[]> | undefined",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "myControl",
+                    "defaultValue": "new FormControl('')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "['One', 'Two', 'Three','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee' ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "_filter",
+                    "args": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "string[]",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "value",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 16,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\r\nimport {FormControl} from '@angular/forms';\r\nimport {Observable} from 'rxjs';\r\nimport {map, startWith} from 'rxjs/operators';\r\n\r\n@Component({\r\n  selector: 'app-mat-auto-complete',\r\n  templateUrl: './mat-auto-complete.component.html',\r\n  styleUrls: ['./mat-auto-complete.component.scss']\r\n})\r\nexport class MatAutoCompleteComponent {\r\n  myControl = new FormControl('');\r\n  options: string[] = ['One', 'Two', 'Three','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee','ee' ];\r\n  filteredOptions: Observable<string[]> | undefined;\r\n\r\n  ngOnInit() {\r\n    this.filteredOptions = this.myControl.valueChanges.pipe(\r\n      startWith(''),\r\n      map((value: any) => this._filter(value || '')),\r\n    );\r\n  }\r\n\r\n  private _filter(value: string): string[] {\r\n    const filterValue = value.toLowerCase();\r\n\r\n    return this.options.filter(option => option.toLowerCase().includes(filterValue));\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-auto-complete.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "\r\n  <div class=\"container-component \">\r\n    \r\n    <div class=\"text-container-component text-container-component__border-Right  text-container-component__widht_50\">\r\n      <h6>Auto complete</h6>\r\n      <br>\r\n      <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\"> 1</span> </p> \r\n      <br>\r\n      <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular: <span class=\"mat-body-strong\"> 8</span></p>\r\n      <br>\r\n      <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">1</span></p>\r\n\r\n    </div>\r\n\r\n    <div class=\"text-container-component centered text-container-component__widht_50\">\r\n      <form class=\"example-form\">\r\n        <mat-form-field class=\"example-full-width\" appearance=\"fill\">\r\n          <mat-label>Number</mat-label>\r\n          <input type=\"text\"\r\n                 placeholder=\"Pick one\"\r\n                 aria-label=\"Number\"\r\n                 matInput\r\n                 formControl=\"myControl\"\r\n                 [matAutocomplete]=\"auto\">\r\n          <mat-autocomplete autoActiveFirstOption #auto=\"matAutocomplete\">\r\n            <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n              {{option}}\r\n            </mat-option>\r\n          </mat-autocomplete>\r\n        </mat-form-field>\r\n      </form>\r\n      \r\n    </div>\r\n  </div>"
+        },
+        {
+            "name": "MatBottomSheetComponent",
+            "id": "component-MatBottomSheetComponent-d41927d17f8aa8d3dcbb74dd1ba96addd2bb83bd3d581a7ca577cd0f75c4f3621eddb4517cf6952332d4354b968dc88cfd299698dc4936e62b0345577b48d13e",
+            "file": "src/app/components/mat-bottom-sheet/mat-bottom-sheet.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-bottom-sheet",
+            "styleUrls": [
+                "./mat-bottom-sheet.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-bottom-sheet.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "openBottomSheet",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport {MatBottomSheet, MatBottomSheetRef} from '@angular/material/bottom-sheet';\r\nimport { BootmSheetBodyComponent } from './bootm-sheet-body/bootm-sheet-body.component';\r\n\r\n\r\n@Component({\r\n  selector: 'app-mat-bottom-sheet',\r\n  templateUrl: './mat-bottom-sheet.component.html',\r\n  styleUrls: ['./mat-bottom-sheet.component.scss']\r\n})\r\nexport class MatBottomSheetComponent {\r\n  constructor(private _bottomSheet: MatBottomSheet) {}\r\n\r\n  openBottomSheet(): void {\r\n    this._bottomSheet.open(BootmSheetBodyComponent);\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-bottom-sheet.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "_bottomSheet",
+                        "type": "MatBottomSheet",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 11,
+                "jsdoctags": [
+                    {
+                        "name": "_bottomSheet",
+                        "type": "MatBottomSheet",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<div class=\"container-component container-component__last\">\r\n\r\n  <div class=\"text-container-component text-container-component__widht_50 text-container-component__border-Right\"> \r\n    <h6>Bottom sheet</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\">16</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\">16</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">16</span></p>\r\n  </div>\r\n  <div class=\"text-container-component centered text-container-component__widht_50\">\r\n    <button mat-raised-button color=\"primary\" (click)=\"openBottomSheet()\">Open file</button>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatButtonsComponent",
+            "id": "component-MatButtonsComponent-da32649cf568a42cc46bac9d2130a22f01bf8b9401e9fd4b4bfcdfd756b20c2def7ed11fa503c4ff18dd509540adca1e90025f6c26089cdba1c243d73ea547aa",
+            "file": "src/app/components/mat-buttons/mat-buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-buttons",
+            "styleUrls": [
+                "./mat-buttons.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-buttons.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-buttons',\r\n  templateUrl: './mat-buttons.component.html',\r\n  styleUrls: ['./mat-buttons.component.scss']\r\n})\r\nexport class MatButtonsComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-buttons.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container-component\">\r\n\r\n\r\n  <div class=\"text-container-component text-container-component__border-Right text-container-component__widht_60 \">\r\n      <h6>buttons</h6>\r\n      <br>\r\n      <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react para la variante de boton(<span class=\"font-weight-700\">contained</span>):<span class=\"mat-body-strong\">2</span> </p> \r\n      <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react para la variante de boton(<span class=\"font-weight-700\">fab</span>):<span class=\"mat-body-strong\">6</span> </p> \r\n      <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular para la variante de boton(<span class=\"font-weight-700\">raised</span>):<span class=\"mat-body-strong\">2</span> </p> \r\n      <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular para la variante de boton(<span class=\"font-weight-700\">fab</span>):<span class=\"mat-body-strong\">6</span> </p> \r\n      <br>\r\n      <mat-divider></mat-divider>\r\n      <br>\r\n      <p class=\"mat-subtitle-1 \">nivel de de elevacion actual en(<span class=\"font-weight-700\">raised-button</span>): <span class=\"mat-body-strong\">2</span></p>\r\n      <p class=\"mat-subtitle-1 \">nivel de de elevacion actual en(<span class=\"font-weight-700\">fab-button</span>):<span class=\"mat-body-strong\">6</span></p>\r\n\r\n\r\n  </div>\r\n  <div class=\"text-container-component centered text-container-component__widht_40 text-container-component__column\" >\r\n    <button mat-raised-button color=\"primary\">Contained</button>\r\n    <br />\r\n    <br />\r\n    <button mat-raised-button disabled=\"true\">Disabled</button>\r\n    <br />\r\n    <br />\r\n    <button mat-fab>hola</button>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatButtonToggleComponent",
+            "id": "component-MatButtonToggleComponent-7247789a3bad61b5ffaabc4913979d280d5fdb9345ac3a12f9dcff340fb2a4caf9ea95fdd9ead9d17c0838b1625e73ea83a1359c6ee32d8d645f066f6ac6b086",
+            "file": "src/app/components/mat-button-toggle/mat-button-toggle.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-button-toggle",
+            "styleUrls": [
+                "./mat-button-toggle.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-button-toggle.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-button-toggle',\r\n  templateUrl: './mat-button-toggle.component.html',\r\n  styleUrls: ['./mat-button-toggle.component.scss']\r\n})\r\nexport class MatButtonToggleComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-button-toggle.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container-component \">\r\n  <div class=\"text-container-component text-container-component__widht_60  text-container-component__border-Right\">\r\n    <h6>button toggle</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">componente homonimo en react:<span class=\"mat-body-strong\"> button-group</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react para la variante de (<span class=\"font-weight-700\">contained</span>):<span class=\"mat-body-strong\">2</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular para la variante de (<span class=\"font-weight-700\">legacy</span>):<span class=\"mat-body-strong\">2</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">2</span></p>\r\n\r\n  </div>\r\n  <div class=\"text-container-component text-container-component__widht_40 centered text-container-component__column\">\r\n    <p>\r\n      Default appearance:\r\n      <mat-button-toggle-group name=\"fontStyle\" aria-label=\"Font Style\">\r\n        <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\r\n        <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\r\n        <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\r\n      </mat-button-toggle-group>\r\n    </p>\r\n    <br />\r\n    <p>\r\n      Legacy appearance:\r\n      <mat-button-toggle-group\r\n        appearance=\"legacy\"\r\n        name=\"fontStyle\"\r\n        aria-label=\"Font Style\"\r\n      >\r\n        <mat-button-toggle value=\"bold\">Bold</mat-button-toggle>\r\n        <mat-button-toggle value=\"italic\">Italic</mat-button-toggle>\r\n        <mat-button-toggle value=\"underline\">Underline</mat-button-toggle>\r\n      </mat-button-toggle-group>\r\n    </p>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatCardComponent",
+            "id": "component-MatCardComponent-e0304a6438b53f4ee2f53c77286810280ad9d24d19c6d26d6cbb3882b6db000a32696970e64534630ad7765eb82b2dcd1876de89750dcbdaf1997628d232cd8b",
+            "file": "src/app/components/mat-card/mat-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-card",
+            "styleUrls": [
+                "./mat-card.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-card.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "longText",
+                    "defaultValue": "`The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog\r\n  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was\r\n  originally bred for hunting.`",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-card',\r\n  templateUrl: './mat-card.component.html',\r\n  styleUrls: ['./mat-card.component.scss']\r\n})\r\nexport class MatCardComponent {\r\n  longText = `The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog\r\n  from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was\r\n  originally bred for hunting.`;\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".example-card {\r\n  max-width: 400px;\r\n  margin-bottom: 8px;\r\n}\r\n",
+                    "styleUrl": "./mat-card.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container-component\">\r\n  <!-- Cards with media area -->\r\n\r\n  <div class=\"text-container-component text-container-component__border-Right text-container-component__widht_50\">\r\n    <h6>Card</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\"> 1</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular: <span class=\"mat-body-strong\">1</span></p>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">1</span></p>\r\n  </div>\r\n\r\n  <div class=\"text-container-component text-container-component__widht_50 centered\">\r\n    <mat-card class=\"example-card\">\r\n      <mat-card-header>\r\n        <mat-card-title-group>\r\n          <mat-card-title class=\"mat-h5\">Shiba Inu</mat-card-title>\r\n          <mat-card-subtitle>Small</mat-card-subtitle>\r\n          <img\r\n            mat-card-sm-image\r\n            src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\"\r\n          />\r\n        </mat-card-title-group>\r\n      </mat-card-header>\r\n      <mat-card-content>\r\n        {{ longText }}\r\n      </mat-card-content>\r\n    </mat-card>\r\n  \r\n  </div>\r\n\r\n</div>\r\n"
+        },
+        {
+            "name": "MatChipsComponent",
+            "id": "component-MatChipsComponent-271085f237391854d986af8f9722c72e3795c0d49c5527dc75ae85101b43e7daef10c9f9aae0eaa30333ca36292a3c1a5267a148e94a559b90e0414f854f9bbe",
+            "file": "src/app/components/mat-chips/mat-chips.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-chips",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./mat-chips.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-chips',\r\n  templateUrl: './mat-chips.component.html',\r\n})\r\nexport class MatChipsComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "templateData": "<div class=\"container-component \">\r\n\r\n\r\n  <div class=\"text-container-component text-container-component__border-Right text-container-component__widht_50\">\r\n    <h6>Chips</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\">1</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\">3</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">1</span></p>\r\n  </div>\r\n  <div class=\"text-container-component text-container-component__widht_50 centered\">\r\n    <mat-chip disabled>Orange</mat-chip>\r\n    <br />\r\n    <mat-chip>Orange</mat-chip>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatDatePickerComponent",
+            "id": "component-MatDatePickerComponent-e4e053ee6017803e665c40f023c3c3932edd22b83d2974c3e51613ad00742a9682843e0db9834cf8b68365408245939636555bd4048c6fee634cf5d256259544",
+            "file": "src/app/components/mat-date-picker/mat-date-picker.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-date-picker",
+            "styleUrls": [
+                "./mat-date-picker.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-date-picker.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-date-picker',\r\n  templateUrl: './mat-date-picker.component.html',\r\n  styleUrls: ['./mat-date-picker.component.scss']\r\n})\r\nexport class MatDatePickerComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-date-picker.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container-component\">\r\n  \r\n  <div class=\"text-container-component text-container-component__widht_50 text-container-component__border-Right\">\r\n    <h6>Date picker</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\"> 8</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\"> 4</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">8</span></p>\r\n  </div>\r\n  <div class=\"text-container-component text-container-component__widht_50 centered\">\r\n    <mat-form-field appearance=\"fill\">\r\n      <mat-label>Choose a date</mat-label>\r\n      <input matInput [matDatepicker]=\"picker\" />\r\n      <mat-hint>MM/DD/YYYY</mat-hint>\r\n      <mat-datepicker-toggle matIconSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n      <mat-datepicker #picker></mat-datepicker>\r\n    </mat-form-field>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatDialogComponent",
+            "id": "component-MatDialogComponent-92f16df52bb298acaf80fd173bc4b29cc498b562d2e56aa5e317f712db07f30f2a4a4f6a2b6ec99bfd96b810ad04508ae5cd393ff0cbb8bd3bd53bd4481f5b52",
+            "file": "src/app/components/mat-dialog/mat-dialog.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-dialog",
+            "styleUrls": [
+                "./mat-dialog.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-dialog.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "dialog",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MatDialog",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "openDialog",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport {MatDialog} from '@angular/material/dialog';\r\nimport { DialogBoxComponent } from './dialog-box/dialog-box.component';\r\n\r\n\r\n@Component({\r\n  selector: 'app-mat-dialog',\r\n  templateUrl: './mat-dialog.component.html',\r\n  styleUrls: ['./mat-dialog.component.scss']\r\n})\r\nexport class MatDialogComponent {\r\n\r\n  constructor(public dialog: MatDialog) {}\r\n\r\n  openDialog() {\r\n    const dialogRef = this.dialog.open(DialogBoxComponent);\r\n\r\n    dialogRef.afterClosed().subscribe(result => {\r\n      console.log(`Dialog result: ${result}`);\r\n    });\r\n  }\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-dialog.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 11,
+                "jsdoctags": [
+                    {
+                        "name": "dialog",
+                        "type": "MatDialog",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "\r\n<div class=\"container-component\">\r\n    <div class=\"text-container-component text-container-component__widht_50 text-container-component__border-Right\">\r\n        <h6>Dialog</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\">24</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\">24</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">24</span></p>\r\n    </div>\r\n    <div class=\"text-container-component text-container-component__widht_50 centered\">\r\n        <button mat-raised-button color=\"primary\"(click)=\"openDialog()\">Open dialog</button>\r\n    </div>\r\n</div>"
+        },
+        {
+            "name": "MatExpancionPanelComponent",
+            "id": "component-MatExpancionPanelComponent-4bf87da5d7fb4d392a674632a61ac6f17c108d85125266e7166821bfc4eb3af25d81f0439911254a5682076f58659930e2287fb6e467104f2bc949255e581ce0",
+            "file": "src/app/components/mat-expancion-panel/mat-expancion-panel.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-expancion-panel",
+            "styleUrls": [
+                "./mat-expancion-panel.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-expancion-panel.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "panelOpenState",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-expancion-panel',\r\n  templateUrl: './mat-expancion-panel.component.html',\r\n  styleUrls: ['./mat-expancion-panel.component.scss']\r\n})\r\nexport class MatExpancionPanelComponent {\r\n  panelOpenState = false;\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-expancion-panel.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container-component\">\r\n\r\n\r\n  <div class=\"text-container-component text-container-component__border-Right  text-container-component__widht_40\">\r\n    <h6>Expancion panel</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">componente homonimo en react:<span class=\"mat-body-strong\"> Acordion</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\"> 1</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\"> 1</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">1</span></p>\r\n\r\n\r\n  </div>\r\n  <div class=\"text-container-component centered text-container-component__widht_60\">\r\n    <mat-accordion>\r\n      <mat-expansion-panel hideToggle>\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title> This is the expansion title </mat-panel-title>\r\n          <mat-panel-description>\r\n            This is a summary of the content\r\n          </mat-panel-description>\r\n        </mat-expansion-panel-header>\r\n        <p>primary content of the panel.</p>\r\n      </mat-expansion-panel>\r\n      <mat-expansion-panel\r\n        (opened)=\"panelOpenState = true\"\r\n        (closed)=\"panelOpenState = false\"\r\n      >\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title> Self aware panel </mat-panel-title>\r\n          <mat-panel-description>\r\n            Currently I am {{ panelOpenState ? \"open\" : \"closed\" }}\r\n          </mat-panel-description>\r\n        </mat-expansion-panel-header>\r\n        <p>I'm visible because I am open</p>\r\n      </mat-expansion-panel>\r\n      <mat-expansion-panel\r\n        (opened)=\"panelOpenState = true\"\r\n        (closed)=\"panelOpenState = false\"\r\n      >\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title> Self aware panel </mat-panel-title>\r\n          <mat-panel-description>\r\n            Currently I am {{ panelOpenState ? \"open\" : \"closed\" }}\r\n          </mat-panel-description>\r\n        </mat-expansion-panel-header>\r\n        <p>I'm visible because I am open</p>\r\n      </mat-expansion-panel>\r\n      <mat-expansion-panel\r\n        (opened)=\"panelOpenState = true\"\r\n        (closed)=\"panelOpenState = false\"\r\n      >\r\n        <mat-expansion-panel-header>\r\n          <mat-panel-title> Self aware panel </mat-panel-title>\r\n          <mat-panel-description>\r\n            Currently I am {{ panelOpenState ? \"open\" : \"closed\" }}\r\n          </mat-panel-description>\r\n        </mat-expansion-panel-header>\r\n        <p>I'm visible because I am open</p>\r\n      </mat-expansion-panel>\r\n    </mat-accordion>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatMenuComponent",
+            "id": "component-MatMenuComponent-bb8440ae0978ef6a262a41a7d60438f2fa1de66c7266c986a4d6cf21773223e8671176063a8b67ec50a9bf9d1162cccdd37314520c5d92555858a555e171467b",
+            "file": "src/app/components/mat-menu/mat-menu.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-menu",
+            "styleUrls": [
+                "./mat-menu.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-menu.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-menu',\r\n  templateUrl: './mat-menu.component.html',\r\n  styleUrls: ['./mat-menu.component.scss']\r\n})\r\nexport class MatMenuComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-menu.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container-component\">\r\n  <div class=\"text-container-component text-container-component__border-Right text-container-component__widht_50\">\r\n    <h6>Menu</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\">8</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\">8</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">8</span></p>\r\n  </div>\r\n  <div class=\"text-container-component centered text-container-component__widht_50\">\r\n    <button mat-raised-button color=\"warn\" [matMenuTriggerFor]=\"animals\">\r\n      Menu animals\r\n    </button>\r\n    <mat-menu #animals=\"matMenu\">\r\n      <button mat-menu-item [matMenuTriggerFor]=\"vertebrates\">\r\n        Vertebrates\r\n      </button>\r\n      <button mat-menu-item [matMenuTriggerFor]=\"invertebrates\">\r\n        Invertebrates\r\n      </button>\r\n    </mat-menu>\r\n\r\n    <mat-menu #vertebrates=\"matMenu\">\r\n      <button mat-menu-item [matMenuTriggerFor]=\"fish\">Fishes</button>\r\n      <button mat-menu-item [matMenuTriggerFor]=\"amphibians\">Amphibians</button>\r\n      <button mat-menu-item [matMenuTriggerFor]=\"reptiles\">Reptiles</button>\r\n      <button mat-menu-item>Birds</button>\r\n      <button mat-menu-item>Mammals</button>\r\n    </mat-menu>\r\n\r\n    <mat-menu #invertebrates=\"matMenu\">\r\n      <button mat-menu-item>Insects</button>\r\n      <button mat-menu-item>Molluscs</button>\r\n      <button mat-menu-item>Crustaceans</button>\r\n      <button mat-menu-item>Corals</button>\r\n      <button mat-menu-item>Arachnids</button>\r\n      <button mat-menu-item>Velvet worms</button>\r\n      <button mat-menu-item>Horseshoe crabs</button>\r\n    </mat-menu>\r\n\r\n    <mat-menu #fish=\"matMenu\">\r\n      <button mat-menu-item>Baikal oilfish</button>\r\n      <button mat-menu-item>Bala shark</button>\r\n      <button mat-menu-item>Ballan wrasse</button>\r\n      <button mat-menu-item>Bamboo shark</button>\r\n      <button mat-menu-item>Banded killifish</button>\r\n    </mat-menu>\r\n\r\n    <mat-menu #amphibians=\"matMenu\">\r\n      <button mat-menu-item>Sonoran desert toad</button>\r\n      <button mat-menu-item>Western toad</button>\r\n      <button mat-menu-item>Arroyo toad</button>\r\n      <button mat-menu-item>Yosemite toad</button>\r\n    </mat-menu>\r\n\r\n    <mat-menu #reptiles=\"matMenu\">\r\n      <button mat-menu-item>Banded Day Gecko</button>\r\n      <button mat-menu-item>Banded Gila Monster</button>\r\n      <button mat-menu-item>Black Tree Monitor</button>\r\n      <button mat-menu-item>Blue Spiny Lizard</button>\r\n      <button mat-menu-item disabled>Velociraptor</button>\r\n    </mat-menu>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatSelectComponent",
+            "id": "component-MatSelectComponent-e826350e9dd1342e30932189ec11c6a40eb697d295bd832cb5a885f01856bc892e3d05fa27ffd66de749968de16677f3819b0ba8317bd79ac9a2413b9f905750",
+            "file": "src/app/components/mat-select/mat-select.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-select",
+            "styleUrls": [
+                "./mat-select.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-select.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "toppingList",
+                    "defaultValue": "['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "toppings",
+                    "defaultValue": "new FormControl('')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport {FormControl} from '@angular/forms';\r\n\r\n@Component({\r\n  selector: 'app-mat-select',\r\n  templateUrl: './mat-select.component.html',\r\n  styleUrls: ['./mat-select.component.scss']\r\n})\r\nexport class MatSelectComponent {\r\n  toppings = new FormControl('');\r\n  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-select.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"container-component\">\r\n  <div class=\"text-container-component text-container-component__widht_50 text-container-component__border-Right\">\r\n    <h6>Select</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\">8</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\">8</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">8</span></p>\r\n  </div>\r\n  <div class=\"text-container-component text-container-component__widht_50 centered\">\r\n    <mat-form-field appearance=\"fill\">\r\n      <mat-label>Toppings</mat-label>\r\n      <mat-select formControl=\"toppings\" multiple>\r\n        <mat-select-trigger>\r\n          {{toppings.value?.[0] || ''}}\r\n          <span\r\n            *ngIf=\"(toppings.value?.length || 0) > 1\"\r\n            class=\"example-additional-selection\"\r\n          >\r\n            (+{{ (toppings.value?.length || 0) - 1 }}\r\n            {{ toppings.value?.length === 2 ? \"other\" : \"others\" }})\r\n          </span>\r\n        </mat-select-trigger>\r\n        <mat-option *ngFor=\"let topping of toppingList\" [value]=\"topping\">{{\r\n          topping\r\n        }}</mat-option>\r\n      </mat-select>\r\n    </mat-form-field>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "MatSnackBarComponent",
+            "id": "component-MatSnackBarComponent-a3fe19283accd1c0ebecd92b09da6aba674d751bc7023362005d5e307ae2c2ca2b0a26caf87dd119af203a3719ea747e49d6c8d23834a2326cb0839488be3542",
+            "file": "src/app/components/mat-snack-bar/mat-snack-bar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-snack-bar",
+            "styleUrls": [
+                "./mat-snack-bar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-snack-bar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "openSnackBar",
+                    "args": [
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "action",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "action",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport {MatSnackBar} from '@angular/material/snack-bar';\r\n\r\n\r\n@Component({\r\n  selector: 'app-mat-snack-bar',\r\n  templateUrl: './mat-snack-bar.component.html',\r\n  styleUrls: ['./mat-snack-bar.component.scss']\r\n})\r\nexport class MatSnackBarComponent {\r\n  constructor(private _snackBar: MatSnackBar) {}\r\n\r\n  openSnackBar(message: string, action: string) {\r\n    this._snackBar.open(message, action);\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./mat-snack-bar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "_snackBar",
+                        "type": "MatSnackBar",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 10,
+                "jsdoctags": [
+                    {
+                        "name": "_snackBar",
+                        "type": "MatSnackBar",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<div class=\"container-component\">\r\n  <div class=\"text-container-component text-container-component__widht_50 text-container-component__border-Right\">\r\n    <h6>Snack bar</h6>\r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en react:<span class=\"mat-body-strong\">6</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de elevavion nativa en angular:<span class=\"mat-body-strong\">6</span> </p> \r\n    <br>\r\n    <p class=\"mat-subtitle-1\">nivel de de elevacion actual: <span class=\"mat-body-strong\">6</span></p>\r\n  </div>\r\n  <div class=\"text-container-component centered text-container-component__widht_50 \">\r\n    <button mat-raised-button color=\"accent\" (click)=\"openSnackBar('hola', 'que tal')\">\r\n    Show snack-bar\r\n  </button>\r\n  </div>\r\n</div>\r\n"
+        },
+        {
+            "name": "ShadowsComponentsListComponent",
+            "id": "component-ShadowsComponentsListComponent-9c0478eb098ac531f49cc2d51d388cf7a2cb5112d58350c4aa5fb453140f1e65bb84643dbaffa7f025da7b8ac12966e3a4056cb1db8a77b1dd0db6437552f59e",
+            "file": "src/app/components/documentation/shadows-components-list/shadows-components-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-shadows-components-list",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./shadows-components-list.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-shadows-components-list',\r\n  templateUrl: './shadows-components-list.component.html',\r\n})\r\nexport class ShadowsComponentsListComponent {\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "templateData": "<app-mat-auto-complete></app-mat-auto-complete>\r\n<app-mat-expancion-panel></app-mat-expancion-panel>\r\n<app-mat-buttons></app-mat-buttons>\r\n<app-mat-button-toggle></app-mat-button-toggle>\r\n<app-mat-card></app-mat-card>\r\n<app-mat-date-picker></app-mat-date-picker>\r\n<app-mat-dialog></app-mat-dialog>\r\n<app-mat-chips></app-mat-chips>\r\n<app-mat-menu></app-mat-menu>\r\n<app-mat-select></app-mat-select>\r\n<app-mat-snack-bar></app-mat-snack-bar>\r\n<app-mat-bottom-sheet></app-mat-bottom-sheet>\r\n"
+        },
+        {
+            "name": "TypographyComponent",
+            "id": "component-TypographyComponent-0048636dd69a3ac3a50e42114101357c77986bd9cfdfe40e8794536cb1d53d71fe8f79c62423eb9c5a76cede8fd6163353fabbef2963d6860084365aa9edd77a",
+            "file": "src/app/components/typography/typography.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-typography",
+            "styleUrls": [],
+            "styles": [],
+            "template": "<div class=\"container-component centered\">\n  <p [ngClass]=\"classTypography\">{{class}}</p>\n</div>\n",
+            "templateUrl": [
+                "./typography.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "class",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"subtitle-1\" | \"subtitle-2\" | \"body-1\" | \"body-2\" | \"caption\" | \"overline\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-typography',\n  templateUrl: './typography.component.html',\n  template: `\n    <div class=\"container-component centered\">\n      <p [ngClass]=\"classTypography\">{{class}}</p>\n    </div>\n  `,\n  // styleUrls: ['../../../styles/main.scss']\n})\nexport class TypographyComponent {\n  @Input() class?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'subtitle-1' | 'subtitle-2' | 'body-1' | 'body-2' | 'caption' | 'overline'  ;\n\n  public get classTypography():string[]{\n    return[\n      `mat-${this.class}`\n    ];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "accessors": {
+                "classTypography": {
+                    "name": "classTypography",
+                    "getSignature": {
+                        "name": "classTypography",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 16
+                    }
+                }
+            },
             "templateData": ""
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-0380eb99dc933726a298e8346c6bccd22e1b5cc04b104327b1338c34576989e47a18332184e6619667ea44cdcc8415094943c57e1610f717c21a145170f5c250",
+            "id": "module-AppModule-8dfa0fdc3e7f7b3628cda3dc1f774827aa84b6a91dce195832ad2770c06c70ecdf4fe9047d3e81d47db6f7a5f18d41acffa0dfffa1ad06d44b1ec2c5f212f9fa",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { SharedModule } from './components/shared/shared.module';\r\nimport { MatAutoCompleteComponent } from './components/mat-auto-complete/mat-auto-complete.component';\r\nimport { MatExpancionPanelComponent } from './components/mat-expancion-panel/mat-expancion-panel.component';\r\nimport { MatButtonsComponent } from './components/mat-buttons/mat-buttons.component';\r\nimport { MatButtonToggleComponent } from './components/mat-button-toggle/mat-button-toggle.component';\r\nimport { MatCardComponent } from './components/mat-card/mat-card.component';\r\nimport { MatDatePickerComponent } from './components/mat-date-picker/mat-date-picker.component';\r\nimport { MatDialogComponent } from './components/mat-dialog/mat-dialog.component';\r\nimport { DialogBoxComponent } from './components/mat-dialog/dialog-box/dialog-box.component';\r\nimport { MatChipsComponent } from './components/mat-chips/mat-chips.component';\r\nimport { MatMenuComponent } from './components/mat-menu/mat-menu.component';\r\nimport { MatSelectComponent } from './components/mat-select/mat-select.component';\r\nimport { MatSnackBarComponent } from './components/mat-snack-bar/mat-snack-bar.component';\r\nimport { MatBottomSheetComponent } from './components/mat-bottom-sheet/mat-bottom-sheet.component';\r\nimport { BootmSheetBodyComponent } from './components/mat-bottom-sheet/bootm-sheet-body/bootm-sheet-body.component';\r\nimport { AllElevationsLevelComponent } from './components/documentation/all-elevations-level/all-elevations-level.component';\r\nimport { ShadowsComponentsListComponent } from './components/documentation/shadows-components-list/shadows-components-list.component';\r\nimport { TypographyComponent } from './components/typography/typography.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    MatAutoCompleteComponent,\r\n    MatExpancionPanelComponent,\r\n    MatButtonsComponent,\r\n    MatButtonToggleComponent,\r\n    MatCardComponent,\r\n    MatDatePickerComponent,\r\n    MatDialogComponent,\r\n    DialogBoxComponent,\r\n    MatChipsComponent,\r\n    MatMenuComponent,\r\n    MatSelectComponent,\r\n    MatSnackBarComponent,\r\n    MatBottomSheetComponent,\r\n    BootmSheetBodyComponent,\r\n    ShadowsComponentsListComponent,\r\n    AllElevationsLevelComponent,\r\n    TypographyComponent\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    SharedModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -67,7 +1012,58 @@
                     "type": "declarations",
                     "elements": [
                         {
+                            "name": "AllElevationsLevelComponent"
+                        },
+                        {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "BootmSheetBodyComponent"
+                        },
+                        {
+                            "name": "DialogBoxComponent"
+                        },
+                        {
+                            "name": "MatAutoCompleteComponent"
+                        },
+                        {
+                            "name": "MatBottomSheetComponent"
+                        },
+                        {
+                            "name": "MatButtonToggleComponent"
+                        },
+                        {
+                            "name": "MatButtonsComponent"
+                        },
+                        {
+                            "name": "MatCardComponent"
+                        },
+                        {
+                            "name": "MatChipsComponent"
+                        },
+                        {
+                            "name": "MatDatePickerComponent"
+                        },
+                        {
+                            "name": "MatDialogComponent"
+                        },
+                        {
+                            "name": "MatExpancionPanelComponent"
+                        },
+                        {
+                            "name": "MatMenuComponent"
+                        },
+                        {
+                            "name": "MatSelectComponent"
+                        },
+                        {
+                            "name": "MatSnackBarComponent"
+                        },
+                        {
+                            "name": "ShadowsComponentsListComponent"
+                        },
+                        {
+                            "name": "TypographyComponent"
                         }
                     ]
                 },
@@ -76,6 +1072,9 @@
                     "elements": [
                         {
                             "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "SharedModule"
                         }
                     ]
                 },
@@ -99,13 +1098,49 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "SharedModule",
+            "id": "module-SharedModule-cb531398347d2e704cad5b77229013b068071c109bb2bb3fe6d89c3a56fb6fbe3ce62d402847883fbc542128bc983c00e4bd86c827ef390746adf525730853c5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/components/shared/shared.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\n\r\nimport {MatBottomSheetModule} from '@angular/material/bottom-sheet';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatToolbarModule } from '@angular/material/toolbar';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatBadgeModule } from '@angular/material/badge';\r\nimport { MatCheckboxModule } from '@angular/material/checkbox';\r\nimport { MatRadioModule } from '@angular/material/radio';\r\nimport { MatChipsModule } from '@angular/material/chips';\r\nimport { MatAutocompleteModule } from '@angular/material/autocomplete';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\nimport { MatDatepickerModule } from '@angular/material/datepicker';\r\nimport { MatStepperModule } from '@angular/material/stepper';\r\nimport { MatTabsModule } from '@angular/material/tabs';\r\nimport {MatSnackBarModule} from '@angular/material/snack-bar';\r\nimport { MatSliderModule } from '@angular/material/slider';\r\nimport { MatSlideToggleModule } from '@angular/material/slide-toggle';\r\nimport { MatButtonToggleModule } from '@angular/material/button-toggle';\r\nimport {MatCardModule} from '@angular/material/card';\r\nimport { MatExpansionModule } from '@angular/material/expansion';\r\nimport { MatNativeDateModule } from '@angular/material/core';\r\nimport {MatDialogModule} from '@angular/material/dialog';\r\nimport {MatMenuModule} from '@angular/material/menu';\r\nimport {MatSelectModule} from '@angular/material/select';\r\nimport {MatListModule} from '@angular/material/list';\r\nimport {MatDividerModule} from '@angular/material/divider';\r\n\r\n\r\nconst component = [\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatDividerModule,\r\n  MatToolbarModule,\r\n  MatDialogModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCardModule,\r\n  MatMenuModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatSelectModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSnackBarModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule,\r\n  MatExpansionModule,\r\n  MatButtonToggleModule,\r\n  MatNativeDateModule,\r\n  MatBottomSheetModule,\r\n  MatListModule, \r\n];\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [CommonModule, component],\r\n  exports: [component],\r\n})\r\nexport class SharedModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -134,7 +1169,82 @@
             ]
         }
     ],
-    "miscellaneous": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "component",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/shared/shared.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatDividerModule,\r\n  MatToolbarModule,\r\n  MatDialogModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCardModule,\r\n  MatMenuModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatSelectModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSnackBarModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule,\r\n  MatExpansionModule,\r\n  MatButtonToggleModule,\r\n  MatNativeDateModule,\r\n  MatBottomSheetModule,\r\n  MatListModule, \r\n]"
+            },
+            {
+                "name": "level",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/typography/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/typography/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TypographyComponent>",
+                "defaultValue": "(args: TypographyComponent) =>\r\n({\r\n    props: args,\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/components/shared/shared.module.ts": [
+                {
+                    "name": "component",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/shared/shared.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n  CommonModule,\r\n  MatIconModule,\r\n  MatDividerModule,\r\n  MatToolbarModule,\r\n  MatDialogModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatCardModule,\r\n  MatMenuModule,\r\n  MatCheckboxModule,\r\n  MatRadioModule,\r\n  MatChipsModule,\r\n  MatAutocompleteModule,\r\n  MatFormFieldModule,\r\n  MatInputModule,\r\n  MatSelectModule,\r\n  MatProgressSpinnerModule,\r\n  MatProgressBarModule,\r\n  MatDatepickerModule,\r\n  MatStepperModule,\r\n  MatTabsModule,\r\n  MatSnackBarModule,\r\n  MatSliderModule,\r\n  MatSlideToggleModule,\r\n  MatExpansionModule,\r\n  MatButtonToggleModule,\r\n  MatNativeDateModule,\r\n  MatBottomSheetModule,\r\n  MatListModule, \r\n]"
+                }
+            ],
+            "src/app/components/typography/typography.stories.ts": [
+                {
+                    "name": "level",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/typography/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/typography/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TypographyComponent>",
+                    "defaultValue": "(args: TypographyComponent) =>\r\n({\r\n    props: args,\r\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
     "routes": {
         "name": "<root>",
         "kind": "module",
@@ -158,6 +1268,189 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/documentation/all-elevations-level/all-elevations-level.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AllElevationsLevelComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/documentation/shadows-components-list/shadows-components-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ShadowsComponentsListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-auto-complete/mat-auto-complete.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatAutoCompleteComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-bottom-sheet/bootm-sheet-body/bootm-sheet-body.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "BootmSheetBodyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-bottom-sheet/mat-bottom-sheet.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatBottomSheetComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-button-toggle/mat-button-toggle.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatButtonToggleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-buttons/mat-buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-card/mat-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-chips/mat-chips.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatChipsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-date-picker/mat-date-picker.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatDatePickerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-dialog/dialog-box/dialog-box.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DialogBoxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-dialog/mat-dialog.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatDialogComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-expancion-panel/mat-expancion-panel.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatExpancionPanelComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-menu/mat-menu.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatMenuComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-select/mat-select.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSelectComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/mat-snack-bar/mat-snack-bar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSnackBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/shared/shared.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "component",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/typography/typography.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TypographyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/typography/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "level",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/typography/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

@@ -21,6 +21,7 @@ import { MatBottomSheetComponent } from './components/mat-bottom-sheet/mat-botto
 import { BootmSheetBodyComponent } from './components/mat-bottom-sheet/bootm-sheet-body/bootm-sheet-body.component';
 import { AllElevationsLevelComponent } from './components/documentation/all-elevations-level/all-elevations-level.component';
 import { ShadowsComponentsListComponent } from './components/documentation/shadows-components-list/shadows-components-list.component';
+import { TypographyComponent } from './components/typography/typography.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { ShadowsComponentsListComponent } from './components/documentation/shado
     MatBottomSheetComponent,
     BootmSheetBodyComponent,
     ShadowsComponentsListComponent,
-    AllElevationsLevelComponent
+    AllElevationsLevelComponent,
+    TypographyComponent
   ],
   imports: [
     BrowserModule,
