@@ -1,8 +1,8 @@
-import { Component,} from '@angular/core';
-import  { moduleMetadata  } from "@storybook/angular";
-import { MatButtonComponent } from "./mat-button.component";
-import {MatButtonModule} from '@angular/material/button';
 import { Meta, Story} from '@storybook/angular/types-6-0';
+import { MatButtonComponent } from "./mat-button.component";
+
+import  { moduleMetadata  } from "@storybook/angular";
+import {MatButtonModule} from '@angular/material/button';
 
 export default {
     title: 'MatButton',
@@ -32,7 +32,6 @@ const Template :Story<MatButtonModule> = (args: MatButtonModule) =>({
     props:args
 })
 
-  
   export const Button = Template.bind({});
   Button.args = {
   };

@@ -3,12 +3,10 @@ import { Component, Input} from '@angular/core';
 @Component({
   selector: 'app-mat-button',
   templateUrl: './mat-button.component.html',
-  template: `
-  <button mat-raised-button [ngClass]="classes"> Button </button>
-
-  `,
+  template: ` <button mat-raised-button [ngClass]="classes"> Button </button> `,
   styleUrls: ['../config.color.scss']
 })
+
 export class MatButtonComponent {
 constructor () {}
 

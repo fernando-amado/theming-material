@@ -48,8 +48,78 @@
             "templateData": "\r\n"
         },
         {
+            "name": "MatBadgeComponent",
+            "id": "component-MatBadgeComponent-63d9cb6e0278a3160d19de5b1f43ddc6e1616f40ea6376322281a06dfd914513d85e5da80a9c8bb5cbdb213dd95553983a40fef322947140be075e07e19498dd",
+            "file": "src/stories/mat-badge/mat-badge.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-badge",
+            "styleUrls": [
+                "../config.color.scss"
+            ],
+            "styles": [],
+            "template": "<div matBadge=\"4\" matBadgeOverlap=\"false\" class=\"demo-section\">Text with a badge</div>\n\n",
+            "templateUrl": [
+                "./mat-badge.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
+                    "type": "\"primary\" | \"accent\" | \"warn\" | \"success\" | \"info\" | \"warning\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output } from '@angular/core';\r\nimport { PRIMARY_OUTLET } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'app-mat-badge',\r\n  templateUrl: './mat-badge.component.html',\r\n  template: `\r\n<div matBadge=\"4\" matBadgeOverlap=\"false\" class=\"demo-section\">Text with a badge</div>\r\n\r\n`,\r\n  styleUrls: ['../config.color.scss']\r\n})\r\nexport class MatBadgeComponent {\r\n  constructor () {}\r\n\r\n\r\n @Input () color : 'primary'| 'accent' | 'warn'| 'success'| 'info'| 'warning' = 'primary';\r\n\r\n public get classes(): string[] {\r\n  return ['app-mat-badge',`app-mat-badge--${this.color}`]\r\n}\r\n \r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n$light-text: #fff;\r\n$primary: #1e62a1;\r\n$accent: #0cbbe2;\r\n$warn: #d14343;\r\n$success: #8fc93a;\r\n$info: #2d9fc5;\r\n$warning: #fb8500;\r\n\r\n@mixin color-Config($textColor, $background) {\r\n  color: $textColor !important;\r\n  background-color: $background !important;\r\n}\r\n//Mat BADGE CONFIGURATION EXTRA \r\n:host {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n}\r\n\r\n.demo-section + .demo-section {\r\n  margin-top: 16px;\r\n}\r\n// EXTRA COLORS\r\n.app-mat-button--primary {\r\n  @include color-Config($light-text, $primary);\r\n}\r\n.app-mat-button--accent{\r\n  @include color-Config($light-text, $accent);\r\n}\r\n.app-mat-button--warn {\r\n  @include color-Config($light-text, $warn);\r\n}\r\n.app-mat-button--success {\r\n  @include color-Config($light-text, $success);\r\n}\r\n.app-mat-button--info {\r\n  @include color-Config($light-text, $info);\r\n}\r\n.app-mat-button--warning {\r\n  @include color-Config($light-text, $warning);\r\n}\r\n.mat-badge-content {\r\n  @include color-Config($light-text, $accent )\r\n}\r\n.mat-badge-content{\r\n  .app-mat-badge--primary{\r\n    @include color-Config($light-text,$primary )\r\n  }\r\n& .app-mat-badge--accent{\r\n  @include color-Config($light-text, $warn )\r\n}\r\n}\r\n.app-mat-progress-bar--primary {\r\n  --mdc-linear-progress-active-indicator-color: #1e62a1;\r\n}\r\n.app-mat-progress-bar--accent {\r\n  --mdc-linear-progress-active-indicator-color: #0cbbe2;\r\n}\r\n.app-mat-progress-bar--warn {\r\n  --mdc-linear-progress-active-indicator-color: #d14343;\r\n}\r\n.app-mat-progress-bar--success {\r\n  --mdc-linear-progress-active-indicator-color: #8fc93a;\r\n}\r\n.app-mat-progress-bar--info {\r\n  --mdc-linear-progress-active-indicator-color: #2d9fc5;\r\n}\r\n.app-mat-progress-bar--warning {\r\n  --mdc-linear-progress-active-indicator-color: #fb8500;\r\n}\r\n\r\n.app-mat-slider--primary  {\r\n  --mdc-slider-handle-color: #1e62a1;\r\n  --mdc-slider-focus-handle-color: #1e62a1;\r\n  --mdc-slider-hover-handle-color: #1e62a1;\r\n  --mdc-slider-active-track-color: #1e62a1;\r\n  --mdc-slider-inactive-track-color: #1e62a1;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #1e62a1;\r\n  --mat-mdc-slider-ripple-color: #1e62a1;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(103, 58, 183, .05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(103, 58, 183, .2);\r\n}\r\n.mat-mdc-slider .app-mat-slider--success {\r\n  --mdc-slider-handle-color: #8fc93a;\r\n  --mdc-slider-focus-handle-color: #8fc93a;\r\n  --mdc-slider-hover-handle-color: #8fc93a;\r\n  --mdc-slider-active-track-color: #8fc93a;\r\n  --mdc-slider-inactive-track-color: #8fc93a;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;\r\n  --mat-mdc-slider-ripple-color: #8fc93a;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--info {\r\n  --mdc-slider-handle-color: #4dadce;\r\n  --mdc-slider-focus-handle-color: #4dadce;\r\n  --mdc-slider-hover-handle-color: #4dadce;\r\n  --mdc-slider-active-track-color: #4dadce;\r\n  --mdc-slider-inactive-track-color: #4dadce;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #4dadce;\r\n  --mat-mdc-slider-ripple-color: #4dadce;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--warning {\r\n  --mdc-slider-handle-color: #fb8500;\r\n  --mdc-slider-focus-handle-color: #fb8500;\r\n  --mdc-slider-hover-handle-color: #fb8500;\r\n  --mdc-slider-active-track-color: #fb8500;\r\n  --mdc-slider-inactive-track-color: #fb8500;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;\r\n  --mat-mdc-slider-ripple-color: #fb8500;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n\r\n",
+                    "styleUrl": "../config.color.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 13
+            },
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 19
+                    }
+                }
+            },
+            "templateData": ""
+        },
+        {
             "name": "MatButtonComponent",
-            "id": "component-MatButtonComponent-7028d20080ef3fb77262f702a6785ae5f28b109946ab9eccf8e31eeb5e43afc0ae9f63be50987f1f253be8c5881673d9dc7cac7728df639c965e1fa7a9500317",
+            "id": "component-MatButtonComponent-e8fcd11ef3fa29da60ac78d3ec36655c1c047b0d880c21f1bba973016835811944fb905d2984b7c4b18a313d2d3d96dc061c32311d2d3fc3e489da44dfdbfcd5",
             "file": "src/stories/mat-button/mat-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -87,11 +157,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input} from '@angular/core';\n\n@Component({\n  selector: 'app-mat-button',\n  templateUrl: './mat-button.component.html',\n  template: `\n  <button mat-raised-button [ngClass]=\"classes\"> Button </button>\n\n  `,\n  styleUrls: ['../config.color.scss']\n})\nexport class MatButtonComponent {\nconstructor () {}\n\n@Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\n\npublic get classes(): string[] {\n  return ['app-mat-button',`app-mat-button--${this.color}`]\n}\n\n} \n",
+            "sourceCode": "import { Component, Input} from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-button',\r\n  templateUrl: './mat-button.component.html',\r\n  template: `\r\n  <button mat-raised-button [ngClass]=\"classes\"> Button </button>\r\n\r\n  `,\r\n  styleUrls: ['../config.color.scss']\r\n})\r\nexport class MatButtonComponent {\r\nconstructor () {}\r\n\r\n@Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\r\n\r\npublic get classes(): string[] {\r\n  return ['app-mat-button',`app-mat-button--${this.color}`]\r\n}\r\n\r\n} \r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "$text-color: #fff;\r\n$primary: #1e62a1;\r\n$accent: #0cbbe2;\r\n$warn: #d14343;\r\n$success: #8fc93a;\r\n$info: #2d9fc5;\r\n$warning: #fb8500;\r\n\r\n@mixin color(\r\n  $primary: false,\r\n  $accent: false,\r\n  $warn: false,\r\n  $success: false,\r\n  $info: false,\r\n  $warningx: false,\r\n  $text-color: false\r\n){\r\n  color: $text-color;\r\n\r\n  @if $primary {\r\n    background-color: $primary;\r\n  } @else if $accent {\r\n    background-color: $accent;\r\n  } @else if $warn {\r\n    background-color: $warn;\r\n  } @else if $success {\r\n    background-color: $success;\r\n  } @else if $info {\r\n    background-color: $info;\r\n  } @else if $warning {\r\n    background-color: $warning;\r\n  }\r\n}\r\n\r\n// @mixin component($button: true, $progressBar: true) {\r\n//   @if $button {\r\n//     color: $text-color;\r\n//     background-color: $primary;\r\n//   } @else if $progressBar {\r\n//     --mdc-linear-progress-active-indicator-color: #1e62a1;\r\n//   }\r\n// }\r\n@mixin color-Config($textColor, $background){\r\n    color: $textColor;\r\n    background-color: $background;\r\n}\r\n\r\n.app-mat-button--primary {\r\n  @include color-Config($text-color, $primary);\r\n}\r\n.app-mat-progress-bar--primary {\r\n  @include color($accent: true);\r\n}\r\n.app-mat-progress-bar--accent {\r\n  // @include color($accent: true);\r\n  --mdc-linear-progress-active-indicator-color: #0cbbe2;\r\n}\r\n.app-mat-progress-bar--warn {\r\n  --mdc-linear-progress-active-indicator-color: #d14343;\r\n}\r\n.app-mat-progress-bar--success {\r\n  --mdc-linear-progress-active-indicator-color: #8fc93a;\r\n}\r\n.app-mat-progress-bar--info {\r\n  --mdc-linear-progress-active-indicator-color: #2d9fc5;\r\n}\r\n.app-mat-progress-bar--warning {\r\n  --mdc-linear-progress-active-indicator-color: #fb8500;\r\n}\r\n",
+                    "data": "\r\n$light-text: #fff;\r\n$primary: #1e62a1;\r\n$accent: #0cbbe2;\r\n$warn: #d14343;\r\n$success: #8fc93a;\r\n$info: #2d9fc5;\r\n$warning: #fb8500;\r\n\r\n@mixin color-Config($textColor, $background) {\r\n  color: $textColor !important;\r\n  background-color: $background !important;\r\n}\r\n//Mat BADGE CONFIGURATION EXTRA \r\n:host {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n}\r\n\r\n.demo-section + .demo-section {\r\n  margin-top: 16px;\r\n}\r\n// EXTRA COLORS\r\n.app-mat-button--primary {\r\n  @include color-Config($light-text, $primary);\r\n}\r\n.app-mat-button--accent{\r\n  @include color-Config($light-text, $accent);\r\n}\r\n.app-mat-button--warn {\r\n  @include color-Config($light-text, $warn);\r\n}\r\n.app-mat-button--success {\r\n  @include color-Config($light-text, $success);\r\n}\r\n.app-mat-button--info {\r\n  @include color-Config($light-text, $info);\r\n}\r\n.app-mat-button--warning {\r\n  @include color-Config($light-text, $warning);\r\n}\r\n.mat-badge-content {\r\n  @include color-Config($light-text, $accent )\r\n}\r\n.mat-badge-content{\r\n  .app-mat-badge--primary{\r\n    @include color-Config($light-text,$primary )\r\n  }\r\n& .app-mat-badge--accent{\r\n  @include color-Config($light-text, $warn )\r\n}\r\n}\r\n.app-mat-progress-bar--primary {\r\n  --mdc-linear-progress-active-indicator-color: #1e62a1;\r\n}\r\n.app-mat-progress-bar--accent {\r\n  --mdc-linear-progress-active-indicator-color: #0cbbe2;\r\n}\r\n.app-mat-progress-bar--warn {\r\n  --mdc-linear-progress-active-indicator-color: #d14343;\r\n}\r\n.app-mat-progress-bar--success {\r\n  --mdc-linear-progress-active-indicator-color: #8fc93a;\r\n}\r\n.app-mat-progress-bar--info {\r\n  --mdc-linear-progress-active-indicator-color: #2d9fc5;\r\n}\r\n.app-mat-progress-bar--warning {\r\n  --mdc-linear-progress-active-indicator-color: #fb8500;\r\n}\r\n\r\n.app-mat-slider--primary  {\r\n  --mdc-slider-handle-color: #1e62a1;\r\n  --mdc-slider-focus-handle-color: #1e62a1;\r\n  --mdc-slider-hover-handle-color: #1e62a1;\r\n  --mdc-slider-active-track-color: #1e62a1;\r\n  --mdc-slider-inactive-track-color: #1e62a1;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #1e62a1;\r\n  --mat-mdc-slider-ripple-color: #1e62a1;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(103, 58, 183, .05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(103, 58, 183, .2);\r\n}\r\n.mat-mdc-slider .app-mat-slider--success {\r\n  --mdc-slider-handle-color: #8fc93a;\r\n  --mdc-slider-focus-handle-color: #8fc93a;\r\n  --mdc-slider-hover-handle-color: #8fc93a;\r\n  --mdc-slider-active-track-color: #8fc93a;\r\n  --mdc-slider-inactive-track-color: #8fc93a;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;\r\n  --mat-mdc-slider-ripple-color: #8fc93a;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--info {\r\n  --mdc-slider-handle-color: #4dadce;\r\n  --mdc-slider-focus-handle-color: #4dadce;\r\n  --mdc-slider-hover-handle-color: #4dadce;\r\n  --mdc-slider-active-track-color: #4dadce;\r\n  --mdc-slider-inactive-track-color: #4dadce;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #4dadce;\r\n  --mat-mdc-slider-ripple-color: #4dadce;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--warning {\r\n  --mdc-slider-handle-color: #fb8500;\r\n  --mdc-slider-focus-handle-color: #fb8500;\r\n  --mdc-slider-hover-handle-color: #fb8500;\r\n  --mdc-slider-active-track-color: #fb8500;\r\n  --mdc-slider-inactive-track-color: #fb8500;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;\r\n  --mat-mdc-slider-ripple-color: #fb8500;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n\r\n",
                     "styleUrl": "../config.color.scss"
                 }
             ],
@@ -115,11 +185,81 @@
                     }
                 }
             },
-            "templateData": "<!-- <button mat-button (ngClass)=\"classes\" >Basic Button</button> -->"
+            "templateData": ""
+        },
+        {
+            "name": "MatChipComponent",
+            "id": "component-MatChipComponent-d428275fe91cf4f79c542573508843b9a8dd301c062c432b420c29bd55d88d5457deadfb16ea868cdeafb81e84e88d784940c2e15a3b87b1d5899d5dd01d2315",
+            "file": "src/stories/mat-chip/mat-chip.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-chip",
+            "styleUrls": [
+                "../config.color.scss"
+            ],
+            "styles": [],
+            "template": "<mat-chip-listbox aria-label=\"Chip selection\" [ngClass]=\"classes\">\n  <mat-chip-option>MatChip </mat-chip-option>\n</mat-chip-listbox>\n",
+            "templateUrl": [
+                "./mat-chip.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "\"primary\" | \"accent\" | \"warn\" | \"success\" | \"info\" | \"warning\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-chip',\r\n  templateUrl: './mat-chip.component.html',\r\n  template: `\r\n  <mat-chip-listbox aria-label=\"Chip selection\" [ngClass]=\"classes\">\r\n    <mat-chip-option>MatChip </mat-chip-option>\r\n  </mat-chip-listbox>\r\n`,\r\n  styleUrls: ['../config.color.scss']\r\n})\r\nexport class MatChipComponent {\r\nconstructor ()  {}\r\n\r\n@Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\r\n\r\npublic get classes(): string[] {\r\n  return ['app-mat-progress-bar',`app-mat-progress-bar--${this.color}`]\r\n}\r\n\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n$light-text: #fff;\r\n$primary: #1e62a1;\r\n$accent: #0cbbe2;\r\n$warn: #d14343;\r\n$success: #8fc93a;\r\n$info: #2d9fc5;\r\n$warning: #fb8500;\r\n\r\n@mixin color-Config($textColor, $background) {\r\n  color: $textColor !important;\r\n  background-color: $background !important;\r\n}\r\n//Mat BADGE CONFIGURATION EXTRA \r\n:host {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n}\r\n\r\n.demo-section + .demo-section {\r\n  margin-top: 16px;\r\n}\r\n// EXTRA COLORS\r\n.app-mat-button--primary {\r\n  @include color-Config($light-text, $primary);\r\n}\r\n.app-mat-button--accent{\r\n  @include color-Config($light-text, $accent);\r\n}\r\n.app-mat-button--warn {\r\n  @include color-Config($light-text, $warn);\r\n}\r\n.app-mat-button--success {\r\n  @include color-Config($light-text, $success);\r\n}\r\n.app-mat-button--info {\r\n  @include color-Config($light-text, $info);\r\n}\r\n.app-mat-button--warning {\r\n  @include color-Config($light-text, $warning);\r\n}\r\n.mat-badge-content {\r\n  @include color-Config($light-text, $accent )\r\n}\r\n.mat-badge-content{\r\n  .app-mat-badge--primary{\r\n    @include color-Config($light-text,$primary )\r\n  }\r\n& .app-mat-badge--accent{\r\n  @include color-Config($light-text, $warn )\r\n}\r\n}\r\n.app-mat-progress-bar--primary {\r\n  --mdc-linear-progress-active-indicator-color: #1e62a1;\r\n}\r\n.app-mat-progress-bar--accent {\r\n  --mdc-linear-progress-active-indicator-color: #0cbbe2;\r\n}\r\n.app-mat-progress-bar--warn {\r\n  --mdc-linear-progress-active-indicator-color: #d14343;\r\n}\r\n.app-mat-progress-bar--success {\r\n  --mdc-linear-progress-active-indicator-color: #8fc93a;\r\n}\r\n.app-mat-progress-bar--info {\r\n  --mdc-linear-progress-active-indicator-color: #2d9fc5;\r\n}\r\n.app-mat-progress-bar--warning {\r\n  --mdc-linear-progress-active-indicator-color: #fb8500;\r\n}\r\n\r\n.app-mat-slider--primary  {\r\n  --mdc-slider-handle-color: #1e62a1;\r\n  --mdc-slider-focus-handle-color: #1e62a1;\r\n  --mdc-slider-hover-handle-color: #1e62a1;\r\n  --mdc-slider-active-track-color: #1e62a1;\r\n  --mdc-slider-inactive-track-color: #1e62a1;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #1e62a1;\r\n  --mat-mdc-slider-ripple-color: #1e62a1;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(103, 58, 183, .05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(103, 58, 183, .2);\r\n}\r\n.mat-mdc-slider .app-mat-slider--success {\r\n  --mdc-slider-handle-color: #8fc93a;\r\n  --mdc-slider-focus-handle-color: #8fc93a;\r\n  --mdc-slider-hover-handle-color: #8fc93a;\r\n  --mdc-slider-active-track-color: #8fc93a;\r\n  --mdc-slider-inactive-track-color: #8fc93a;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;\r\n  --mat-mdc-slider-ripple-color: #8fc93a;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--info {\r\n  --mdc-slider-handle-color: #4dadce;\r\n  --mdc-slider-focus-handle-color: #4dadce;\r\n  --mdc-slider-hover-handle-color: #4dadce;\r\n  --mdc-slider-active-track-color: #4dadce;\r\n  --mdc-slider-inactive-track-color: #4dadce;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #4dadce;\r\n  --mat-mdc-slider-ripple-color: #4dadce;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--warning {\r\n  --mdc-slider-handle-color: #fb8500;\r\n  --mdc-slider-focus-handle-color: #fb8500;\r\n  --mdc-slider-hover-handle-color: #fb8500;\r\n  --mdc-slider-active-track-color: #fb8500;\r\n  --mdc-slider-inactive-track-color: #fb8500;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;\r\n  --mat-mdc-slider-ripple-color: #fb8500;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n\r\n",
+                    "styleUrl": "../config.color.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 13
+            },
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 18
+                    }
+                }
+            },
+            "templateData": "<p>mat-chip works!</p>\r\n"
         },
         {
             "name": "MatProgressBar",
-            "id": "component-MatProgressBar-d93629dcf6dbed0269ac8119a769adea81e2e5eba2d46ebfc61261781acd3bc5c2b39a02ec41c2d33adcbdc993c6562870fd260a9953dbdc2e30f0ab4bea6727",
+            "id": "component-MatProgressBar-9a31b83ba105bf6141046c84e41a40e49080e0ae6b5d2807280087755990f02e3dd6383e0b189c48abd3e96090df6566d37b1a065bbfbfb559d3e38487dddaca",
             "file": "src/stories/mat-progress-bar/mat-progress-bar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -166,11 +306,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n\n@Component({\n  selector: 'app-mat-progress-bar',\n  templateUrl: './mat-progress-bar.component.html',\n  template: `<mat-progress-bar mode=\"indeterminate\" [ngClass]=\"classes\"></mat-progress-bar>`,\n  styleUrls: ['../config.color.scss']\n})\nexport class MatProgressBar {\n  \n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  @Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\n\n  public get classes(): string[] {\n    return ['app-mat-progress-bar',`app-mat-progress-bar--${this.color}`]\n  }\n\n}\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n\r\n@Component({\r\n  selector: 'app-mat-progress-bar',\r\n  templateUrl: './mat-progress-bar.component.html',\r\n  template: `<mat-progress-bar mode=\"indeterminate\" [ngClass]=\"classes\"></mat-progress-bar>`,\r\n  styleUrls: ['../config.color.scss']\r\n})\r\nexport class MatProgressBar {\r\n  \r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  @Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\r\n\r\n  public get classes(): string[] {\r\n    return ['app-mat-progress-bar',`app-mat-progress-bar--${this.color}`]\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "$text-color: #fff;\r\n$primary: #1e62a1;\r\n$accent: #0cbbe2;\r\n$warn: #d14343;\r\n$success: #8fc93a;\r\n$info: #2d9fc5;\r\n$warning: #fb8500;\r\n\r\n@mixin color(\r\n  $primary: false,\r\n  $accent: false,\r\n  $warn: false,\r\n  $success: false,\r\n  $info: false,\r\n  $warningx: false,\r\n  $text-color: false\r\n){\r\n  color: $text-color;\r\n\r\n  @if $primary {\r\n    background-color: $primary;\r\n  } @else if $accent {\r\n    background-color: $accent;\r\n  } @else if $warn {\r\n    background-color: $warn;\r\n  } @else if $success {\r\n    background-color: $success;\r\n  } @else if $info {\r\n    background-color: $info;\r\n  } @else if $warning {\r\n    background-color: $warning;\r\n  }\r\n}\r\n\r\n// @mixin component($button: true, $progressBar: true) {\r\n//   @if $button {\r\n//     color: $text-color;\r\n//     background-color: $primary;\r\n//   } @else if $progressBar {\r\n//     --mdc-linear-progress-active-indicator-color: #1e62a1;\r\n//   }\r\n// }\r\n@mixin color-Config($textColor, $background){\r\n    color: $textColor;\r\n    background-color: $background;\r\n}\r\n\r\n.app-mat-button--primary {\r\n  @include color-Config($text-color, $primary);\r\n}\r\n.app-mat-progress-bar--primary {\r\n  @include color($accent: true);\r\n}\r\n.app-mat-progress-bar--accent {\r\n  // @include color($accent: true);\r\n  --mdc-linear-progress-active-indicator-color: #0cbbe2;\r\n}\r\n.app-mat-progress-bar--warn {\r\n  --mdc-linear-progress-active-indicator-color: #d14343;\r\n}\r\n.app-mat-progress-bar--success {\r\n  --mdc-linear-progress-active-indicator-color: #8fc93a;\r\n}\r\n.app-mat-progress-bar--info {\r\n  --mdc-linear-progress-active-indicator-color: #2d9fc5;\r\n}\r\n.app-mat-progress-bar--warning {\r\n  --mdc-linear-progress-active-indicator-color: #fb8500;\r\n}\r\n",
+                    "data": "\r\n$light-text: #fff;\r\n$primary: #1e62a1;\r\n$accent: #0cbbe2;\r\n$warn: #d14343;\r\n$success: #8fc93a;\r\n$info: #2d9fc5;\r\n$warning: #fb8500;\r\n\r\n@mixin color-Config($textColor, $background) {\r\n  color: $textColor !important;\r\n  background-color: $background !important;\r\n}\r\n//Mat BADGE CONFIGURATION EXTRA \r\n:host {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n}\r\n\r\n.demo-section + .demo-section {\r\n  margin-top: 16px;\r\n}\r\n// EXTRA COLORS\r\n.app-mat-button--primary {\r\n  @include color-Config($light-text, $primary);\r\n}\r\n.app-mat-button--accent{\r\n  @include color-Config($light-text, $accent);\r\n}\r\n.app-mat-button--warn {\r\n  @include color-Config($light-text, $warn);\r\n}\r\n.app-mat-button--success {\r\n  @include color-Config($light-text, $success);\r\n}\r\n.app-mat-button--info {\r\n  @include color-Config($light-text, $info);\r\n}\r\n.app-mat-button--warning {\r\n  @include color-Config($light-text, $warning);\r\n}\r\n.mat-badge-content {\r\n  @include color-Config($light-text, $accent )\r\n}\r\n.mat-badge-content{\r\n  .app-mat-badge--primary{\r\n    @include color-Config($light-text,$primary )\r\n  }\r\n& .app-mat-badge--accent{\r\n  @include color-Config($light-text, $warn )\r\n}\r\n}\r\n.app-mat-progress-bar--primary {\r\n  --mdc-linear-progress-active-indicator-color: #1e62a1;\r\n}\r\n.app-mat-progress-bar--accent {\r\n  --mdc-linear-progress-active-indicator-color: #0cbbe2;\r\n}\r\n.app-mat-progress-bar--warn {\r\n  --mdc-linear-progress-active-indicator-color: #d14343;\r\n}\r\n.app-mat-progress-bar--success {\r\n  --mdc-linear-progress-active-indicator-color: #8fc93a;\r\n}\r\n.app-mat-progress-bar--info {\r\n  --mdc-linear-progress-active-indicator-color: #2d9fc5;\r\n}\r\n.app-mat-progress-bar--warning {\r\n  --mdc-linear-progress-active-indicator-color: #fb8500;\r\n}\r\n\r\n.app-mat-slider--primary  {\r\n  --mdc-slider-handle-color: #1e62a1;\r\n  --mdc-slider-focus-handle-color: #1e62a1;\r\n  --mdc-slider-hover-handle-color: #1e62a1;\r\n  --mdc-slider-active-track-color: #1e62a1;\r\n  --mdc-slider-inactive-track-color: #1e62a1;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #1e62a1;\r\n  --mat-mdc-slider-ripple-color: #1e62a1;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(103, 58, 183, .05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(103, 58, 183, .2);\r\n}\r\n.mat-mdc-slider .app-mat-slider--success {\r\n  --mdc-slider-handle-color: #8fc93a;\r\n  --mdc-slider-focus-handle-color: #8fc93a;\r\n  --mdc-slider-hover-handle-color: #8fc93a;\r\n  --mdc-slider-active-track-color: #8fc93a;\r\n  --mdc-slider-inactive-track-color: #8fc93a;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;\r\n  --mat-mdc-slider-ripple-color: #8fc93a;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--info {\r\n  --mdc-slider-handle-color: #4dadce;\r\n  --mdc-slider-focus-handle-color: #4dadce;\r\n  --mdc-slider-hover-handle-color: #4dadce;\r\n  --mdc-slider-active-track-color: #4dadce;\r\n  --mdc-slider-inactive-track-color: #4dadce;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #4dadce;\r\n  --mat-mdc-slider-ripple-color: #4dadce;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--warning {\r\n  --mdc-slider-handle-color: #fb8500;\r\n  --mdc-slider-focus-handle-color: #fb8500;\r\n  --mdc-slider-hover-handle-color: #fb8500;\r\n  --mdc-slider-active-track-color: #fb8500;\r\n  --mdc-slider-inactive-track-color: #fb8500;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;\r\n  --mat-mdc-slider-ripple-color: #fb8500;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n\r\n",
                     "styleUrl": "../config.color.scss"
                 }
             ],
@@ -183,6 +323,76 @@
                         "type": "[]",
                         "returnType": "string[]",
                         "line": 17
+                    }
+                }
+            },
+            "templateData": ""
+        },
+        {
+            "name": "MatSliderComponent",
+            "id": "component-MatSliderComponent-c70663f3d3862a7d7249575dd927a1ffeb0c546e391f2779e11ab83b3f7c0a4e0c4a0b6aa06182bec6db0c2c33d3fcc7ddd5f409a37ca6775636db3d8348d433",
+            "file": "src/stories/mat-slider/mat-slider.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-slider",
+            "styleUrls": [
+                "../config.color.scss"
+            ],
+            "styles": [],
+            "template": "<mat-slider >  <input matSliderThumb [ngClass]=\"classes\">\n</mat-slider>",
+            "templateUrl": [
+                "./mat-slider.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "defaultValue": "'primary'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "\"primary\" | \"accent\" | \"warn\" | \"success\" | \"info\" | \"warning\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-slider',\r\n  templateUrl: './mat-slider.component.html',\r\n  template: `<mat-slider >\r\n  <input matSliderThumb [ngClass]=\"classes\">\r\n</mat-slider>`,\r\n  styleUrls: ['../config.color.scss']\r\n})\r\nexport class MatSliderComponent {\r\n  constructor () {}\r\n\r\n  @Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\r\n  \r\n  public get classes(): string[] {\r\n    return ['app-mat-slider',`app-mat-slider--${this.color}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n$light-text: #fff;\r\n$primary: #1e62a1;\r\n$accent: #0cbbe2;\r\n$warn: #d14343;\r\n$success: #8fc93a;\r\n$info: #2d9fc5;\r\n$warning: #fb8500;\r\n\r\n@mixin color-Config($textColor, $background) {\r\n  color: $textColor !important;\r\n  background-color: $background !important;\r\n}\r\n//Mat BADGE CONFIGURATION EXTRA \r\n:host {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n}\r\n\r\n.demo-section + .demo-section {\r\n  margin-top: 16px;\r\n}\r\n// EXTRA COLORS\r\n.app-mat-button--primary {\r\n  @include color-Config($light-text, $primary);\r\n}\r\n.app-mat-button--accent{\r\n  @include color-Config($light-text, $accent);\r\n}\r\n.app-mat-button--warn {\r\n  @include color-Config($light-text, $warn);\r\n}\r\n.app-mat-button--success {\r\n  @include color-Config($light-text, $success);\r\n}\r\n.app-mat-button--info {\r\n  @include color-Config($light-text, $info);\r\n}\r\n.app-mat-button--warning {\r\n  @include color-Config($light-text, $warning);\r\n}\r\n.mat-badge-content {\r\n  @include color-Config($light-text, $accent )\r\n}\r\n.mat-badge-content{\r\n  .app-mat-badge--primary{\r\n    @include color-Config($light-text,$primary )\r\n  }\r\n& .app-mat-badge--accent{\r\n  @include color-Config($light-text, $warn )\r\n}\r\n}\r\n.app-mat-progress-bar--primary {\r\n  --mdc-linear-progress-active-indicator-color: #1e62a1;\r\n}\r\n.app-mat-progress-bar--accent {\r\n  --mdc-linear-progress-active-indicator-color: #0cbbe2;\r\n}\r\n.app-mat-progress-bar--warn {\r\n  --mdc-linear-progress-active-indicator-color: #d14343;\r\n}\r\n.app-mat-progress-bar--success {\r\n  --mdc-linear-progress-active-indicator-color: #8fc93a;\r\n}\r\n.app-mat-progress-bar--info {\r\n  --mdc-linear-progress-active-indicator-color: #2d9fc5;\r\n}\r\n.app-mat-progress-bar--warning {\r\n  --mdc-linear-progress-active-indicator-color: #fb8500;\r\n}\r\n\r\n.app-mat-slider--primary  {\r\n  --mdc-slider-handle-color: #1e62a1;\r\n  --mdc-slider-focus-handle-color: #1e62a1;\r\n  --mdc-slider-hover-handle-color: #1e62a1;\r\n  --mdc-slider-active-track-color: #1e62a1;\r\n  --mdc-slider-inactive-track-color: #1e62a1;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #1e62a1;\r\n  --mat-mdc-slider-ripple-color: #1e62a1;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(103, 58, 183, .05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(103, 58, 183, .2);\r\n}\r\n.mat-mdc-slider .app-mat-slider--success {\r\n  --mdc-slider-handle-color: #8fc93a;\r\n  --mdc-slider-focus-handle-color: #8fc93a;\r\n  --mdc-slider-hover-handle-color: #8fc93a;\r\n  --mdc-slider-active-track-color: #8fc93a;\r\n  --mdc-slider-inactive-track-color: #8fc93a;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;\r\n  --mat-mdc-slider-ripple-color: #8fc93a;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--info {\r\n  --mdc-slider-handle-color: #4dadce;\r\n  --mdc-slider-focus-handle-color: #4dadce;\r\n  --mdc-slider-hover-handle-color: #4dadce;\r\n  --mdc-slider-active-track-color: #4dadce;\r\n  --mdc-slider-inactive-track-color: #4dadce;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #4dadce;\r\n  --mat-mdc-slider-ripple-color: #4dadce;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n.mat-mdc-slider .app-mat-slider--warning {\r\n  --mdc-slider-handle-color: #fb8500;\r\n  --mdc-slider-focus-handle-color: #fb8500;\r\n  --mdc-slider-hover-handle-color: #fb8500;\r\n  --mdc-slider-active-track-color: #fb8500;\r\n  --mdc-slider-inactive-track-color: #fb8500;\r\n  --mdc-slider-with-tick-marks-active-container-color: #fff;\r\n  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;\r\n  --mat-mdc-slider-ripple-color: #fb8500;\r\n  --mat-mdc-slider-hover-ripple-color: rgba(30, 98, 161, 0.05);\r\n  --mat-mdc-slider-focus-ripple-color: rgba(30, 98, 161, 0.05);\r\n}\r\n\r\n",
+                    "styleUrl": "../config.color.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 11
+            },
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 16
                     }
                 }
             },
@@ -279,13 +489,13 @@
         },
         {
             "name": "MaterialModule",
-            "id": "module-MaterialModule-d5ad7114f09d863f7049b877712ac3b0929d521350876966c78c8d404a7329eedde55936a7dfef8fb4a7fb34ecb60cebfef34fb854441b0870a25c239c079623",
+            "id": "module-MaterialModule-60570f1476c313ddb7d454ce8b28a7f1f5f454855ef51a559e149164a2d42a87a02c9c95218d5895321e7ec472928d9f910f1730944b0afa63e207f94c108cb2",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/material.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule, Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { MatButtonModule } from '@angular/material/button';\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\n\n\n\nconst components = [\n  CommonModule,\n  MatButtonModule,\n];\n\n@NgModule({\n  declarations: [],\n  imports: [ components],\n  exports: [components]\n})\nexport class MaterialModule { \n\n}\n",
+            "sourceCode": "import { NgModule, Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\nimport {MatBadgeModule} from '@angular/material/badge';\r\n\r\n\r\nconst components = [\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatProgressBarModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [ components],\r\n  exports: [components]\r\n})\r\nexport class MaterialModule { \r\n\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -297,11 +507,19 @@
                 },
                 {
                     "type": "imports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "MatProgressBarModule"
+                        }
+                    ]
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "MatProgressBarModule"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -316,6 +534,26 @@
     ],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "Badge",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-badge/mat-badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Button",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-chip/mat-chip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
             {
                 "name": "Button",
                 "ctype": "miscellaneous",
@@ -334,7 +572,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n]"
+                "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatProgressBarModule\r\n]"
             },
             {
                 "name": "progressBar",
@@ -345,6 +583,36 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Slider",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-slider/slider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-badge/mat-badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatBadgeModule>",
+                "defaultValue": "(args: MatBadgeModule) =>({\r\n    props:args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-chip/mat-chip.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatChipsModule>",
+                "defaultValue": "(args: MatChipsModule) =>({\r\n    props:args\r\n})"
             },
             {
                 "name": "Template",
@@ -365,12 +633,66 @@
                 "deprecationMessage": "",
                 "type": "Story<MatProgressBar>",
                 "defaultValue": "(args: MatProgressBar) =>({\r\n    props:args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-slider/slider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatSliderModule>",
+                "defaultValue": "(args: MatSliderModule) =>({\r\n    props:args\r\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/stories/mat-badge/mat-badge.stories.ts": [
+                {
+                    "name": "Badge",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-badge/mat-badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-badge/mat-badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatBadgeModule>",
+                    "defaultValue": "(args: MatBadgeModule) =>({\r\n    props:args\r\n})"
+                }
+            ],
+            "src/stories/mat-chip/mat-chip.stories.ts": [
+                {
+                    "name": "Button",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-chip/mat-chip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-chip/mat-chip.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatChipsModule>",
+                    "defaultValue": "(args: MatChipsModule) =>({\r\n    props:args\r\n})"
+                }
+            ],
             "src/stories/mat-button/mat-button.stories.ts": [
                 {
                     "name": "Button",
@@ -402,7 +724,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\n  CommonModule,\n  MatButtonModule,\n]"
+                    "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatProgressBarModule\r\n]"
                 }
             ],
             "src/stories/mat-progress-bar/progress-bar.stories.ts": [
@@ -425,6 +747,28 @@
                     "deprecationMessage": "",
                     "type": "Story<MatProgressBar>",
                     "defaultValue": "(args: MatProgressBar) =>({\r\n    props:args\r\n})"
+                }
+            ],
+            "src/stories/mat-slider/slider.stories.ts": [
+                {
+                    "name": "Slider",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-slider/slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-slider/slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatSliderModule>",
+                    "defaultValue": "(args: MatSliderModule) =>({\r\n    props:args\r\n})"
                 }
             ]
         },
@@ -470,6 +814,35 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/mat-badge/mat-badge.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatBadgeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-badge/mat-badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Badge",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-badge/mat-badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/mat-button/mat-button.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -499,6 +872,35 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/mat-chip/mat-chip.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatChipComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-chip/mat-chip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Button",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-chip/mat-chip.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/mat-progress-bar/mat-progress-bar.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -519,6 +921,35 @@
             },
             {
                 "filePath": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slider/mat-slider.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSliderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slider/slider.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Slider",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slider/slider.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
