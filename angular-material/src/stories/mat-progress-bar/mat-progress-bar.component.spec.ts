@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MatProgressBar } from './mat-progress-bar.component';
+import { MatProgressBarComponent } from './mat-progress-bar.component';
 
-describe('MatProgressBar', () => {
-  let component: MatProgressBar;
-  let fixture: ComponentFixture<MatProgressBar>;
+describe('MatProgressBarComponent', () => {
+  let component: MatProgressBarComponent;
+  let fixture: ComponentFixture<MatProgressBarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MatProgressBar ]
+      declarations: [ MatProgressBarComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MatProgressBar);
+    fixture = TestBed.createComponent(MatProgressBarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

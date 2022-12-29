@@ -3,30 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
+import { MatButtonComponent } from '../stories/mat-button/mat-button.component';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-
-
+import { MatProgressBarComponent } from 'src/stories/mat-progress-bar/mat-progress-bar.component';
 @NgModule({
-
-    declarations: [
-        AppComponent
-    ],
-    providers: [],
-    bootstrap: [AppComponent],
     imports: [
         BrowserModule,
         AppRoutingModule,
         BrowserAnimationsModule,
         MaterialModule,
-        MatProgressBarModule,
     ],
-       exports: [
-        MatButtonModule,
-    
+    exports: [
+        
     ],
+    declarations: [
+        AppComponent,
+        MatButtonComponent,
+        MatProgressBarComponent
+    ],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule { }

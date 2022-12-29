@@ -49,7 +49,7 @@
         },
         {
             "name": "MatButtonComponent",
-            "id": "component-MatButtonComponent-7b381381d30462ac8a9a1274c80149a25ba288dfad2faddea276f4feae0ce0b9efae032d936baa9806c2fc5618f6e013d2210a6e878b2592bb34a5c0aebf720d",
+            "id": "component-MatButtonComponent-906e9bfe121cbe6b70faa82dd96ec104facd265a501f5c66d0ab6b148809885a3bb09476283b35118cb34d46bc319eb7004bba6367ebdc61984ddc7d62d4827f",
             "file": "src/stories/mat-button/mat-button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -61,7 +61,6 @@
                 "../config.color.scss"
             ],
             "styles": [],
-            "template": "<button mat-raised-button [ngClass]=\"classes\"> Button </button>",
             "templateUrl": [
                 "./mat-button.component.html"
             ],
@@ -72,7 +71,7 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 12,
                     "type": "\"primary\" | \"accent\" | \"warn\" | \"success\" | \"info\" | \"warning\"",
                     "decorators": []
                 }
@@ -87,7 +86,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input} from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-button',\r\n  templateUrl: './mat-button.component.html',\r\n  template: ` <button mat-raised-button [ngClass]=\"classes\"> Button </button> `,\r\n  styleUrls: ['../config.color.scss']\r\n})\r\n\r\nexport class MatButtonComponent {\r\nconstructor () {}\r\n\r\n@Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\r\n\r\npublic get classes(): string[] {\r\n  return ['app-mat-button',`app-mat-button--${this.color}`]\r\n}\r\n\r\n} \r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-button',\r\n  templateUrl: './mat-button.component.html',\r\n  styleUrls: ['../config.color.scss']\r\n})\r\n\r\nexport class MatButtonComponent {\r\nconstructor () {}\r\n\r\n@Input () color: 'primary' | 'accent' | 'warn' | 'success' | 'info' | 'warning' = 'primary';\r\n\r\npublic get classes(): string[] {\r\n  return ['app-mat-button',`app-mat-button--${this.color}`]\r\n}\r\n\r\n\r\n} \r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -102,7 +101,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 10
+                "line": 9
             },
             "accessors": {
                 "classes": {
@@ -111,15 +110,15 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 15
+                        "line": 14
                     }
                 }
             },
-            "templateData": ""
+            "templateData": "<button mat-raised-button [ngClass]=\"classes\"> Button </button>"
         },
         {
-            "name": "MatProgressBar",
-            "id": "component-MatProgressBar-47c45515810609d75fce43d2df110c2b4dcb12ac9f28f0c962a58ce67b4f8a24b5fa4d0c6fe71f1797beecd92d6f675e65186983597de2e81345847aa05b33db",
+            "name": "MatProgressBarComponent",
+            "id": "component-MatProgressBarComponent-5522a64892a7bc9cb12868cce96741a6799651b7c1d8ffd26c3e85c1476b27d9f7e9e54194ecf356859e0a370382e0b333e96a3d16e0d5e36ea181772393ee0f",
             "file": "src/stories/mat-progress-bar/mat-progress-bar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -131,7 +130,6 @@
                 "../config.color.scss"
             ],
             "styles": [],
-            "template": "<mat-progress-bar mode=\"indeterminate\" [ngClass]=\"classes\"></mat-progress-bar>",
             "templateUrl": [
                 "./mat-progress-bar.component.html"
             ],
@@ -142,21 +140,12 @@
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 11,
                     "type": "\"primary\" | \"accent\" | \"warn\" | \"success\" | \"info\" | \"warning\"",
                     "decorators": []
                 }
             ],
-            "outputsClass": [
-                {
-                    "name": "onClick",
-                    "defaultValue": "new EventEmitter<Event>()",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 15,
-                    "type": "EventEmitter"
-                }
-            ],
+            "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
             "deprecated": false,
@@ -166,7 +155,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-progress-bar',\r\n  templateUrl: './mat-progress-bar.component.html',\r\n  template: `<mat-progress-bar mode=\"indeterminate\" [ngClass]=\"classes\"></mat-progress-bar>`,\r\n  styleUrls: ['../config.color.scss']\r\n})\r\n\r\nexport class MatProgressBar {\r\n  \r\n  @Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\r\n\r\n  @Output()\r\n  onClick = new EventEmitter<Event>();\r\n\r\n  public get classes(): string[] {\r\n    return ['app-mat-progress-bar',`app-mat-progress-bar--${this.color}`]\r\n  }\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-mat-progress-bar',\r\n  templateUrl: './mat-progress-bar.component.html',\r\n  styleUrls: ['../config.color.scss']\r\n})\r\n\r\nexport class MatProgressBarComponent {\r\n  \r\n  @Input () color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';\r\n  \r\n  public get classes(): string[] {\r\n    return ['app-mat-progress-bar',`app-mat-progress-bar--${this.color}`]\r\n  }\r\n\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -182,23 +171,23 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 17
+                        "line": 13
                     }
                 }
             },
-            "templateData": ""
+            "templateData": "<mat-progress-bar mode=\"indeterminate\" [ngClass]=\"classes\"></mat-progress-bar>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-5f7ee4558e43d27c02324a00acaf57955b1a94756d6bb602bfe81ad3571ca6847bc4d6db552ba44f2628344e8ba0bfcc47e7aaeb5e229f68f11a372e53a59cf8",
+            "id": "module-AppModule-46326aa9c0005b3489d17ef815b271577a8c0837837d305c6cb214acecf49b90ae549f43f443db253db5637f35977208ba9b165b87d6f0caba3b160743797625",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { MaterialModule } from './material.module';\r\n\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\n\r\n\r\n@NgModule({\r\n\r\n    declarations: [\r\n        AppComponent\r\n    ],\r\n    providers: [],\r\n    bootstrap: [AppComponent],\r\n    imports: [\r\n        BrowserModule,\r\n        AppRoutingModule,\r\n        BrowserAnimationsModule,\r\n        MaterialModule,\r\n        MatProgressBarModule,\r\n    ],\r\n       exports: [\r\n        MatButtonModule,\r\n    \r\n    ],\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\n\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { MaterialModule } from './material.module';\r\nimport { MatButtonComponent } from '../stories/mat-button/mat-button.component';\r\n\r\nimport { MatProgressBarComponent } from 'src/stories/mat-progress-bar/mat-progress-bar.component';\r\n@NgModule({\r\n    imports: [\r\n        BrowserModule,\r\n        AppRoutingModule,\r\n        BrowserAnimationsModule,\r\n        MaterialModule,\r\n    ],\r\n    exports: [\r\n        \r\n    ],\r\n    declarations: [\r\n        AppComponent,\r\n        MatButtonComponent,\r\n        MatProgressBarComponent\r\n    ],\r\n    providers: [],\r\n    bootstrap: [AppComponent],\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -209,6 +198,12 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "MatButtonComponent"
+                        },
+                        {
+                            "name": "MatProgressBarComponent"
                         }
                     ]
                 },
@@ -279,13 +274,13 @@
         },
         {
             "name": "MaterialModule",
-            "id": "module-MaterialModule-60570f1476c313ddb7d454ce8b28a7f1f5f454855ef51a559e149164a2d42a87a02c9c95218d5895321e7ec472928d9f910f1730944b0afa63e207f94c108cb2",
+            "id": "module-MaterialModule-982a37960916cc73626674e602d15c740e8df04584bde61b0a3ec2abfd792bed86ecf616a6e790f21efcd8956b48709e1ac2de3fbca2c4781e5c8eb6c7aa6b1d",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/material.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule, Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\nimport {MatBadgeModule} from '@angular/material/badge';\r\n\r\n\r\nconst components = [\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatProgressBarModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [ components],\r\n  exports: [components]\r\n})\r\nexport class MaterialModule { \r\n\r\n}\r\n",
+            "sourceCode": "import { NgModule, Component } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatProgressBarModule } from '@angular/material/progress-bar';\r\nimport { MatBadgeModule } from '@angular/material/badge';\r\n\r\nconst components = [\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatProgressBarModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [components],\r\n  exports: [components]\r\n})\r\nexport class MaterialModule { \r\n\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -297,19 +292,11 @@
                 },
                 {
                     "type": "imports",
-                    "elements": [
-                        {
-                            "name": "MatProgressBarModule"
-                        }
-                    ]
+                    "elements": []
                 },
                 {
                     "type": "exports",
-                    "elements": [
-                        {
-                            "name": "MatProgressBarModule"
-                        }
-                    ]
+                    "elements": []
                 },
                 {
                     "type": "bootstrap",
@@ -342,7 +329,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "[]",
-                "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatProgressBarModule\r\n]"
+                "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatProgressBarModule\r\n]"
             },
             {
                 "name": "progressBar",
@@ -410,7 +397,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "[]",
-                    "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatBadgeModule,\r\n  MatProgressBarModule\r\n]"
+                    "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatProgressBarModule\r\n]"
                 }
             ],
             "src/stories/mat-progress-bar/progress-bar.stories.ts": [
@@ -510,9 +497,9 @@
                 "filePath": "src/stories/mat-progress-bar/mat-progress-bar.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "MatProgressBar",
+                "name": "MatProgressBarComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
