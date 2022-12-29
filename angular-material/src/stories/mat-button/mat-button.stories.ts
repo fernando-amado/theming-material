@@ -16,7 +16,8 @@ export default {
         color: {
           control: { type: 'radio' }, 
           options: ['primary', 'accent', 'warn','success', 'info', 'warning'],
-          description: 'MatButton componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : '
+          description: 'MatButton componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : ',
+          defaultValue: 'primary',
 
         },  
       },

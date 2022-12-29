@@ -10,7 +10,18 @@ $warning: #fb8500;
   color: $textColor !important;
   background-color: $background !important;
 }
+// MAT-BAGDE CONFIGURACIÓN EXTRA
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
+
+// CONFIGURACIÓN COMPONENTES
 .app-mat-button--primary {
   @include color-Config($light-text, $primary);
 }
@@ -29,7 +40,10 @@ $warning: #fb8500;
 .app-mat-button--warning {
   @include color-Config($light-text, $warning);
 }
-
+.app-mat-chip--primary {
+  --mdc-chip-elevated-container-color: red !important;
+  --mdc-chip-elevated-disabled-container-color: red !important;
+}
 .app-mat-progress-bar--primary {
   --mdc-linear-progress-active-indicator-color: #1e62a1;
 }
@@ -49,3 +63,40 @@ $warning: #fb8500;
   --mdc-linear-progress-active-indicator-color: #fb8500;
 }
 
+.app-mat-toolbar--primary {
+  @include color-Config($light-text, $primary);
+}
+
+.app-mat-toolbar--accent {
+  @include color-Config($light-text, $accent);
+}
+
+.app-mat-toolbar--warn {
+  @include color-Config($light-text, $warn);
+}
+
+.app-mat-toolbar--success {
+  @include color-Config($light-text, $success);
+}
+
+.app-mat-toolbar--info {
+  @include color-Config($light-text, $info);
+}
+.app-mat-toolbar--warning {
+  @include color-Config($light-text, $warning);
+}
+.app-mat-spinner--accent {
+  --mdc-circular-progress-active-indicator-color: #0cbbe2;
+}
+.app-mat-spinner--warn {
+  --mdc-circular-progress-active-indicator-color: #d14343;
+}
+.app-mat-spinner--success {
+  --mdc-circular-progress-active-indicator-color: #8fc93a;
+}
+.app-mat-spinner--info {
+  --mdc-circular-progress-active-indicator-color: #2d9fc5;
+}
+.app-mat-spinner--warning {
+  --mdc-circular-progress-active-indicator-color: #fb8500;
+}
