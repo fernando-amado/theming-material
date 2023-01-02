@@ -5,17 +5,17 @@ import { Component } from '../interfaces/Component';
 })
 export class SizeDirective implements Component {
   constructor(private el: ElementRef) {}
-  button: string = 'button';
-  matChip: string = 'mat-chip';
-  matChipOption: string = 'mat-chip-option';
-  matFormField: string = 'mat-form-field';
-  matCheckBox: string = 'mat-checkbox';
-  matSlider: string = 'mat-slider';
-  matRadioButton: string = 'mat-radio-button';
-  matSpinner: string = 'mat-spinner';
-  table: string = 'table';
-  matTable: string = 'mat-table';
-  matIcon: string = 'mat-icon';
+  button = 'button';
+  matChip = 'mat-chip';
+  matChipOption = 'mat-chip-option';
+  matFormField = 'mat-form-field';
+  matCheckBox = 'mat-checkbox';
+  matSlider = 'mat-slider';
+  matRadioButton = 'mat-radio-button';
+  matSpinner = 'mat-spinner';
+  table = 'table';
+  matTable = 'mat-table';
+  matIcon = 'mat-icon';
 
   @Input() size!: string;
   ngOnChanges() {
