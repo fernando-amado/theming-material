@@ -15,8 +15,17 @@ mat-chip-option.small {
   font-size: 13px;
   padding-inline: 8px;
 }
-mat-form-field.smal {
+mat-form-field.small,
+.form-field--small {
   height: 70px;
+}
+mat-form-field.mat-mdc-form-field-infix,
+.form-field--small {
+  font-size: 13.5px !important;
+}
+mat-label,
+.form-field--small {
+  font-size: 15px !important;
 }
 .small {
   //Form-field

@@ -14,7 +14,7 @@ export default {
     size: {
       options: ['small', 'medium'],
       control: { type: 'radio' },
-    },
+    },  
   },
 } as Meta;
 

@@ -2,8 +2,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button',
-  templateUrl: './button.component.html',
-  template: `<button mat-button [ngClass]="classes">{{ label }}</button>`,
+  template: `<button mat-button [ngClass]="sizes">{{ label }}</button>`,
   styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
@@ -13,7 +12,7 @@ export class ButtonComponent {
 
   @Input() tipo: 'raised' = 'raised';
 
-  public get classes(): string[] {
+  public get sizes(): string[] {
     return [
       'app-button',
       `app-button--${this.size}` || 'app-button',

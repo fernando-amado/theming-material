@@ -2,7 +2,10 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'Form-field',
-  templateUrl: './form-field.component.html',
+  template: `<mat-form-field [ngClass]="classes" appearance="fill">
+  <mat-label>{{label}}</mat-label>
+  <input matInput placeholder="{{label}}" size="small">
+</mat-form-field>`,
   styleUrls: ['../../../styles/main.scss'],
 })
 export class FormFieldComponent {
@@ -11,6 +14,6 @@ export class FormFieldComponent {
   @Input() size: string = 'small' || 'medium';
 
   public get classes(): string[] {
-    return ['Form-field', `app-form-field--${this.size}`];
+    return ['Form-field', `form-field--${this.size}`];
   }
 }
