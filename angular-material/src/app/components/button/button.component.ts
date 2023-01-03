@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-button',
   template: `<button mat-button [ngClass]="sizes">{{ label }}</button>`,
-  styleUrls: ['./button.component.scss'],
+  styleUrls: ['../../../styles/main.scss'],
 })
 export class ButtonComponent {
   @Input() label = 'Button';

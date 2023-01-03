@@ -3,12 +3,12 @@
     "interfaces": [
         {
             "name": "Component",
-            "id": "interface-Component-38d1f7ea191176c7331fd42df78a5717261948bc060a17ccd7b0df5b83c6a2abd20304d243d77a07afdd52076de1c907ea7ec2712ea0a93abe463b4c167ca320",
+            "id": "interface-Component-54921605924dc63f575f787dac25aba33d723f44c1feb3a670816cd1c065df7550531ccdabbea3077286092d8f1afe0957e806c53e0853f6a2bf4e9412be5a7f",
             "file": "src/app/interfaces/Component.ts",
             "deprecated": false,
             "deprecationMessage": "",
             "type": "interface",
-            "sourceCode": "export interface Component {\n  button: string;\n  matChip: string;\n  matChipOption: string;\n  matFormField: string;\n  matCheckBox: string;\n  matSlider: string;\n  matRadioButton: string;\n  matSpinner: string;\n  table: string;\n  matTable: string;\n  matIcon: string;\n}\n",
+            "sourceCode": "export interface Component {\r\n  button: string;\r\n  matChip: string;\r\n  matChipOption: string;\r\n  matFormField: string;\r\n  matCheckBox: string;\r\n  matSlider: string;\r\n  matRadioButton: string;\r\n  matSpinner: string;\r\n  table: string;\r\n  matTable: string;\r\n  matIcon: string;\r\n}\r\n",
             "properties": [
                 {
                     "name": "button",
@@ -343,7 +343,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-f4d03c6987dfdcc1cfdf7707d21b0f655a1912fbdf8bab37214c74fef2c004a56e7adc0245c10fc95dbd82b70f5ea28b91a022c4bbab52480556198168676f9a",
+            "id": "component-ButtonComponent-09ef2ddd01f8b4194845d8f28cdfa30f542e4121be246a70e33e0fd8afb905f37a567d6a12d167a0ce59292e5fb56996c3af381564c41645837c8cd26613de92",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -355,10 +355,8 @@
                 "./button.component.scss"
             ],
             "styles": [],
-            "template": "<button mat-button [ngClass]=\"classes\">{{ label }}</button>",
-            "templateUrl": [
-                "./button.component.html"
-            ],
+            "template": "<button mat-button [ngClass]=\"sizes\">{{ label }}</button>",
+            "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
@@ -366,7 +364,7 @@
                     "defaultValue": "'Button'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 9,
                     "type": "string",
                     "decorators": []
                 },
@@ -375,7 +373,7 @@
                     "defaultValue": "'medium'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 11,
                     "type": "\"small\" | \"medium\" | \"large\"",
                     "decorators": []
                 },
@@ -384,7 +382,7 @@
                     "defaultValue": "'raised'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 14,
+                    "line": 13,
                     "type": "",
                     "decorators": []
                 }
@@ -399,7 +397,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  template: `<button mat-button [ngClass]=\"classes\">{{ label }}</button>`,\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label = 'Button';\r\n\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  @Input() tipo: 'raised' = 'raised';\r\n\r\n  public get classes(): string[] {\r\n    return [\r\n      'app-button',\r\n      `app-button--${this.size}` || 'app-button',\r\n      `app-button--${this.tipo}`,\r\n    ];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  template: `<button mat-button [ngClass]=\"sizes\">{{ label }}</button>`,\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label = 'Button';\r\n\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  @Input() tipo: 'raised' = 'raised';\r\n\r\n  public get sizes(): string[] {\r\n    return [\r\n      'app-button',\r\n      `app-button--${this.size}` || 'app-button',\r\n      `app-button--${this.tipo}`,\r\n    ];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -409,21 +407,20 @@
             ],
             "stylesData": "",
             "accessors": {
-                "classes": {
-                    "name": "classes",
+                "sizes": {
+                    "name": "sizes",
                     "getSignature": {
-                        "name": "classes",
+                        "name": "sizes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 16
+                        "line": 15
                     }
                 }
-            },
-            "templateData": ""
+            }
         },
         {
             "name": "FormFieldComponent",
-            "id": "component-FormFieldComponent-fe18e7438c3cb791fedd1140967dc93b9fa94dde0fac996915388063c5df07046a769660ce91826149123d047fe2d15b036fb9cf672de38beacb52891a465f27",
+            "id": "component-FormFieldComponent-e039e9b9795f610960ea9bf0538d7251f70e28a6e6dd67198801135b16fdcec93e410f7b0881e5b705fb8faa85db50df4cabb409fe19b355e27f0f95668fcfbc",
             "file": "src/app/components/form-field/form-field.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -435,9 +432,8 @@
                 "../../../styles/main.scss"
             ],
             "styles": [],
-            "templateUrl": [
-                "./form-field.component.html"
-            ],
+            "template": "<mat-form-field [ngClass]=\"classes\" appearance=\"fill\">  <mat-label>{{label}}</mat-label>\n  <input matInput placeholder=\"{{label}}\" size=\"small\">\n</mat-form-field>",
+            "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
@@ -445,7 +441,7 @@
                     "defaultValue": "'Form-field'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 },
@@ -454,7 +450,7 @@
                     "defaultValue": "'small' || 'medium'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 14,
                     "type": "string",
                     "decorators": []
                 }
@@ -469,7 +465,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Form-field',\r\n  templateUrl: './form-field.component.html',\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class FormFieldComponent {\r\n  @Input() label: string = 'Form-field';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get classes(): string[] {\r\n    return ['Form-field', `app-form-field--${this.size}`];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Form-field',\r\n  template: `<mat-form-field [ngClass]=\"classes\" appearance=\"fill\">\r\n  <mat-label>{{label}}</mat-label>\r\n  <input matInput placeholder=\"{{label}}\" size=\"small\">\r\n</mat-form-field>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class FormFieldComponent {\r\n  @Input() label: string = 'Form-field';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get classes(): string[] {\r\n    return ['Form-field', `form-field--${this.size}`];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -485,11 +481,10 @@
                         "name": "classes",
                         "type": "[]",
                         "returnType": "string[]",
-                        "line": 13
+                        "line": 16
                     }
                 }
-            },
-            "templateData": "<mat-form-field [ngClass]=\"classes\" appearance=\"fill\">\r\n  <mat-label>{{label}}</mat-label>\r\n  <input matInput placeholder=\"{{label}}\" size=\"small\">\r\n</mat-form-field>\r\n"
+            }
         },
         {
             "name": "MatChipComponent",
@@ -631,13 +626,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-8dd372a6f3771fef97a682a1a2c60f07c76d17c2156023411cc6cc25a6fceef387331a251fe20e957fd92c6b81fb587aac5c43fda7ae5d1a24aca9a143d2433a",
+            "id": "module-AppModule-fe77296d245a4f4a32f4bd0922540f57c558cac70ea7fcf6b151c3349d273a52afe27b619b2974a88ec5d56c7faf4a48c295e14d1c2653e4a328f80c1d9784ee",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\nimport { SizeDirective } from './Directivas/size.directive';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ButtonComponent } from './components/button/button.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent, SizeDirective, ButtonComponent],\r\n  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\nimport { SizeDirective } from './Directivas/size.directive';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ButtonComponent } from './components/button/button.component';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { FormFieldComponent } from './components/form-field/form-field.component';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatChipComponent } from './components/mat-chip/mat-chip.component';\r\nimport { MatChipOptionComponent } from './components/mat-chip-option/mat-chip-option.component';\r\n@NgModule({\r\n  declarations: [\r\n    MatChipOptionComponent,\r\n    MatChipComponent,\r\n    AppComponent,\r\n    FormFieldComponent,\r\n    SizeDirective,\r\n    ButtonComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MatInputModule,\r\n    MatFormFieldModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -651,6 +646,15 @@
                         },
                         {
                             "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "FormFieldComponent"
+                        },
+                        {
+                            "name": "MatChipComponent"
+                        },
+                        {
+                            "name": "MatChipOptionComponent"
                         },
                         {
                             "name": "SizeDirective"
@@ -726,17 +730,7 @@
                 "name": "size",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "size",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
+                "file": "src/app/components/button/button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -756,7 +750,17 @@
                 "name": "size",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/button/button.component.stories.ts",
+                "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "size",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -766,21 +770,11 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
+                "file": "src/app/components/button/button.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<MatChipOptionComponent>",
-                "defaultValue": "(args: MatChipOptionComponent) => ({\r\n  props: args,\r\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story<MatChipComponent>",
-                "defaultValue": "(args: MatChipComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
             },
             {
                 "name": "Template",
@@ -796,23 +790,33 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/components/button/button.component.stories.ts",
+                "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
+                "type": "Story<MatChipComponent>",
+                "defaultValue": "(args: MatChipComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatChipOptionComponent>",
+                "defaultValue": "(args: MatChipOptionComponent) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
-            "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts": [
+            "src/app/components/button/button.component.stories.ts": [
                 {
                     "name": "size",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
+                    "file": "src/app/components/button/button.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -822,33 +826,11 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
+                    "file": "src/app/components/button/button.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<MatChipOptionComponent>",
-                    "defaultValue": "(args: MatChipOptionComponent) => ({\r\n  props: args,\r\n})"
-                }
-            ],
-            "src/app/components/mat-chip/mat-chip.component.stories.ts": [
-                {
-                    "name": "size",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story<MatChipComponent>",
-                    "defaultValue": "(args: MatChipComponent) => ({\r\n  props: args,\r\n})"
+                    "type": "Story<ButtonComponent>",
+                    "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
             "src/app/components/form-field/form-field.component.stories.ts": [
@@ -873,12 +855,12 @@
                     "defaultValue": "(args: MatFormFieldModule) => ({\r\n  props: args,\r\n})"
                 }
             ],
-            "src/app/components/button/button.component.stories.ts": [
+            "src/app/components/mat-chip/mat-chip.component.stories.ts": [
                 {
                     "name": "size",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/components/button/button.component.stories.ts",
+                    "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -888,11 +870,33 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/components/button/button.component.stories.ts",
+                    "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story<ButtonComponent>",
-                    "defaultValue": "(args: ButtonComponent) => ({\r\n  props: args,\r\n})"
+                    "type": "Story<MatChipComponent>",
+                    "defaultValue": "(args: MatChipComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts": [
+                {
+                    "name": "size",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatChipOptionComponent>",
+                    "defaultValue": "(args: MatChipOptionComponent) => ({\r\n  props: args,\r\n})"
                 }
             ]
         },

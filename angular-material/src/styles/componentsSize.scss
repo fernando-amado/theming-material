@@ -8,29 +8,19 @@ mat-icon.small {
 mat-chip.small {
   height: 24px !important;
   font-size: 13px;
-  padding-inline: 8px;
 }
 mat-chip-option.small {
   height: 24px !important;
   font-size: 13px;
-  padding-inline: 8px;
 }
-mat-form-field.small,
-.form-field--small {
+mat-form-field.small {
   height: 70px;
-}
-mat-form-field.mat-mdc-form-field-infix,
-.form-field--small {
-  font-size: 13.5px !important;
-}
-mat-label,
-.form-field--small {
-  font-size: 15px !important;
 }
 .small {
   //Form-field
   .mat-mdc-form-field-infix {
-    font-size: 13px !important;
+    font-size: 13.5px !important;
+    padding: 20px !important;
   }
   .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c83-0.mdc-text-field--filled {
     height: 48.5px;
