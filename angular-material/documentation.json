@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-0023012fe875717a39fd6a81eb76df92d366cebabeacad73a7bb4c6c567da6220dc1a721c6a135eb8a8e0929cfad2c4082a160db6ebe8747bb977b77ab1ab8f7",
+            "id": "component-AppComponent-5cdec6dc2fc3039a5efda3bb87dec908a84c48974feee8dc20e698da36638e15b232a8bd017f6f330b0b8ca1872e34f6bb04dfbc81d7476ded8d5fdff516b455",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -36,7 +36,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -45,19 +45,619 @@
                 }
             ],
             "stylesData": "",
-            "templateData": ""
+            "templateData": "\r\n"
+        },
+        {
+            "name": "MatBagdeComponent",
+            "id": "component-MatBagdeComponent-0ecab72dbb4606b4f0c45f38db286eb61afdb4975362ab28d44720c6f4a81bcdbe5b66591284426259444bfa980d1ca8b977539ad424ac4460c7efdf55d811e8",
+            "file": "src/stories/mat-bagde/mat-bagde.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-bagde",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-bagde.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n@Component({\r\n  selector: 'app-mat-bagde',\r\n  templateUrl: './mat-bagde.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\nexport class MatBagdeComponent {\r\n@Input () color?: colors;\r\n\r\npublic get colorOption(): string[] {\r\n  return ['app-mat-bagde',`app-mat-bagde--${this.color}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 11
+                    }
+                }
+            },
+            "templateData": "<div matBadge=\"4\" matBadgeOverlap=\"false\" class=\"demo-section\" [ngClass]=\"colorOption\">Badge component </div>"
+        },
+        {
+            "name": "MatButtonComponent",
+            "id": "component-MatButtonComponent-c87b4006fd84633ffd3be166b9aba121f36c8e83bf1eb7c8e1af8d9e33dfc5c05e5a8e52be46ebfb12db5f86f073651aff066f3c2fd5da24eadb81db5a2e09a0",
+            "file": "src/stories/mat-button/mat-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-button",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n@Component({\r\n  selector: 'app-mat-button',\r\n  templateUrl: './mat-button.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\n\r\nexport class MatButtonComponent {\r\n  @Input () color?: colors;\r\n\r\n  public get colorOption(): string[] {\r\n   return ['app-mat-button',`app-mat-button--${this.color}`]\r\n  }\r\n} ",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<button mat-raised-button [ngClass]=\"colorOption\"> {{color}} </button>\r\n\r\n"
+        },
+        {
+            "name": "MatChipsComponent",
+            "id": "component-MatChipsComponent-29ac92c5d825eb84afd1e1a495860a93583e010bb8727bc1edb7855590bceab8581e1c40ce06b81333f3592ca7b36c049624978a4d654a3166d524849c4218ff",
+            "file": "src/stories/mat-chips/mat-chips.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-chips",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-chips.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n\r\n@Component({\r\n  selector: 'app-mat-chips',\r\n  templateUrl: './mat-chips.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\nexport class MatChipsComponent {\r\n  @Input () color?: colors;\r\n  \r\n  public get colorOption(): string[] {\r\n    return ['app-mat-chips',`app-mat-chips--${this.color}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<mat-chip-option [ngClass]=\"colorOption\" >{{color}} </mat-chip-option>\r\n"
+        },
+        {
+            "name": "MatProgressBarComponent",
+            "id": "component-MatProgressBarComponent-7e90bedddddebab8596bd2f85a01f854d8a94ce512a94a031d937dd942c1571eeb8f11d22637e90f2ce6f8b274a37c5cadf08ee68cb03a832d26442f2ac2f3d0",
+            "file": "src/stories/mat-progress-bar/mat-progress-bar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-progress-bar",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-progress-bar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n@Component({\r\n  selector: 'app-mat-progress-bar',\r\n  templateUrl: './mat-progress-bar.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\n\r\nexport class MatProgressBarComponent {\r\n  @Input () color?: colors;\r\n  \r\n  public get colorOption(): string[] {\r\n    return ['app-mat-progress-bar',`app-mat-progress-bar--${this.color}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<mat-progress-bar mode=\"indeterminate\" [ngClass]=\"colorOption\"></mat-progress-bar>"
+        },
+        {
+            "name": "MatSliderComponent",
+            "id": "component-MatSliderComponent-6ec0d6ed8b69aaa170abf6b06130544451d99d0867a454a9883c5a8641bc93a779079a523a47525c07768ed2cc02d1131304aac50a34471c5444346b3b042d92",
+            "file": "src/stories/mat-slider/mat-slider.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-slider",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-slider.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n\r\n@Component({\r\n  selector: 'app-mat-slider',\r\n  templateUrl: './mat-slider.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\nexport class MatSliderComponent {\r\n  @Input () color?: colors;\r\n\r\n  public get colorOption(): string[] {\r\n    return ['app-mat-slider',`app-mat-slider--${this.color}`]\r\n  }\r\n};\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<mat-slider [ngClass]=\"colorOption\">\r\n    <input matSliderThumb>\r\n  </mat-slider>\r\n"
+        },
+        {
+            "name": "MatSlidetoggleComponent",
+            "id": "component-MatSlidetoggleComponent-122961ba90e0cfa22e34d2b95238713c1ca13f79be0792262793cf26957c3d782185e97d29a6462f3413b320215bd4fdad220d8ca504b5dc0669778c4c04bddc",
+            "file": "src/stories/mat-slidetoggle/mat-slidetoggle.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-slidetoggle",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-slidetoggle.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n\r\n@Component({\r\n  selector: 'app-mat-slidetoggle',\r\n  templateUrl: './mat-slidetoggle.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\nexport class MatSlidetoggleComponent {\r\n  @Input () color?: colors;\r\n  \r\n  public get colorOption(): string[] {\r\n    return ['app-mat-slidetoggle',`app-mat-slidetoggle--${this.color}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<mat-slide-toggle [ngClass]=\"colorOption\">Slide toggle </mat-slide-toggle>"
+        },
+        {
+            "name": "MatSnackbarComponent",
+            "id": "component-MatSnackbarComponent-fc2ea8a26b950f6c9074b2399ff41e579b17e805c93dd52dcaafe57012c252eb396b66671ea5b91c807dc4910d7389bcd1951a3f5fb49186584a705561fdbb77",
+            "file": "src/stories/mat-snackbar/mat-snackbar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-snackbar",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-snackbar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject, Input } from '@angular/core';\r\nimport {MatSnackBar, MatSnackBarRef} from '@angular/material/snack-bar';\r\nimport { colors } from '../model/.model';\r\n@Component({\r\n  selector: 'app-mat-snackbar',\r\n  templateUrl: './mat-snackbar.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\nexport class MatSnackbarComponent {\r\n  @Input () color?: colors;\r\n  \r\n  public get colorOption(): string[] {\r\n    return ['app-mat-slidetoggle',`app-mat-slidetoggle--${this.color}`]\r\n    }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<span class=\"example-pizza-party\">\n    Aqui va el snacbar componente\n  </span>"
+        },
+        {
+            "name": "MatSpinnerComponent",
+            "id": "component-MatSpinnerComponent-356de33e6ec36275563c0baa72797629e17fc82e8221919a0e54401c82143ad9da5d766592e5be9d564439a5e4d3f91a698672d07ace2f4104d3b1bb073f2512",
+            "file": "src/stories/mat-spinner/mat-spinner.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-spinner",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-spinner.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n\r\n@Component({\r\n  selector: 'app-mat-spinner',\r\n  templateUrl: './mat-spinner.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\nexport class MatSpinnerComponent {\r\n  @Input () color?: colors;\r\n\r\n  public get colorOption(): string[] {\r\n    return ['app-mat-spinner',`app-mat-spinner--${this.color}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<mat-spinner [ngClass]=\"colorOption\"></mat-spinner>\n"
+        },
+        {
+            "name": "MatStepperComponent",
+            "id": "component-MatStepperComponent-bfec54cfe63190023f0a062e4d7a50c1c11541c425299464c6d3dfb484c7201b3ae172937032a4dc6e084a8741d16853207d819a1cf091ffc99a77fdc52e1116",
+            "file": "src/stories/mat-stepper/mat-stepper.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-stepper",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-stepper.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n@Component({\r\n  selector: 'app-mat-stepper',\r\n  templateUrl: './mat-stepper.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n\r\n})\r\nexport class MatStepperComponent {\r\n@Input () color?: colors;\r\n\r\npublic get colorOption(): string[] {\r\n  return ['app-mat-stepper',`app-mat-stepper--${this.color}`]\r\n}\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "\n  <mat-stepper linear  #stepper >\n    <mat-step  >\n      <form >\n        <ng-template matStepLabel>Step 1</ng-template>\n        <mat-form-field appearance=\"fill\" [ngClass]=\"colorOption\">\n          <mat-label>Name</mat-label>\n          <input matInput formControlName=\"1\" placeholder=\"Last name, First name\" required>\n        </mat-form-field>\n        <div>\n          <button mat-button matStepperNext>Next</button>\n        </div>\n      </form>\n    </mat-step>\n    <mat-step >\n      <form >\n        <ng-template matStepLabel>Step 2</ng-template>\n        <mat-form-field appearance=\"fill\">\n          <mat-label>Step 2</mat-label>\n          <input matInput  placeholder=\"Ex. 1 Main St, New York, NY\"\n                 required>\n        </mat-form-field>\n      </form>\n    </mat-step>\n    <mat-step>\n      <ng-template matStepLabel>Step 3</ng-template>\n      <p>Step 3</p>\n    </mat-step>\n  </mat-stepper>"
+        },
+        {
+            "name": "MatToolbarComponent",
+            "id": "component-MatToolbarComponent-4c6f9885399ea3de917e5288e79e35e6f88e7b284e450b2324fba124188553c346cc05203a053d4700369c9fda1b64d18eef341036f1aad84adda182b69a097e",
+            "file": "src/stories/mat-toolbar/mat-toolbar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mat-toolbar",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mat-toolbar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "colors",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { colors } from '../model/.model';\r\n\r\n@Component({\r\n  selector: 'app-mat-toolbar',\r\n  templateUrl: './mat-toolbar.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\nexport class MatToolbarComponent {\r\n  @Input() color?: colors\r\n\r\n  public get colorOption(): string[] {\r\n    return ['app-mat-toolbar', `app-mat-toolbar--${this.color}`];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "colorOption": {
+                    "name": "colorOption",
+                    "getSignature": {
+                        "name": "colorOption",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<mat-toolbar [ngClass]=\"colorOption\">\n    <h6>toolbar</h6>\n</mat-toolbar>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-0380eb99dc933726a298e8346c6bccd22e1b5cc04b104327b1338c34576989e47a18332184e6619667ea44cdcc8415094943c57e1610f717c21a145170f5c250",
+            "id": "module-AppModule-f95430afb5034a25d44652f851f7af0556a646c5365fd71de50010d0ae68a24550746f93d296786235ff33b90ec50e97b23c06b64d9d249c179198c7a2bd3c48",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule                } from '@angular/core';\r\nimport { BrowserModule           } from '@angular/platform-browser';\r\nimport { AppRoutingModule        } from './app-routing.module';\r\nimport { AppComponent            } from './app.component';\r\n\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { MaterialModule          } from './material.module';\r\nimport { MatButtonComponent      } from '../stories/mat-button/mat-button.component';\r\nimport { MatProgressBarComponent } from 'src/stories/mat-progress-bar/mat-progress-bar.component';\r\nimport { MatToolbarComponent     } from 'src/stories/mat-toolbar/mat-toolbar.component';\r\nimport { MatSpinnerComponent     } from 'src/stories/mat-spinner/mat-spinner.component';\r\nimport { MatSliderComponent      } from '../stories/mat-slider/mat-slider.component';\r\nimport { MatChipsComponent       } from 'src/stories/mat-chips/mat-chips.component';\r\nimport { MatBagdeComponent       } from 'src/stories/mat-bagde/mat-bagde.component';\r\nimport { MatSlidetoggleComponent } from 'src/stories/mat-slidetoggle/mat-slidetoggle.component';\r\nimport { MatStepperComponent     } from 'src/stories/mat-stepper/mat-stepper.component';\r\nimport { MatSnackbarComponent } from 'src/stories/mat-snackbar/mat-snackbar.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        BrowserModule,\r\n        AppRoutingModule,\r\n        BrowserAnimationsModule,\r\n        MaterialModule,\r\n    ],\r\n    exports: [],\r\n    declarations: [\r\n        AppComponent,\r\n        MatButtonComponent,\r\n        MatProgressBarComponent,\r\n        MatToolbarComponent,\r\n        MatSpinnerComponent,\r\n        MatSliderComponent,\r\n        MatChipsComponent,\r\n        MatBagdeComponent,\r\n        MatSlidetoggleComponent,\r\n        MatStepperComponent,\r\n        MatSnackbarComponent\r\n    ],\r\n    providers: [],\r\n    bootstrap: [AppComponent],\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -68,6 +668,36 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "MatBagdeComponent"
+                        },
+                        {
+                            "name": "MatButtonComponent"
+                        },
+                        {
+                            "name": "MatChipsComponent"
+                        },
+                        {
+                            "name": "MatProgressBarComponent"
+                        },
+                        {
+                            "name": "MatSliderComponent"
+                        },
+                        {
+                            "name": "MatSlidetoggleComponent"
+                        },
+                        {
+                            "name": "MatSnackbarComponent"
+                        },
+                        {
+                            "name": "MatSpinnerComponent"
+                        },
+                        {
+                            "name": "MatStepperComponent"
+                        },
+                        {
+                            "name": "MatToolbarComponent"
                         }
                     ]
                 },
@@ -76,6 +706,9 @@
                     "elements": [
                         {
                             "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "MaterialModule"
                         }
                     ]
                 },
@@ -99,13 +732,49 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "MaterialModule",
+            "id": "module-MaterialModule-335f7a1d98abfcc33477c37c8c1892b084fbfad74dd21d873607c0a0bbf2a1c0ca9fa04170de7624698c55821c223cc28d708e8b4f6817d5379a4bb9a2fcf45c",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/material.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule                 } from '@angular/core';\r\nimport { CommonModule             } from '@angular/common';\r\nimport { MatButtonModule          } from '@angular/material/button';\r\nimport { MatProgressBarModule     } from '@angular/material/progress-bar';\r\nimport { MatChipsModule           } from '@angular/material/chips';\r\nimport { MatToolbarModule         } from '@angular/material/toolbar';\r\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\r\nimport { MatSliderModule          } from '@angular/material/slider';\r\nimport { MatBadgeModule           } from '@angular/material/badge';\r\nimport { MatSlideToggleModule     } from '@angular/material/slide-toggle';\r\nimport { MatStepperModule         } from '@angular/material/stepper';\r\nimport { MatFormFieldModule       } from '@angular/material/form-field';\r\nimport { MatSnackBarModule       } from '@angular/material/snack-bar';\r\n\r\nconst components = [\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatProgressBarModule,\r\n  MatToolbarModule,\r\n  MatChipsModule,\r\n  MatProgressSpinnerModule,\r\n  MatSliderModule,\r\n  MatBadgeModule,\r\n  MatSlideToggleModule,\r\n  MatStepperModule,\r\n  MatFormFieldModule,\r\n  MatSnackBarModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [components],\r\n  exports: [components]\r\n})\r\nexport class MaterialModule { \r\n\r\n}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -134,7 +803,592 @@
             ]
         }
     ],
-    "miscellaneous": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "components",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/material.module.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatProgressBarModule,\r\n  MatToolbarModule,\r\n  MatChipsModule,\r\n  MatProgressSpinnerModule,\r\n  MatSliderModule,\r\n  MatBadgeModule,\r\n  MatSlideToggleModule,\r\n  MatStepperModule,\r\n  MatFormFieldModule,\r\n  MatSnackBarModule\r\n]"
+            },
+            {
+                "name": "MatBadge",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-bagde/mat-badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "MatButton",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-button/mat-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "MatChips",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-chips/mat-chips.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "MatSlider",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-slider/mat-slider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "MatSlideToggle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-slidetoggle/mat-slideToggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "MatSnackbar",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-snackbar/mat-snackbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "matSpiner",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-spinner/mat-spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "MatStepper",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-stepper/mat-stepper.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "matToolbar",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-toolbar/mat-toolbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "progressBar",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-bagde/mat-badge.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatBagdeComponent>",
+                "defaultValue": "(args: MatBagdeComponent) =>({\r\n    props:args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-button/mat-button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatButtonModule>",
+                "defaultValue": "(args: MatButtonModule) =>({ props:args })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatProgressBarComponent>",
+                "defaultValue": "(args: MatProgressBarComponent) =>({\r\n    props:args\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-chips/mat-chips.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatChipsComponent>",
+                "defaultValue": "(\r\n  args: MatChipsComponent\r\n) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-slider/mat-slider.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatSliderComponent>",
+                "defaultValue": "(\r\n  args: MatSliderModule\r\n) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-slidetoggle/mat-slideToggle.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatSlidetoggleComponent>",
+                "defaultValue": "(args: MatSlideToggleModule ) => ({ props: args })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-spinner/mat-spinner.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatSpinnerComponent>",
+                "defaultValue": "(\r\n  args: MatSpinnerComponent\r\n) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-snackbar/mat-snackbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatSnackbarComponent>",
+                "defaultValue": "(args: MatSnackBarModule ) => ({ props: args })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-stepper/mat-stepper.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatStepperComponent>",
+                "defaultValue": "(\r\n  args: MatStepperComponent\r\n) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/mat-toolbar/mat-toolbar.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatToolbarComponent>",
+                "defaultValue": "(args: MatToolbarModule) => ({\r\n  props: args,\r\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [
+            {
+                "name": "colors",
+                "childs": [
+                    {
+                        "name": "primary",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "primary"
+                    },
+                    {
+                        "name": "accent",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "accent"
+                    },
+                    {
+                        "name": "warn",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "warn"
+                    },
+                    {
+                        "name": "success",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "success"
+                    },
+                    {
+                        "name": "info",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "info"
+                    },
+                    {
+                        "name": "warning",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "warning"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/stories/model/.model.ts"
+            },
+            {
+                "name": "descripcionComponent",
+                "childs": [
+                    {
+                        "name": "descripcion",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=\" \" ` por cualquiera de los siguientes opciones : "
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/stories/model/.model.ts"
+            }
+        ],
+        "groupedVariables": {
+            "src/app/material.module.ts": [
+                {
+                    "name": "components",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/material.module.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatProgressBarModule,\r\n  MatToolbarModule,\r\n  MatChipsModule,\r\n  MatProgressSpinnerModule,\r\n  MatSliderModule,\r\n  MatBadgeModule,\r\n  MatSlideToggleModule,\r\n  MatStepperModule,\r\n  MatFormFieldModule,\r\n  MatSnackBarModule\r\n]"
+                }
+            ],
+            "src/stories/mat-bagde/mat-badge.stories.ts": [
+                {
+                    "name": "MatBadge",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-bagde/mat-badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-bagde/mat-badge.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatBagdeComponent>",
+                    "defaultValue": "(args: MatBagdeComponent) =>({\r\n    props:args\r\n})"
+                }
+            ],
+            "src/stories/mat-button/mat-button.stories.ts": [
+                {
+                    "name": "MatButton",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-button/mat-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-button/mat-button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatButtonModule>",
+                    "defaultValue": "(args: MatButtonModule) =>({ props:args })"
+                }
+            ],
+            "src/stories/mat-chips/mat-chips.stories.ts": [
+                {
+                    "name": "MatChips",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-chips/mat-chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-chips/mat-chips.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatChipsComponent>",
+                    "defaultValue": "(\r\n  args: MatChipsComponent\r\n) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/mat-slider/mat-slider.stories.ts": [
+                {
+                    "name": "MatSlider",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-slider/mat-slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-slider/mat-slider.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatSliderComponent>",
+                    "defaultValue": "(\r\n  args: MatSliderModule\r\n) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/mat-slidetoggle/mat-slideToggle.stories.ts": [
+                {
+                    "name": "MatSlideToggle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-slidetoggle/mat-slideToggle.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-slidetoggle/mat-slideToggle.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatSlidetoggleComponent>",
+                    "defaultValue": "(args: MatSlideToggleModule ) => ({ props: args })"
+                }
+            ],
+            "src/stories/mat-snackbar/mat-snackbar.stories.ts": [
+                {
+                    "name": "MatSnackbar",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-snackbar/mat-snackbar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-snackbar/mat-snackbar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatSnackbarComponent>",
+                    "defaultValue": "(args: MatSnackBarModule ) => ({ props: args })"
+                }
+            ],
+            "src/stories/mat-spinner/mat-spinner.stories.ts": [
+                {
+                    "name": "matSpiner",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-spinner/mat-spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-spinner/mat-spinner.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatSpinnerComponent>",
+                    "defaultValue": "(\r\n  args: MatSpinnerComponent\r\n) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/mat-stepper/mat-stepper.stories.ts": [
+                {
+                    "name": "MatStepper",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-stepper/mat-stepper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-stepper/mat-stepper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatStepperComponent>",
+                    "defaultValue": "(\r\n  args: MatStepperComponent\r\n) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/mat-toolbar/mat-toolbar.stories.ts": [
+                {
+                    "name": "matToolbar",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-toolbar/mat-toolbar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-toolbar/mat-toolbar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatToolbarComponent>",
+                    "defaultValue": "(args: MatToolbarModule) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/stories/mat-progress-bar/progress-bar.stories.ts": [
+                {
+                    "name": "progressBar",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatProgressBarComponent>",
+                    "defaultValue": "(args: MatProgressBarComponent) =>({\r\n    props:args\r\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {
+            "src/stories/model/.model.ts": [
+                {
+                    "name": "colors",
+                    "childs": [
+                        {
+                            "name": "primary",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "primary"
+                        },
+                        {
+                            "name": "accent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "accent"
+                        },
+                        {
+                            "name": "warn",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "warn"
+                        },
+                        {
+                            "name": "success",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "success"
+                        },
+                        {
+                            "name": "info",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "info"
+                        },
+                        {
+                            "name": "warning",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "warning"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/stories/model/.model.ts"
+                },
+                {
+                    "name": "descripcionComponent",
+                    "childs": [
+                        {
+                            "name": "descripcion",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=\" \" ` por cualquiera de los siguientes opciones : "
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/stories/model/.model.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {}
+    },
     "routes": {
         "name": "<root>",
         "kind": "module",
@@ -158,6 +1412,306 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/material.module.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "components",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-bagde/mat-badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MatBadge",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-bagde/mat-badge.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-bagde/mat-bagde.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatBagdeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-button/mat-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-button/mat-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MatButton",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-button/mat-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-chips/mat-chips.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatChipsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-chips/mat-chips.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MatChips",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-chips/mat-chips.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-progress-bar/mat-progress-bar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatProgressBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "progressBar",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slider/mat-slider.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSliderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slider/mat-slider.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MatSlider",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slider/mat-slider.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slidetoggle/mat-slideToggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MatSlideToggle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slidetoggle/mat-slideToggle.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-slidetoggle/mat-slidetoggle.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSlidetoggleComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-snackbar/mat-snackbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSnackbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-snackbar/mat-snackbar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MatSnackbar",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-snackbar/mat-snackbar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-spinner/mat-spinner.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatSpinnerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-spinner/mat-spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "matSpiner",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-spinner/mat-spinner.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-stepper/mat-stepper.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatStepperComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-stepper/mat-stepper.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MatStepper",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-stepper/mat-stepper.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-toolbar/mat-toolbar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MatToolbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-toolbar/mat-toolbar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "matToolbar",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mat-toolbar/mat-toolbar.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
