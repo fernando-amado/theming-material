@@ -5,11 +5,66 @@
     "guards": [],
     "interceptors": [],
     "classes": [],
-    "directives": [],
+    "directives": [
+        {
+            "name": "ColorDirective",
+            "id": "directive-ColorDirective-14286db5a4a63112ee26c5f47eaaa6c92664445b18e76f69b4ba64f1825719c724856b7ff4d45bd090b2f618c26cc60f3a4e84a0ed02b08616b5de2245ba46ff",
+            "file": "src/stories/typography/color.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Directive,HostBinding } from '@angular/core';\n\n@Directive({\n  selector: '[Color]'\n})\nexport class ColorDirective {\n\n  constructor() { }\n  @HostBinding('style.backgroundColor') bgColor = 'yellow';\n\n\n}\n",
+            "selector": "[Color]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "style.backgroundColor",
+                    "defaultValue": "'yellow'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "propertiesClass": [
+                {
+                    "name": "bgColor",
+                    "defaultValue": "'yellow'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'style.backgroundColor'"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            }
+        }
+    ],
     "components": [
         {
             "name": "AppComponent",
-            "id": "component-AppComponent-0023012fe875717a39fd6a81eb76df92d366cebabeacad73a7bb4c6c567da6220dc1a721c6a135eb8a8e0929cfad2c4082a160db6ebe8747bb977b77ab1ab8f7",
+            "id": "component-AppComponent-5cdec6dc2fc3039a5efda3bb87dec908a84c48974feee8dc20e698da36638e15b232a8bd017f6f330b0b8ca1872e34f6bb04dfbc81d7476ded8d5fdff516b455",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -36,7 +91,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n}\n",
+            "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -46,18 +101,78 @@
             ],
             "stylesData": "",
             "templateData": ""
+        },
+        {
+            "name": "TypographyComponent",
+            "id": "component-TypographyComponent-8a0546fb6c2c228b9f7bff24e9e62b5b07b7e81fa46d5e58d0b824059fa39b93417f03a8cb9790af92f52165682b997f3d312f7a7f302ca8fb6a4a3a4e718d11",
+            "file": "src/stories/typography/typography.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-typogrpahy-levels",
+            "styleUrls": [
+                "../config-storybook/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./typography.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "level",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "typography_levels",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { typography_levels } from '../model/enums.model';\n\n@Component({\n  selector: 'app-typogrpahy-levels',\n  templateUrl: './typography.component.html',\n  styleUrls: ['../config-storybook/main.scss']\n})\nexport class TypographyComponent {\n  @Input() level?: typography_levels; \n\n  public get classes(): string[]{\n    return[`app-typogrpahy-levels--${this.level} `]\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';\r\n@import './config-typography.scss';",
+                    "styleUrl": "../config-storybook/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            },
+            "templateData": "<p [ngClass]=\"classes\">{{level}}</p>"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-0380eb99dc933726a298e8346c6bccd22e1b5cc04b104327b1338c34576989e47a18332184e6619667ea44cdcc8415094943c57e1610f717c21a145170f5c250",
+            "id": "module-AppModule-ef19ab52c28e14ad5f4867b2ad05771ab1111f63bef63894ace345957b3677a8547082e0d18c24d702b24a115bd8ade89e22b9f5709c6280e2cdfb3a94df7ae6",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\n\n@NgModule({\n  declarations: [\n    AppComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    BrowserAnimationsModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { TypographyComponent } from '../stories/typography/typography.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    TypographyComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n  ],\r\n  exports:[],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -68,6 +183,9 @@
                     "elements": [
                         {
                             "name": "AppComponent"
+                        },
+                        {
+                            "name": "TypographyComponent"
                         }
                     ]
                 },
@@ -99,13 +217,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-78922b3ae99d2c5249b333980bd5afde1b120b2cc6fedfd41b8b2cc90f279797cb4b22e183bf7e1d1dfab8c6100e77e7812c110234d81f866f544f28a3e18b15",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\n\nconst routes: Routes = [];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -134,7 +252,336 @@
             ]
         }
     ],
-    "miscellaneous": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "level",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/typography/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/typography/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TypographyComponent>",
+                "defaultValue": "(\r\n    args: TypographyComponent\r\n  ) => ({\r\n    props: args,\r\n  })"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [
+            {
+                "name": "colors",
+                "childs": [
+                    {
+                        "name": "primary",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "primary"
+                    },
+                    {
+                        "name": "accent",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "accent"
+                    },
+                    {
+                        "name": "warn",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "warn"
+                    },
+                    {
+                        "name": "success",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "success"
+                    },
+                    {
+                        "name": "info",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "info"
+                    },
+                    {
+                        "name": "warning",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "warning"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/stories/model/enums.model.ts"
+            },
+            {
+                "name": "typography_levels",
+                "childs": [
+                    {
+                        "name": "h1",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h1"
+                    },
+                    {
+                        "name": "h2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h2"
+                    },
+                    {
+                        "name": "h3",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h3"
+                    },
+                    {
+                        "name": "h4",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h4"
+                    },
+                    {
+                        "name": "h5",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h5"
+                    },
+                    {
+                        "name": "h6",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h6"
+                    },
+                    {
+                        "name": "subtitle1",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "subtitle-1"
+                    },
+                    {
+                        "name": "subtitle2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "subtitle-2"
+                    },
+                    {
+                        "name": "body1",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "body-1"
+                    },
+                    {
+                        "name": "body2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "body-2"
+                    },
+                    {
+                        "name": "caption",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "caption"
+                    },
+                    {
+                        "name": "button",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "button"
+                    },
+                    {
+                        "name": "overline",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "overline"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/stories/model/enums.model.ts"
+            }
+        ],
+        "groupedVariables": {
+            "src/stories/typography/typography.stories.ts": [
+                {
+                    "name": "level",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/typography/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/typography/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TypographyComponent>",
+                    "defaultValue": "(\r\n    args: TypographyComponent\r\n  ) => ({\r\n    props: args,\r\n  })"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {
+            "src/stories/model/enums.model.ts": [
+                {
+                    "name": "colors",
+                    "childs": [
+                        {
+                            "name": "primary",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "primary"
+                        },
+                        {
+                            "name": "accent",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "accent"
+                        },
+                        {
+                            "name": "warn",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "warn"
+                        },
+                        {
+                            "name": "success",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "success"
+                        },
+                        {
+                            "name": "info",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "info"
+                        },
+                        {
+                            "name": "warning",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "warning"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/stories/model/enums.model.ts"
+                },
+                {
+                    "name": "typography_levels",
+                    "childs": [
+                        {
+                            "name": "h1",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h1"
+                        },
+                        {
+                            "name": "h2",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h2"
+                        },
+                        {
+                            "name": "h3",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h3"
+                        },
+                        {
+                            "name": "h4",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h4"
+                        },
+                        {
+                            "name": "h5",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h5"
+                        },
+                        {
+                            "name": "h6",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h6"
+                        },
+                        {
+                            "name": "subtitle1",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "subtitle-1"
+                        },
+                        {
+                            "name": "subtitle2",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "subtitle-2"
+                        },
+                        {
+                            "name": "body1",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "body-1"
+                        },
+                        {
+                            "name": "body2",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "body-2"
+                        },
+                        {
+                            "name": "caption",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "caption"
+                        },
+                        {
+                            "name": "button",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "button"
+                        },
+                        {
+                            "name": "overline",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "overline"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/stories/model/enums.model.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {}
+    },
     "routes": {
         "name": "<root>",
         "kind": "module",
@@ -158,6 +605,44 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/typography/color.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "ColorDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/typography/typography.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TypographyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/typography/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "level",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/typography/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
