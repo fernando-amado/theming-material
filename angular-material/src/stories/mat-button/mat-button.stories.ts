@@ -1,11 +1,11 @@
-import { Meta, Story} from '@storybook/angular/types-6-0';
-import { MatButtonComponent } from "./mat-button.component";
+import { Meta, Story          } from '@storybook/angular/types-6-0';
+import { MatButtonComponent   } from "./mat-button.component";
+import { colors, descripcionComponent } from '../model/.model';
 
-import  { moduleMetadata  } from "@storybook/angular";
-import {MatButtonModule} from '@angular/material/button';
-
+import { moduleMetadata       } from "@storybook/angular";
+import { MatButtonModule      } from '@angular/material/button';
 export default {
-    title: 'MatButton',
+    title: 'Button',
     component: MatButtonComponent ,
     decorators:[
         moduleMetadata({
@@ -15,10 +15,9 @@ export default {
     argTypes: {
         color: {
           control: { type: 'radio' }, 
-          options: ['primary', 'accent', 'warn','success', 'info', 'warning'],
-          description: 'MatButton componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : ',
-          defaultValue: 'primary',
-
+          options: colors,
+          description: 'Button ' + descripcionComponent.descripcion,
+          defaultValue: colors.primary
         },  
       },
       parameters: {
@@ -27,17 +26,11 @@ export default {
             { name: 'dark', value: '#000' },
           ],
         },
-
       },
 } as Meta
-
-const Template :Story<MatButtonModule> = (args: MatButtonModule) =>({
-    props:args
-})
-
-  export const Button = Template.bind({});
-  Button.args = {
-  };
+const Template :Story<MatButtonModule> = (args: MatButtonModule) =>({ props:args })
+export const MatButton = Template.bind({});
+  MatButton.args = {};
 
 
 

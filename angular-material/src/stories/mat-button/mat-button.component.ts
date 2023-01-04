@@ -1,19 +1,15 @@
 import { Component, Input } from '@angular/core';
-
+import { colors } from '../model/.model';
 @Component({
   selector: 'app-mat-button',
   templateUrl: './mat-button.component.html',
-  styleUrls: ['../config.color.scss']
+  styleUrls: ['../config-storybook/main.scss']
 })
 
 export class MatButtonComponent {
-constructor () {}
+  @Input () color?: colors;
 
-@Input () color: 'primary' | 'accent' | 'warn' | 'success' | 'info' | 'warning' = 'primary';
-
-public get classes(): string[] {
-  return ['app-mat-button',`app-mat-button--${this.color}`]
-}
-
-
+  public get colorOption(): string[] {
+   return ['app-mat-button',`app-mat-button--${this.color}`]
+  }
 } 

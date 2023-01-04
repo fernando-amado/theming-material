@@ -1,11 +1,12 @@
 import { Meta, Story } from '@storybook/angular/types-6-0';
+import { colors, descripcionComponent } from '../model/.model';
 
 import { moduleMetadata } from '@storybook/angular';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatToolbarComponent } from './mat-toolbar.component';
 
 export default {
-  title: 'matToolbar',
+  title: 'Toolbar',
   component: MatToolbarComponent,
   decorators: [
     moduleMetadata({
@@ -15,9 +16,9 @@ export default {
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: ['primary', 'accent', 'warn', 'success', 'info', 'warning'],
-      description:
-        'matToolbar componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : ',
+      options: colors,
+      description: 'Toolbar ' + descripcionComponent.descripcion,
+      defaultValue: colors.primary
     },
   },
   Parameters: {
@@ -26,7 +27,6 @@ export default {
     },
   },
 } as Meta;
-
 const Template: Story<MatToolbarComponent> = (args: MatToolbarModule) => ({
   props: args,
 });

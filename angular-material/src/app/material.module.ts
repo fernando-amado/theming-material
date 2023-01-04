@@ -1,18 +1,30 @@
-import { NgModule             } from '@angular/core';
-import { CommonModule         } from '@angular/common';
-import { MatButtonModule      } from '@angular/material/button';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatChipsModule       } from '@angular/material/chips';
+import { NgModule                 } from '@angular/core';
+import { CommonModule             } from '@angular/common';
+import { MatButtonModule          } from '@angular/material/button';
+import { MatProgressBarModule     } from '@angular/material/progress-bar';
+import { MatChipsModule           } from '@angular/material/chips';
 import { MatToolbarModule         } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSliderModule          } from '@angular/material/slider';
+import { MatBadgeModule           } from '@angular/material/badge';
+import { MatSlideToggleModule     } from '@angular/material/slide-toggle';
+import { MatStepperModule         } from '@angular/material/stepper';
+import { MatFormFieldModule       } from '@angular/material/form-field';
+import { MatSnackBarModule       } from '@angular/material/snack-bar';
 
 const components = [
   CommonModule,
   MatButtonModule,
   MatProgressBarModule,
-  MatChipsModule,
   MatToolbarModule,
-  MatProgressSpinnerModule
+  MatChipsModule,
+  MatProgressSpinnerModule,
+  MatSliderModule,
+  MatBadgeModule,
+  MatSlideToggleModule,
+  MatStepperModule,
+  MatFormFieldModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

@@ -80,13 +80,9 @@ $light-theme-variants: (
   warning: $warning-color,
 );
 .light-theme{
-
   @include mat.all-component-themes($light-theme);
   @include variants.color($light-theme, $light-theme-variants);
-
 }
-
-
 .dark-theme {
   background-color: $dark-background-default;
   @include mat.all-component-colors($dark-theme);
@@ -102,11 +98,11 @@ $light-theme-variants: (
 .dark-theme .mat-mdc-progress-spinner.mat-info {
   --mdc-circular-progress-active-indicator-color: #2d9fc5;
 }
-.dark-theme .mat-mdc-progress-spinner.mat-warning {
+.dark-theme .mat-mdc-progress-spinner.mat-warning{
   --mdc-circular-progress-active-indicator-color: #fb8500;
 }
 // MAT PROGRESS BAR
-.dark-theme .mat-mdc-progress-bar.mat-success {
+.dark-theme .mat-mdc-progress-bar.mat-success{
   --mdc-linear-progress-active-indicator-color: #8fc93a;
 }
 .dark-theme .mat-mdc-progress-bar.mat-info {
@@ -223,7 +219,7 @@ $light-theme-variants: (
   --mdc-linear-progress-active-indicator-color: #fb8500;
 }
 // MAT SLIDER
-.light-theme .mat-mdc-slider.mat-success {
+.light-theme .mat-mdc-slider.mat-success{
   --mdc-slider-handle-color: #8fc93a;
   --mdc-slider-focus-handle-color: #8fc93a;
   --mdc-slider-hover-handle-color: #8fc93a;
@@ -286,7 +282,7 @@ $light-theme-variants: (
   --mdc-switch-selected-pressed-track-color: #2d9fc5;
   --mdc-switch-selected-track-color: #2d9fc5;
 }
-.light-theme .mat-mdc-slide-toggle.mat-warning .mdc-form-field {
+.light-theme .mat-mdc-slide-toggle.mat-warning .mdc-form-field  {
   --mdc-switch-selected-focus-state-layer-color: #fb8500;
   --mdc-switch-selected-handle-color: #fb8500;
   --mdc-switch-selected-hover-state-layer-color: #fb8500;

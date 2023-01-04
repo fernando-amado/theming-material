@@ -1,23 +1,25 @@
 import { Story } from '@storybook/angular/types-6-0';
 import { MatSpinnerComponent } from './mat-spinner.component';
+import { colors, descripcionComponent } from '../model/.model';
 
 import { moduleMetadata } from '@storybook/angular';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 export default {
-  title: 'matSpiner',
+  title: 'Spinner',
   component: MatSpinnerComponent,
   decorators: [
     moduleMetadata({
       imports: [MatProgressSpinnerModule],
     }),
   ],
+
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: ['primary', 'accent', 'warn', 'success', 'info', 'warning'],
-      description: 'matSpiner componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : ',
-      defaultValue: 'primary',
+      options: colors,
+      description: 'Spinner ' + descripcionComponent.descripcion,
+      defaultValue: colors.primary,
     },
   },
   Parameters: {
@@ -28,7 +30,7 @@ export default {
 };
 
 const Template: Story<MatSpinnerComponent> = (
-  args: MatProgressSpinnerModule
+  args: MatSpinnerComponent
 ) => ({
   props: args,
 });
