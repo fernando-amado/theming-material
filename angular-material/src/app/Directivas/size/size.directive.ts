@@ -6,7 +6,7 @@ export type Size = 'small' | 'medium' | 'large';
   selector: `button,mat-form-field [size]`,
 })
 export class SizeDirective implements OnChanges {
-  constructor(private el: ElementRef<HTMLElement>) { }
+  constructor(private el: ElementRef<HTMLElement>) {}
 
   @Input() size!: Size;
 
