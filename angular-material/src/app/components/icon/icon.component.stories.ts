@@ -1,38 +1,31 @@
-import { MatRadioModule } from '@angular/material/radio';
-import { RadioButtonsComponent } from './radio-buttons.component';
+import { MatIconModule } from '@angular/material/icon';
+import { IconComponent } from './icon.component';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { descriptionSizeTresTipos } from 'src/app/stories/module/module.module';
-
 export default {
-  title: 'Angular Material/Radio Button',
-  component: RadioButtonsComponent,
+  title: 'Angular Material/Icon',
+  component: IconComponent,
   decorators: [
     moduleMetadata({
-      imports: [MatRadioModule],
+      imports: [MatIconModule],
     }),
   ],
   argTypes: {
     size: {
       options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
-      table: {
+      table:{
         defaultValue: { summary: 'Medium' },
       },
-      description:
-        'Radio Button ' +
-        descriptionSizeTresTipos.description +
-        ' `SMALL` O `LARGE`',
+      description: 'Icon ' + descriptionSizeTresTipos.description + ' `SMALL` O `LARGE`'
     },
   },
 } as Meta;
 
-const Template: Story<RadioButtonsComponent> = (
-  args: RadioButtonsComponent
-) => ({
+const Template: Story<MatIconModule> = (args: MatIconModule) => ({
   props: args,
 });
 export const size = Template.bind({});
 size.args = {
   size: 'medium',
-  label: 'Radio-button',
 };

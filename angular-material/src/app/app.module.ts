@@ -13,6 +13,11 @@ import { MatChipOptionComponent } from './components/mat-chip-option/mat-chip-op
 import { CheckBoxComponent } from './components/check-box/check-box.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { IconComponent } from './components/icon/icon.component';
+
+import { MatTableModule } from '@angular/material/table';
+import { TableComponent } from './components/table/table.component';
 @NgModule({
   declarations: [
     MatChipOptionComponent,
@@ -24,6 +29,9 @@ import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.
     CheckBoxComponent,
     SliderComponent,
     RadioButtonsComponent,
+    SpinnerComponent,
+    IconComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +39,7 @@ import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.
     BrowserAnimationsModule,
     MatInputModule,
     MatFormFieldModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent],

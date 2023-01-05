@@ -1,14 +1,14 @@
-import { MatChipsModule } from '@angular/material/chips';
-import { MatChipComponent } from './mat-chip.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { SpinnerComponent } from './spinner.component';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { descriptionSizeDosTipos } from 'src/app/stories/module/module.module';
 
 export default {
-  title: 'Angular Material/Chip',
-  component: MatChipComponent,
+  title: 'Angular Material/progress',
+  component: SpinnerComponent,
   decorators: [
     moduleMetadata({
-      imports: [MatChipsModule],
+      imports: [MatProgressSpinnerModule],
     }),
   ],
   argTypes: {
@@ -18,16 +18,15 @@ export default {
       table: {
         defaultValue: { summary: 'Medium' },
       },
-      description: 'Chip ' + descriptionSizeDosTipos.description,
+      description: 'Progress ' + descriptionSizeDosTipos.description,
     },
   },
 } as Meta;
 
-const Template: Story<MatChipComponent> = (args: MatChipComponent) => ({
+const Template: Story<SpinnerComponent> = (args: SpinnerComponent) => ({
   props: args,
 });
 export const size = Template.bind({});
 size.args = {
   size: 'medium',
-  label: 'Mat-Chip',
 };

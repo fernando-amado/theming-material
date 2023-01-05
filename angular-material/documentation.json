@@ -113,6 +113,38 @@
             "indexSignatures": [],
             "kind": 165,
             "methods": []
+        },
+        {
+            "name": "Transaction",
+            "id": "interface-Transaction-b1896a7c5a6dcb1c7bf5420d6cbf66d8858409bf1121f708eb001b90e421c2b7991de9b3c4f4ad9c433517add9cb9c5e943703053d78fe3557235a95b0422a97",
+            "file": "src/app/components/table/table.component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Component, Input } from '@angular/core';\ninterface Transaction {\n  item: string;\n  cost: number;\n}\n@Component({\n  selector: 'Table',\n  templateUrl: './table.component.html',\n  styleUrls: ['../../../styles/main.scss'],\n})\nexport class TableComponent {\n  @Input() size: string = 'small' || 'medium';\n\n  displayedColumns: string[] = ['item', 'cost'];\n  transactions: Transaction[] = [\n    { item: 'Beach ball', cost: 4 },\n    { item: 'Towel', cost: 5 },\n    { item: 'Frisbee', cost: 2 },\n    { item: 'Sunscreen', cost: 4 },\n    { item: 'Cooler', cost: 25 },\n    { item: 'Swim suit', cost: 15 },\n  ];\n  getTotalCost() {\n    return this.transactions\n      .map((t) => t.cost)\n      .reduce((acc, value) => acc + value, 0);\n  }\n  public get sizes(): string[] {\n    return ['Table', `table--${this.size}`];\n  }\n}\n",
+            "properties": [
+                {
+                    "name": "cost",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "item",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
         }
     ],
     "injectables": [],
@@ -122,17 +154,18 @@
     "directives": [
         {
             "name": "SizeDirective",
-            "id": "directive-SizeDirective-effad0431b6060c9e9b66fcee7a4e51404d175300afb31fd008a66b1366be1207fe45d49ec12fff3b4496df1ed9db2dc382cc234b87b47c19e53687b29a75f14",
+            "id": "directive-SizeDirective-abfab465969750bf1ccad7a657580762c3c5c586f28566a415d7b7e43b905cbb5b525b1d41acdc5fe7c25672a0d99f51c0b609b7d4471ea949b42d7c2c520722",
             "file": "src/app/Directivas/size.directive.ts",
             "type": "directive",
             "description": "",
             "rawdescription": "\n",
-            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\r\nimport { Component } from '../interfaces/Component';\r\n@Directive({\r\n  selector: '[size]',\r\n})\r\nexport class SizeDirective implements Component {\r\n  constructor(private el: ElementRef) {}\r\n  button: string = 'button';\r\n  matChip: string = 'mat-chip';\r\n  matChipOption: string = 'mat-chip-option';\r\n  matFormField: string = 'mat-form-field';\r\n  matCheckBox: string = 'mat-checkbox';\r\n  matSlider: string = 'mat-slider';\r\n  matRadioButton: string = 'mat-radio-button';\r\n  matSpinner: string = 'mat-spinner';\r\n  table: string = 'table';\r\n  matTable: string = 'mat-table';\r\n  matIcon: string = 'mat-icon';\r\n\r\n  @Input() size!: string;\r\n  ngOnChanges() {\r\n    let element = this.el.nativeElement;\r\n    switch (this.size) {\r\n      case 'small':\r\n        {\r\n          this.button = element.classList.add('small');\r\n          this.matChip = element.classList.add('small');\r\n          this.matChipOption = element.classList.add('small');\r\n          this.matFormField = element.classList.add('small');\r\n          this.matCheckBox = element.classList.add('small');\r\n          this.matRadioButton = element.classList.add('small');\r\n          this.matSlider = element.classList.add('small');\r\n          this.matSpinner = element.classList.add('small');\r\n          this.table = element.classList.add('small');\r\n          this.matTable = element.classList.add('small');\r\n          this.matIcon = element.classList.add('small');\r\n        }\r\n        return;\r\n      case 'large':\r\n        {\r\n          this.button = element.classList.add('large');\r\n          this.matCheckBox = element.classList.add('large');\r\n          this.matRadioButton = element.classList.add('large');\r\n          this.matIcon = element.classList.add('large');\r\n        }\r\n        return;\r\n      default:\r\n        return;\r\n    }\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\r\nimport { Component } from '../interfaces/Component';\r\n@Directive({\r\n  selector: '[size]',\r\n})\r\nexport class SizeDirective implements Component {\r\n  constructor(private el: ElementRef) {}\r\n  button = 'button';\r\n  matChip = 'mat-chip';\r\n  matChipOption = 'mat-chip-option';\r\n  matFormField = 'mat-form-field';\r\n  matCheckBox = 'mat-checkbox';\r\n  matSlider = 'mat-slider';\r\n  matRadioButton = 'mat-radio-button';\r\n  matSpinner = 'mat-spinner';\r\n  table = 'table';\r\n  matTable = 'mat-table';\r\n  matIcon = 'mat-icon';\r\n\r\n  @Input() size: string = 'small' || 'large';\r\n  ngOnChanges({ small, large }: { small: string; large: string; }): void {\r\n\r\n    let element = this.el.nativeElement;\r\n\r\n\r\n  //   switch (this.size) {\r\n  //     case 'small':\r\n  //       {\r\n  //         this.button = element.classList.add('small');\r\n  //         this.matChip = element.classList.add('small');\r\n  //         this.matChipOption = element.classList.add('small');\r\n  //         this.matFormField = element.classList.add('small');\r\n  //         this.matCheckBox = element.classList.add('small');\r\n  //         this.matRadioButton = element.classList.add('small');\r\n  //         this.matSlider = element.classList.add('small');\r\n  //         this.matSpinner = element.classList.add('small');\r\n  //         this.table = element.classList.add('small');\r\n  //         this.matTable = element.classList.add('small');\r\n  //         this.matIcon = element.classList.add('small');\r\n  //       }\r\n  //       return;\r\n  //     case 'large':\r\n  //       {\r\n  //         this.button = element.classList.add('large');\r\n  //         this.matCheckBox = element.classList.add('large');\r\n  //         this.matRadioButton = element.classList.add('large');\r\n  //         this.matIcon = element.classList.add('large');\r\n  //       }\r\n  //       return;\r\n  //     default:\r\n  //       return;\r\n  //   }\r\n  }\r\n}\r\n",
             "selector": "[size]",
             "providers": [],
             "inputsClass": [
                 {
                     "name": "size",
+                    "defaultValue": "'small' || 'large'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 20,
@@ -260,13 +293,29 @@
             "methodsClass": [
                 {
                     "name": "ngOnChanges",
-                    "args": [],
+                    "args": [
+                        {
+                            "type": "literal type",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
                     "line": 21,
                     "deprecated": false,
-                    "deprecationMessage": ""
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "type": "literal type",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
                 }
             ],
             "implements": [
@@ -343,7 +392,7 @@
         },
         {
             "name": "ButtonComponent",
-            "id": "component-ButtonComponent-09ef2ddd01f8b4194845d8f28cdfa30f542e4121be246a70e33e0fd8afb905f37a567d6a12d167a0ce59292e5fb56996c3af381564c41645837c8cd26613de92",
+            "id": "component-ButtonComponent-de793ff755a2af5c42fd7d35b1ba2caff8061409536686d5d39e4b4bcd932c1ba4ead3773d37823a38298acfca85b76d7534a94a363d756281d64ba460bac29c",
             "file": "src/app/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -352,7 +401,7 @@
             "providers": [],
             "selector": "app-button",
             "styleUrls": [
-                "./button.component.scss"
+                "../../../styles/main.scss"
             ],
             "styles": [],
             "template": "<button mat-button [ngClass]=\"sizes\">{{ label }}</button>",
@@ -397,12 +446,12 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  template: `<button mat-button [ngClass]=\"sizes\">{{ label }}</button>`,\r\n  styleUrls: ['./button.component.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label = 'Button';\r\n\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  @Input() tipo: 'raised' = 'raised';\r\n\r\n  public get sizes(): string[] {\r\n    return [\r\n      'app-button',\r\n      `app-button--${this.size}` || 'app-button',\r\n      `app-button--${this.tipo}`,\r\n    ];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  template: `<button mat-button [ngClass]=\"sizes\">{{ label }}</button>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label = 'Button';\r\n\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  @Input() tipo: 'raised' = 'raised';\r\n\r\n  public get sizes(): string[] {\r\n    return [\r\n      'app-button',\r\n      `app-button--${this.size}` || 'app-button',\r\n      `app-button--${this.tipo}`,\r\n    ];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".app-button--small {\r\n  font-size: 13px;\r\n  height: 32px;\r\n  padding-inline: 8px;\r\n}\r\n.app-button--medium {\r\n  font-size: 14px;\r\n  padding: 15px 15px;\r\n}\r\n.app-button--large {\r\n  font-size: 15px;\r\n  padding: 19px 18px;\r\n}\r\n.app-button--raised {\r\n  background-color: #3f51b5;\r\n  color: white !important;\r\n  font-weight: 600;\r\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),\r\n    0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);\r\n}\r\n",
-                    "styleUrl": "./button.component.scss"
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
+                    "styleUrl": "../../../styles/main.scss"
                 }
             ],
             "stylesData": "",
@@ -419,20 +468,88 @@
             }
         },
         {
+            "name": "CheckBoxComponent",
+            "id": "component-CheckBoxComponent-5fac73db56ab621026d6cd38886dc7456f780b434a363cd2a4e985b84faacd34a790a24150a714f563e803071a693eec191dbfe04a3e0841ca8e4d4664d7a591",
+            "file": "src/app/components/check-box/check-box.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "Mat-checkbox",
+            "styleUrls": [
+                "../../../styles/main.scss"
+            ],
+            "styles": [],
+            "template": "<mat-checkbox [ngClass]=\"sizes\">{{ label }}</mat-checkbox>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'Check-box'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-checkbox',\r\n  template: `<mat-checkbox [ngClass]=\"sizes\">{{ label }}</mat-checkbox>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class CheckBoxComponent {\r\n  @Input() label = 'Check-box';\r\n  @Input() size: 'small' | 'medium' | 'large' = 'medium';\r\n\r\n  public get sizes(): string[] {\r\n    return ['Mat-checkbox', `check-box--${this.size}`];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
+                    "styleUrl": "../../../styles/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "sizes": {
+                    "name": "sizes",
+                    "getSignature": {
+                        "name": "sizes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            }
+        },
+        {
             "name": "FormFieldComponent",
-            "id": "component-FormFieldComponent-e039e9b9795f610960ea9bf0538d7251f70e28a6e6dd67198801135b16fdcec93e410f7b0881e5b705fb8faa85db50df4cabb409fe19b355e27f0f95668fcfbc",
+            "id": "component-FormFieldComponent-51a8c37bf2325e0289de87a7640f64e11a7a475b1a34da09f151035bb4aabf5b6fe400bff41e7feda93b1e5d41cbec6d9b6e7a79d0d4c599afb9a9e07244ca22",
             "file": "src/app/components/form-field/form-field.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "Form-field",
+            "selector": "Mat-form-field",
             "styleUrls": [
                 "../../../styles/main.scss"
             ],
             "styles": [],
-            "template": "<mat-form-field [ngClass]=\"classes\" appearance=\"fill\">  <mat-label>{{label}}</mat-label>\n  <input matInput placeholder=\"{{label}}\" size=\"small\">\n</mat-form-field>",
+            "template": "<mat-form-field [ngClass]=\"classes\" appearance=\"fill\">    <mat-label>{{ label }}</mat-label>\n    <input matInput placeholder=\"{{ label }}\" size=\"small\" />\n  </mat-form-field>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -465,11 +582,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Form-field',\r\n  template: `<mat-form-field [ngClass]=\"classes\" appearance=\"fill\">\r\n  <mat-label>{{label}}</mat-label>\r\n  <input matInput placeholder=\"{{label}}\" size=\"small\">\r\n</mat-form-field>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class FormFieldComponent {\r\n  @Input() label: string = 'Form-field';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get classes(): string[] {\r\n    return ['Form-field', `form-field--${this.size}`];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-form-field',\r\n  template: `<mat-form-field [ngClass]=\"classes\" appearance=\"fill\">\r\n    <mat-label>{{ label }}</mat-label>\r\n    <input matInput placeholder=\"{{ label }}\" size=\"small\" />\r\n  </mat-form-field>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class FormFieldComponent {\r\n  @Input() label: string = 'Form-field';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get classes(): string[] {\r\n    return ['Mat-form-field', `form-field--${this.size}`];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n",
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
                     "styleUrl": "../../../styles/main.scss"
                 }
             ],
@@ -487,8 +604,67 @@
             }
         },
         {
+            "name": "IconComponent",
+            "id": "component-IconComponent-665c609057febec5657275c6be2310b39aa9e6d134d3fe9eb2bd36d02f16a12d6bdab58a52a62c68cd53e9525e36dde32f88437bc2e6553a97da6bf34cbc0e9b",
+            "file": "src/app/components/icon/icon.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "Mat-icon",
+            "styleUrls": [
+                "../../../styles/main.scss"
+            ],
+            "styles": [],
+            "template": "<mat-icon [ngClass]=\"sizes\" color='primary'>home</mat-icon>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "defaultValue": "'small' || 'medium' || 'large'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'Mat-icon',\n  template: `<mat-icon [ngClass]=\"sizes\" color='primary'>home</mat-icon> `,\n  styleUrls: ['../../../styles/main.scss'],\n})\nexport class IconComponent {\n  @Input() size: string = 'small' || 'medium' || 'large';\n\n  public get sizes(): string[] {\n    return ['Mat-icon', `mat-icon--${this.size}`];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
+                    "styleUrl": "../../../styles/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "sizes": {
+                    "name": "sizes",
+                    "getSignature": {
+                        "name": "sizes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 11
+                    }
+                }
+            }
+        },
+        {
             "name": "MatChipComponent",
-            "id": "component-MatChipComponent-3cd027e257f49593a89652e36f7e90e64c3961d81b4680697bc561ef10e601493a23c6704a30d00250ce8ffde7a2396baf1c8a36a69eb8297f935143ad06ef31",
+            "id": "component-MatChipComponent-bb46bdea998550bcf9825edcff599acd8a04537cb00ef990368c99fe73e3bbc690d875705a125dd6e1ad8d3dbcd92ca44b22f0bcc78748dfcf65237aa5a7830e",
             "file": "src/app/components/mat-chip/mat-chip.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -500,7 +676,7 @@
                 "../../../styles/main.scss"
             ],
             "styles": [],
-            "template": "<mat-chip [ngClass]=\"classes\">{{ label }}</mat-chip>",
+            "template": "<mat-chip [ngClass]=\"sizes\">{{ label }}</mat-chip>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -533,20 +709,20 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-chip',\r\n  template: `<mat-chip [ngClass]=\"classes\">{{ label }}</mat-chip> `,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class MatChipComponent {\r\n  @Input() label: string = 'Mat-Chip';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get classes(): string[] {\r\n    return ['Mat-chip', `app-mat-chip--${this.size}`];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-chip',\r\n  template: `<mat-chip [ngClass]=\"sizes\">{{ label }}</mat-chip> `,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class MatChipComponent {\r\n  @Input() label: string = 'Mat-Chip';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get sizes(): string[] {\r\n    return ['Mat-chip', `mat-chip--${this.size}`];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n",
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
                     "styleUrl": "../../../styles/main.scss"
                 }
             ],
             "stylesData": "",
             "accessors": {
-                "classes": {
-                    "name": "classes",
+                "sizes": {
+                    "name": "sizes",
                     "getSignature": {
-                        "name": "classes",
+                        "name": "sizes",
                         "type": "[]",
                         "returnType": "string[]",
                         "line": 13
@@ -556,7 +732,7 @@
         },
         {
             "name": "MatChipOptionComponent",
-            "id": "component-MatChipOptionComponent-b62409cc3b5200e63393dafb965fcadfac34c425c0bcd559b18a25667d364208321a13e98730bfd8f9bf5765d378a01ef485174d010474dad738b57e00010af0",
+            "id": "component-MatChipOptionComponent-27363e4ecf0b38fc2cdf733e00f4e2800db67470a23a1fde1d274dca0d760b847127d5a28ce96188c88d1a487201a5c33910baf0f853ab9145f5ddf8613faae3",
             "file": "src/app/components/mat-chip-option/mat-chip-option.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -568,7 +744,7 @@
                 "../../../styles/main.scss"
             ],
             "styles": [],
-            "template": "<mat-chip-option [ngClass]=\"classes\">{{    label\n  }}</mat-chip-option>",
+            "template": "<mat-chip-option [ngClass]=\"sizes\">{{    label\n  }}</mat-chip-option>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
@@ -601,38 +777,317 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-chip-option',\r\n  template: `<mat-chip-option [ngClass]=\"classes\">{{\r\n    label\r\n  }}</mat-chip-option> `,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class MatChipOptionComponent {\r\n  @Input() label: string = 'mat-chip-option';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get classes(): string[] {\r\n    return ['Mat-chip-option', `mat-chip-option--${this.size}`];\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-chip-option',\r\n  template: `<mat-chip-option [ngClass]=\"sizes\">{{\r\n    label\r\n  }}</mat-chip-option> `,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class MatChipOptionComponent {\r\n  @Input() label: string = 'mat-chip-option';\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get sizes(): string[] {\r\n    return ['Mat-chip-option', `mat-chip-option--${this.size}`];\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n",
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
                     "styleUrl": "../../../styles/main.scss"
                 }
             ],
             "stylesData": "",
             "accessors": {
-                "classes": {
-                    "name": "classes",
+                "sizes": {
+                    "name": "sizes",
                     "getSignature": {
-                        "name": "classes",
+                        "name": "sizes",
                         "type": "[]",
                         "returnType": "string[]",
                         "line": 15
                     }
                 }
             }
+        },
+        {
+            "name": "RadioButtonsComponent",
+            "id": "component-RadioButtonsComponent-3f913083b20de62082bda3c45bd0c8c6ff7abced81c48355cf16bf4764b752f25944dc3b2c0c083f220a5b726ddd55c66a75d6762ad0ac06806b1a28e4cccc6d",
+            "file": "src/app/components/radio-buttons/radio-buttons.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "Mat-radio-button",
+            "styleUrls": [
+                "../../../styles/main.scss"
+            ],
+            "styles": [],
+            "template": "<mat-radio-button [ngClass]=\"sizes\" >{{label}}</mat-radio-button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'radio-button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'small' || 'medium' || 'large'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-radio-button',\r\ntemplate:`  <mat-radio-button [ngClass]=\"sizes\" >{{label}}</mat-radio-button>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class RadioButtonsComponent {\r\n\r\n  @Input() label: string = 'radio-button'\r\n\r\n  @Input() size: string = 'small' || 'medium' || 'large'\r\n\r\n  public get sizes(): string[]{\r\n    return ['mat-radio-button',`radio-button--${this.size}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
+                    "styleUrl": "../../../styles/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "sizes": {
+                    "name": "sizes",
+                    "getSignature": {
+                        "name": "sizes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 14
+                    }
+                }
+            }
+        },
+        {
+            "name": "SliderComponent",
+            "id": "component-SliderComponent-2d808ca7accdd658c226f4b17921738a0fa8067a141d4167999af255e13b1f801c78ddfb6f147a449a7e23bdc316380b23e34d8d60666d956e3a75a589bc3e94",
+            "file": "src/app/components/slider/slider.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "Mat-slider",
+            "styleUrls": [
+                "../../../styles/main.scss"
+            ],
+            "styles": [],
+            "template": "<mat-slider [ngClass]=\"sizes\" size=\"small\"><input matSliderThumb /></mat-slider>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "defaultValue": "'small' || 'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-slider',\r\n  template: `<mat-slider [ngClass]=\"sizes\" size=\"small\"><input matSliderThumb /></mat-slider>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class SliderComponent {\r\n\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get sizes(): string[]{\r\n    return ['Mat-slider', `slider--${this.size}`]\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
+                    "styleUrl": "../../../styles/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "sizes": {
+                    "name": "sizes",
+                    "getSignature": {
+                        "name": "sizes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 12
+                    }
+                }
+            }
+        },
+        {
+            "name": "SpinnerComponent",
+            "id": "component-SpinnerComponent-b96ce976b6774b93a110828afd8149b0b80806fc57edbbed5e0806ab44b9665b78f96c81a210e56eda6d9f3f647c502d8fe60686067718d07a90b9663465753a",
+            "file": "src/app/components/spinner/spinner.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "Mat-spinner",
+            "styleUrls": [
+                "../../../styles/main.scss"
+            ],
+            "styles": [],
+            "template": "<mat-spinner [ngClass]=\"sizes\"></mat-spinner>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "defaultValue": "'small' || 'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'Mat-spinner',\r\n  template: `<mat-spinner [ngClass]=\"sizes\"></mat-spinner>`,\r\n  styleUrls: ['../../../styles/main.scss'],\r\n})\r\nexport class SpinnerComponent {\r\n  @Input() size: string = 'small' || 'medium';\r\n\r\n  public get sizes(): string[] {\r\n    return ['Mat-spinner', `mat-spinner--${this.size}`];\r\n  }\r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
+                    "styleUrl": "../../../styles/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "sizes": {
+                    "name": "sizes",
+                    "getSignature": {
+                        "name": "sizes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 11
+                    }
+                }
+            }
+        },
+        {
+            "name": "TableComponent",
+            "id": "component-TableComponent-b1896a7c5a6dcb1c7bf5420d6cbf66d8858409bf1121f708eb001b90e421c2b7991de9b3c4f4ad9c433517add9cb9c5e943703053d78fe3557235a95b0422a97",
+            "file": "src/app/components/table/table.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "Table",
+            "styleUrls": [
+                "../../../styles/main.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./table.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "defaultValue": "'small' || 'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "displayedColumns",
+                    "defaultValue": "['item', 'cost']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "transactions",
+                    "defaultValue": "[\n    { item: 'Beach ball', cost: 4 },\n    { item: 'Towel', cost: 5 },\n    { item: 'Frisbee', cost: 2 },\n    { item: 'Sunscreen', cost: 4 },\n    { item: 'Cooler', cost: 25 },\n    { item: 'Swim suit', cost: 15 },\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Transaction[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getTotalCost",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "any",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\ninterface Transaction {\n  item: string;\n  cost: number;\n}\n@Component({\n  selector: 'Table',\n  templateUrl: './table.component.html',\n  styleUrls: ['../../../styles/main.scss'],\n})\nexport class TableComponent {\n  @Input() size: string = 'small' || 'medium';\n\n  displayedColumns: string[] = ['item', 'cost'];\n  transactions: Transaction[] = [\n    { item: 'Beach ball', cost: 4 },\n    { item: 'Towel', cost: 5 },\n    { item: 'Frisbee', cost: 2 },\n    { item: 'Sunscreen', cost: 4 },\n    { item: 'Cooler', cost: 25 },\n    { item: 'Swim suit', cost: 15 },\n  ];\n  getTotalCost() {\n    return this.transactions\n      .map((t) => t.cost)\n      .reduce((acc, value) => acc + value, 0);\n  }\n  public get sizes(): string[] {\n    return ['Table', `table--${this.size}`];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "//Component size\r\n@import \"componentsSize.scss\";\r\n// TYPOGRAPHY CONFIGURATION\r\n@import \"./typography.scss\";\r\n// STYLES STORYBOOK\r\n@import \"./stylesStoryBook.scss\";\r\n",
+                    "styleUrl": "../../../styles/main.scss"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "sizes": {
+                    "name": "sizes",
+                    "getSignature": {
+                        "name": "sizes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 28
+                    }
+                }
+            },
+            "templateData": "<table mat-table [ngClass]=\"size\" [dataSource]=\"transactions\" class=\"mat-elevation-z8\">\r\n  <!-- Item Column -->\r\n  <ng-container matColumnDef=\"item\">\r\n    <th mat-header-cell *matHeaderCellDef> Item </th>\r\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.item}} </td>\r\n    <td mat-footer-cell *matFooterCellDef> Total </td>\r\n  </ng-container>\r\n\r\n  <!-- Cost Column -->\r\n  <ng-container matColumnDef=\"cost\">\r\n    <th mat-header-cell *matHeaderCellDef> Cost </th>\r\n    <td mat-cell *matCellDef=\"let transaction\"> {{transaction.cost | currency}} </td>\r\n    <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency}} </td>\r\n  </ng-container>\r\n\r\n  <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n  <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n  <tr mat-footer-row *matFooterRowDef=\"displayedColumns\"></tr>\r\n</table>\r\n"
         }
     ],
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-fe77296d245a4f4a32f4bd0922540f57c558cac70ea7fcf6b151c3349d273a52afe27b619b2974a88ec5d56c7faf4a48c295e14d1c2653e4a328f80c1d9784ee",
+            "id": "module-AppModule-6742584a0a39f55f01f5c828c9bd387571bbe7a4b3d96ab6fb5b7575be8a217fbd2ecfa96b9bc4ce31a4b726e8373f22265706353b99cd5ff0c55057c0e7eb04",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\nimport { SizeDirective } from './Directivas/size.directive';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ButtonComponent } from './components/button/button.component';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { FormFieldComponent } from './components/form-field/form-field.component';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatChipComponent } from './components/mat-chip/mat-chip.component';\r\nimport { MatChipOptionComponent } from './components/mat-chip-option/mat-chip-option.component';\r\n@NgModule({\r\n  declarations: [\r\n    MatChipOptionComponent,\r\n    MatChipComponent,\r\n    AppComponent,\r\n    FormFieldComponent,\r\n    SizeDirective,\r\n    ButtonComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MatInputModule,\r\n    MatFormFieldModule,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppComponent } from './app.component';\r\nimport { SizeDirective } from './Directivas/size.directive';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { ButtonComponent } from './components/button/button.component';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { FormFieldComponent } from './components/form-field/form-field.component';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatChipComponent } from './components/mat-chip/mat-chip.component';\r\nimport { MatChipOptionComponent } from './components/mat-chip-option/mat-chip-option.component';\r\nimport { CheckBoxComponent } from './components/check-box/check-box.component';\r\nimport { SliderComponent } from './components/slider/slider.component';\r\nimport { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.component';\r\nimport { SpinnerComponent } from './components/spinner/spinner.component';\r\nimport { IconComponent } from './components/icon/icon.component';\r\n\r\nimport { MatTableModule } from '@angular/material/table';\r\nimport { TableComponent } from './components/table/table.component';\r\n@NgModule({\r\n  declarations: [\r\n    MatChipOptionComponent,\r\n    MatChipComponent,\r\n    AppComponent,\r\n    FormFieldComponent,\r\n    SizeDirective,\r\n    ButtonComponent,\r\n    CheckBoxComponent,\r\n    SliderComponent,\r\n    RadioButtonsComponent,\r\n    SpinnerComponent,\r\n    IconComponent,\r\n    TableComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n    MatInputModule,\r\n    MatFormFieldModule,\r\n    MatTableModule\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -648,7 +1103,13 @@
                             "name": "ButtonComponent"
                         },
                         {
+                            "name": "CheckBoxComponent"
+                        },
+                        {
                             "name": "FormFieldComponent"
+                        },
+                        {
+                            "name": "IconComponent"
                         },
                         {
                             "name": "MatChipComponent"
@@ -657,7 +1118,19 @@
                             "name": "MatChipOptionComponent"
                         },
                         {
+                            "name": "RadioButtonsComponent"
+                        },
+                        {
                             "name": "SizeDirective"
+                        },
+                        {
+                            "name": "SliderComponent"
+                        },
+                        {
+                            "name": "SpinnerComponent"
+                        },
+                        {
+                            "name": "TableComponent"
                         }
                     ]
                 },
@@ -750,6 +1223,16 @@
                 "name": "size",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/check-box/check-box.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "size",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -760,7 +1243,57 @@
                 "name": "size",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "size",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/radio-buttons/radio-buttons.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "size",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "size",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/table/table.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "size",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/slider/slider.componet.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "size",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/spinner/spinner.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -790,6 +1323,16 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/check-box/check-box.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<CheckBoxComponent>",
+                "defaultValue": "(args: CheckBoxComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/mat-chip/mat-chip.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -800,16 +1343,130 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "src/app/components/icon/icon.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<MatIconModule>",
+                "defaultValue": "(args: MatIconModule) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/radio-buttons/radio-buttons.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<RadioButtonsComponent>",
+                "defaultValue": "(\r\n  args: RadioButtonsComponent\r\n) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<MatChipOptionComponent>",
-                "defaultValue": "(args: MatChipOptionComponent) => ({\r\n  props: args,\r\n})"
+                "defaultValue": "(\r\n  args: MatChipOptionComponent\r\n) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/table/table.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TableComponent>",
+                "defaultValue": "(args: TableComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/slider/slider.componet.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SliderComponent>",
+                "defaultValue": "(args: SliderComponent) => ({\r\n  props: args,\r\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/components/spinner/spinner.component.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<SpinnerComponent>",
+                "defaultValue": "(args: SpinnerComponent) => ({\r\n  props: args,\r\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
-        "enumerations": [],
+        "enumerations": [
+            {
+                "name": "descriptionSizeDosTipos",
+                "childs": [
+                    {
+                        "name": "description",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "maneja 2 tipos de tamaños, al momento de importar el componente viene con un tamaño por defecto (medium), por medio del atributo \"size\" puede modificar el tamaño tanto como `SMALL` O `MEDIUM`"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/app/stories/module/module.module.ts"
+            },
+            {
+                "name": "descriptionSizeTresTipos",
+                "childs": [
+                    {
+                        "name": "description",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "maneja 3 tipos de tamaños, al momento de importar el componente viene con un tamaño por defecto (medium), por medio del atributo \"size\" puede modificar el tamaño tanto como"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/app/stories/module/module.module.ts"
+            },
+            {
+                "name": "sizes",
+                "childs": [
+                    {
+                        "name": "small",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "small"
+                    },
+                    {
+                        "name": "medium",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "medium"
+                    },
+                    {
+                        "name": "large",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "large"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/app/stories/module/module.module.ts"
+            }
+        ],
         "groupedVariables": {
             "src/app/components/button/button.component.stories.ts": [
                 {
@@ -855,6 +1512,28 @@
                     "defaultValue": "(args: MatFormFieldModule) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "src/app/components/check-box/check-box.component.stories.ts": [
+                {
+                    "name": "size",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/check-box/check-box.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/check-box/check-box.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<CheckBoxComponent>",
+                    "defaultValue": "(args: CheckBoxComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
             "src/app/components/mat-chip/mat-chip.component.stories.ts": [
                 {
                     "name": "size",
@@ -877,6 +1556,50 @@
                     "defaultValue": "(args: MatChipComponent) => ({\r\n  props: args,\r\n})"
                 }
             ],
+            "src/app/components/icon/icon.component.stories.ts": [
+                {
+                    "name": "size",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/icon/icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/icon/icon.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<MatIconModule>",
+                    "defaultValue": "(args: MatIconModule) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/components/radio-buttons/radio-buttons.component.stories.ts": [
+                {
+                    "name": "size",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/radio-buttons/radio-buttons.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/radio-buttons/radio-buttons.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<RadioButtonsComponent>",
+                    "defaultValue": "(\r\n  args: RadioButtonsComponent\r\n) => ({\r\n  props: args,\r\n})"
+                }
+            ],
             "src/app/components/mat-chip-option/mat-chip-option.component.stories.ts": [
                 {
                     "name": "size",
@@ -896,12 +1619,144 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<MatChipOptionComponent>",
-                    "defaultValue": "(args: MatChipOptionComponent) => ({\r\n  props: args,\r\n})"
+                    "defaultValue": "(\r\n  args: MatChipOptionComponent\r\n) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/components/table/table.component.stories.ts": [
+                {
+                    "name": "size",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/table/table.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/table/table.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TableComponent>",
+                    "defaultValue": "(args: TableComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/components/slider/slider.componet.stories.ts": [
+                {
+                    "name": "size",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/slider/slider.componet.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/slider/slider.componet.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<SliderComponent>",
+                    "defaultValue": "(args: SliderComponent) => ({\r\n  props: args,\r\n})"
+                }
+            ],
+            "src/app/components/spinner/spinner.component.stories.ts": [
+                {
+                    "name": "size",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/spinner/spinner.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/components/spinner/spinner.component.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<SpinnerComponent>",
+                    "defaultValue": "(args: SpinnerComponent) => ({\r\n  props: args,\r\n})"
                 }
             ]
         },
         "groupedFunctions": {},
-        "groupedEnumerations": {},
+        "groupedEnumerations": {
+            "src/app/stories/module/module.module.ts": [
+                {
+                    "name": "descriptionSizeDosTipos",
+                    "childs": [
+                        {
+                            "name": "description",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "maneja 2 tipos de tamaños, al momento de importar el componente viene con un tamaño por defecto (medium), por medio del atributo \"size\" puede modificar el tamaño tanto como `SMALL` O `MEDIUM`"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/app/stories/module/module.module.ts"
+                },
+                {
+                    "name": "descriptionSizeTresTipos",
+                    "childs": [
+                        {
+                            "name": "description",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "maneja 3 tipos de tamaños, al momento de importar el componente viene con un tamaño por defecto (medium), por medio del atributo \"size\" puede modificar el tamaño tanto como"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/app/stories/module/module.module.ts"
+                },
+                {
+                    "name": "sizes",
+                    "childs": [
+                        {
+                            "name": "small",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "small"
+                        },
+                        {
+                            "name": "medium",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "medium"
+                        },
+                        {
+                            "name": "large",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "large"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/app/stories/module/module.module.ts"
+                }
+            ]
+        },
         "groupedTypeAliases": {}
     },
     "routes": {
@@ -970,6 +1825,35 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/components/check-box/check-box.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "size",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/check-box/check-box.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/check-box/check-box.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CheckBoxComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/components/form-field/form-field.component.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -996,6 +1880,35 @@
                 "name": "FormFieldComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/icon/icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "size",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/icon/icon.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/icon/icon.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "IconComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
@@ -1052,6 +1965,131 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "MatChipComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/radio-buttons/radio-buttons.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "size",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/radio-buttons/radio-buttons.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/radio-buttons/radio-buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "RadioButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/slider/slider.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SliderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/slider/slider.componet.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "size",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/slider/slider.componet.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/spinner/spinner.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "size",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/spinner/spinner.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/spinner/spinner.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SpinnerComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/table/table.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "size",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/table/table.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/table/table.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TableComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/components/table/table.component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Transaction",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"

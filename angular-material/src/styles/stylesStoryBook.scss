@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 mat-chip.small,
 .mat-chip--small {
   height: 24px !important;
@@ -8,14 +10,18 @@ mat-chip-option.small,
   height: 24px !important;
   font-size: 13px;
 }
+
 mat-form-field.small,
 .form-field--small {
   height: 70px;
 }
-.mat-mdc-form-field-infix,
 .form-field--small {
-  font-size: 13.5px !important;
-  padding-top: 20px !important;
+  &::ng-deep {
+    .mat-mdc-form-field-infix {
+      font-size: 13.5px !important;
+      padding-top: 20px !important;
+    }
+  }
 }
 .app-button--small {
   font-size: 13px;
@@ -60,6 +66,32 @@ mat-form-field.small,
     }
   }
 }
+
+.mat-spinner--small {
+  &::ng-deep {
+    .mdc-circular-progress__indeterminate-container {
+      width: 70px;
+    }
+  }
+}
+
+.table--small {
+  &::ng-deep {
+    .mat-mdc-table,
+    .mdc-data-table__header-row,
+    .mdc-data-table__row {
+      height: 35px !important;
+      min-height: 30px;
+      font-size: 12px;
+    }
+  }
+}
+
+mat-icon.small,
+.mat-icon--small {
+  font-size: 20px !important;
+}
+
 ///////////////////////Large//////////////////////
 
 .app-button--large {
@@ -91,7 +123,12 @@ mat-form-field.small,
     }
   }
 }
-
+mat-icon.large,
+.mat-icon--large {
+  font-size: 30px;
+  width: 33px;
+  height: 30px;
+}
 //////////////////////Color//////////////////////
 
 .app-button--raised {

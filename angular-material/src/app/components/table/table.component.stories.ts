@@ -1,14 +1,14 @@
-import { MatChipsModule } from '@angular/material/chips';
-import { MatChipComponent } from './mat-chip.component';
+import { MatTableModule } from '@angular/material/table';
+import { TableComponent } from './table.component';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
 import { descriptionSizeDosTipos } from 'src/app/stories/module/module.module';
 
 export default {
-  title: 'Angular Material/Chip',
-  component: MatChipComponent,
+  title: 'Angular Material/Table',
+  component: TableComponent,
   decorators: [
     moduleMetadata({
-      imports: [MatChipsModule],
+      imports: [MatTableModule],
     }),
   ],
   argTypes: {
@@ -18,16 +18,16 @@ export default {
       table: {
         defaultValue: { summary: 'Medium' },
       },
-      description: 'Chip ' + descriptionSizeDosTipos.description,
+      description: 'Chip' + descriptionSizeDosTipos.description,
     },
+    
   },
 } as Meta;
 
-const Template: Story<MatChipComponent> = (args: MatChipComponent) => ({
+const Template: Story<TableComponent> = (args: TableComponent) => ({
   props: args,
 });
 export const size = Template.bind({});
 size.args = {
   size: 'medium',
-  label: 'Mat-Chip',
 };

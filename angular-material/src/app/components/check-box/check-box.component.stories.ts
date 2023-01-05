@@ -1,6 +1,7 @@
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { CheckBoxComponent } from './check-box.component';
 import { moduleMetadata, Story, Meta } from '@storybook/angular';
+import { descriptionSizeTresTipos } from '../../stories/module/module.module';
 
 export default {
   title: 'Angular Material/CheckBox',
@@ -11,9 +12,20 @@ export default {
     }),
   ],
   argTypes: {
+    label: {
+      description: 'Checkbox',
+      defaultValue: 'CHECKBOX',
+    },
     size: {
-      options: ['small', 'medium', 'large'],
       control: { type: 'radio' },
+      options: ['small', 'medium', 'large'],
+      table: {
+        defaultValue: { summary: 'Medium' },
+      },
+      description:
+        'Checkbox ' +
+        descriptionSizeTresTipos.description +
+        ' `SMALL` O `LARGE`',
     },
   },
 } as Meta;
