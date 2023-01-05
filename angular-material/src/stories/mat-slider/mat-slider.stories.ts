@@ -1,9 +1,8 @@
-import { Story              } from '@storybook/angular/types-6-0';
-import { colors, descripcionComponent } from '../model/.model';
-
-import { moduleMetadata     } from '@storybook/angular';
-import { MatSliderModule    } from '@angular/material/slider';
-import { MatSliderComponent } from './mat-slider.component';
+import { Story                        } from '@storybook/angular/types-6-0';
+import { moduleMetadata               } from '@storybook/angular';
+import { MatSliderModule              } from '@angular/material/slider';
+import { MatSliderComponent           } from './mat-slider.component';
+import { Colors, descripcionComponent } from '../../model/modelo.model';
 
 export default {
   title: 'Slider',
@@ -16,9 +15,11 @@ export default {
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: colors,
-      description: 'Slider ' + descripcionComponent.descripcion,
-      defaultValue: colors.primary,
+      options: Colors,
+      description: 'Slider ' + descripcionComponent,
+      table: {
+        defaultValue: { summary: 'Primary' }
+      }, 
     },
   },
   Parameters: {

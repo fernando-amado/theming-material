@@ -1,9 +1,9 @@
-import { Meta, Story          } from '@storybook/angular/types-6-0';
-import { MatButtonComponent   } from "./mat-button.component";
-import { colors, descripcionComponent } from '../model/.model';
+import { Meta, Story                   } from '@storybook/angular/types-6-0';
+import { moduleMetadata                } from "@storybook/angular";
+import { MatButtonModule               } from '@angular/material/button';
+import { MatButtonComponent            } from "./mat-button.component";
+import { Colors, descripcionComponent  } from '../../model/modelo.model';
 
-import { moduleMetadata       } from "@storybook/angular";
-import { MatButtonModule      } from '@angular/material/button';
 export default {
     title: 'Button',
     component: MatButtonComponent ,
@@ -15,9 +15,11 @@ export default {
     argTypes: {
         color: {
           control: { type: 'radio' }, 
-          options: colors,
-          description: 'Button ' + descripcionComponent.descripcion,
-          defaultValue: colors.primary
+          options: Colors,
+          description: 'Button ' + descripcionComponent,
+          table: {
+            defaultValue: { summary: 'Primary' }
+          }, 
         },  
       },
       parameters: {
@@ -28,7 +30,9 @@ export default {
         },
       },
 } as Meta
+
 const Template :Story<MatButtonModule> = (args: MatButtonModule) =>({ props:args })
+
 export const MatButton = Template.bind({});
   MatButton.args = {};
 

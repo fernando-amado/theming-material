@@ -1,9 +1,9 @@
-import { Meta, Story            } from '@storybook/angular/types-6-0';
-import { colors, descripcionComponent } from '../model/.model';
+import { Meta, Story                  } from '@storybook/angular/types-6-0';
+import { moduleMetadata               } from "@storybook/angular";
+import { MatBadgeModule               } from '@angular/material/badge';
+import { MatBagdeComponent            } from './mat-bagde.component';
+import { Colors, descripcionComponent } from '../../model/modelo.model';
 
-import { moduleMetadata         } from "@storybook/angular";
-import { MatBagdeComponent      } from './mat-bagde.component';
-import { MatBadgeModule         } from '@angular/material/badge';
 export default {
     title: 'Badge',
     component: MatBagdeComponent ,
@@ -15,9 +15,11 @@ export default {
     argTypes: {
         color: {
           control: { type: 'radio' }, 
-          options: colors,
-          description: 'Badge ' + descripcionComponent.descripcion,
-          defaultValue: colors.primary
+          options: Colors,
+          description: 'Badge ' + descripcionComponent,
+          table: {
+            defaultValue: { summary: 'primary' }
+          }, 
         },  
       },
       parameters: {
@@ -26,13 +28,10 @@ export default {
             { name: 'dark', value: '#000' },
           ],
         },
-
       },
 } as Meta
 
-const Template :Story<MatBagdeComponent> = (args: MatBagdeComponent) =>({
-    props:args
-})
+const Template :Story<MatBagdeComponent> = (args: MatBagdeComponent) =>({ props:args })
 
 export const MatBadge = Template.bind({});
   MatBadge.args = {};

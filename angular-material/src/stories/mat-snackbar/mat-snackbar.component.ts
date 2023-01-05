@@ -1,15 +1,14 @@
-import { Component, inject, Input } from '@angular/core';
-import {MatSnackBar, MatSnackBarRef} from '@angular/material/snack-bar';
-import { colors } from '../model/.model';
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-mat-snackbar',
   templateUrl: './mat-snackbar.component.html',
   styleUrls: ['../config-storybook/main.scss']
 })
 export class MatSnackbarComponent {
-  @Input () color?: colors;
-  
+  @Input() 
+  color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;
+    
   public get colorOption(): string[] {
-    return ['app-mat-slidetoggle',`app-mat-slidetoggle--${this.color}`]
+    return [`app-mat-slidetoggle--${this.color}`]
     }
 }

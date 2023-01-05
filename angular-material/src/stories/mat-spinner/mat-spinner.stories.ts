@@ -1,9 +1,8 @@
-import { Story } from '@storybook/angular/types-6-0';
-import { MatSpinnerComponent } from './mat-spinner.component';
-import { colors, descripcionComponent } from '../model/.model';
-
-import { moduleMetadata } from '@storybook/angular';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { Story                        } from '@storybook/angular/types-6-0';
+import { moduleMetadata               } from '@storybook/angular';
+import { MatProgressSpinnerModule     } from '@angular/material/progress-spinner';
+import { MatSpinnerComponent          } from './mat-spinner.component';
+import { Colors, descripcionComponent } from '../../model/modelo.model';
 
 export default {
   title: 'Spinner',
@@ -13,13 +12,14 @@ export default {
       imports: [MatProgressSpinnerModule],
     }),
   ],
-
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: colors,
-      description: 'Spinner ' + descripcionComponent.descripcion,
-      defaultValue: colors.primary,
+      options: Colors,
+      description: 'Spinner ' + descripcionComponent,
+      table: {
+        defaultValue: { summary: 'Primary' }
+      }, 
     },
   },
   Parameters: {
@@ -29,11 +29,7 @@ export default {
   },
 };
 
-const Template: Story<MatSpinnerComponent> = (
-  args: MatSpinnerComponent
-) => ({
-  props: args,
-});
+const Template: Story<MatSpinnerComponent> = ( args: MatSpinnerComponent ) => ({ props: args });
 
 export const matSpiner = Template.bind({});
 matSpiner.args = {};

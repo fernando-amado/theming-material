@@ -2,7 +2,6 @@ import { NgModule                } from '@angular/core';
 import { BrowserModule           } from '@angular/platform-browser';
 import { AppRoutingModule        } from './app-routing.module';
 import { AppComponent            } from './app.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule          } from './material.module';
 import { MatButtonComponent      } from '../stories/mat-button/mat-button.component';
@@ -13,7 +12,6 @@ import { MatSliderComponent      } from '../stories/mat-slider/mat-slider.compon
 import { MatChipsComponent       } from 'src/stories/mat-chips/mat-chips.component';
 import { MatBagdeComponent       } from 'src/stories/mat-bagde/mat-bagde.component';
 import { MatSlidetoggleComponent } from 'src/stories/mat-slidetoggle/mat-slidetoggle.component';
-import { MatStepperComponent     } from 'src/stories/mat-stepper/mat-stepper.component';
 import { MatSnackbarComponent } from 'src/stories/mat-snackbar/mat-snackbar.component';
 
 @NgModule({
@@ -34,7 +32,6 @@ import { MatSnackbarComponent } from 'src/stories/mat-snackbar/mat-snackbar.comp
         MatChipsComponent,
         MatBagdeComponent,
         MatSlidetoggleComponent,
-        MatStepperComponent,
         MatSnackbarComponent
     ],
     providers: [],

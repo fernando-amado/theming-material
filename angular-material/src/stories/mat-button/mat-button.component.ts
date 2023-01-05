@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { colors } from '../model/.model';
 @Component({
   selector: 'app-mat-button',
   templateUrl: './mat-button.component.html',
@@ -7,9 +6,10 @@ import { colors } from '../model/.model';
 })
 
 export class MatButtonComponent {
-  @Input () color?: colors;
+  @Input() 
+  color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;  
 
   public get colorOption(): string[] {
-   return ['app-mat-button',`app-mat-button--${this.color}`]
+   return [`app-mat-button--${this.color}`]
   }
 } 

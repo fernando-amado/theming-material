@@ -19,7 +19,6 @@ $warning: #fb8500;
 .demo-section + .demo-section {
   margin-top: 16px;
 }
-
 // CONFIGURACIÓN COLORES COMPONENTES
 //MAT BUTTON , MATBAGDE
 .app-mat-button--primary,
@@ -168,10 +167,6 @@ $warning: #fb8500;
 // MATCHIPS
 .app-mat-chips--primary.mat-mdc-standard-chip.mat-mdc-chip-selected, .mat-mdc-standard-chip.mat-mdc-chip-selected {
   --mdc-chip-elevated-container-color: #1e62a1;
- text-transform:var(--mdc-typography-body2-text-transform, uppercase)!important;
-}
-.mat-mdc-standard-chip {
-  text-transform: uppercase!important;
 }
 .app-mat-chips--accent.mat-mdc-standard-chip.mat-mdc-chip-selected {
   --mdc-chip-elevated-container-color: #0cbbe2;

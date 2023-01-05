@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { colors } from '../model/.model';
 @Component({
   selector: 'app-mat-progress-bar',
   templateUrl: './mat-progress-bar.component.html',
@@ -7,9 +6,10 @@ import { colors } from '../model/.model';
 })
 
 export class MatProgressBarComponent {
-  @Input () color?: colors;
+  @Input() 
+  color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;
   
   public get colorOption(): string[] {
-    return ['app-mat-progress-bar',`app-mat-progress-bar--${this.color}`]
+    return [`app-mat-progress-bar--${this.color}`]
   }
 }

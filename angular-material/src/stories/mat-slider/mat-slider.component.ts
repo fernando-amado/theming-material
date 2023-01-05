@@ -1,15 +1,14 @@
 import { Component, Input } from '@angular/core';
-import { colors } from '../model/.model';
-
 @Component({
   selector: 'app-mat-slider',
   templateUrl: './mat-slider.component.html',
   styleUrls: ['../config-storybook/main.scss']
 })
 export class MatSliderComponent {
-  @Input () color?: colors;
+  @Input() 
+  color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;
 
   public get colorOption(): string[] {
-    return ['app-mat-slider',`app-mat-slider--${this.color}`]
+    return [`app-mat-slider--${this.color}`]
   }
 };

@@ -1,9 +1,8 @@
-import { Meta, Story } from '@storybook/angular/types-6-0';
-import { colors, descripcionComponent } from '../model/.model';
-
-import { moduleMetadata } from '@storybook/angular';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatToolbarComponent } from './mat-toolbar.component';
+import { Meta, Story                  } from '@storybook/angular/types-6-0';
+import { moduleMetadata               } from '@storybook/angular';
+import { MatToolbarModule             } from '@angular/material/toolbar';
+import { MatToolbarComponent          } from './mat-toolbar.component';
+import { Colors, descripcionComponent } from '../../model/modelo.model';
 
 export default {
   title: 'Toolbar',
@@ -16,9 +15,11 @@ export default {
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: colors,
-      description: 'Toolbar ' + descripcionComponent.descripcion,
-      defaultValue: colors.primary
+      options: Colors,
+      description: 'Toolbar ' + descripcionComponent,
+      table: {
+        defaultValue: { summary: 'Primary' }
+      }, 
     },
   },
   Parameters: {
@@ -27,8 +28,8 @@ export default {
     },
   },
 } as Meta;
-const Template: Story<MatToolbarComponent> = (args: MatToolbarModule) => ({
-  props: args,
-});
+
+const Template: Story<MatToolbarComponent> = (args: MatToolbarModule) => ({ props: args });
+
 export const matToolbar = Template.bind({});
 matToolbar.args = {};

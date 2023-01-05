@@ -1,10 +1,9 @@
-import { Story                   } from '@storybook/angular/types-6-0';
-import { colors, descripcionComponent} from '../model/.model';
+import { Story                        } from '@storybook/angular/types-6-0';
+import { moduleMetadata               } from '@storybook/angular';
+import { MatSlideToggleModule         } from '@angular/material/slide-toggle';
+import { MatSlidetoggleComponent      } from 'src/stories/mat-slidetoggle/mat-slidetoggle.component';
+import { Colors, descripcionComponent } from '../../model/modelo.model';
 
-import { moduleMetadata          } from '@storybook/angular';
-import { MatSlideToggleModule    } from '@angular/material/slide-toggle';
-import { MatSlidetoggleComponent } from 'src/stories/mat-slidetoggle/mat-slidetoggle.component';
-import { progressBar } from '../mat-progress-bar/progress-bar.stories';
 export default {
   title: 'Slide toggle',
   component: MatSlidetoggleComponent,
@@ -16,9 +15,11 @@ export default {
   argTypes: {
     color: {
       control: { type: 'radio' },
-      options: colors,
-      description: 'Slide' + descripcionComponent.descripcion,
-      defaultValue: colors.primary,
+      options: Colors,
+      description: 'Slide' + descripcionComponent,
+      table: {
+        defaultValue: { summary: 'Primary' }
+      }, 
     },
   },
   Parameters: {
@@ -27,6 +28,8 @@ export default {
     },
   },
 };
+
 const Template: Story<MatSlidetoggleComponent> = (args: MatSlideToggleModule ) => ({ props: args });
+
 export const MatSlideToggle = Template.bind({});
 MatSlideToggle.args = {};
