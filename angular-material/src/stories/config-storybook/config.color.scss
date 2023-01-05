@@ -1,0 +1,282 @@
+$light-text: #fff;
+$primary: #1e62a1;
+$accent: #0cbbe2;
+$warn: #d14343;
+$success: #8fc93a;
+$info: #2d9fc5;
+$warning: #fb8500;
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.demo-section + .demo-section {
+  margin-top: 16px;
+}
+
+@mixin color-Config($textColor, $background) {
+  color: $textColor !important;
+  background-color: $background !important;
+}
+
+// CONFIGURACIÓN COLORES COMPONENTES
+//MAT BUTTON , MATBAGDE
+.app-mat-button--primary,
+.app-mat-toolbar--primary,
+.app-mat-bagde--primary .mat-badge-content {
+  @include color-Config($light-text, $primary);
+}
+.mat-mdc-raised-button{
+  background-color: transparent;
+}
+.app-mat-button--accent,
+.app-mat-toolbar--accent,
+.app-mat-bagde--accent .mat-badge-content {
+  @include color-Config($light-text, $accent);
+}
+.app-mat-button--warn,
+.app-mat-toolbar--warn,
+.app-mat-bagde--warn .mat-badge-content {
+  @include color-Config($light-text, $warn);
+}
+.app-mat-button--success,
+.app-mat-toolbar--success,
+.app-mat-bagde--success .mat-badge-content {
+  @include color-Config($light-text, $success);
+}
+.app-mat-button--info,
+.app-mat-toolbar--info,
+.app-mat-bagde--info .mat-badge-content {
+  @include color-Config($light-text, $info);
+}
+.app-mat-button--warning,
+.app-mat-toolbar--warning,
+.app-mat-bagde--warning .mat-badge-content {
+  @include color-Config($light-text, $warning);
+}
+
+// MAT PROGRESS BAR
+.app-mat-progress-bar--primary {
+  --mdc-linear-progress-active-indicator-color: #1e62a1;
+}
+.app-mat-progress-bar--accent {
+  --mdc-linear-progress-active-indicator-color: #0cbbe2;
+}
+.app-mat-progress-bar--warn {
+  --mdc-linear-progress-active-indicator-color: #d14343;
+}
+.app-mat-progress-bar--success {
+  --mdc-linear-progress-active-indicator-color: #8fc93a;
+}
+.app-mat-progress-bar--info {
+  --mdc-linear-progress-active-indicator-color: #2d9fc5;
+}
+.app-mat-progress-bar--warning {
+  --mdc-linear-progress-active-indicator-color: #fb8500;
+}
+
+//MAT SPINNER
+.app-mat-spinner--primary {
+  --mdc-circular-progress-active-indicator-color: #1e62a1;
+}
+.app-mat-spinner--accent {
+  --mdc-circular-progress-active-indicator-color: #0cbbe2;
+}
+.app-mat-spinner--warn {
+  --mdc-circular-progress-active-indicator-color: #d14343;
+}
+.app-mat-spinner--success {
+  --mdc-circular-progress-active-indicator-color: #8fc93a;
+}
+.app-mat-spinner--info {
+  --mdc-circular-progress-active-indicator-color: #2d9fc5;
+}
+.app-mat-spinner--warning {
+  --mdc-circular-progress-active-indicator-color: #fb8500;
+}
+// MAT SLIDER
+.app-mat-slider--primary {
+  --mdc-slider-handle-color: #1e62a1;
+  --mdc-slider-focus-handle-color: #1e62a1;
+  --mdc-slider-hover-handle-color: #1e62a1;
+  --mdc-slider-active-track-color: #1e62a1;
+  --mdc-slider-inactive-track-color: #1e62a1;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #1e62a1;
+  --mat-mdc-slider-ripple-color: #1e62a1;
+  --mat-mdc-slider-hover-ripple-color: rgba(63, 81, 181, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(63, 81, 181, 0.2);
+}
+.app-mat-slider--accent {
+  --mdc-slider-handle-color: #0cbbe2;
+  --mdc-slider-focus-handle-color: #0cbbe2;
+  --mdc-slider-hover-handle-color: #0cbbe2;
+  --mdc-slider-active-track-color: #0cbbe2;
+  --mdc-slider-inactive-track-color: #0cbbe2;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #0cbbe2;
+  --mat-mdc-slider-ripple-color: #0cbbe2;
+  --mat-mdc-slider-hover-ripple-color: rgba(63, 81, 181, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(63, 81, 181, 0.2);
+}
+.app-mat-slider--warn {
+  --mdc-slider-handle-color: #d14343;
+  --mdc-slider-focus-handle-color: #d14343;
+  --mdc-slider-hover-handle-color: #d14343;
+  --mdc-slider-active-track-color: #d14343;
+  --mdc-slider-inactive-track-color: #d14343;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #d14343;
+  --mat-mdc-slider-ripple-color: #d14343;
+  --mat-mdc-slider-hover-ripple-color: rgba(63, 81, 181, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(63, 81, 181, 0.2);
+}
+.app-mat-slider--success {
+  --mdc-slider-handle-color: #8fc93a;
+  --mdc-slider-focus-handle-color: #8fc93a;
+  --mdc-slider-hover-handle-color: #8fc93a;
+  --mdc-slider-active-track-color: #8fc93a;
+  --mdc-slider-inactive-track-color: #8fc93a;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #8fc93a;
+  --mat-mdc-slider-ripple-color: #8fc93a;
+  --mat-mdc-slider-hover-ripple-color: rgba(63, 81, 181, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(63, 81, 181, 0.2);
+}
+.app-mat-slider--info {
+  --mdc-slider-handle-color: #2d9fc5;
+  --mdc-slider-focus-handle-color: #2d9fc5;
+  --mdc-slider-hover-handle-color: #2d9fc5;
+  --mdc-slider-active-track-color: #2d9fc5;
+  --mdc-slider-inactive-track-color: #2d9fc5;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #2d9fc5;
+  --mat-mdc-slider-ripple-color: #2d9fc5;
+  --mat-mdc-slider-hover-ripple-color: rgba(63, 81, 181, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(63, 81, 181, 0.2);
+}
+.app-mat-slider--warning {
+  --mdc-slider-handle-color: #fb8500;
+  --mdc-slider-focus-handle-color: #fb8500;
+  --mdc-slider-hover-handle-color: #fb8500;
+  --mdc-slider-active-track-color: #fb8500;
+  --mdc-slider-inactive-track-color: #fb8500;
+  --mdc-slider-with-tick-marks-active-container-color: #fff;
+  --mdc-slider-with-tick-marks-inactive-container-color: #fb8500;
+  --mat-mdc-slider-ripple-color: #fb8500;
+  --mat-mdc-slider-hover-ripple-color: rgba(63, 81, 181, 0.05);
+  --mat-mdc-slider-focus-ripple-color: rgba(63, 81, 181, 0.2);
+}
+// MATCHIPS
+.app-mat-chips--primary.mat-mdc-standard-chip.mat-mdc-chip-selected {
+  --mdc-chip-elevated-container-color: #1e62a1;
+}
+.app-mat-chips--accent.mat-mdc-standard-chip.mat-mdc-chip-selected {
+  --mdc-chip-elevated-container-color: #0cbbe2;
+}
+.app-mat-chips--warn.mat-mdc-standard-chip.mat-mdc-chip-selected {
+  --mdc-chip-elevated-container-color: #d14343;
+}
+.app-mat-chips--success.mat-mdc-standard-chip.mat-mdc-chip-selected {
+  --mdc-chip-elevated-container-color: #8fc93a;
+}
+.app-mat-chips--info.mat-mdc-standard-chip.mat-mdc-chip-selected {
+  --mdc-chip-elevated-container-color: #2d9fc5;
+}
+.app-mat-chips--warning.mat-mdc-standard-chip.mat-mdc-chip-selected {
+  --mdc-chip-elevated-container-color: #fb8500;
+}
+// MAT SLIDE TOGGLE
+.app-mat-slidetoggle--primary.mat-mdc-slide-toggle {
+  --mdc-switch-selected-focus-state-layer-color: #1e62a1;
+  --mdc-switch-selected-handle-color: #1e62a1;
+  --mdc-switch-selected-hover-state-layer-color: #1e62a1;
+  --mdc-switch-selected-pressed-state-layer-color: #1e62a1;
+  --mdc-switch-selected-focus-handle-color: #1e62a1;
+  --mdc-switch-selected-hover-handle-color: #1e62a1;
+  --mdc-switch-selected-pressed-handle-color: #1e62a1;
+  --mdc-switch-selected-focus-track-color: #3971a5;
+  --mdc-switch-selected-hover-track-color: #3971a5;
+  --mdc-switch-selected-pressed-track-color: #3971a5;
+  --mdc-switch-selected-track-color: #3971a5;
+}
+.app-mat-slidetoggle--accent.mat-mdc-slide-toggle {
+  --mdc-switch-selected-focus-state-layer-color: #0cbbe2;
+  --mdc-switch-selected-handle-color: #0cbbe2;
+  --mdc-switch-selected-hover-state-layer-color: #0cbbe2;
+  --mdc-switch-selected-pressed-state-layer-color: #0cbbe2;
+  --mdc-switch-selected-focus-handle-color: #0cbbe2;
+  --mdc-switch-selected-hover-handle-color: #0cbbe2;
+  --mdc-switch-selected-pressed-handle-color: #0cbbe2;
+  --mdc-switch-selected-focus-track-color: #44c4e1;
+  --mdc-switch-selected-hover-track-color: #44c4e1;
+  --mdc-switch-selected-pressed-track-color: #44c4e1;
+  --mdc-switch-selected-track-color: #44c4e1;
+}
+.app-mat-slidetoggle--warn.mat-mdc-slide-toggle {
+  --mdc-switch-selected-focus-state-layer-color: #d14343;
+  --mdc-switch-selected-handle-color: #d14343;
+  --mdc-switch-selected-hover-state-layer-color: #d14343;
+  --mdc-switch-selected-pressed-state-layer-color: #d14343;
+  --mdc-switch-selected-focus-handle-color: #d14343;
+  --mdc-switch-selected-hover-handle-color: #d14343;
+  --mdc-switch-selected-pressed-handle-color: #d14343;
+  --mdc-switch-selected-focus-track-color: #d37373;
+  --mdc-switch-selected-hover-track-color: #d37373;
+  --mdc-switch-selected-pressed-track-color: #d37373;
+  --mdc-switch-selected-track-color: #d37373;
+}
+.app-mat-slidetoggle--success.mat-mdc-slide-toggle {
+  --mdc-switch-selected-focus-state-layer-color: #8fc93a;
+  --mdc-switch-selected-handle-color: #8fc93a;
+  --mdc-switch-selected-hover-state-layer-color: #8fc93a;
+  --mdc-switch-selected-pressed-state-layer-color: #8fc93a;
+  --mdc-switch-selected-focus-handle-color: #8fc93a;
+  --mdc-switch-selected-hover-handle-color: #8fc93a;
+  --mdc-switch-selected-pressed-handle-color: #8fc93a;
+  --mdc-switch-selected-focus-track-color: #a4c86e;
+  --mdc-switch-selected-hover-track-color: #a4c86e;
+  --mdc-switch-selected-pressed-track-color: #a4c86e;
+  --mdc-switch-selected-track-color: #a4c86e;
+}
+.app-mat-slidetoggle--info.mat-mdc-slide-toggle {
+  --mdc-switch-selected-focus-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-handle-color: #2d9fc5;
+  --mdc-switch-selected-hover-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-pressed-state-layer-color: #2d9fc5;
+  --mdc-switch-selected-focus-handle-color: #2d9fc5;
+  --mdc-switch-selected-hover-handle-color: #2d9fc5;
+  --mdc-switch-selected-pressed-handle-color: #2d9fc5;
+  --mdc-switch-selected-focus-track-color: rgb(117, 208, 228);
+  --mdc-switch-selected-hover-track-color: rgb(117, 208, 228);
+  --mdc-switch-selected-pressed-track-color: rgb(117, 208, 228);
+  --mdc-switch-selected-track-color: rgb(117, 208, 228);
+}
+.app-mat-slidetoggle--warning.mat-mdc-slide-toggle {
+  --mdc-switch-selected-focus-state-layer-color: #fb8500;
+  --mdc-switch-selected-handle-color: #fb8500;
+  --mdc-switch-selected-hover-state-layer-color: #fb8500;
+  --mdc-switch-selected-pressed-state-layer-color: #fb8500;
+  --mdc-switch-selected-focus-handle-color: #fb8500;
+  --mdc-switch-selected-hover-handle-color: #fb8500;
+  --mdc-switch-selected-pressed-handle-color: #fb8500;
+  --mdc-switch-selected-focus-track-color: #fab86d;
+  --mdc-switch-selected-hover-track-color: #fab86d;
+  --mdc-switch-selected-pressed-track-color: #fab86d;
+  --mdc-switch-selected-track-color: #fab86d;
+}
+
+.app-mat-tabs.mat-mdc-tab-group.mat-background-success {
+  --mat-mdc-tab-header-with-background-background-color: #8fc93a;
+  --mat-mdc-tab-header-with-background-foreground-color: #fff;
+}
+.app-mat-tabs.mat-mdc-tab-group.mat-background-info {
+  --mat-mdc-tab-header-with-background-background-color: #2d9fc5;
+  --mat-mdc-tab-header-with-background-foreground-color: #fff;
+}
+.app-mat-tabs.mat-mdc-tab-group.mat-background-warning {
+  --mat-mdc-tab-header-with-background-background-color: #fb8500;
+  --mat-mdc-tab-header-with-background-foreground-color: #fff;
+}

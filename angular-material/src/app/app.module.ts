@@ -1,3 +1,5 @@
+export class AppModule { }
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
@@ -8,7 +10,7 @@ import { SizeDirective } from './Directivas/size/size.directive';
 
 @NgModule({
   imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, MatButtonModule],
-  declarations: [AppComponent, SizeDirective],
+  declarations: [AppComponent, SizeDirective,TypographyComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
