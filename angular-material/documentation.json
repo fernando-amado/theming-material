@@ -5,7 +5,62 @@
     "guards": [],
     "interceptors": [],
     "classes": [],
-    "directives": [],
+    "directives": [
+        {
+            "name": "ColorDirective",
+            "id": "directive-ColorDirective-14286db5a4a63112ee26c5f47eaaa6c92664445b18e76f69b4ba64f1825719c724856b7ff4d45bd090b2f618c26cc60f3a4e84a0ed02b08616b5de2245ba46ff",
+            "file": "src/stories/typography/color.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Directive,HostBinding } from '@angular/core';\n\n@Directive({\n  selector: '[Color]'\n})\nexport class ColorDirective {\n\n  constructor() { }\n  @HostBinding('style.backgroundColor') bgColor = 'yellow';\n\n\n}\n",
+            "selector": "[Color]",
+            "providers": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [
+                {
+                    "name": "style.backgroundColor",
+                    "defaultValue": "'yellow'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "hostListeners": [],
+            "propertiesClass": [
+                {
+                    "name": "bgColor",
+                    "defaultValue": "'yellow'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9,
+                    "decorators": [
+                        {
+                            "name": "HostBinding",
+                            "stringifiedArguments": "'style.backgroundColor'"
+                        }
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 6
+            }
+        }
+    ],
     "components": [
         {
             "name": "AppComponent",
@@ -45,34 +100,59 @@
                 }
             ],
             "stylesData": "",
+<<<<<<< HEAD
             "templateData": "\r\n"
         },
         {
             "name": "MatBagdeComponent",
             "id": "component-MatBagdeComponent-e668e7469df896cf5b3e6f69f7eaad146058c71d836028c20c5425d601d2c7a1d8a376fb42bf4d9d31f99cf05ec7caaa1cdb41792298083b42b862b2aa989f78",
             "file": "src/stories/mat-bagde/mat-bagde.component.ts",
+=======
+            "templateData": ""
+        },
+        {
+            "name": "TypographyComponent",
+            "id": "component-TypographyComponent-8a0546fb6c2c228b9f7bff24e9e62b5b07b7e81fa46d5e58d0b824059fa39b93417f03a8cb9790af92f52165682b997f3d312f7a7f302ca8fb6a4a3a4e718d11",
+            "file": "src/stories/typography/typography.component.ts",
+>>>>>>> main
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
+<<<<<<< HEAD
             "selector": "app-mat-bagde",
+=======
+            "selector": "app-typogrpahy-levels",
+>>>>>>> main
             "styleUrls": [
                 "../config-storybook/main.scss"
             ],
             "styles": [],
             "templateUrl": [
+<<<<<<< HEAD
                 "./mat-bagde.component.html"
+=======
+                "./typography.component.html"
+>>>>>>> main
             ],
             "viewProviders": [],
             "inputsClass": [
                 {
+<<<<<<< HEAD
                     "name": "color",
                     "defaultValue": "'primary'",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 10,
                     "type": "\"primary\" | \"accent\" | \"warn\" | \"success\" | \"info\" | \"warning\"",
+=======
+                    "name": "level",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "typography_levels",
+>>>>>>> main
                     "decorators": []
                 }
             ],
@@ -86,26 +166,42 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
+<<<<<<< HEAD
             "sourceCode": "import { Component, Input } from '@angular/core';\r\n@Component({\r\n  selector: 'app-mat-bagde',\r\n  templateUrl: './mat-bagde.component.html',\r\n  styleUrls: ['../config-storybook/main.scss']\r\n})\r\n\r\nexport class MatBagdeComponent {\r\n@Input() \r\ncolor?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;\r\n\r\n  public get colorOption(): string[] {\r\n  return [`app-mat-bagde--${this.color}`]\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
                     "data": "@import './config.color';",
+=======
+            "sourceCode": "import { Component, Input } from '@angular/core';\nimport { typography_levels } from '../model/enums.model';\n\n@Component({\n  selector: 'app-typogrpahy-levels',\n  templateUrl: './typography.component.html',\n  styleUrls: ['../config-storybook/main.scss']\n})\nexport class TypographyComponent {\n  @Input() level?: typography_levels; \n\n  public get classes(): string[]{\n    return[`app-typogrpahy-levels--${this.level} `]\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "@import './config.color';\r\n@import './config-typography.scss';",
+>>>>>>> main
                     "styleUrl": "../config-storybook/main.scss"
                 }
             ],
             "stylesData": "",
             "accessors": {
+<<<<<<< HEAD
                 "colorOption": {
                     "name": "colorOption",
                     "getSignature": {
                         "name": "colorOption",
+=======
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+>>>>>>> main
                         "type": "[]",
                         "returnType": "string[]",
                         "line": 12
                     }
                 }
             },
+<<<<<<< HEAD
             "templateData": "<div matBadge=\"4\" matBadgeOverlap=\"false\" class=\"demo-section\" [ngClass]=\"colorOption\">Badge component </div>"
         },
         {
@@ -595,18 +691,29 @@
                 }
             },
             "templateData": "<mat-toolbar [ngClass]=\"colorOption\">\n    <h6>toolbar</h6>\n</mat-toolbar>"
+=======
+            "templateData": "<p [ngClass]=\"classes\">{{level}}</p>"
+>>>>>>> main
         }
     ],
     "modules": [
         {
             "name": "AppModule",
+<<<<<<< HEAD
             "id": "module-AppModule-a7807ba6e51d3f418263671596d0b35d550f4cfd67feceaed0e6f8b006dbfb3e8a4ad53d085cabea2c3dc0dbf6426b1663c06acc1e5ad0dd2812dfa660e725a6",
+=======
+            "id": "module-AppModule-ef19ab52c28e14ad5f4867b2ad05771ab1111f63bef63894ace345957b3677a8547082e0d18c24d702b24a115bd8ade89e22b9f5709c6280e2cdfb3a94df7ae6",
+>>>>>>> main
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
+<<<<<<< HEAD
             "sourceCode": "import { NgModule                } from '@angular/core';\r\nimport { BrowserModule           } from '@angular/platform-browser';\r\nimport { AppRoutingModule        } from './app-routing.module';\r\nimport { AppComponent            } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { MaterialModule          } from './material.module';\r\nimport { MatButtonComponent      } from '../stories/mat-button/mat-button.component';\r\nimport { MatProgressBarComponent } from 'src/stories/mat-progress-bar/mat-progress-bar.component';\r\nimport { MatToolbarComponent     } from 'src/stories/mat-toolbar/mat-toolbar.component';\r\nimport { MatSpinnerComponent     } from 'src/stories/mat-spinner/mat-spinner.component';\r\nimport { MatSliderComponent      } from '../stories/mat-slider/mat-slider.component';\r\nimport { MatChipsComponent       } from 'src/stories/mat-chips/mat-chips.component';\r\nimport { MatBagdeComponent       } from 'src/stories/mat-bagde/mat-bagde.component';\r\nimport { MatSlidetoggleComponent } from 'src/stories/mat-slidetoggle/mat-slidetoggle.component';\r\nimport { MatSnackbarComponent } from 'src/stories/mat-snackbar/mat-snackbar.component';\r\n\r\n@NgModule({\r\n    imports: [\r\n        BrowserModule,\r\n        AppRoutingModule,\r\n        BrowserAnimationsModule,\r\n        MaterialModule,\r\n    ],\r\n    exports: [],\r\n    declarations: [\r\n        AppComponent,\r\n        MatButtonComponent,\r\n        MatProgressBarComponent,\r\n        MatToolbarComponent,\r\n        MatSpinnerComponent,\r\n        MatSliderComponent,\r\n        MatChipsComponent,\r\n        MatBagdeComponent,\r\n        MatSlidetoggleComponent,\r\n        MatSnackbarComponent\r\n    ],\r\n    providers: [],\r\n    bootstrap: [AppComponent],\r\n})\r\nexport class AppModule { }\r\n",
+=======
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { TypographyComponent } from '../stories/typography/typography.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    TypographyComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n  ],\r\n  exports:[],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+>>>>>>> main
             "children": [
                 {
                     "type": "providers",
@@ -619,6 +726,7 @@
                             "name": "AppComponent"
                         },
                         {
+<<<<<<< HEAD
                             "name": "MatBagdeComponent"
                         },
                         {
@@ -644,6 +752,9 @@
                         },
                         {
                             "name": "MatToolbarComponent"
+=======
+                            "name": "TypographyComponent"
+>>>>>>> main
                         }
                     ]
                 },
@@ -685,6 +796,7 @@
             "file": "src/app/app-routing.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+<<<<<<< HEAD
             "children": [
                 {
                     "type": "providers",
@@ -721,6 +833,8 @@
             "file": "src/app/material.module.ts",
             "methods": [],
             "sourceCode": "import { NgModule                 } from '@angular/core';\r\nimport { CommonModule             } from '@angular/common';\r\nimport { MatButtonModule          } from '@angular/material/button';\r\nimport { MatProgressBarModule     } from '@angular/material/progress-bar';\r\nimport { MatChipsModule           } from '@angular/material/chips';\r\nimport { MatToolbarModule         } from '@angular/material/toolbar';\r\nimport { MatProgressSpinnerModule } from '@angular/material/progress-spinner';\r\nimport { MatSliderModule          } from '@angular/material/slider';\r\nimport { MatBadgeModule           } from '@angular/material/badge';\r\nimport { MatSlideToggleModule     } from '@angular/material/slide-toggle';\r\nimport { MatStepperModule         } from '@angular/material/stepper';\r\nimport { MatFormFieldModule       } from '@angular/material/form-field';\r\nimport { MatSnackBarModule       } from '@angular/material/snack-bar';\r\n\r\nconst components = [\r\n  CommonModule,\r\n  MatButtonModule,\r\n  MatProgressBarModule,\r\n  MatToolbarModule,\r\n  MatChipsModule,\r\n  MatProgressSpinnerModule,\r\n  MatSliderModule,\r\n  MatBadgeModule,\r\n  MatSlideToggleModule,\r\n  MatStepperModule,\r\n  MatFormFieldModule,\r\n  MatSnackBarModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [],\r\n  imports: [components],\r\n  exports: [components]\r\n})\r\nexport class MaterialModule { \r\n\r\n}\r\n",
+=======
+>>>>>>> main
             "children": [
                 {
                     "type": "providers",
@@ -752,6 +866,7 @@
     "miscellaneous": {
         "variables": [
             {
+<<<<<<< HEAD
                 "name": "components",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -856,6 +971,12 @@
                 "ctype": "miscellaneous",
                 "subtype": "variable",
                 "file": "src/stories/mat-progress-bar/progress-bar.stories.ts",
+=======
+                "name": "level",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/typography/typography.stories.ts",
+>>>>>>> main
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "",
@@ -865,6 +986,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+<<<<<<< HEAD
                 "file": "src/stories/mat-chips/mat-chips.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -969,6 +1091,20 @@
         "enumerations": [
             {
                 "name": "Colors",
+=======
+                "file": "src/stories/typography/typography.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<TypographyComponent>",
+                "defaultValue": "(\r\n    args: TypographyComponent\r\n  ) => ({\r\n    props: args,\r\n  })"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [
+            {
+                "name": "colors",
+>>>>>>> main
                 "childs": [
                     {
                         "name": "primary",
@@ -1004,7 +1140,11 @@
                         "name": "warning",
                         "deprecated": false,
                         "deprecationMessage": "",
+<<<<<<< HEAD
                         "value": "warning "
+=======
+                        "value": "warning"
+>>>>>>> main
                     }
                 ],
                 "ctype": "miscellaneous",
@@ -1012,6 +1152,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
+<<<<<<< HEAD
                 "file": "src/model/modelo.model.ts"
             }
         ],
@@ -1046,6 +1187,107 @@
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/stories/mat-bagde/mat-badge.stories.ts",
+=======
+                "file": "src/stories/model/enums.model.ts"
+            },
+            {
+                "name": "typography_levels",
+                "childs": [
+                    {
+                        "name": "h1",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h1"
+                    },
+                    {
+                        "name": "h2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h2"
+                    },
+                    {
+                        "name": "h3",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h3"
+                    },
+                    {
+                        "name": "h4",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h4"
+                    },
+                    {
+                        "name": "h5",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h5"
+                    },
+                    {
+                        "name": "h6",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "h6"
+                    },
+                    {
+                        "name": "subtitle1",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "subtitle-1"
+                    },
+                    {
+                        "name": "subtitle2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "subtitle-2"
+                    },
+                    {
+                        "name": "body1",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "body-1"
+                    },
+                    {
+                        "name": "body2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "body-2"
+                    },
+                    {
+                        "name": "caption",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "caption"
+                    },
+                    {
+                        "name": "button",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "button"
+                    },
+                    {
+                        "name": "overline",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "value": "overline"
+                    }
+                ],
+                "ctype": "miscellaneous",
+                "subtype": "enum",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "file": "src/stories/model/enums.model.ts"
+            }
+        ],
+        "groupedVariables": {
+            "src/stories/typography/typography.stories.ts": [
+                {
+                    "name": "level",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/typography/typography.stories.ts",
+>>>>>>> main
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "",
@@ -1055,6 +1297,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
+<<<<<<< HEAD
                     "file": "src/stories/mat-bagde/mat-badge.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
@@ -1236,14 +1479,27 @@
                     "deprecationMessage": "",
                     "type": "Story<MatProgressBarComponent>",
                     "defaultValue": "(args: MatProgressBarComponent) =>({ props:args })"
+=======
+                    "file": "src/stories/typography/typography.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<TypographyComponent>",
+                    "defaultValue": "(\r\n    args: TypographyComponent\r\n  ) => ({\r\n    props: args,\r\n  })"
+>>>>>>> main
                 }
             ]
         },
         "groupedFunctions": {},
         "groupedEnumerations": {
+<<<<<<< HEAD
             "src/model/modelo.model.ts": [
                 {
                     "name": "Colors",
+=======
+            "src/stories/model/enums.model.ts": [
+                {
+                    "name": "colors",
+>>>>>>> main
                     "childs": [
                         {
                             "name": "primary",
@@ -1279,7 +1535,11 @@
                             "name": "warning",
                             "deprecated": false,
                             "deprecationMessage": "",
+<<<<<<< HEAD
                             "value": "warning "
+=======
+                            "value": "warning"
+>>>>>>> main
                         }
                     ],
                     "ctype": "miscellaneous",
@@ -1287,6 +1547,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
+<<<<<<< HEAD
                     "file": "src/model/modelo.model.ts"
                 }
             ]
@@ -1306,6 +1567,102 @@
                 }
             ]
         }
+=======
+                    "file": "src/stories/model/enums.model.ts"
+                },
+                {
+                    "name": "typography_levels",
+                    "childs": [
+                        {
+                            "name": "h1",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h1"
+                        },
+                        {
+                            "name": "h2",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h2"
+                        },
+                        {
+                            "name": "h3",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h3"
+                        },
+                        {
+                            "name": "h4",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h4"
+                        },
+                        {
+                            "name": "h5",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h5"
+                        },
+                        {
+                            "name": "h6",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "h6"
+                        },
+                        {
+                            "name": "subtitle1",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "subtitle-1"
+                        },
+                        {
+                            "name": "subtitle2",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "subtitle-2"
+                        },
+                        {
+                            "name": "body1",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "body-1"
+                        },
+                        {
+                            "name": "body2",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "body-2"
+                        },
+                        {
+                            "name": "caption",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "caption"
+                        },
+                        {
+                            "name": "button",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "button"
+                        },
+                        {
+                            "name": "overline",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "value": "overline"
+                        }
+                    ],
+                    "ctype": "miscellaneous",
+                    "subtype": "enum",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "file": "src/stories/model/enums.model.ts"
+                }
+            ]
+        },
+        "groupedTypeAliases": {}
+>>>>>>> main
     },
     "routes": {
         "name": "<root>",
@@ -1335,16 +1692,43 @@
                 "status": "low"
             },
             {
+<<<<<<< HEAD
                 "filePath": "src/app/material.module.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "components",
+=======
+                "filePath": "src/stories/typography/color.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "ColorDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/typography/typography.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TypographyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/typography/typography.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "level",
+>>>>>>> main
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
+<<<<<<< HEAD
                 "filePath": "src/model/modelo.model.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1607,6 +1991,9 @@
             },
             {
                 "filePath": "src/stories/mat-toolbar/mat-toolbar.stories.ts",
+=======
+                "filePath": "src/stories/typography/typography.stories.ts",
+>>>>>>> main
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
