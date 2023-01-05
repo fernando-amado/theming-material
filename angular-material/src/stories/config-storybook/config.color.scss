@@ -6,30 +6,25 @@ $success: #8fc93a;
 $info: #2d9fc5;
 $warning: #fb8500;
 
+@mixin color-Config($textColor, $background) {
+  color: $textColor !important;
+  background-color: $background !important;
+}
+//BAGDE CONFIGURACION EXTRA
 :host {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
 .demo-section + .demo-section {
   margin-top: 16px;
 }
-
-@mixin color-Config($textColor, $background) {
-  color: $textColor !important;
-  background-color: $background !important;
-}
-
 // CONFIGURACIÓN COLORES COMPONENTES
 //MAT BUTTON , MATBAGDE
 .app-mat-button--primary,
 .app-mat-toolbar--primary,
 .app-mat-bagde--primary .mat-badge-content {
   @include color-Config($light-text, $primary);
-}
-.mat-mdc-raised-button{
-  background-color: transparent;
 }
 .app-mat-button--accent,
 .app-mat-toolbar--accent,
@@ -268,15 +263,3 @@ $warning: #fb8500;
   --mdc-switch-selected-track-color: #fab86d;
 }
 
-.app-mat-tabs.mat-mdc-tab-group.mat-background-success {
-  --mat-mdc-tab-header-with-background-background-color: #8fc93a;
-  --mat-mdc-tab-header-with-background-foreground-color: #fff;
-}
-.app-mat-tabs.mat-mdc-tab-group.mat-background-info {
-  --mat-mdc-tab-header-with-background-background-color: #2d9fc5;
-  --mat-mdc-tab-header-with-background-foreground-color: #fff;
-}
-.app-mat-tabs.mat-mdc-tab-group.mat-background-warning {
-  --mat-mdc-tab-header-with-background-background-color: #fb8500;
-  --mat-mdc-tab-header-with-background-foreground-color: #fff;
-}
