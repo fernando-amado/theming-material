@@ -1,7 +1,6 @@
 button-group.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
-  margin: 100px 0 0 0;
-  background-color: rgb(21, 101, 192);
+  background-color: #1976d2;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -12,9 +11,9 @@ button-group.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
 
 button-group.primary-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
-  background-color: #1565c0;
-  border-right: 1px solid #8383838a;
-  // border-color: #0f3969;
+  background-color: #1976d2;
+  border-right: 1px solid #969696;
+  border-color: #1565c0;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
