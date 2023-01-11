@@ -1,8 +1,11 @@
 // TYPOGRAPHY CONFIGURATION
 @import "./typography.scss";
-
+//DIRECTIVES STYLES
+@import'./directivesStyles/Tabs/iconPosition.scss';
+@import'./directivesStyles/orientation.scss';
+@import'./directivesStyles/textColor.scss';
 // BUTTON GROUP STYLES
-
 @import "./buttongroup/buttonGroupContained.scss";
+@import "./buttongroup/orientationButtonGroup.scss";
 @import "./buttongroup/buttonGroupText.scss";
 @import "./buttongroup/buttonGroupOutlined.scss";

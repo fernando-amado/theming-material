@@ -1,0 +1,179 @@
+$primary: #1e62a1;
+$accent: #0cbbe2;
+$warn: #d14343;
+$success: #8fc93a;
+$info: #2d9fc5;
+$warning: #fb8500;
+$border-start: 4px;
+$border-end: 4px;
+$border-end-left: 0px;
+@mixin bordes($border-start, $border-end, $color){
+  // background-color: $color;
+  border-start-end-radius: $border-start;
+  border-end-end-radius: $border-end;
+}
+.vertical--button-group {
+  .content {
+    display: flex;
+    flex-direction: column;
+    //content variant
+  }
+  //variant contained
+  .mat-mdc-button-base {
+    &:first-of-type {
+      border-end-start-radius: 0px !important;
+      border-top-right-radius: 4px !important;
+    }
+    &:last-of-type {
+      border-start-end-radius: 0px !important;
+      border-bottom-left-radius: 4px !important;
+    }
+  }
+  &.primary-,
+  &.accent,
+  &.warn,
+  &.success,
+  &.info,
+  &.warning {
+    &-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:first-of-type,
+      &:not(:last-of-type) {
+        border-right: none;
+      }
+    }
+  }
+  //variant text
+  &.primary {
+    &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:first-of-type,
+      &:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid $primary;
+      }
+    }
+  }
+  &.accent {
+    &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:first-of-type,
+      &:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid $accent;
+      }
+    }
+  }
+  &.warn {
+    &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:first-of-type,
+      &:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid $warn;
+      }
+    }
+  }
+  &.success {
+    &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:first-of-type,
+      &:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid $success;
+      }
+    }
+  }
+  &.info {
+    &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:first-of-type,
+      &:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid $info;
+      }
+    }
+  }
+  &.warning {
+    &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:first-of-type,
+      &:not(:last-of-type) {
+        border-right: none;
+        border-bottom: 1px solid $warning;
+      }
+    }
+  }
+  //variant outlined
+  &.outlined-buttonGroup {
+    &.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:not(:last-of-type) {
+        border-right: 1px solid $primary !important;
+      }
+      &:first-of-type {
+        border-bottom: none ;
+      }
+      &:last-of-type {
+        border-top: none ;
+      }
+    }
+  }
+  &.outlined-buttonGroup {
+    &.accent-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:not(:last-of-type) {
+        border-right: 1px solid $accent !important;
+      }
+      &:first-of-type {
+        border-bottom: none ;
+      }
+      &:last-of-type {
+        border-top: none ;
+      }
+    }
+  }
+  &.outlined-buttonGroup {
+    &.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:not(:last-of-type) {
+        border-right: 1px solid $warn !important;
+      }
+      &:first-of-type {
+        border-bottom: none ;
+      }
+      &:last-of-type {
+        border-top: none ;
+      }
+    }
+  }
+  &.outlined-buttonGroup {
+    &.success-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:not(:last-of-type) {
+        border-right: 1px solid $success !important;
+      }
+      &:first-of-type {
+        border-bottom: none ;
+      }
+      &:last-of-type {
+        border-top: none ;
+      }
+    }
+  }
+  &.outlined-buttonGroup {
+    &.info-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:not(:last-of-type) {
+        border-right: 1px solid $info !important;
+      }
+      &:first-of-type {
+        border-bottom: none ;
+      }
+      &:last-of-type {
+        border-top: none ;
+      }
+    }
+  }
+  &.outlined-buttonGroup {
+    &.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
+      &:not(:last-of-type) {
+        border-right: 1px solid $warning !important;
+      }
+      &:first-of-type {
+        border-bottom: none ;
+      }
+      &:last-of-type {
+        border-top: none ;
+      }
+    }
+  }
+}
