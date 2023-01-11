@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Size } from './Directivas/size/size.directive';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  sizeFirstButton: Size = 'small';
+  sizeSecondButton: Size = 'medium';
 }

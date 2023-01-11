@@ -1,12 +1,142 @@
 {
     "pipes": [],
-    "interfaces": [],
+    "interfaces": [
+        {
+            "name": "Component",
+            "id": "interface-Component-38d1f7ea191176c7331fd42df78a5717261948bc060a17ccd7b0df5b83c6a2abd20304d243d77a07afdd52076de1c907ea7ec2712ea0a93abe463b4c167ca320",
+            "file": "src/app/interfaces/Component.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Component {\n  button: string;\n  matChip: string;\n  matChipOption: string;\n  matFormField: string;\n  matCheckBox: string;\n  matSlider: string;\n  matRadioButton: string;\n  matSpinner: string;\n  table: string;\n  matTable: string;\n  matIcon: string;\n}\n",
+            "properties": [
+                {
+                    "name": "button",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "matCheckBox",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "matChip",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "matChipOption",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "matFormField",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "matIcon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "matRadioButton",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "matSlider",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "matSpinner",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "matTable",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "table",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        }
+    ],
     "injectables": [],
     "guards": [],
     "interceptors": [],
     "classes": [],
     "directives": [
         {
+            "name": "SizeDirective",
+            "id": "directive-SizeDirective-385ca6765f35a8031e4b67078fd006ca910aa80df4060c44e37c4ec984c7de72183281c5603728c6bd89c0ae2bb2badbaf62316e4cbd881079adcd9fc7b2f00a",
+            "file": "src/app/Directivas/size.directive.ts",
+            "type": "directive",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import { Directive, ElementRef, Input, OnChanges } from '@angular/core';\nimport { Component } from '../interfaces/Component';\n@Directive({\n  selector: '[size]',\n})\nexport class SizeDirective implements Component {\n  constructor(private el: ElementRef) {}\n  button = 'button';\n  matChip = 'mat-chip';\n  matChipOption = 'mat-chip-option';\n  matFormField = 'mat-form-field';\n  matCheckBox = 'mat-checkbox';\n  matSlider = 'mat-slider';\n  matRadioButton = 'mat-radio-button';\n  matSpinner = 'mat-spinner';\n  table = 'table';\n  matTable = 'mat-table';\n  matIcon = 'mat-icon';\n\n  @Input() size!: string;\n  ngOnChanges() {\n    let element = this.el.nativeElement;\n    switch (this.size) {\n      case 'small':\n        {\n          this.button = element.classList.add('small');\n          this.matChip = element.classList.add('small');\n          this.matChipOption = element.classList.add('small');\n          this.matFormField = element.classList.add('small');\n          this.matCheckBox = element.classList.add('small');\n          this.matRadioButton = element.classList.add('small');\n          this.matSlider = element.classList.add('small');\n          this.matSpinner = element.classList.add('small');\n          this.table = element.classList.add('small');\n          this.matTable = element.classList.add('small');\n          this.matIcon = element.classList.add('small');\n        }\n        return;\n      case 'large':\n        {\n          this.button = element.classList.add('large');\n          this.matCheckBox = element.classList.add('large');\n          this.matRadioButton = element.classList.add('large');\n          this.matIcon = element.classList.add('large');\n        }\n        return;\n      default:\n        return;\n    }\n  }\n}\n",
+            "selector": "[size]",
+            "providers": [],
+            "inputsClass": [
+                {
+                    "name": "size",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 20,
+=======
             "name": "ColorDirective",
             "id": "directive-ColorDirective-14286db5a4a63112ee26c5f47eaaa6c92664445b18e76f69b4ba64f1825719c724856b7ff4d45bd090b2f618c26cc60f3a4e84a0ed02b08616b5de2245ba46ff",
             "file": "src/stories/typography/color.directive.ts",
@@ -31,6 +161,75 @@
                     "decorators": []
                 }
             ],
+            "outputsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "propertiesClass": [
+                {
+                    "name": "button",
+                    "defaultValue": "'button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                },
+                {
+                    "name": "matCheckBox",
+                    "defaultValue": "'mat-checkbox'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                },
+                {
+                    "name": "matChip",
+                    "defaultValue": "'mat-chip'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "matChipOption",
+                    "defaultValue": "'mat-chip-option'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "matFormField",
+                    "defaultValue": "'mat-form-field'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "matIcon",
+                    "defaultValue": "'mat-icon'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                },
+                {
+                    "name": "matRadioButton",
+                    "defaultValue": "'mat-radio-button'",
             "hostListeners": [],
             "propertiesClass": [
                 {
@@ -41,6 +240,64 @@
                     "type": "string",
                     "optional": false,
                     "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "matSlider",
+                    "defaultValue": "'mat-slider'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "matSpinner",
+                    "defaultValue": "'mat-spinner'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "matTable",
+                    "defaultValue": "'mat-table'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 17
+                },
+                {
+                    "name": "table",
+                    "defaultValue": "'table'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnChanges",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "implements": [
+                "Component"
+            ],
                     "line": 9,
                     "decorators": [
                         {
@@ -56,6 +313,26 @@
                 "description": "",
                 "deprecated": false,
                 "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 6,
+                "jsdoctags": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
                 "args": [],
                 "line": 6
             }
@@ -64,6 +341,7 @@
     "components": [
         {
             "name": "AppComponent",
+            "id": "component-AppComponent-20aa6cecde39f66f275adf2971ff7450765acb73ff757ddfbe0ec207d5c4594d0718228a1a11fb6358833fbfa608a9a5e67794adba20a89a96e2358d2fe6a603",
             "id": "component-AppComponent-5cdec6dc2fc3039a5efda3bb87dec908a84c48974feee8dc20e698da36638e15b232a8bd017f6f330b0b8ca1872e34f6bb04dfbc81d7476ded8d5fdff516b455",
             "file": "src/app/app.component.ts",
             "encapsulation": [],
@@ -91,6 +369,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n\n}\n",
             "sourceCode": "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  templateUrl: './app.component.html',\r\n  styleUrls: ['./app.component.scss']\r\n})\r\nexport class AppComponent {\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
@@ -166,13 +445,21 @@
     "modules": [
         {
             "name": "AppModule",
+
+            "id": "module-AppModule-2fd11592b67254e58972f7895c9bb4558323a7f6ee733b397b9fcf103ee5d25c9787e82db132ad38a5386c9bb7520ee05c4aed97ecdfcfdc0d3d261d2bc3e24a",
+
             "id": "module-AppModule-ef19ab52c28e14ad5f4867b2ad05771ab1111f63bef63894ace345957b3677a8547082e0d18c24d702b24a115bd8ade89e22b9f5709c6280e2cdfb3a94df7ae6",
+
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
+
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { AppComponent } from './app.component';\nimport { SizeDirective } from './Directivas/size.directive';\nimport { AppRoutingModule } from './app-routing.module';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { ButtonComponent } from './components/button/button.component';\n\n@NgModule({\n  declarations: [AppComponent, SizeDirective, ButtonComponent],\n  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+
             "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { TypographyComponent } from '../stories/typography/typography.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    TypographyComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule,\r\n  ],\r\n  exports:[],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+
             "children": [
                 {
                     "type": "providers",
@@ -185,6 +472,9 @@
                             "name": "AppComponent"
                         },
                         {
+
+                            "name": "SizeDirective"
+
                             "name": "TypographyComponent"
                         }
                     ]
@@ -601,6 +891,15 @@
         "status": "low",
         "files": [
             {
+                "filePath": "src/app/Directivas/size.directive.ts",
+                "type": "directive",
+                "linktype": "directive",
+                "name": "SizeDirective",
+                "coveragePercent": 0,
+                "coverageCount": "0/15",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/app.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -610,6 +909,12 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/interfaces/Component.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Component",
+                "coveragePercent": 0,
+                "coverageCount": "0/12",
                 "filePath": "src/stories/typography/color.directive.ts",
                 "type": "directive",
                 "linktype": "directive",
