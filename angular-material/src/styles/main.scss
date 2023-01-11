@@ -2,6 +2,7 @@
 @import "./typography.scss";
 
 // BUTTON GROUP STYLES
-@import "./buttonGroupStyles.scss";
 
-@import "./mixin/buttongroup.scss";
+@import "./buttongroup/buttonGroupContained.scss";
+@import "./buttongroup/buttonGroupText.scss";
+@import "./buttongroup/buttonGroupOutlined.scss";

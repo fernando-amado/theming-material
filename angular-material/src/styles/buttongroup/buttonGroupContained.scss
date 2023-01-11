@@ -1,0 +1,164 @@
+button-group.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
+  color: white;
+  background-color: #1e62a1;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  border-end-end-radius: 4px;
+  border-start-end-radius: 4px;
+}
+
+button-group.primary-buttonGroup
+  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #1e62a1;
+  border-right: 1px solid #969696;
+  border-color: #0a55ab;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+}
+
+button-group.primary-buttonGroup
+  button.mdc-button.mat-mdc-button-base:first-of-type {
+  border-end-start-radius: 4px;
+  border-start-start-radius: 4px;
+}
+
+button-group.accent-buttonGroup button.mdc-button.mat-mdc-button-base {
+  color: white;
+  background-color: #0cbbe2;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  border-end-end-radius: 4px;
+  border-start-end-radius: 4px;
+}
+
+button-group.accent-buttonGroup
+  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #0cbbe2;
+  border-right: 1px solid #969696;
+  border-color: #18a9c9;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+}
+
+button-group.accent-buttonGroup
+  button.mdc-button.mat-mdc-button-base:first-of-type {
+  border-end-start-radius: 4px;
+  border-start-start-radius: 4px;
+}
+button-group.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
+  color: white;
+  background-color: #d14343;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  border-end-end-radius: 4px;
+  border-start-end-radius: 4px;
+}
+
+button-group.warn-buttonGroup
+  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #d14343;
+  border-right: 1px solid #969696;
+  border-color: #c15f57;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+}
+
+button-group.warn-buttonGroup
+  button.mdc-button.mat-mdc-button-base:first-of-type {
+  border-end-start-radius: 4px;
+  border-start-start-radius: 4px;
+}
+button-group.success-buttonGroup button.mdc-button.mat-mdc-button-base {
+  color: white;
+  background-color: #8fc93a;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  border-end-end-radius: 4px;
+  border-start-end-radius: 4px;
+}
+
+button-group.success-buttonGroup
+  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #8fc93a;
+  border-right: 1px solid #969696;
+  border-color: #5778257d;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+}
+
+button-group.success-buttonGroup
+  button.mdc-button.mat-mdc-button-base:first-of-type {
+  border-end-start-radius: 4px;
+  border-start-start-radius: 4px;
+}
+
+button-group.info-buttonGroup button.mdc-button.mat-mdc-button-base {
+  color: white;
+  background-color: #2d9fc5;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  border-end-end-radius: 4px;
+  border-start-end-radius: 4px;
+}
+
+button-group.info-buttonGroup
+  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #2d9fc5;
+  border-right: 1px solid #969696;
+  border-color: #067aa163;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+}
+
+button-group.info-buttonGroup
+  button.mdc-button.mat-mdc-button-base:first-of-type {
+  border-end-start-radius: 4px;
+  border-start-start-radius: 4px;
+}
+button-group.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
+  color: white;
+  background-color: #fb8500;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  border-end-end-radius: 4px;
+  border-start-end-radius: 4px;
+}
+
+button-group.warning-buttonGroup
+  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #fb8500;
+  border-right: 1px solid #969696;
+  border-color: #ad661782;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+}
+
+button-group.warning-buttonGroup
+  button.mdc-button.mat-mdc-button-base:first-of-type {
+  border-end-start-radius: 4px;
+  border-start-start-radius: 4px;
+}
