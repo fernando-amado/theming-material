@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-mat-toolbar',
   templateUrl: './mat-toolbar.component.html',
-  styleUrls: ['../config-storybook/main.scss']
+  styleUrls: ['../..//styles/main.scss']
 })
 export class MatToolbarComponent {
   @Input() 

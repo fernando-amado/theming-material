@@ -9,4 +9,7 @@
 @import "./typography.scss";
 // VARIANTES PERSONALIZADAS
 @import "./variantes-personalizadas.scss";
-
+@import "./buttongroup/buttonGroupContained.scss";
+@import "./buttongroup/buttonGroupOutlined.scss";
+@import "./buttongroup/buttonGroupText.scss";
+@import "./buttongroup/orientationButtonGroup.scss";

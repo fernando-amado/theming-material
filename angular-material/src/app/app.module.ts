@@ -10,23 +10,22 @@ import { MatSlidetoggleComponent   } from 'src/components/mat-slidetoggle/mat-sl
 import { MatSnackbarComponent      } from 'src/components/mat-snackbar/mat-snackbar.component';
 import { MatTextfieldComponent     } from 'src/components/mat-textfield/input.component';   
 import { MatAvatarComponent        } from 'src/components/mat-avatar/mat-avatar.component';
-import { appearanceDirective       } from 'src/stories/Directives/appearance-directive/appearance';
-import { avatarDirective           } from 'src/stories/Directives/avatar-component-directive/avatar.directive';
 import { MatSliderComponent        } from 'src/components/mat-slider/mat-slider.component';   
+import { ButtonGroupComponent      } from 'src/components/mat-buttonGroup/button-group.component';
 import { AppComponent              } from './app.component';
 import { MaterialModule            } from './material.module';
- 
+import { DirectivesModule          } from './directives/directives.module';
+
 @NgModule({
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
         MaterialModule,
+        DirectivesModule
     ],
-    exports: [],
+    exports: [DirectivesModule],
     declarations: [
         AppComponent,
-        avatarDirective,
-        appearanceDirective,
         MatProgressBarComponent,
         MatToolbarComponent,
         MatSpinnerComponent,
@@ -37,8 +36,9 @@ import { MaterialModule            } from './material.module';
         MatSnackbarComponent,
         MatTextfieldComponent,
         MatAvatarComponent,
+        ButtonGroupComponent
     ],
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

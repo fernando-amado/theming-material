@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-mat-bagde',
   templateUrl: './mat-bagde.component.html',
-  styleUrls: ['../config-storybook/main.scss']
+  styleUrls: ['../..//styles/main.scss']
 })
 
 export class MatBagdeComponent {

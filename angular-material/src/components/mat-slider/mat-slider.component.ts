@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-mat-slider',
   templateUrl: './mat-slider.component.html',
-  styleUrls: ['../config-storybook/main.scss']
+  styleUrls: ['../..//styles/main.scss']
 })
 export class MatSliderComponent {
   @Input() 
