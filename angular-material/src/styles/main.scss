@@ -1,4 +1,12 @@
+@use "@angular/material" as mat;
+// EXTRA COLORS CONFIGURATION
+@import "./extraColorConfig.scss";
+// LIGHT AND DARK  THEMES
+@import "./theme.scss";
+//PALETTES
+@import "./palettes.scss";
 // TYPOGRAPHY CONFIGURATION
 @import "./typography.scss";
-@import "./extraColorConfig.scss";
-@import "./palettes.scss";
+// VARIANTES PERSONALIZADAS
+@import "./variantes-personalizadas.scss";
+

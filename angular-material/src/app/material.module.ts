@@ -10,7 +10,9 @@ import { MatBadgeModule           } from '@angular/material/badge';
 import { MatSlideToggleModule     } from '@angular/material/slide-toggle';
 import { MatStepperModule         } from '@angular/material/stepper';
 import { MatFormFieldModule       } from '@angular/material/form-field';
-import { MatSnackBarModule       } from '@angular/material/snack-bar';
+import { MatInputModule           } from '@angular/material/input';
+import { MatSnackBarModule        } from '@angular/material/snack-bar';
+import { MatIconModule            } from '@angular/material/icon';
 
 const components = [
   CommonModule,
@@ -24,7 +26,9 @@ const components = [
   MatSlideToggleModule,
   MatStepperModule,
   MatFormFieldModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatInputModule,
+  MatIconModule
 ];
 
 @NgModule({
@@ -34,4 +38,9 @@ const components = [
 })
 export class MaterialModule { 
 
+  
 }
+
+// get twoCharacter() {
+//   return this.avatar.name ? this.avatar.name.substring(0,2).toUpperCase() : '';
+// }

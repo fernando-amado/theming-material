@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-mat-progress-bar',
   templateUrl: './mat-progress-bar.component.html',
-  styleUrls: ['../config-storybook/main.scss']
+  styleUrls: ['../..//styles/main.scss']
 })
 
 export class MatProgressBarComponent {
@@ -11,5 +11,6 @@ export class MatProgressBarComponent {
   
   public get colorOption(): string[] {
     return [`app-mat-progress-bar--${this.color}`]
+    
   }
 }

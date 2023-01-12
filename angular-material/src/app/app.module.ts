@@ -1,30 +1,32 @@
-import { NgModule                } from '@angular/core';
-import { BrowserModule           } from '@angular/platform-browser';
-import { AppRoutingModule        } from './app-routing.module';
-import { AppComponent            } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule          } from './material.module';
-import { MatButtonComponent      } from '../stories/mat-button/mat-button.component';
-import { MatProgressBarComponent } from 'src/stories/mat-progress-bar/mat-progress-bar.component';
-import { MatToolbarComponent     } from 'src/stories/mat-toolbar/mat-toolbar.component';
-import { MatSpinnerComponent     } from 'src/stories/mat-spinner/mat-spinner.component';
-import { MatSliderComponent      } from '../stories/mat-slider/mat-slider.component';
-import { MatChipsComponent       } from 'src/stories/mat-chips/mat-chips.component';
-import { MatBagdeComponent       } from 'src/stories/mat-bagde/mat-bagde.component';
-import { MatSlidetoggleComponent } from 'src/stories/mat-slidetoggle/mat-slidetoggle.component';
-import { MatSnackbarComponent } from 'src/stories/mat-snackbar/mat-snackbar.component';
-
+import { NgModule                  } from '@angular/core';
+import { BrowserModule             } from '@angular/platform-browser';
+import { BrowserAnimationsModule   } from '@angular/platform-browser/animations';
+import { MatProgressBarComponent   } from 'src/components/mat-progress-bar/mat-progress-bar.component';
+import { MatToolbarComponent       } from 'src/components/mat-toolbar/mat-toolbar.component';
+import { MatSpinnerComponent       } from 'src/components/mat-spinner/mat-spinner.component';
+import { MatChipsComponent         } from 'src/components/mat-chips/mat-chips.component';
+import { MatBagdeComponent         } from 'src/components/mat-bagde/mat-bagde.component';
+import { MatSlidetoggleComponent   } from 'src/components/mat-slidetoggle/mat-slidetoggle.component';
+import { MatSnackbarComponent      } from 'src/components/mat-snackbar/mat-snackbar.component';
+import { MatTextfieldComponent     } from 'src/components/mat-textfield/input.component';   
+import { MatAvatarComponent        } from 'src/components/mat-avatar/mat-avatar.component';
+import { appearanceDirective       } from 'src/stories/Directives/appearance-directive/appearance';
+import { avatarDirective           } from 'src/stories/Directives/avatar-component-directive/avatar.directive';
+import { MatSliderComponent        } from 'src/components/mat-slider/mat-slider.component';   
+import { AppComponent              } from './app.component';
+import { MaterialModule            } from './material.module';
+ 
 @NgModule({
     imports: [
         BrowserModule,
-        AppRoutingModule,
         BrowserAnimationsModule,
         MaterialModule,
     ],
     exports: [],
     declarations: [
         AppComponent,
-        MatButtonComponent,
+        avatarDirective,
+        appearanceDirective,
         MatProgressBarComponent,
         MatToolbarComponent,
         MatSpinnerComponent,
@@ -32,7 +34,9 @@ import { MatSnackbarComponent } from 'src/stories/mat-snackbar/mat-snackbar.comp
         MatChipsComponent,
         MatBagdeComponent,
         MatSlidetoggleComponent,
-        MatSnackbarComponent
+        MatSnackbarComponent,
+        MatTextfieldComponent,
+        MatAvatarComponent,
     ],
     providers: [],
     bootstrap: [AppComponent],
