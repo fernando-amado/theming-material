@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-export type avatarVariant = 'around' | 'square'
+export type avatarVariant = 'rounded' | 'square'
 
 @Directive({
   selector: `[avatar]`,

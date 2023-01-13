@@ -3,7 +3,7 @@ import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 export type Orientation = 'vertical';
 
 @Directive({
-  selector: 'mat-tab-group,button-group [orientation]',
+  selector: 'div,button[orientation]',
 })
 export class OrientationDirective implements OnChanges {
   constructor(private el: ElementRef<HTMLElement>) {}

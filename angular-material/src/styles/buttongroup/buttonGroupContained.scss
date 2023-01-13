@@ -39,8 +39,8 @@ button-group.accent-buttonGroup
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
-  @include bordes($border-start, $border-end);
-}
+  border-end-start-radius: 4px;
+  border-start-start-radius: 4px;}
 
 .accent-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #0cbbe2;

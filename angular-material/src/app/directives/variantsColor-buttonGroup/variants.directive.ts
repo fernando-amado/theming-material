@@ -8,7 +8,7 @@ export type Variant = 'text' | 'outlined' | 'contained';
 export class VariantsDirective implements OnInit {
   constructor(private el: ElementRef<HTMLHtmlElement>) {}
   @Input()
-  color?: 'primary' | 'accent' | 'warn' | 'success' | 'info' | 'warning' =
+  color: 'primary' | 'accent' | 'warn' | 'success' | 'info' | 'warning' =
     'primary';
 
   @Input()
