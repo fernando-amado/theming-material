@@ -34,20 +34,29 @@ button-group.accent-buttonGroup button.mdc-button.mat-mdc-button-base {
 button-group.accent-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #0cbbe2;
-  border-right: 1px solid #969696;
-  border-color: #18a9c9;
+  color: white;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  @include bordes($border-start, $border-end);
+}
+
+.accent-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #0cbbe2;
+  border-right: 1px solid #d8dae5;
+  border-color: #008bb0;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.accent-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.accent-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
+.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #d14343;
   border-radius: var(
@@ -58,23 +67,21 @@ button-group.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.warn-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.warn-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #d14343;
-  border-right: 1px solid #969696;
-  border-color: #c15f57;
+  border-right: 1px solid #d8dae5;
+  border-color: #b51e1e;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.warn-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.warn-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.success-buttonGroup button.mdc-button.mat-mdc-button-base {
+.success-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #8fc93a;
   border-radius: var(
@@ -85,24 +92,22 @@ button-group.success-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.success-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.success-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #8fc93a;
-  border-right: 1px solid #969696;
-  border-color: #5778257d;
+  border-right: 1px solid #d8dae5;
+  border-color: #60a918;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.success-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.success-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
 
-button-group.info-buttonGroup button.mdc-button.mat-mdc-button-base {
+.info-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #2d9fc5;
   border-radius: var(
@@ -113,23 +118,21 @@ button-group.info-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.info-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.info-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #2d9fc5;
-  border-right: 1px solid #969696;
-  border-color: #067aa163;
+  border-right: 1px solid #d8dae5;
+  border-color: #1172a3;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.info-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.info-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
+.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #fb8500;
   border-radius: var(
@@ -140,19 +143,17 @@ button-group.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.warning-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.warning-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #fb8500;
-  border-right: 1px solid #969696;
-  border-color: #ad661782;
+  border-right: 1px solid #d8dae5;
+  border-color: #f85500;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.warning-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.warning-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }

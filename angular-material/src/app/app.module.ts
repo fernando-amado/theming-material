@@ -9,12 +9,13 @@ import { MatBagdeComponent         } from 'src/components/mat-bagde/mat-bagde.co
 import { MatSlidetoggleComponent   } from 'src/components/mat-slidetoggle/mat-slidetoggle.component';
 import { MatTextfieldComponent     } from 'src/components/mat-textfield/input.component';   
 import { MatAvatarComponent        } from 'src/components/mat-avatar/mat-avatar.component';
-import { MatSliderComponent        } from 'src/components/mat-slider/mat-slider.component';   
+import { MatSliderComponent        } from 'src/components/mat-slider/mat-slider.component';
 import { ButtonGroupComponent      } from 'src/components/mat-buttonGroup/button-group.component';
 import { MatButtonComponent        } from 'src/components/mat-button/mat-button.component';
 import { AppComponent              } from './app.component';
 import { MaterialModule            } from './material.module';
 import { DirectivesModule          } from './directives/directives.module';
+import { RatingComponent           } from '../stories/components/rating/rating.component';
 
 @NgModule({
     imports: [

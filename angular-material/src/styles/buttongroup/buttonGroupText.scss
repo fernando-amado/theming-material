@@ -1,5 +1,4 @@
-button-group.primary-buttonGroup.text-buttonGroup
-  button.mdc-button.mat-mdc-button-base {
+.primary-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: #0a55ab;
   background-color: white;
   border-radius: var(
@@ -9,7 +8,7 @@ button-group.primary-buttonGroup.text-buttonGroup
   border-start-end-radius: 4px;
   border-end-end-radius: 4px;
 }
-button-group.primary-buttonGroup.text-buttonGroup
+.primary-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: white;
   border-right: 1px solid #0a55ab;
@@ -18,13 +17,12 @@ button-group.primary-buttonGroup.text-buttonGroup
     var(--mdc-shape-small, 0px)
   );
 }
-button-group.primary-buttonGroup.text-buttonGroup
+.primary-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.accent-buttonGroup.text-buttonGroup
-  button.mdc-button.mat-mdc-button-base {
+.accent-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: #18a9c9;
   background-color: white;
   border-radius: var(
@@ -34,7 +32,7 @@ button-group.accent-buttonGroup.text-buttonGroup
   border-end-end-radius: 4px;
   border-start-end-radius: 4px;
 }
-button-group.accent-buttonGroup.text-buttonGroup
+.accent-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: white;
   border-right: 1px solid #18a9c9;
@@ -44,13 +42,12 @@ button-group.accent-buttonGroup.text-buttonGroup
     var(--mdc-shape-small, 0px)
   );
 }
-button-group.accent-buttonGroup.text-buttonGroup
+.accent-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.warn-buttonGroup.text-buttonGroup
-  button.mdc-button.mat-mdc-button-base {
+.warn-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: #d14343;
   background-color: white;
   border-radius: var(
@@ -60,7 +57,7 @@ button-group.warn-buttonGroup.text-buttonGroup
   border-end-end-radius: 4px;
   border-start-end-radius: 4px;
 }
-button-group.warn-buttonGroup.text-buttonGroup
+.warn-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: white;
   border-right: 1px solid #d14343;
@@ -69,13 +66,12 @@ button-group.warn-buttonGroup.text-buttonGroup
     var(--mdc-shape-small, 0px)
   );
 }
-button-group.warn-buttonGroup.text-buttonGroup
+.warn-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.success-buttonGroup.text-buttonGroup
-  button.mdc-button.mat-mdc-button-base {
+.success-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: #8fc93a;
   background-color: white;
   border-radius: var(
@@ -86,7 +82,7 @@ button-group.success-buttonGroup.text-buttonGroup
   border-start-end-radius: 4px;
 }
 
-button-group.success-buttonGroup.text-buttonGroup
+.success-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: white;
   border-right: 1px solid #8fc93a;
@@ -96,14 +92,13 @@ button-group.success-buttonGroup.text-buttonGroup
   );
 }
 
-button-group.success-buttonGroup.text-buttonGroup
+.success-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
 
-button-group.info-buttonGroup.text-buttonGroup
-  button.mdc-button.mat-mdc-button-base {
+.info-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: #2d9fc5;
   background-color: white;
   border-radius: var(
@@ -114,7 +109,7 @@ button-group.info-buttonGroup.text-buttonGroup
   border-start-end-radius: 4px;
 }
 
-button-group.info-buttonGroup.text-buttonGroup
+.info-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: white;
   border-right: 1px solid #2d9fc5;
@@ -124,13 +119,12 @@ button-group.info-buttonGroup.text-buttonGroup
   );
 }
 
-button-group.info-buttonGroup.text-buttonGroup
+.info-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.warning-buttonGroup.text-buttonGroup
-  button.mdc-button.mat-mdc-button-base {
+.warning-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: #fb8500;
   background-color: white;
   border-radius: var(
@@ -141,7 +135,7 @@ button-group.warning-buttonGroup.text-buttonGroup
   border-start-end-radius: 4px;
 }
 
-button-group.warning-buttonGroup.text-buttonGroup
+.warning-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: white;
   border-right: solid 1px #fb8500;
@@ -151,7 +145,7 @@ button-group.warning-buttonGroup.text-buttonGroup
   );
 }
 
-button-group.warning-buttonGroup.text-buttonGroup
+.warning-buttonGroup.text-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;

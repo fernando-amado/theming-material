@@ -13,7 +13,8 @@ export class OrientationDirective implements OnChanges {
   ngOnChanges() {}
 
   ngAfterViewInit(): void {
-    this.el.nativeElement.classList.add(`${this.orientation}--${this.el.nativeElement.tagName.toLowerCase()}`);  
-    console.log(this.el.nativeElement)
+    this.el.nativeElement.classList.add(
+      `${this.orientation}--${this.el.nativeElement.tagName.toLowerCase()}`
+    );
   }
 }
