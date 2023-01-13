@@ -1,9 +1,8 @@
-.vertical--button-group {
-  //content variant
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
+.vertical {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  max-width: 36px;
   //variant contained
   .mat-mdc-button-base {
     &:first-of-type {

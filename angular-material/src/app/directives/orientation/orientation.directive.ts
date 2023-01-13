@@ -3,7 +3,7 @@ import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 export type Orientation = 'vertical';
 
 @Directive({
-  selector: 'div,button[orientation]',
+  selector: 'div [orientation]',
 })
 export class OrientationDirective implements OnChanges {
   constructor(private el: ElementRef<HTMLElement>) {}
@@ -13,8 +13,6 @@ export class OrientationDirective implements OnChanges {
   ngOnChanges() {}
 
   ngAfterViewInit(): void {
-    this.el.nativeElement.classList.add(
-      `${this.orientation}--${this.el.nativeElement.tagName.toLowerCase()}`
-    );
+    this.el.nativeElement.classList.add(this.orientation);
   }
 }
