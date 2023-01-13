@@ -1,10 +1,16 @@
+@use "@angular/material" as mat;
+// EXTRA COLORS CONFIGURATION
+@import "./extraColorConfig.scss";
+// LIGHT AND DARK  THEMES
+@import "./theme.scss";
+//PALETTES
+@import "./palettes.scss";
 // TYPOGRAPHY CONFIGURATION
 @import "./typography.scss";
-
-// BUTTON GROUP STYLES
-
+// VARIANTES PERSONALIZADAS
+@import "./variantes-personalizadas.scss";
 @import "./buttongroup/buttonGroupContained.scss";
-@import "./buttongroup/buttonGroupText.scss";
 @import "./buttongroup/buttonGroupOutlined.scss";
-
+@import "./buttongroup/buttonGroupText.scss";
+@import "./buttongroup/orientationButtonGroup.scss";
 @import './raiting/raiting.scss'
