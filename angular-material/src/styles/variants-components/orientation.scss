@@ -1,12 +1,9 @@
-mat-tab-group.vertical{
+.vertical{
   flex-direction: row !important;
-  height: 224px;
-  flex-grow: 1;
+  height: 100%;
   background-color: #fbfbfb;
   overflow: hidden;
-  .mat-mdc-tab-header-pagination {
-    box-sizing: border-box;
-  }
+
   .mat-mdc-tab-header {
     flex-direction: column !important;
     width: auto;
@@ -14,6 +11,7 @@ mat-tab-group.vertical{
     border-right: 1px solid;
     border-color: rgba(16, 24, 64, 0.12);
   }
+
   .mat-mdc-tab-labels {
     flex-direction: column;
   }
@@ -24,9 +22,10 @@ mat-tab-group.vertical{
     overflow-y: auto;
     overflow-x: hidden;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+
+  }
+  .mat-mdc-tab{
+    flex-grow: 0!important;
   }
   .mdc-tab-indicator {
     width: 48px;
@@ -35,12 +34,12 @@ mat-tab-group.vertical{
     left: auto;
     right: 0;
   }
+
   .mat-mdc-tab-body-wrapper {
     flex: 1 1 auto;
   }
   .mat-mdc-tab-body-content{
-    height: 100%;
-    padding-inline:24px;
+    padding:24px;
   }
 }
 

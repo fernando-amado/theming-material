@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
-export type Orientation = 'vertical';
+export type Orientation = 'vertical'|'horinzontal';
 
 @Directive({
   selector: 'mat-tab-group,div [orientation]',
