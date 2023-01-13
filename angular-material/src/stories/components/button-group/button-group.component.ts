@@ -1,12 +1,6 @@
 import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
-export type Colors =
-  | 'primary'
-  | 'accent'
-  | 'warn'
-  | 'info'
-  | 'warning'
-  | 'success';
+export type Colors = | 'primary' | 'accent' | 'warn' | 'info' | 'warning' | 'success';
 export type Variant = 'text' | 'outlined' | 'contained';
 @Component({
   selector: 'button-group',

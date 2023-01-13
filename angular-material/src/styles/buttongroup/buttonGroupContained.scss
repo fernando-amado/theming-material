@@ -1,4 +1,4 @@
-button-group.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
+div.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #1e62a1;
   border-radius: var(
@@ -12,8 +12,8 @@ button-group.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
 button-group.primary-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #1e62a1;
-  border-right: 1px solid #969696;
-  border-color: #0a55ab;
+  border-right: 1px solid #D8DAE5;
+  border-color: #003972;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -40,8 +40,8 @@ button-group.accent-buttonGroup button.mdc-button.mat-mdc-button-base {
 button-group.accent-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #0cbbe2;
-  border-right: 1px solid #969696;
-  border-color: #18a9c9;
+  border-right: 1px solid #D8DAE5;
+  border-color: #008BB0;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -67,8 +67,8 @@ button-group.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
 button-group.warn-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #d14343;
-  border-right: 1px solid #969696;
-  border-color: #c15f57;
+  border-right: 1px solid #D8DAE5;
+  border-color: #B51E1E;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -94,8 +94,8 @@ button-group.success-buttonGroup button.mdc-button.mat-mdc-button-base {
 button-group.success-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #8fc93a;
-  border-right: 1px solid #969696;
-  border-color: #5778257d;
+  border-right: 1px solid #D8DAE5;
+  border-color: #60A918;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -122,8 +122,8 @@ button-group.info-buttonGroup button.mdc-button.mat-mdc-button-base {
 button-group.info-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #2d9fc5;
-  border-right: 1px solid #969696;
-  border-color: #067aa163;
+  border-right: 1px solid #D8DAE5;
+  border-color: #1172A3;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -149,8 +149,8 @@ button-group.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
 button-group.warning-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #fb8500;
-  border-right: 1px solid #969696;
-  border-color: #ad661782;
+  border-right: 1px solid #D8DAE5;
+  border-color: #F85500;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)

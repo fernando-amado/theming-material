@@ -6,9 +6,16 @@ import { AppComponent } from './app.component';
 import { TypographyComponent } from '../stories/typography/typography.component';
 import { ButtonGroupComponent } from '../stories/components/button-group/button-group.component';
 import { MatButtonModule } from '@angular/material/button';
+import { RatingComponent } from '../stories/components/rating/rating.component';
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
-  declarations: [AppComponent, TypographyComponent, ButtonGroupComponent],
+  declarations: [
+    AppComponent,
+    TypographyComponent,
+    ButtonGroupComponent,
+    RatingComponent,
+  ],
   exports: [],
   providers: [],
   bootstrap: [AppComponent],
@@ -17,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
+    MatIconModule
   ],
 })
 export class AppModule {}
