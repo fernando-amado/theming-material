@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-
 @Component({
-  selector: 'mat-textfield ',
+  selector: 'mat-textfield',
   templateUrl: './input.component.html',
-  styleUrls: ['../..//styles/main.scss']
+  styleUrls: ['../..//styles/variantes-personalizadas.scss']
 })
+
 export class MatTextfieldComponent {}

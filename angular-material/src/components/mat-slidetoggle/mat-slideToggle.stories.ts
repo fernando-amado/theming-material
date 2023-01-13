@@ -1,7 +1,7 @@
 import { Story                        } from '@storybook/angular/types-6-0';
 import { moduleMetadata               } from '@storybook/angular';
 import { MatSlideToggleModule         } from '@angular/material/slide-toggle';
-import { MatSlidetoggleComponent      } from 'src/stories/mat-slidetoggle/mat-slidetoggle.component';
+import { MatSlidetoggleComponent      } from './mat-slidetoggle.component';    
 import { Colors, descripcionComponent } from '../../model/modelo.model';
 
 export default {

@@ -1,33 +1,16 @@
-$primary: #1e62a1;
-$accent: #0cbbe2;
-$warn: #d14343;
-$success: #8fc93a;
-$info: #2d9fc5;
-$warning: #fb8500;
-$border-start: 4px;
-$border-end: 4px;
-@mixin bordes($border-start, $border-end){
-  // background-color: $color;
-  border-start-end-radius: $border-start;
-  border-end-end-radius: $border-end;
-}
-
 button-group.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
-  color: white;
-  background-color: #1e62a1;
-  border-radius: var(
-    --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
-  );
-  border-start-end-radius: 4px;
-  border-end-end-radius: 4px;
+    @include bg-color-config($white, $primary, ' ');
+    border-radius: var(
+      --mdc-filled-button-container-shape,
+      var(--mdc-shape-small, 0px)
+      );
+    @include bordes-radius(' ', 4px, 4px, ' ');
 }
 
 button-group.primary-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
-  background-color: #1e62a1;
+  @include bg-color-config(' ', $primary,  $primary);
   border-right: 1px solid #969696;
-  border-color: #0a55ab;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -36,18 +19,16 @@ button-group.primary-buttonGroup
 
 button-group.primary-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
-  border-end-start-radius: 4px;
-  border-start-start-radius: 4px;
+    @include bordes-radius(4px, ' ', ' ', 4px);
 }
 
 button-group.accent-buttonGroup button.mdc-button.mat-mdc-button-base {
-  background-color: #0a55ab;
-  color: white;
+  @include bg-color-config($white, $primary, ' ');
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
-  @include bordes($border-start, $border-end)
+  @include bordes-radius(4px, ' ',' ',4px);
 }
 
 button-group.accent-buttonGroup
@@ -174,11 +155,4 @@ button-group.warning-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
-}
-button-group{
-  .warning-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type{
-
-    @include bordes($border-start, $border-end)
-  }
 }

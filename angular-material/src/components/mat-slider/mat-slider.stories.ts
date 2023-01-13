@@ -29,10 +29,6 @@ export default {
   },
 };
 
-const Template: Story<MatSliderComponent> = (
-  args: MatSliderModule
-) => ({
-  props: args,
-});
+const Template: Story<MatSliderComponent> = ( args: MatSliderModule ) => ({ props: args });
 export const MatSlider = Template.bind({});
 MatSlider.args = {};

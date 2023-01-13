@@ -6,10 +6,10 @@ import { Component, Input } from '@angular/core';
 })
 
 export class MatBagdeComponent {
-@Input() 
-color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;
+  @Input() 
+  color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;
 
-  public get colorOption(): string[] {
+ public get colorOption(): string[] {
   return [`app-mat-bagde--${this.color}`]
   }
 }

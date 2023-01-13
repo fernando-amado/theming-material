@@ -1,5 +1,4 @@
-import { Directive, ElementRef, Input, OnChanges, ViewChild } from '@angular/core';
-import { MatTabGroup } from '@angular/material/tabs';
+import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 export type Orientation = 'vertical';
 

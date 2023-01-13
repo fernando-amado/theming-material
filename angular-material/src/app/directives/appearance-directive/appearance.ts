@@ -1,6 +1,6 @@
 import { Directive, ElementRef } from '@angular/core';
 @Directive({
-  selector: `input, mat-form-field [defaultAppearance]`,
+  selector: `[defaultAppearance]`,
 })
 
 export class appearanceDirective {

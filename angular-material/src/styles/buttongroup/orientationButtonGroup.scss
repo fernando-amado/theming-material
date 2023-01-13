@@ -1,22 +1,8 @@
-$primary: #1e62a1;
-$accent: #0cbbe2;
-$warn: #d14343;
-$success: #8fc93a;
-$info: #2d9fc5;
-$warning: #fb8500;
-$border-start: 4px;
-$border-end: 4px;
-$border-end-left: 0px;
-@mixin bordes($border-start, $border-end, $color){
-  // background-color: $color;
-  border-start-end-radius: $border-start;
-  border-end-end-radius: $border-end;
-}
 .vertical--button-group {
+  //content variant
   .content {
     display: flex;
     flex-direction: column;
-    //content variant
   }
   //variant contained
   .mat-mdc-button-base {
@@ -35,7 +21,8 @@ $border-end-left: 0px;
   &.success,
   &.info,
   &.warning {
-    &-buttonGroup button.mdc-button.mat-mdc-button-base {
+    &-buttonGroup button.mdc-button.mat-mdc-button-base,
+    &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
       &:first-of-type,
       &:not(:last-of-type) {
         border-right: none;
@@ -47,7 +34,6 @@ $border-end-left: 0px;
     &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
       &:first-of-type,
       &:not(:last-of-type) {
-        border-right: none;
         border-bottom: 1px solid $primary;
       }
     }
@@ -56,7 +42,6 @@ $border-end-left: 0px;
     &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
       &:first-of-type,
       &:not(:last-of-type) {
-        border-right: none;
         border-bottom: 1px solid $accent;
       }
     }
@@ -65,7 +50,6 @@ $border-end-left: 0px;
     &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
       &:first-of-type,
       &:not(:last-of-type) {
-        border-right: none;
         border-bottom: 1px solid $warn;
       }
     }
@@ -74,7 +58,6 @@ $border-end-left: 0px;
     &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
       &:first-of-type,
       &:not(:last-of-type) {
-        border-right: none;
         border-bottom: 1px solid $success;
       }
     }
@@ -83,7 +66,6 @@ $border-end-left: 0px;
     &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
       &:first-of-type,
       &:not(:last-of-type) {
-        border-right: none;
         border-bottom: 1px solid $info;
       }
     }
@@ -92,7 +74,6 @@ $border-end-left: 0px;
     &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
       &:first-of-type,
       &:not(:last-of-type) {
-        border-right: none;
         border-bottom: 1px solid $warning;
       }
     }

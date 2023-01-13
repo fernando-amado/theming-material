@@ -1,0 +1,23 @@
+button-group.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
+  @include bg-color-config($white, $primary, ' ');
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+    );
+  @include bordes-radius(' ', 4px, 4px, ' ');
+}
+
+button-group.primary-buttonGroup
+button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+@include bg-color-config(' ', $primary,  $primary);
+border-right: 1px solid #969696;
+border-radius: var(
+  --mdc-filled-button-container-shape,
+  var(--mdc-shape-small, 0px)
+);
+}
+
+button-group.primary-buttonGroup
+button.mdc-button.mat-mdc-button-base:first-of-type {
+  @include bordes-radius(4px, ' ', ' ', 4px);
+}

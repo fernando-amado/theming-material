@@ -7,9 +7,13 @@
 @import "./palettes.scss";
 // TYPOGRAPHY CONFIGURATION
 @import "./typography.scss";
+// VARIABLES   
+@import "./variables/variables.scss";
+// MIXINS
+@import "./mixins/mixins.scss";
 // VARIANTES PERSONALIZADAS
-@import "./variantes-personalizadas.scss";
 @import "./buttongroup/buttonGroupContained.scss";
 @import "./buttongroup/buttonGroupOutlined.scss";
 @import "./buttongroup/buttonGroupText.scss";
 @import "./buttongroup/orientationButtonGroup.scss";
+@import "./variantes-personalizadas.scss";

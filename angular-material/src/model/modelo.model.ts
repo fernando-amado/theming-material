@@ -24,5 +24,5 @@ export enum TypographyLevels{
 }
 
 export const descripcionComponent = 
-    'componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : ';
-    
+    'componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : '
+    ;

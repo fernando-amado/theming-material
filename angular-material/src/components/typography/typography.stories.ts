@@ -1,6 +1,7 @@
-import { Story, Meta } from '@storybook/angular/types-6-0';
-import { TypographyComponent } from './typography.component';
-import { TypographyLevels, Colors } from '../../model/modulo.model';
+import { Story, Meta                             } from '@storybook/angular/types-6-0';
+import { TypographyComponent                     } from './typography.component';
+import { TypographyLevels, descripcionComponent  } from '../../model/modelo.model';
+import {  } from 'src/model/modelo.model';
 
 export default {
   title: 'Typography',
@@ -9,8 +10,8 @@ export default {
     level: {
       options: TypographyLevels,
       control: { type: 'radio' },
-      description:
-        'En esta configuracion para la tipografia se editaron `12 niveles` en total de los cuales 5 son personalizados.<br><br> <h2>lista de niveles</h2><br>',
+      description: 'Toolbar ' + descripcionComponent,
+
       defaultValue: TypographyLevels.body2,
     },
   },

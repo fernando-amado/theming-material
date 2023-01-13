@@ -36,11 +36,4 @@ const components = [
   imports: [components],
   exports: [components]
 })
-export class MaterialModule { 
-
-  
-}
-
-// get twoCharacter() {
-//   return this.avatar.name ? this.avatar.name.substring(0,2).toUpperCase() : '';
-// }
+export class MaterialModule {}

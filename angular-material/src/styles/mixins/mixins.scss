@@ -1,0 +1,21 @@
+@mixin bordes-radius(
+  $border-start-left,
+  $border-start-right,
+  $border-end-right,
+  $border-end-left
+) {
+  border-start-start-radius: $border-start-left;
+  border-start-end-radius: $border-start-right;
+  border-end-end-radius:  $border-end-right;
+  border-end-start-radius: $border-end-left;
+};
+
+@mixin bg-color-config(
+    $color,
+    $backgroundColor,
+    $border-color,
+){
+    color: $color;
+    background-color: $backgroundColor;
+    border-color: $border-color;
+};
