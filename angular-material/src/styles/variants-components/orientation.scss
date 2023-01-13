@@ -1,12 +1,9 @@
-
-
-.vertical{
+mat-tab-group.vertical{
   flex-direction: row !important;
   height: 224px;
   flex-grow: 1;
   background-color: #fbfbfb;
   overflow: hidden;
-
   .mat-mdc-tab-header-pagination {
     box-sizing: border-box;
   }
@@ -46,6 +43,7 @@
     padding-inline:24px;
   }
 }
+
 
 .mat-mdc-tab-group.mat-tabs-with-background > .mat-mdc-tab-header {
   border: none;

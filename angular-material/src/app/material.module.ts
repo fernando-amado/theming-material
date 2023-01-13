@@ -13,6 +13,8 @@ import { MatFormFieldModule       } from '@angular/material/form-field';
 import { MatInputModule           } from '@angular/material/input';
 import { MatSnackBarModule        } from '@angular/material/snack-bar';
 import { MatIconModule            } from '@angular/material/icon';
+import { MatTabsModule            } from '@angular/material/tabs';
+
 
 const components = [
   CommonModule,
@@ -28,7 +30,8 @@ const components = [
   MatFormFieldModule,
   MatSnackBarModule,
   MatInputModule,
-  MatIconModule
+  MatIconModule,
+  MatTabsModule            
 ];
 
 @NgModule({
