@@ -6,13 +6,13 @@ $info: #2d9fc5;
 $warning: #fb8500;
 $border-start: 4px;
 $border-end: 4px;
-@mixin bordes($border-start, $border-end){
+@mixin bordes($border-start, $border-end) {
   // background-color: $color;
   border-start-end-radius: $border-start;
   border-end-end-radius: $border-end;
 }
 
-div.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
+.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #1e62a1;
   border-radius: var(
@@ -23,10 +23,9 @@ div.primary-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-end-end-radius: 4px;
 }
 
-button-group.primary-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.primary-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #1e62a1;
-  border-right: 1px solid #D8DAE5;
+  border-right: 1px solid #d8dae5;
   border-color: #003972;
   border-radius: var(
     --mdc-filled-button-container-shape,
@@ -34,39 +33,36 @@ button-group.primary-buttonGroup
   );
 }
 
-button-group.primary-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.primary-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
 
-button-group.accent-buttonGroup button.mdc-button.mat-mdc-button-base {
-  background-color: #0a55ab;
-  color: white;
-  border-radius: var(
-    --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
-  );
-  @include bordes($border-start, $border-end)
-}
-
-button-group.accent-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.accent-buttonGroup button.mdc-button.mat-mdc-button-base {
   background-color: #0cbbe2;
-  border-right: 1px solid #D8DAE5;
-  border-color: #008BB0;
+  color: white;
+  border-radius: var(
+    --mdc-filled-button-container-shape,
+    var(--mdc-shape-small, 0px)
+  );
+  @include bordes($border-start, $border-end);
+}
+
+.accent-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  background-color: #0cbbe2;
+  border-right: 1px solid #d8dae5;
+  border-color: #008bb0;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.accent-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.accent-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
+.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #d14343;
   border-radius: var(
@@ -77,23 +73,21 @@ button-group.warn-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.warn-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.warn-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #d14343;
-  border-right: 1px solid #D8DAE5;
-  border-color: #B51E1E;
+  border-right: 1px solid #d8dae5;
+  border-color: #b51e1e;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.warn-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.warn-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.success-buttonGroup button.mdc-button.mat-mdc-button-base {
+.success-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #8fc93a;
   border-radius: var(
@@ -104,24 +98,22 @@ button-group.success-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.success-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.success-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #8fc93a;
-  border-right: 1px solid #D8DAE5;
-  border-color: #60A918;
+  border-right: 1px solid #d8dae5;
+  border-color: #60a918;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.success-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.success-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
 
-button-group.info-buttonGroup button.mdc-button.mat-mdc-button-base {
+.info-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #2d9fc5;
   border-radius: var(
@@ -132,23 +124,21 @@ button-group.info-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.info-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.info-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #2d9fc5;
-  border-right: 1px solid #D8DAE5;
-  border-color: #1172A3;
+  border-right: 1px solid #d8dae5;
+  border-color: #1172a3;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.info-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.info-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
 }
-button-group.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
+.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
   color: white;
   background-color: #fb8500;
   border-radius: var(
@@ -159,26 +149,17 @@ button-group.warning-buttonGroup button.mdc-button.mat-mdc-button-base {
   border-start-end-radius: 4px;
 }
 
-button-group.warning-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.warning-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   background-color: #fb8500;
-  border-right: 1px solid #D8DAE5;
-  border-color: #F85500;
+  border-right: 1px solid #d8dae5;
+  border-color: #f85500;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
 }
 
-button-group.warning-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
+.warning-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
   border-end-start-radius: 4px;
   border-start-start-radius: 4px;
-}
-button-group{
-  .warning-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type{
-
-    @include bordes($border-start, $border-end)
-  }
 }
