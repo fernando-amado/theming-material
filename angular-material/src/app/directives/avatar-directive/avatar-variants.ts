@@ -10,7 +10,7 @@ export class avatarVariantDirective {
     @Input()
     avatar!: avatarVariant;
 
-    ngOnInit(): any {
+    ngOnInit(): void {
     this.el.nativeElement.classList.add(`matAvatar--${this.avatar}` );
     }
 };

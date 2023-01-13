@@ -4,8 +4,9 @@ import { IconPositionDirective   } from './Tabs/iconPosition/icon-position.direc
 import { OrientationDirective    } from './orientation/orientation.directive';
 import { ColorTextDirective      } from './colorText/color-text.directive';
 import { appearanceDirective     } from './appearance-directive/appearance';
-import { avatarVariantDirective } from './avatar-component-directive/avatar-variants';
-import { VariantsDirective } from './variantsColor-buttonGroup/variants.directive';
+import { avatarVariantDirective  } from './avatar-directive/avatar-variants';
+import { VariantsDirective       } from './variantsColor-buttonGroup/variants.directive';
+
 const directivas = [
   OrientationDirective,
   IconPositionDirective,
