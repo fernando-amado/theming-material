@@ -1,9 +1,7 @@
-.vertical--button-group {
-  //content variant
-  .content {
-    display: flex;
-    flex-direction: column;
-  }
+.vertical {
+  display: flex;
+  flex-direction: column !important;
+  max-width: 64px;
   //variant contained
   .mat-mdc-button-base {
     &:first-of-type {
@@ -15,6 +13,7 @@
       border-bottom-left-radius: 4px !important;
     }
   }
+
   &.primary-,
   &.accent,
   &.warn,
@@ -85,10 +84,10 @@
         border-right: 1px solid $primary !important;
       }
       &:first-of-type {
-        border-bottom: none ;
+        border-bottom: none;
       }
       &:last-of-type {
-        border-top: none ;
+        border-top: none;
       }
     }
   }
@@ -98,10 +97,10 @@
         border-right: 1px solid $accent !important;
       }
       &:first-of-type {
-        border-bottom: none ;
+        border-bottom: none;
       }
       &:last-of-type {
-        border-top: none ;
+        border-top: none;
       }
     }
   }
@@ -111,10 +110,10 @@
         border-right: 1px solid $warn !important;
       }
       &:first-of-type {
-        border-bottom: none ;
+        border-bottom: none;
       }
       &:last-of-type {
-        border-top: none ;
+        border-top: none;
       }
     }
   }
@@ -124,10 +123,10 @@
         border-right: 1px solid $success !important;
       }
       &:first-of-type {
-        border-bottom: none ;
+        border-bottom: none;
       }
       &:last-of-type {
-        border-top: none ;
+        border-top: none;
       }
     }
   }
@@ -137,10 +136,10 @@
         border-right: 1px solid $info !important;
       }
       &:first-of-type {
-        border-bottom: none ;
+        border-bottom: none;
       }
       &:last-of-type {
-        border-top: none ;
+        border-top: none;
       }
     }
   }
@@ -150,10 +149,10 @@
         border-right: 1px solid $warning !important;
       }
       &:first-of-type {
-        border-bottom: none ;
+        border-bottom: none;
       }
       &:last-of-type {
-        border-top: none ;
+        border-top: none;
       }
     }
   }

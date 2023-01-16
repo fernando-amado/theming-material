@@ -1,18 +1,45 @@
 // TEXTFIELD
 .default-textfield {
-  & .mdc-text-field--filled:not(.mdc-text-field--disabled),
-  .mat-mdc-form-field-focus-overlay {
-    background-color: transparent !important;
-    padding-inline: 0px 0px !important;
+  //   & .mdc-text-field--filled:not(.mdc-text-field--disabled),
+  // .mat-mdc-form-field-focus-overlay{
+  //     background-color: transparent !important;
+  //     padding-inline: 0px 0px !important;
+  //  }
+  //   & .mdc-text-field .mdc-floating-label {
+  //     transform: translateY(10%) !important;
+  //   }
+  //   & .mdc-text-field--filled .mdc-floating-label--float-above {
+  //     transform: translateY(-110%) scale(0.75) !important;
+  //   }
+
+  & .mdc-notched-outline__leading {
+    border-top: 0px solid;
+    border-left: 0px solid;
+    // border-radius: 0px;
   }
-  & .mdc-text-field .mdc-floating-label {
-    transform: translateY(10%);
+  & .mdc-notched-outline__notch,
+  .mdc-notched-outline__trailing {
+    border-top: 0px solid;
+    border-right: 0px solid;
   }
-  & .mdc-text-field--filled .mdc-floating-label--float-above {
-    transform: translateY(-110%) scale(0.75);
+  &
+    .mdc-text-field--outlined
+    .mdc-notched-outline
+    .mdc-notched-outline__leading {
+    border-bottom-left-radius: 0px;
   }
+  &
+    .mdc-text-field--outlined
+    .mdc-notched-outline
+    .mdc-notched-outline__trailing {
+    border-bottom-right-radius: var(--mdc-shape-small, 0px);
+  }
+  & .mdc-text-field--outlined .mdc-text-field--focused{
+    border-color:none;
+  }
+  // .mat-mdc-form-field-focus-overlay
 }
-// COMPONENTE AVATAR
+// AVATAR
 .matAvatar--rounded {
   display: flex;
   align-items: center;
@@ -21,6 +48,7 @@
   width: 50px;
   height: 50px;
   border-radius: 100px !important;
+  backdrop-filter: blur(0px);
   & img {
     display: flex;
     width: 55px;
