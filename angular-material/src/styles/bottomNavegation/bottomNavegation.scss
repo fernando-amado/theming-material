@@ -40,16 +40,18 @@ bottom-navigation-actions{
     .mat-icon{
         transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
         transition-delay:0.1s;
-        color: $primary ;         
+        color: $primary !important;         
     }
     .label{
         display: flex !important;
         color: $primary;
-    } 
+    }
+    
 }
 .bottom-navigation{
     &--primary{
-        background-color: $primary;  
+        background-color: $primary;
+        
     }
     &--accent{
         background-color: $accent;
@@ -83,7 +85,7 @@ bottom-navigation-actions{
     }
     &--primary,&--accent,&--warn,&--success,&--info,&--warning{
         .active .mat-icon,.label{
-            color: white;
+            color: white !important;
         }
     }
 
