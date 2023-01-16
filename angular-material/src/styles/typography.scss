@@ -91,7 +91,7 @@ $typography-global-config: map.merge(
         $font-weight: 400,
         $font-size: 1.4rem,
         $line-height: 2.002rem,
-        $letter-spacing: 0.017px,
+        $letter-spacing: 0.017rem,
       ),
     $caption:
       mat.define-typography-level(
