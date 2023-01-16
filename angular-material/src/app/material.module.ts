@@ -14,24 +14,50 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule} from '@angular/material/menu';
+import { MatListModule } from '@angular/material/list';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSelectModule } from '@angular/material/select';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatTableModule} from '@angular/material/table';
 
 
 const components = [
   CommonModule,
-  MatButtonModule,
-  MatProgressBarModule,
-  MatToolbarModule,
-  MatChipsModule,
-  MatProgressSpinnerModule,
-  MatSliderModule,
-  MatBadgeModule,
-  MatSlideToggleModule,
-  MatStepperModule,
-  MatFormFieldModule,
-  MatSnackBarModule,
-  MatInputModule,
+  MatAutocompleteModule,
   MatIconModule,
-  MatTabsModule            
+  MatToolbarModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatBottomSheetModule,
+  MatBadgeModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatCardModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatSelectModule,
+  MatStepperModule,
+  MatTabsModule,
+  MatSnackBarModule,
+  MatExpansionModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatTabsModule,
+  MatNativeDateModule,
+  MatListModule,
+  MatMenuModule,
+  MatDialogModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatDatepickerModule
 ];
 
 
