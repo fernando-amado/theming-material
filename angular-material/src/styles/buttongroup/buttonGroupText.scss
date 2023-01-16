@@ -1,20 +1,20 @@
 .primary-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($primary, white,'');
+  @include bg-color-config($primary, white,null);
 }
 .accent-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($accent, white,'');
+  @include bg-color-config($accent, white,null);
 }
 .warn-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($warn, white,'');
+  @include bg-color-config($warn, white,null);
 }
 .success-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($success, white,'');
+  @include bg-color-config($success, white,null);
 }
 .info-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($info, white,'');
+  @include bg-color-config($info, white,null);
 }
 .warning-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($warning, white,'');
+  @include bg-color-config($warning, white,null);
 }
 .primary,.accent,.warn,.success,.info,.warning{
   &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base{
@@ -22,16 +22,16 @@
       --mdc-filled-button-container-shape,
       var(--mdc-shape-small, 0rem)
     );
-    @include bordes-radius('', .4rem, .4rem, '');
+    @include bordes-radius(null, .4rem, .4rem, null);
     &:not(:last-of-type) {
-      @include bg-color-config('', white,'');
+      @include bg-color-config(null, white,null);
       border-radius: var(
         --mdc-filled-button-container-shape,
         var(--mdc-shape-small, 0rem)
       );
     }
     &:first-of-type {
-      @include bordes-radius(.4rem, '', '', .4rem);
+      @include bordes-radius(.4rem, null, null, .4rem);
     }
   }
 }

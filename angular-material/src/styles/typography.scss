@@ -3,43 +3,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 $h3: mat.define-typography-level(
-  $font-size: 48px,
+  $font-size: 4.8rem,
   $font-weight: 500,
-  $line-height: 56.02px,
-  $letter-spacing: 0px !important,
+  $line-height: 5.602rem,
+  $letter-spacing: 0rem !important,
   $font-family: Nunito !important,
 );
 
 $h4: mat.define-typography-level(
   $font-weight: 600,
-  $font-size: 34px,
-  $line-height: 41.99px,
-  $letter-spacing: 0.25px !important,
+  $font-size: 3.4rem,
+  $line-height: 4.199rem,
+  $letter-spacing: 0.025rem !important,
   $font-family: Nunito !important,
 );
 
 $h5: mat.define-typography-level(
   $font-weight: 600,
-  $font-size: 24px,
-  $line-height: 32.02px,
+  $font-size: 2.4rem,
+  $line-height: 3.202rem,
   $letter-spacing: 0 !important,
   $font-family: Nunito !important,
 );
 
 $h6: mat.define-typography-level(
   $font-weight: 600,
-  $font-size: 20px,
-  $line-height: 32px,
-  $letter-spacing: 0.15px !important,
+  $font-size: 2rem,
+  $line-height: 3.2rem,
+  $letter-spacing: 0.015rem !important,
   $font-family: Nunito !important,
 );
 
 $overline: mat.define-typography-level(
   $font-family: Roboto,
   $font-weight: 400,
-  $font-size: 12px,
-  $line-height: 31.92px,
-  $letter-spacing: 1px,
+  $font-size: 1.2rem,
+  $line-height: 3.192rem,
+  $letter-spacing: 1rem,
 );
 
 $typography-global-config: map.merge(
@@ -49,65 +49,65 @@ $typography-global-config: map.merge(
       mat.define-typography-level(
         $font-family: Nunito,
         $font-weight: 300,
-        $font-size: 96px,
-        $line-height: 112.03px,
-        $letter-spacing: -1.5px,
+        $font-size: 9.6rem,
+        $line-height: 11.203rem,
+        $letter-spacing: -0.015rem,
       ),
     $headline-6:
       mat.define-typography-level(
         $font-family: Nunito,
         $font-weight: 400,
-        $font-size: 60px,
-        $line-height: 72px,
-        $letter-spacing: -0.5px,
+        $font-size: 6rem,
+        $line-height: 7.2rem,
+        $letter-spacing: -0.05rem,
       ),
     $subtitle-1:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 16px,
-        $line-height: 28px,
-        $letter-spacing: 0.15px,
+        $font-size: 1.6rem,
+        $line-height: 2.8rem,
+        $letter-spacing: 0.015rem,
       ),
     $subtitle-2:
       mat.define-typography-level(
           $font-weight: 500,
-          $font-size: 14px,
-          $line-height: 21.98px,
-          $letter-spacing: 0.1px,
+          $font-size: 1.4rem,
+          $line-height: 2.198rem,
+          $letter-spacing: 0.01rem,
           $font-family: Roboto,
       ),
     $body-1:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 16px,
-        $line-height: 24px,
-        $letter-spacing: 0.15px,
+        $font-size: 1.6rem,
+        $line-height: 2.4rem,
+        $letter-spacing: 0.015rem,
       ),
     $body-2:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 14px,
-        $line-height: 20.02px,
-        $letter-spacing: 0.17px,
+        $font-size: 1.4rem,
+        $line-height: 2.002rem,
+        $letter-spacing: 0.017px,
       ),
     $caption:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 12px,
-        $line-height: 19.92px,
-        $letter-spacing: 0.4px,
+        $font-size: 1.2rem,
+        $line-height: 1.992rem,
+        $letter-spacing: 0.04rem,
       ),
     $button:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 500,
-        $font-size: 14px,
-        $line-height: 24px,
-        $letter-spacing: 0.4px,
+        $font-size: 1.4rem,
+        $line-height: 2.4rem,
+        $letter-spacing: 0.04rem,
       ),
   ),
   (
