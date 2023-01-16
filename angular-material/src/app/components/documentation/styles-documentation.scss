@@ -1,0 +1,72 @@
+@import "/src/styles/elevations.scss";
+//components
+.container-component {
+  width: 75%;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 2rem;
+  @include elevation(1);
+  margin: 2rem auto;
+  background-color: rgb(254, 255, 255);
+  &__column {
+    flex-direction: column;
+  }
+}
+.text-container-component {
+  height: 100%;
+  padding: 0.9rem;
+  &__widht_40 {
+    width: 40%;
+  }
+  &__widht_60 {
+    width: 60%;
+  }
+  &__widht_50 {
+    width: 50%;
+  }
+  &__widht_30 {
+    width: 30%;
+  }
+  &__widht_70 {
+    width: 70%;
+  }
+  p {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  &__border-Right {
+    border-right: 1px solid rgb(224, 224, 224);
+    padding-inline: 2rem;
+  }
+  &__column {
+    flex-direction: column;
+  }
+}
+.container-elevations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-block: 3rem;
+}
+.elevation-example {
+
+  width: 20%;
+  height: 7rem;
+  margin: 2rem;
+}
+//utilities
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.font-weight-700 {
+  font-weight: 700 !important;
+}
+.subtitle-color{
+  color: rgba(0, 0, 0, 0.47);
+}
+.text-color{
+  color: black;
+}

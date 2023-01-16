@@ -1,0 +1,31 @@
+<div class="container-component">
+  <div class="text-container-component text-container-component__widht_50 text-container-component__border-Right">
+    <h6>Select</h6>
+    <br>
+    <p class="mat-subtitle-1">nivel de elevavion nativa en react:<span class="mat-body-strong">8</span> </p> 
+    <br>
+    <p class="mat-subtitle-1">nivel de elevavion nativa en angular:<span class="mat-body-strong">8</span> </p> 
+    <br>
+    <p class="mat-subtitle-1">nivel de de elevacion actual: <span class="mat-body-strong">8</span></p>
+  </div>
+  <div class="text-container-component text-container-component__widht_50 centered">
+    <mat-form-field appearance="fill">
+      <mat-label>Toppings</mat-label>
+      <mat-select formControl="toppings" multiple>
+        <mat-select-trigger>
+          {{toppings.value?.[0] || ''}}
+          <span
+            *ngIf="(toppings.value?.length || 0) > 1"
+            class="example-additional-selection"
+          >
+            (+{{ (toppings.value?.length || 0) - 1 }}
+            {{ toppings.value?.length === 2 ? "other" : "others" }})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topping of toppingList" [value]="topping">{{
+          topping
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

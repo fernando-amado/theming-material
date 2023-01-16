@@ -1,0 +1,21 @@
+<div class="container-component">
+  
+  <div class="text-container-component text-container-component__widht_50 text-container-component__border-Right">
+    <h6>Date picker</h6>
+    <br>
+    <p class="mat-subtitle-1">nivel de elevavion nativa en react:<span class="mat-body-strong"> 8</span> </p> 
+    <br>
+    <p class="mat-subtitle-1">nivel de elevavion nativa en angular:<span class="mat-body-strong"> 4</span> </p> 
+    <br>
+    <p class="mat-subtitle-1">nivel de de elevacion actual: <span class="mat-body-strong">8</span></p>
+  </div>
+  <div class="text-container-component text-container-component__widht_50 centered">
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" />
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
