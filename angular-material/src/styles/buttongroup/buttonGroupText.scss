@@ -20,14 +20,14 @@
   &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base{
     border-radius: var(
       --mdc-filled-button-container-shape,
-      var(--mdc-shape-small, 0px)
+      var(--mdc-shape-small, 0rem)
     );
     @include bordes-radius('', .4rem, .4rem, '');
     &:not(:last-of-type) {
       @include bg-color-config('', white,'');
       border-radius: var(
         --mdc-filled-button-container-shape,
-        var(--mdc-shape-small, 0px)
+        var(--mdc-shape-small, 0rem)
       );
     }
     &:first-of-type {
