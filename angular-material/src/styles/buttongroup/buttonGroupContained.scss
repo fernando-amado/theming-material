@@ -2,15 +2,14 @@
   @include bg-color-config($white, $primary, ' ');
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', 4px, 4px, ' ');
+  @include bordes-radius(' ', .4rem, .4rem, ' ');
 }
 
 .primary-buttonGroup
   button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   @include bg-color-config(" ", $primary, #1e62a1);
-  border-right: 1px solid #1e62a1;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -19,16 +18,16 @@
 
 .primary-buttonGroup
   button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(4px, ' ', ' ', 4px);
+  @include bordes-radius(.4rem, ' ', ' ', .4rem);
 }
 
 .accent-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($white, $primary, ' ');
+  @include bg-color-config($white, $accent, #0cbbe2);
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(4px, ' ', ' ', 4px);
+  @include bordes-radius(' ', .4rem, .4rem, ' ');
 }
 
 .accent-buttonGroup
@@ -36,102 +35,97 @@
   @include bg-color-config($white, $accent, ' ');
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(4px, ' ', 4px, ' ');
+  @include bordes-radius(.4rem, ' ', .4rem, ' ');
 }
 
 .accent-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   @include bg-color-config(' ', $accent, #0cbbe2);
-  border-right: 1px solid #0cbbe2;
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
 }
 
 .accent-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(4px, ' ', 4px, ' ');
+  @include bordes-radius(.4rem, ' ', ' ', .4rem);
 }
 
 .warn-buttonGroup button.mdc-button.mat-mdc-button-base {
   @include bg-color-config($white, $warn, #d14343);
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', ' ', 4px, 4px);
+  @include bordes-radius(' ', .4rem, .4rem, ' ');
 }
 
 .warn-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   @include bg-color-config(' ', $warn, #d14343);
-  border-right: 1px solid #d14343;
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
 }
 
 .warn-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(4px, ' ', 4px, ' ');
+  @include bordes-radius(.4rem, ' ', ' ', .4rem);
 }
 
 .success-buttonGroup button.mdc-button.mat-mdc-button-base {
   @include bg-color-config($white, $success, ' ');
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', ' ', 4px, 4px);
+  @include bordes-radius(' ', .4rem, .4rem, ' ');
 }
 
 .success-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   @include bg-color-config(' ', $success, #8fc93a);
-  border-right: 1px solid #8fc93a;
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
 }
 
 .success-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(4px, ' ', 4px, ' ');
+  @include bordes-radius(.4rem, ' ', ' ', .4rem);
 }
 
 .info-buttonGroup button.mdc-button.mat-mdc-button-base {
   @include bg-color-config($white, $info, #8fc93a);
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', ' ', 4px, 4px);
+  @include bordes-radius(' ', .4rem, .4rem, ' ' );
 }
 
 .info-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   @include bg-color-config($white, $info, #1172a3);
-  border-right: 1px solid #1172a3;
   border-radius: var(
     --mdc-filled-button-container-shape,
-    var(--mdc-shape-small, 0px)
+    var(--mdc-shape-small, 0rem)
   );
 }
 
 .info-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(4px, ' ', 4px, ' ');
+  @include bordes-radius(.4rem, ' ', ' ', .4rem);
 }
 
 .warning-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($white, $warning, ' ');
+  @include bg-color-config($white, $warning, #f85500);
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
-  @include bordes-radius(' ', 4px, ' ', 4px);
+  @include bordes-radius(' ', .4rem, .4rem, ' ');
 }
 
 .warning-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   @include bg-color-config(' ', $warning, #f85500);
-  border-right: 1px solid #f85500;
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -139,5 +133,5 @@
 }
 
 .warning-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(4px, ' ', 4px, ' ');
+  @include bordes-radius(.4rem, ' ', ' ', .4rem);
 }

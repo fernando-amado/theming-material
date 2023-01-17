@@ -24,6 +24,7 @@ import { BottomNavigationComponent, bottomNavigationActionsComponents } from '..
         MaterialModule,
         DirectivesModule
     ],
+    
     exports: [DirectivesModule],
     declarations: [
         AppComponent,
@@ -39,7 +40,7 @@ import { BottomNavigationComponent, bottomNavigationActionsComponents } from '..
         ButtonGroupComponent,
         MatButtonComponent,
         BottomNavigationComponent,
-        bottomNavigationActionsComponents
+        bottomNavigationActionsComponents,
     ],
     providers: [],
     bootstrap: [AppComponent],

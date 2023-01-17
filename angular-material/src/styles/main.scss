@@ -11,16 +11,21 @@
 @import "./base.scss";
 // VARIABLES   
 @import "./variables/variables.scss";
+
 // MIXINS
 @import "./mixins/mixins.scss";
-
 // VARIANTES PERSONALIZADAS
-@import "./variants-components/variantes-personalizadas.scss";
-// @import "./variants-components/sizeDirective.scss";
+@import "./bottomNavegation/bottomNavegation.scss";
 @import "./variants-components/orientation.scss";
 @import "./buttongroup/buttonGroupContained.scss";
 @import "./buttongroup/buttonGroupOutlined.scss";
 @import "./buttongroup/buttonGroupText.scss";
 @import "./buttongroup/orientationButtonGroup.scss";
-@import "./bottomNavegation/bottomNavegation.scss";
+@import "./variants-components/avatar/avatarVariants.scss";
+@import "./variants-components/Tabs/iconPosition.scss";
+@import "./variants-components/text-field/textField-appareance.scss";
+@import "./variants-components/size/sizeDirective.scss";
+@import "./variants-components/orientation";
+@import "./variants-components/textColor.scss";
+
 @import './raiting/raiting.scss';
