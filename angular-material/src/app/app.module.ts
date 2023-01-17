@@ -12,10 +12,10 @@ import { MatAvatarComponent                                           } from 'sr
 import { MatSliderComponent                                           } from 'src/components/mat-slider/mat-slider.component';
 import { ButtonGroupComponent                                         } from 'src/components/mat-buttonGroup/button-group.component';
 import { MatButtonComponent                                           } from 'src/components/mat-button/mat-button.component';
-import { AppComponent                                                 } from './app.component';
 import { MaterialModule                                               } from './material.module';
-import { DirectivesModule                                             } from './directives/directives.module';
+import { AppComponent                                                 } from './app.component';
 import { BottomNavigationComponent, bottomNavigationActionsComponents } from '../components/mat-bottom-navigation/bottom-navigation.component';
+import { DirectivesModule                                             } from './directives/directives.module';
 
 @NgModule({
     imports: [

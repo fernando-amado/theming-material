@@ -1,14 +1,13 @@
 .primary-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($white, $primary, ' ');
+  @include bg-color-config($white, $primary, " ");
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', .4rem, .4rem, ' ');
+  @include bordes-radius(" ", .4rem, .4rem, " ");
 }
 
-.primary-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+.primary-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
   @include bg-color-config(" ", $primary, #1e62a1);
   border-radius: var(
     --mdc-filled-button-container-shape,
@@ -16,9 +15,8 @@
   );
 }
 
-.primary-buttonGroup
-  button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(.4rem, ' ', ' ', .4rem);
+.primary-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
+  @include bordes-radius(.4rem, " ", " ", .4rem);
 }
 
 .accent-buttonGroup button.mdc-button.mat-mdc-button-base {
@@ -27,21 +25,20 @@
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', .4rem, .4rem, ' ');
+  @include bordes-radius(" ", 0.4rem, 0.4rem, " ");
 }
 
-.accent-buttonGroup
-  button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
-  @include bg-color-config($white, $accent, ' ');
+.accent-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
+  @include bg-color-config($white, $accent, " ");
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(.4rem, ' ', .4rem, ' ');
+  @include bordes-radius(0.4rem, " ", 0.4rem, " ");
 }
 
 .accent-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
-  @include bg-color-config(' ', $accent, #0cbbe2);
+  @include bg-color-config(" ", $accent, #0cbbe2);
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
@@ -49,7 +46,7 @@
 }
 
 .accent-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(.4rem, ' ', ' ', .4rem);
+  @include bordes-radius(0.4rem, " ", " ", 0.4rem);
 }
 
 .warn-buttonGroup button.mdc-button.mat-mdc-button-base {
@@ -58,11 +55,11 @@
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', .4rem, .4rem, ' ');
+  @include bordes-radius(" ", 0.4rem, 0.4rem, " ");
 }
 
 .warn-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
-  @include bg-color-config(' ', $warn, #d14343);
+  @include bg-color-config(" ", $warn, #d14343);
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
@@ -70,20 +67,20 @@
 }
 
 .warn-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(.4rem, ' ', ' ', .4rem);
+  @include bordes-radius(0.4rem, " ", " ", 0.4rem);
 }
 
 .success-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($white, $success, ' ');
+  @include bg-color-config($white, $success, " ");
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', .4rem, .4rem, ' ');
+  @include bordes-radius(" ", 0.4rem, 0.4rem, " ");
 }
 
 .success-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
-  @include bg-color-config(' ', $success, #8fc93a);
+  @include bg-color-config(" ", $success, #8fc93a);
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
@@ -91,7 +88,7 @@
 }
 
 .success-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(.4rem, ' ', ' ', .4rem);
+  @include bordes-radius(0.4rem, " ", " ", 0.4rem);
 }
 
 .info-buttonGroup button.mdc-button.mat-mdc-button-base {
@@ -100,7 +97,7 @@
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0rem)
   );
-  @include bordes-radius(' ', .4rem, .4rem, ' ' );
+  @include bordes-radius(" ", 0.4rem, 0.4rem, " ");
 }
 
 .info-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
@@ -112,7 +109,7 @@
 }
 
 .info-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(.4rem, ' ', ' ', .4rem);
+  @include bordes-radius(0.4rem, " ", " ", 0.4rem);
 }
 
 .warning-buttonGroup button.mdc-button.mat-mdc-button-base {
@@ -121,11 +118,11 @@
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
   );
-  @include bordes-radius(' ', .4rem, .4rem, ' ');
+  @include bordes-radius(" ", 0.4rem, 0.4rem, " ");
 }
 
 .warning-buttonGroup button.mdc-button.mat-mdc-button-base:not(:last-of-type) {
-  @include bg-color-config(' ', $warning, #f85500);
+  @include bg-color-config(" ", $warning, #f85500);
   border-radius: var(
     --mdc-filled-button-container-shape,
     var(--mdc-shape-small, 0px)
@@ -133,5 +130,5 @@
 }
 
 .warning-buttonGroup button.mdc-button.mat-mdc-button-base:first-of-type {
-  @include bordes-radius(.4rem, ' ', ' ', .4rem);
+  @include bordes-radius(0.4rem, " ", " ", 0.4rem);
 }

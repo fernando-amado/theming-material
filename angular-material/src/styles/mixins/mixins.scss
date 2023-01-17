@@ -10,10 +10,7 @@
   border-end-start-radius: $border-end-left;
 };
 
-@mixin bg-color-config(
-    $color,
-    $backgroundColor,
-    $border-color,
+@mixin bg-color-config($color,$backgroundColor,$border-color,
 ){
     color: $color;
     background-color: $backgroundColor;

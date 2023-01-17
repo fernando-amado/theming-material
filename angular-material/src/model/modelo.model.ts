@@ -7,12 +7,6 @@ export enum Colors {
     warning = 'warning ',
 };
 
-export enum Sizes{
-    small  = 'small',
-    meidum = 'medium',
-    large  = 'large'
-};
-
 export enum TypographyLevels{
     h1='h1',
     h2='h2',

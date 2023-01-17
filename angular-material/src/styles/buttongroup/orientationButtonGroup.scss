@@ -1,7 +1,7 @@
 .vertical {
   display: flex;
   flex-direction: column !important;
-  max-width: 64px;
+  width: max-content;
   //variant contained
   .mat-mdc-button-base {
     &:first-of-type {
