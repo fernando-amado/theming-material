@@ -11,7 +11,7 @@ export class OrientationDirective implements OnChanges {
   @Input() orientation!: Orientation;
 
   ngOnChanges() {
-  this.el.nativeElement.classList.add(`${this.orientation}}`);
+  this.el.nativeElement.classList.add(`${this.orientation}`);
   }
   ngAfterViewInit(): void {
     this.el.nativeElement.classList.add(`${this.orientation}`);

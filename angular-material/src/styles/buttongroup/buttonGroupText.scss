@@ -1,37 +1,34 @@
 .primary-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($primary, white,null);
+  @include bg-color-config($primary, $transparent,"");
 }
 .accent-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($accent, white,null);
+  @include bg-color-config($accent, $transparent,"");
 }
 .warn-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($warn, white,null);
+  @include bg-color-config($warn, $transparent,"");
 }
 .success-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($success, white,null);
+  @include bg-color-config($success, $transparent,"");
 }
 .info-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($info, white,null);
+  @include bg-color-config($info, $transparent,"");
 }
 .warning-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base {
-  @include bg-color-config($warning, white,null);
+  @include bg-color-config($warning, $transparent,"");
 }
 .primary,.accent,.warn,.success,.info,.warning{
   &-buttonGroup.text-buttonGroup button.mdc-button.mat-mdc-button-base{
-    border-radius: var(
-      --mdc-filled-button-container-shape,
-      var(--mdc-shape-small, 0rem)
-    );
-    @include bordes-radius(null, .4rem, .4rem, null);
+    border-radius: var(--mdc-filled-button-container-shape,var(--mdc-shape-small, 0rem));
+    @include bordes-radius("", .4rem, .4rem, "");
     &:not(:last-of-type) {
-      @include bg-color-config(null, white,null);
-      border-radius: var(
-        --mdc-filled-button-container-shape,
-        var(--mdc-shape-small, 0rem)
-      );
+      @include bg-color-config("", $transparent,"");
+      border-radius: var(--mdc-filled-button-container-shape,var(--mdc-shape-small, 0rem));
     }
     &:first-of-type {
-      @include bordes-radius(.4rem, null, null, .4rem);
+      @include bordes-radius(.4rem, "", "", .4rem);
     }
+    &:not(:last-of-type , :first-of-type),&:last-of-type{
+      border-left:.1rem solid;  
+    } 
   }
 }
