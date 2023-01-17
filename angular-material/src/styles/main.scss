@@ -7,18 +7,16 @@
 @import "./palettes.scss";
 // TYPOGRAPHY CONFIGURATION
 @import "./typography.scss";
-// BASE
-@import "./base.scss";
 // VARIABLES   
 @import "./variables/variables.scss";
+// BASE
+@import "./base.scss";
 // MIXINS
 @import "./mixins/mixins.scss";
-
 // VARIANTES PERSONALIZADAS
-@import "./variants-components/variantes-personalizadas.scss";
-// @import "./variants-components/sizeDirective.scss";
-@import "./variants-components/orientation.scss";
 @import "./buttongroup/buttonGroupContained.scss";
+@import "./bottomNavegation/bottomNavegation.scss";
+@import "./variants-components/orientation.scss";
 @import "./buttongroup/buttonGroupOutlined.scss";
 @import "./buttongroup/buttonGroupText.scss";
 @import "./buttongroup/orientationButtonGroup.scss";

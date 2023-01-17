@@ -5,7 +5,7 @@ export enum Colors {
     success = 'success',
     info    = 'info',
     warning = 'warning ',
-}
+};
 
 export enum TypographyLevels{
     h1='h1',
@@ -21,7 +21,7 @@ export enum TypographyLevels{
     caption='caption',
     button='button',
     overline='overline',
-}
+};
 
 export const descripcionComponent = 
     'componente usa por defecto el color primary, para hacer uso de los otros colores solo debe cambiar la propiedad `color=" " ` por cualquiera de los siguientes opciones : '

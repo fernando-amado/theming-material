@@ -1,10 +1,6 @@
-button.mdc-button.small {
-    height: 32px;
-    font-size: 13px;
-  }
   mat-icon.small {
-    font-size: 20px !important;
-  }
+      font-size: 20px !important;
+    }
   mat-chip.small {
     height: 24px !important;
     font-size: 13px;
@@ -19,17 +15,17 @@ button.mdc-button.small {
     height: 70px;
   }
   .small {
-    //Form-field
+      //Form-field
     .mat-mdc-form-field-infix {
-      font-size: 13px !important;
-    }
+        font-size: 13px !important;
+      }
     .mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c83-0.mdc-text-field--filled {
       height: 48.5px;
     }
     // CheckBox
     .mdc-checkbox__background {
-      width: 15px;
-      height: 15px;
+        width: 15px;
+        height: 15px;
       margin: 1px 1.5px;
     }
     // Slider
@@ -57,7 +53,7 @@ button.mdc-button.small {
       margin: 2.5px 1.5px;
     }
     .mdc-circular-progress__indeterminate-container {
-      width: 70px;
+        width: 70px;
     }
     //Table
     .mat-mdc-table,
@@ -69,7 +65,7 @@ button.mdc-button.small {
     }
   }
   button.mdc-button.large {
-    padding: 19px 18px;
+      padding: 19px 18px;
     font-size: 15px;
   }
   mat-icon.large {
@@ -78,22 +74,22 @@ button.mdc-button.small {
     height: 30px;
   }
   .large {
-    // Checkbox
+      // Checkbox
     .mdc-checkbox__background {
-      width: 21px;
-      height: 21px;
-      margin: -1px -1px;
-    }
-    .mdc-radio__background {
-      width: 23px;
-      height: 23px;
+        width: 21px;
+        height: 21px;
+        margin: -1px -1px;
+      }
+      .mdc-radio__background {
+          width: 23px;
+          height: 23px;
     }
     .mdc-radio__inner-circle {
-      border-width: 11px;
+        border-width: 11px;
       margin: -2px -1.5px;
     }
     .mdc-radio__outer-circle {
       margin: -2px -1.5px;
     }
-    
+
   }

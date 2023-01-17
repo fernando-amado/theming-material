@@ -1,12 +1,11 @@
-.top{
-    & .mat-mdc-tab{
-        background-color: red;
-        display: flex;
-        flex-direction: column;
-    }    
-
-}
-.example-tab-icon {
-    margin-right: 8px;
+.top {
+  & .mat-mdc-tab {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
   }
-  
+}
+
+.example-tab-icon {
+  margin-right: 0.8rem;
+}

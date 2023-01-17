@@ -1,10 +1,10 @@
 button-group{
-    .small .mdc-button{
-            padding: .3rem .9rem;
-            min-width: 4.0rem;
+        .small .mdc-button{
+                padding: .3rem .9rem;
+                min-width: 4.0rem;
+        }
+        .large .mdc-button{
+                padding: .7rem 2.1rem;
+                min-width: 4.0rem;
+        }
     }
-    .large .mdc-button{
-            padding: .7rem 2.1rem;
-            min-width: 4.0rem;
-    }
-}

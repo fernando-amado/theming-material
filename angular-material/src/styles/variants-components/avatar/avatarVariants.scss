@@ -1,0 +1,32 @@
+// AVATAR VARIANTS
+.matAvatar--rounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10rem !important;
+    backdrop-filter: blur(0rem);
+    & img {
+      display: flex;
+      width: 55px;
+      height: 55px;
+      border-radius: 10rem !important;
+    }
+  }
+  .matAvatar--square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 0rem !important;
+    & img {
+      display: flex;
+      width: 5.5rem;
+      height: 5.5rem;
+      border-radius: 0rem !important;
+    }
+  }
