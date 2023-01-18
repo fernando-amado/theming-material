@@ -16,6 +16,7 @@ import { MaterialModule                                               } from './
 import { AppComponent                                                 } from './app.component';
 import { BottomNavigationComponent, bottomNavigationActionsComponents } from '../components/mat-bottom-navigation/bottom-navigation.component';
 import { DirectivesModule                                             } from './directives/directives.module';
+import { MAT_FAB_DEFAULT_OPTIONS } from '@angular/material/button';
 
 @NgModule({
     imports: [

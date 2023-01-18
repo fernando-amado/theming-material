@@ -14,15 +14,10 @@
 // MIXINS
 @import "./mixins/mixins.scss";
 // VARIANTES PERSONALIZADAS
-@import "./variants-components/avatar/avatarVariants.scss";
-@import "./variants-components/avatar/sizeAvatar.scss";
+@import "./variants-components/button/customization.scss";
+@import "./variants-components/avatar/customizationAvatar.scss";
+@import "./variants-components/buttongroup/customizationButtonGrup.scss";
 @import "./variants-components/orientation.scss";
 @import "./variants-components/size/sizeDirective.scss";
-@import "./buttongroup/buttonGroupContained.scss";
-@import "./buttongroup/buttonGroupText.scss";
-@import "./buttongroup/buttonGroupOutlined.scss";
-@import "./bottomNavegation/bottomNavegation.scss";
-@import "./buttongroup/orientationButtonGroup.scss";
-@import "./buttongroup/sizeButtonGroup.scss";
-@import "./bottomNavegation/bottomNavegation.scss";
+@import "./variants-components/bottomNavegation/bottomNavegation.scss";
 @import './raiting/raiting.scss';

@@ -3,33 +3,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 $h3: mat.define-typography-level(
-  $font-size: 4.8rem,
-  $font-weight: 500,
-  $line-height: 5.602rem,
-  $letter-spacing: 0rem !important,
   $font-family: Nunito !important,
+  $font-size: 2.8rem,
+  $font-weight: 500,
+  $line-height: 3.36rem,
+  $letter-spacing: 0rem !important,
 );
 
 $h4: mat.define-typography-level(
   $font-weight: 600,
-  $font-size: 3.4rem,
-  $line-height: 4.199rem,
+  $font-size: 2.4rem,
+  $line-height: 2.88rem,
   $letter-spacing: 0.025rem !important,
   $font-family: Nunito !important,
 );
 
 $h5: mat.define-typography-level(
   $font-weight: 600,
-  $font-size: 2.4rem,
-  $line-height: 3.202rem,
+  $font-size: 2rem,
+  $line-height: 3.2rem,
   $letter-spacing: 0 !important,
   $font-family: Nunito !important,
 );
 
 $h6: mat.define-typography-level(
   $font-weight: 600,
-  $font-size: 2rem,
-  $line-height: 3.2rem,
+  $font-size: 1.6rem,
+  $line-height: 2.24rem,
   $letter-spacing: 0.015rem !important,
   $font-family: Nunito !important,
 );
@@ -37,9 +37,25 @@ $h6: mat.define-typography-level(
 $overline: mat.define-typography-level(
   $font-family: Roboto,
   $font-weight: 400,
-  $font-size: 1.2rem,
-  $line-height: 3.192rem,
-  $letter-spacing: 1rem,
+  $font-size: 1rem,
+  $line-height: 2.66rem,
+  $letter-spacing: .2rem,
+);
+$button-small: mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1.3rem,
+  $line-height: 1.8rem,
+  $letter-spacing: 0.02rem,
+
+);
+$button-large: mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 500,
+  $font-size: 1.4rem,
+  $line-height: 2.3rem,
+  $letter-spacing: 0.046rem,
+
 );
 
 $typography-global-config: map.merge(
@@ -49,31 +65,31 @@ $typography-global-config: map.merge(
       mat.define-typography-level(
         $font-family: Nunito,
         $font-weight: 300,
-        $font-size: 9.6rem,
-        $line-height: 11.203rem,
-        $letter-spacing: -0.015rem,
+        $font-size: 4rem,
+        $line-height: 5.6rem,
+        $letter-spacing: -0.15rem,
       ),
     $headline-6:
       mat.define-typography-level(
         $font-family: Nunito,
         $font-weight: 400,
-        $font-size: 6rem,
-        $line-height: 7.2rem,
+        $font-size: 3.2rem,
+        $line-height: 3.84rem,
         $letter-spacing: -0.05rem,
       ),
     $subtitle-1:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 1.6rem,
-        $line-height: 2.8rem,
+        $font-size: 1.3rem,
+        $line-height: 1.82rem,
         $letter-spacing: 0.015rem,
       ),
     $subtitle-2:
       mat.define-typography-level(
           $font-weight: 500,
-          $font-size: 1.4rem,
-          $line-height: 2.198rem,
+          $font-size: 1.2rem,
+          $line-height: 1.68rem,
           $letter-spacing: 0.01rem,
           $font-family: Roboto,
       ),
@@ -81,24 +97,24 @@ $typography-global-config: map.merge(
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 1.6rem,
-        $line-height: 2.4rem,
-        $letter-spacing: 0.015rem,
+        $font-size: 1.2rem,
+        $line-height: 1.44rem,
+        $letter-spacing: 0.017rem,
       ),
     $body-2:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
         $font-size: 1.3rem,
-        $line-height: 2.002rem,
-        $letter-spacing: 0.017rem,
+        $line-height: 1.69rem,
+        $letter-spacing: 0.015rem,
       ),
     $caption:
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 1.2rem,
-        $line-height: 1.992rem,
+        $font-size: 1rem,
+        $line-height: 1.4rem,
         $letter-spacing: 0.04rem,
       ),
     $button:
@@ -116,6 +132,8 @@ $typography-global-config: map.merge(
     "h5": $h5,
     "h6": $h6,
     "overline": $overline,
+    "button-small":$button-small,
+    "button-large":$button-large
   )
 );
 
