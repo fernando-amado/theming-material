@@ -89,7 +89,7 @@ $typography-global-config: map.merge(
       mat.define-typography-level(
         $font-family: Roboto,
         $font-weight: 400,
-        $font-size: 1.4rem,
+        $font-size: 1.3rem,
         $line-height: 2.002rem,
         $letter-spacing: 0.017rem,
       ),
@@ -106,7 +106,7 @@ $typography-global-config: map.merge(
         $font-family: Roboto,
         $font-weight: 500,
         $font-size: 1.4rem,
-        $line-height: 2.4rem,
+        $line-height: 2rem,
         $letter-spacing: 0.04rem,
       ),
   ),

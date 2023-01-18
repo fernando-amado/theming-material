@@ -4,29 +4,38 @@
     align-items: center;
     justify-content: center;
     color: white;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 10rem !important;
-    backdrop-filter: blur(0rem);
+    width: $medium-avatar-size;
+    height: $medium-avatar-size;
+    border-radius: 6.4rem !important;
     & img {
       display: flex;
-      width: 55px;
-      height: 55px;
-      border-radius: 10rem !important;
+      width: $medium-avatar-size + 0.5rem;
+      height: $medium-avatar-size + 0.5rem;
+      border-radius: 6.4rem !important;
     }
   }
-  .matAvatar--square {
+.matAvatar--square {
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    width: 5rem;
-    height: 5rem;
+    width: $medium-avatar-size ;
+    height: $medium-avatar-size;
     border-radius: 0rem !important;
     & img {
       display: flex;
-      width: 5.5rem;
-      height: 5.5rem;
+      width: $medium-avatar-size + 0.5rem;
+      height: $medium-avatar-size + 0.5rem;
       border-radius: 0rem !important;
     }
+    .mat-mdc-button-persistent-ripple::before{
+      background-color: red;
+    }
+}
+
+.matAvatar{
+  &--rounded ,&--square {
+    box-shadow: none;
+    backdrop-filter: blur(0rem) !important;
   }
+}
