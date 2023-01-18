@@ -14,6 +14,8 @@ import { MatInputModule           } from '@angular/material/input';
 import { MatSnackBarModule        } from '@angular/material/snack-bar';
 import { MatIconModule            } from '@angular/material/icon';
 import { MatTabsModule            } from '@angular/material/tabs';
+import { MatCheckboxModule        } from '@angular/material/checkbox';
+import { MatRadioModule           } from '@angular/material/radio';
 
 
 const components = [
@@ -25,7 +27,9 @@ const components = [
   MatProgressSpinnerModule,
   MatSliderModule,
   MatBadgeModule,
+  MatRadioModule,
   MatSlideToggleModule,
+  MatCheckboxModule,
   MatStepperModule,
   MatFormFieldModule,
   MatSnackBarModule,

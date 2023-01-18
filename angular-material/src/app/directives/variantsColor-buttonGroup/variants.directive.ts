@@ -3,7 +3,7 @@ import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 export type Variant = 'text' | 'outlined' | 'contained';
 
 @Directive({
-  selector: 'div[color]',
+  selector: 'button-group [color]',
 })
 export class VariantsDirective implements OnInit {
   constructor(private el: ElementRef<HTMLHtmlElement>) {}
