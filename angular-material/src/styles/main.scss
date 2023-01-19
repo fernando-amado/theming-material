@@ -1,6 +1,8 @@
 @use "@angular/material" as mat;
 // EXTRA COLORS CONFIGURATION
 @import "./extraColorConfig.scss";
+// BASE
+@import "./base.scss";
 // LIGHT AND DARK  THEMES
 @import "./theme.scss";
 //PALETTES
@@ -9,12 +11,10 @@
 @import "./typography.scss";
 // VARIABLES   
 @import "./variables/variables.scss";
-// BASE
-@import "./base.scss";
 // MIXINS
 @import "./mixins/mixins.scss";
 // VARIANTES PERSONALIZADAS
-@import "./variants-components/button/customization.scss";
+@import "./variants-components/button/customizationButtons.scss";
 @import "./variants-components/avatar/customizationAvatar.scss";
 @import "./variants-components/buttongroup/customizationButtonGrup.scss";
 @import "./variants-components/orientation.scss";

@@ -1,7 +1,8 @@
 bottom-navigation{
     display: flex;
     justify-content: center;
-    background-color: inherit ;
+    @include bg-color-config(null,#FBFBFB, null);
+
     position: fixed;
     bottom: 0;
     left: 0;

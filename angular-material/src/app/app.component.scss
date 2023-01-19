@@ -1,0 +1,13 @@
+.container-componet {
+    gap: 10px;
+    display: flex;
+    margin: 2rem auto;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    &:last-of-type{
+        margin-bottom: 7.7rem;
+    }
+  }

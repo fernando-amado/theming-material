@@ -7,7 +7,7 @@ import { Component, Input, ElementRef, OnInit, ViewEncapsulation } from '@angula
 })
 export class BottomNavigationComponent implements OnInit {
   constructor(private element: ElementRef<HTMLElement>) {}
-  @Input() color: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary';
+  @Input() color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' ;
   
   ngOnInit(){
     this.element.nativeElement.classList.add(`${this.element.nativeElement.tagName.toLocaleLowerCase()}--${this.color}`)
