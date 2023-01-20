@@ -1,6 +1,6 @@
 @use "@angular/material" as mat;
 @use "sass:map";
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap");
 
 $h3: mat.define-typography-level(
   $font-family: Nunito !important,
@@ -39,7 +39,7 @@ $overline: mat.define-typography-level(
   $font-weight: 400,
   $font-size: 1rem,
   $line-height: 2.66rem,
-  $letter-spacing: .2rem,
+  $letter-spacing: 0.2rem,
 );
 $button-small: mat.define-typography-level(
   $font-family: Roboto,
@@ -47,15 +47,13 @@ $button-small: mat.define-typography-level(
   $font-size: 1.3rem,
   $line-height: 1.8rem,
   $letter-spacing: 0.02rem,
-
 );
 $button-large: mat.define-typography-level(
   $font-family: Roboto,
   $font-weight: 500,
-  $font-size: 1.4rem,
+  $font-size: 1.5rem,
   $line-height: 2.3rem,
   $letter-spacing: 0.046rem,
-
 );
 
 $typography-global-config: map.merge(
@@ -87,11 +85,11 @@ $typography-global-config: map.merge(
       ),
     $subtitle-2:
       mat.define-typography-level(
-          $font-weight: 500,
-          $font-size: 1.2rem,
-          $line-height: 1.68rem,
-          $letter-spacing: 0.01rem,
-          $font-family: Roboto,
+        $font-weight: 500,
+        $font-size: 1.2rem,
+        $line-height: 1.68rem,
+        $letter-spacing: 0.01rem,
+        $font-family: Roboto,
       ),
     $body-1:
       mat.define-typography-level(
@@ -132,8 +130,8 @@ $typography-global-config: map.merge(
     "h5": $h5,
     "h6": $h6,
     "overline": $overline,
-    "button-small":$button-small,
-    "button-large":$button-large
+    "button-small": $button-small,
+    "button-large": $button-large,
   )
 );
 
@@ -156,7 +154,6 @@ h5,
 h6 {
   margin: 0 !important;
 }
-
 .mat-h3,
 h3 {
   @include mat.typography-level($typography-global-config, "h3");
@@ -177,5 +174,4 @@ h6 {
   text-transform: uppercase;
   @include mat.typography-level($typography-global-config, "overline");
 }
-
 @include mat.all-component-typographies($typography-global-config);

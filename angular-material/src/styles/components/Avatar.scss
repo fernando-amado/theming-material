@@ -1,0 +1,64 @@
+@use '@angular/material' as mat;
+$small-avatar-size: 3.2rem;
+$medium-avatar-size: 4rem;
+$border-radius-rounded: 0.4rem;
+$border-radius-circular: 6.4rem;
+$bg-color-avatar: mat.get-color-from-palette($grey, 400);
+// AVATAR VARIANTS
+mat-avatar.matAvatar {
+  &--rounded {
+    border-radius: $border-radius-rounded !important;
+    & img,.mdc-fab,.mat-icon {
+      border-radius: var(--mdc-fab-container-shape, $border-radius-rounded) ;
+    }
+  }
+  &--square {
+    border-radius: 0rem !important;
+    & img,.mdc-fab,.mat-icon {
+      border-radius: var(--mdc-fab-container-shape, 0%) ;
+    }
+  }
+  &--circular {
+    border-radius: $border-radius-circular !important;
+    & img,.mdc-fab,.mat-icon{
+      border-radius: var(--mdc-fab-container-shape, $border-radius-circular) ;
+    }
+  }
+  &--rounded,&--square,&--circular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $medium-avatar-size;
+    height: $medium-avatar-size;
+    & img,.mdc-fab,.mat-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: $medium-avatar-size + 0.7rem;
+      height: $medium-avatar-size + 0.7rem;
+      @include bg-color-config($white, $bg-color-avatar,null);
+      box-shadow: none;
+      backdrop-filter: blur(0rem);
+    }
+    & .mdc-fab:focus, .mdc-fab:hover, .mdc-fab:active{
+      --mat-mdc-button-persistent-ripple-color:none;
+      --mat-mdc-button-ripple-color:none;
+      box-shadow: none;
+    }
+  }
+}
+//SIZE VARIANT
+mat-avatar.small {
+  .mdc-fab,.mat-icon {
+    width: $small-avatar-size;
+    height: $small-avatar-size;
+    backdrop-filter: blur(0rem);
+    img {
+      width: $small-avatar-size  !important;
+      height: $small-avatar-size  !important;
+    }
+    .mat-icon {
+      font-size: 1.3rem;
+    }
+  }
+}

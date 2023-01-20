@@ -1,0 +1,11 @@
+@use '@angular/material' as mat;
+// Colores base
+$primary: mat.get-color-from-palette($primary, 500);
+$accent: mat.get-color-from-palette($accent, 500);
+$warn: mat.get-color-from-palette($warn, 500);
+$success: mat.get-color-from-palette($success, 500);
+$info: mat.get-color-from-palette($info, 500);
+$warning: mat.get-color-from-palette($warning, 500);
+$white: white;
+$transparent:transparent;
+$darken:18;

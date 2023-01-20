@@ -1,0 +1,14 @@
+// Slider size variants
+.small {
+  .mat-mdc-slider-visual-thumb .mat-ripple {
+    border-radius: 50px;
+    margin: 9px 0px 0px 9.7px;
+    width: 60%;
+    height: 60%;
+  }
+  .mdc-slider__thumb-knob {
+    width: 5px !important;
+    height: 5px !important;
+    border-width: 7.5px !important;
+  }
+}

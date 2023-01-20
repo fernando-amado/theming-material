@@ -1,7 +1,7 @@
 @use "sass:map";
 @use "@angular/material" as mat;
 @use "./extraColorConfig.scss" as variants;
-@import "./palettes.scss";
+@import "./palettes/palettes.scss";
 
 @include mat.core();
 

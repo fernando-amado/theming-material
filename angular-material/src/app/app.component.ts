@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   providers: []
 })
 
-export class AppComponent {}
+export class AppComponent {
+  lotsOfTabs = new Array(20).fill(0).map((_, index) => `Tab ${index}`);
+  
+}

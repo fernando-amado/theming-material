@@ -1,0 +1,35 @@
+//radio-button size variants
+.small {
+  .mdc-radio__background {
+    width: 15px;
+    height: 15px;
+  }
+  .mdc-radio__inner-circle {
+    border-width: 7px;
+    margin: 2.5px 1.5px;
+  }
+  .mdc-radio__outer-circle {
+    margin: 2.5px 1.5px;
+  }
+  .mdc-circular-progress__indeterminate-container {
+    width: 70px;
+  }
+}
+.large {
+  .mdc-checkbox__background {
+    width: 21px;
+    height: 21px;
+    margin: -1px -1px;
+  }
+  .mdc-radio__background {
+    width: 23px;
+    height: 23px;
+  }
+  .mdc-radio__inner-circle {
+    border-width: 11px;
+    margin: -2px -1.5px;
+  }
+  .mdc-radio__outer-circle {
+    margin: -2px -1.5px;
+  }
+}

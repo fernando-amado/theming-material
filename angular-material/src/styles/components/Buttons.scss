@@ -32,16 +32,16 @@
 //sizes button
 .mdc-button{
     &.small{
-        &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button{
+        &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button,&.mat-mdc-fab{
             height:auto ;
             padding: .6rem 1rem;
-            @include mat.typography-level($typography-global-config, "button-small" );
+            @include mat.typography-level($typography-global-config, "button-small" ) ;
         }
     }
 }
 .mdc-button{
     &.large{
-        &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button{
+        &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button,&.mat-mdc-fab{
             height: auto ;
             padding: 1.2rem 2.2rem;
             @include mat.typography-level($typography-global-config, "button-large" );

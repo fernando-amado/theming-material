@@ -1,23 +1,29 @@
 @use "@angular/material" as mat;
+//PALETTES
+@import "./palettes/palettes.scss";
+// TYPOGRAPHY CONFIGURATION
+@import "./typography/typography.scss";
+// LIGHT AND DARK  THEMES
+@import "./theme.scss";
 // EXTRA COLORS CONFIGURATION
 @import "./extraColorConfig.scss";
 // BASE
 @import "./base.scss";
-// LIGHT AND DARK  THEMES
-@import "./theme.scss";
-//PALETTES
-@import "./palettes.scss";
-// TYPOGRAPHY CONFIGURATION
-@import "./typography.scss";
 // VARIABLES   
-@import "./variables/variables.scss";
+@import "./variables.scss";
 // MIXINS
 @import "./mixins/mixins.scss";
-// VARIANTES PERSONALIZADAS
-@import "./variants-components/button/customizationButtons.scss";
-@import "./variants-components/avatar/customizationAvatar.scss";
-@import "./variants-components/buttongroup/customizationButtonGrup.scss";
-@import "./variants-components/orientation.scss";
-@import "./variants-components/size/sizeDirective.scss";
-@import "./variants-components/bottomNavegation/bottomNavegation.scss";
-@import './raiting/raiting.scss';
+// PERSONZALIZACION DE COMPONENTES
+@import "./components/Avatar.scss";
+@import "./components/bottomNavegation.scss";
+@import "./components/ButtonGrup.scss";
+@import "./components/Buttons.scss";
+@import "./components/CheckBox.scss";
+@import "./components/Chips.scss";
+@import "./components/FormField.scss";
+@import "./components/Icons.scss";
+@import "./components/RadioButton.scss";
+@import "./components/Raiting.scss";
+@import "./components/Slider.scss";
+@import "./components/TabsGroup.scss";
+@import './components/TextField.scss';

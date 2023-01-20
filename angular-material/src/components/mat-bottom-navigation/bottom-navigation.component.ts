@@ -11,7 +11,6 @@ export class BottomNavigationComponent implements OnInit {
   
   ngOnInit(){
     this.element.nativeElement.classList.add(`${this.element.nativeElement.tagName.toLocaleLowerCase()}--${this.color}`)
-    console.log(this.element.nativeElement.classList)
   }
 };
 
