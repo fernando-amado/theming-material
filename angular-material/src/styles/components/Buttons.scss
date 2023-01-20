@@ -3,7 +3,7 @@
 .mdc-button{
     &.mat-mdc-outlined-button{
         &.mat-primary,&.mat-accent,&.mat-warn,&.mat-success,&.mat-info,&.mat-warning{
-         border: 1px solid;
+         border: .1rem solid;
         }
     }
     &.mat-mdc-button,&.mat-mdc-outlined-button{

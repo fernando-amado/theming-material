@@ -89,7 +89,7 @@
     &-buttonGroup.outlined-buttonGroup button.mdc-button.mat-mdc-button-base {
       border-radius: var(--mdc-filled-button-container-shape,var(--mdc-shape-small, 0rem));
       @include bordes-radius("", .4rem, .4rem, "");
-      border: 1px solid;
+      border: .1rem solid;
       background-color: inherit;
       &:not(:last-of-type) {
         border-radius: var(--mdc-filled-button-container-shape,var(--mdc-shape-small, 0rem));
