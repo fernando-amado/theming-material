@@ -10,7 +10,7 @@ mat-form-field.small {
         max-height: 100%;
       }
       &-form-field-infix{
-        padding: 0px 0px !important;
+        padding: 0rem 0rem !important;
         min-height:$height-small-form-field;
       }
       &-floating-label{
@@ -26,7 +26,7 @@ mat-form-field.small {
 }
 
 .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
-  --mat-mdc-form-field-label-transform: translateY(-2.0rem)scale(0.75) !important;
+  --mat-mdc-form-field-label-transform: translateY(-2rem)scale(0.75) !important;
 }
 
 
