@@ -88,16 +88,13 @@
   .primary,.accent,.warn,.success,.info,.warning{
     &-buttonGroup.outlined-buttonGroup button.mdc-button.mat-mdc-button-base {
       border-radius: var(--mdc-filled-button-container-shape,var(--mdc-shape-small, 0rem));
-      @include bordes-radius("", .4rem, .4rem, "");
       border: .1rem solid;
       background-color: inherit;
       &:not(:last-of-type) {
         border-radius: var(--mdc-filled-button-container-shape,var(--mdc-shape-small, 0rem));
         border-right: none;
       }
-      &:first-of-type {
-        @include bordes-radius(.4rem, "", "", .4rem);
-      }
+   
     }
   } 
 //variant text
@@ -135,6 +132,47 @@
       } 
     }
   }
+//setting of the focus and hover color of the buttons within the component
+button-group{
+  &.outlined-buttonGroup , &.text-buttonGroup{
+      &.primary-buttonGroup.outlined-buttonGroup ,&.primary-buttonGroup.text-buttonGroup {
+        & .mdc-button:hover, & .mdc-button:focus{
+          --mat-mdc-button-persistent-ripple-color:#1e62a1;
+          --mat-mdc-button-ripple-color: rgba(30, 98, 161, 0.1) ;
+        }
+      }
+      &.accent-buttonGroup.outlined-buttonGroup ,&.accent-buttonGroup.text-buttonGroup {
+        & .mdc-button:hover, & .mdc-button:focus{
+          --mat-mdc-button-persistent-ripple-color:#0cbbe2;
+          --mat-mdc-button-ripple-color: rgba(12, 187, 226, 0.1) ;
+        }
+      }
+      &.warn-buttonGroup.outlined-buttonGroup ,&.warn-buttonGroup.text-buttonGroup {
+        & .mdc-button:hover, & .mdc-button:focus{
+          --mat-mdc-button-persistent-ripple-color:#d14343;
+          --mat-mdc-button-ripple-color: rgba(209, 67, 67, 0.1) ;
+        }
+      }
+      &.success-buttonGroup.outlined-buttonGroup ,&.success-buttonGroup.text-buttonGroup {
+        & .mdc-button:hover, & .mdc-button:focus{
+          --mat-mdc-button-persistent-ripple-color:#8fc93a;
+          --mat-mdc-button-ripple-color: rgba(143, 201, 58, 0.1) ;
+        }
+      }
+      &.info-buttonGroup.outlined-buttonGroup ,&.info-buttonGroup.text-buttonGroup {
+        & .mdc-button:hover, & .mdc-button:focus{
+          --mat-mdc-button-persistent-ripple-color:#2d9fc5;
+          --mat-mdc-button-ripple-color: rgba(45, 159, 197, 0.1) ;
+        }
+      }
+      &.warning-buttonGroup.outlined-buttonGroup ,&.warning-buttonGroup.text-buttonGroup {
+        & .mdc-button:hover, & .mdc-button:focus{
+          --mat-mdc-button-persistent-ripple-color:#fb8500;
+          --mat-mdc-button-ripple-color: rgba(251, 133, 0, 0.1) ;
+        }
+      }
+  }
+}  
 //button-group orientation vertical
 button-group.vertical {
   display: flex;

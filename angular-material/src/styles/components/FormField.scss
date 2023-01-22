@@ -4,7 +4,6 @@ $height-small-form-field-fill: 32px;
 
 $height-medium-form-field: 45px;
 
-
 @function translateYLabel($height, $half, $border) {
   @return $height/$half + $border;
 }
