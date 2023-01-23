@@ -6,7 +6,8 @@ import { ColorTextDirective                   } from './colorText/color-text.dir
 import { appearanceDirective                  } from './appearance-directive/appearance';
 import { avatarVariantDirective               } from './avatar-directive/avatar-variants';
 import { VariantsDirective                    } from './variantsColor-buttonGroup/variants.directive';
-import { SizeDirective                        } from './size-directive/size.directive';          
+import { SizeDirective                        } from './size-directive/size.directive';
+import { VariantsColorDirective } from './variantsColor-StandardChip/variants-color.directive';          
 
 const directivas = [
   OrientationDirective,
@@ -19,7 +20,7 @@ const directivas = [
 ];
 
 @NgModule({
-  declarations: [directivas],
+  declarations: [directivas, VariantsColorDirective],
   imports: [CommonModule],
   exports: [directivas],
   providers: []

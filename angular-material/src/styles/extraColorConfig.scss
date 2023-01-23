@@ -35,7 +35,7 @@ $_ripple-opacity: 0.1;
       #{$property}: mat.get-color-from-palette($variant-palette, $hue);
     }
     &.mat-#{$variant} {
-      &.mat-button-disabled,button {
+      &.mat-button-disabled {
         $palette: if($property == "color", $foreground, $background);
         #{$property}: mat.get-color-from-palette($palette, disabled-button);
       }
@@ -46,14 +46,15 @@ $_ripple-opacity: 0.1;
   $config: mat.get-color-config($config-or-theme);
   $foreground: map.get($config, foreground);
   $background: map.get($config, background);
-  button,
-   .mat-mdc-button,
+  .mat-mdc-button,
   .mat-mdc-outlined-button,
+  .mat-mdc-checkbox,
   .mat-mdc-icon-button,
   .mat-mdc-stroked-button {
     @include _theme-property($config, "color", text, $variants);
     @include _focus-overlay-color($config, $variants);
   }
+
   .mat-mdc-raised-button,
   .mat-mdc-unelevated-button.mat-mdc-button-base,
   .mat-mdc-fab,

@@ -39,6 +39,7 @@ mat-avatar.matAvatar {
       @include bg-color-config($white, $bg-color-avatar,null);
       box-shadow: none;
       backdrop-filter: blur(0rem);
+      cursor: default !important;
     }
     & .mdc-fab:focus, .mdc-fab:hover, .mdc-fab:active{
       --mat-mdc-button-persistent-ripple-color:none;

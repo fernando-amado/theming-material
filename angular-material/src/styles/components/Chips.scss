@@ -1,11 +1,53 @@
+@use "@angular/material" as mat;
+//border radius
+.mat-mdc-standard-chip{
+  border-radius: var(--mdc-chip-container-shape-radius, .4rem .4rem .4rem .4rem) !important;
+  @include mat.typography-level($typography-global-config, "chip-typography");
+  height: auto !important ;
+}
+
+
+.mat-mdc-chip:not(.mat-mdc-chip.mat-primary) {
+  background-color: var(--mdc-chip-elevated-container-color, #e0e0e0) !important;
+}
+
+//colors
+.mat-mdc-chip {
+  &.mat-primary{
+    --mdc-chip-elevated-container-color: #1e62a1;
+    --mdc-chip-elevated-disabled-container-color: #1e62a1;
+  } 
+  &.mat-accent{
+    --mdc-chip-elevated-container-color: #0cbbe2;
+    --mdc-chip-elevated-disabled-container-color: #0cbbe2;
+  } 
+  &.mat-warn{
+    --mdc-chip-elevated-container-color: #d14343;
+    --mdc-chip-elevated-disabled-container-color: #d14343;
+  } 
+  &.mat-success{
+    --mdc-chip-elevated-container-color: #8fc93a;
+    --mdc-chip-elevated-disabled-container-color: #8fc93a;
+  } 
+  &.mat-info{
+    --mdc-chip-elevated-container-color: #2d9fc5;
+    --mdc-chip-elevated-disabled-container-color: #2d9fc5;
+  } 
+  &.mat-warning{
+    --mdc-chip-elevated-container-color: #fb8500;
+    --mdc-chip-elevated-disabled-container-color: #fb8500;
+  } 
+  &.mat-primary,&.mat-accent,&.mat-warn,&.mat-sucess,&.mat-info,&.mat-warning{
+    --mdc-chip-label-text-color: #fff;
+  }
+
+}
+
 //chip size variants
-mat-chip.small {
-  height: 2.4rem !important;
-  font-size: 1.3rem;
-  padding-inline: .8rem;
+mat-chip.small,mat-chip-option.small {
+  padding: .3rem 1rem;
 }
-mat-chip-option.small {
-  height: 2.4rem !important;
-  font-size: 2.4rem;
-  padding-inline: .8rem;
+mat-chip.medium,mat-chip-option.medium {
+  padding: .7rem 1rem;
 }
+

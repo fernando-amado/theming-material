@@ -55,6 +55,13 @@ $button-large: mat.define-typography-level(
   $line-height: 2.3rem,
   $letter-spacing: 0.046rem,
 );
+$chip-typography:mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1.3rem,
+  $line-height: 1.6rem,
+  $letter-spacing: 0.016rem,
+);
 
 $typography-global-config: map.merge(
   mat.define-typography-config(
@@ -132,6 +139,7 @@ $typography-global-config: map.merge(
     "overline": $overline,
     "button-small": $button-small,
     "button-large": $button-large,
+    "chip-typography": $chip-typography,
   )
 );
 
