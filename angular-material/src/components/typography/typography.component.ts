@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
-import { TypographyLevels} from '../../model/modulo.model';
+import { Component, Input       } from '@angular/core';
+import { TypographyLevels       } from '../../model/modelo.model';
 
 @Component({
   selector: 'app-typogrpahy-levels',
   templateUrl: './typography.component.html',
-  styleUrls: ['../config-storybook/main.scss'],  
+  styleUrls: ['../..//styles/main.scss']
 })
 
 export class TypographyComponent {

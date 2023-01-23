@@ -1,0 +1,50 @@
+//mat-tabs orientation vertical
+mat-tab-group.vertical {
+    flex-direction: row !important;
+    height: 100%;
+    min-width: 100%;
+    background-color: #fbfbfb;
+    overflow: hidden;
+    .mat-mdc-tab-header {
+      flex-direction: column !important;
+      width: auto;
+      min-height: 4.8rem;
+      border-right: 0.1rem solid;
+      border-color: rgba(16, 24, 64, 0.12);
+    };
+    .mat-mdc-tab-labels {
+      flex-direction: column;
+    };
+    .mat-mdc-tab-list {
+      display: flex;
+      flex: 1 1 auto;
+      white-space: nowrap;
+      overflow-y: auto;
+      overflow-x: hidden;
+      &::-webkit-scrollbar{
+        display: none;
+      }
+    };
+    .mat-mdc-tab {
+      flex-grow: 0 !important;
+    };
+    .mdc-tab-indicator {
+      width: 4.8rem;
+      height: 100%;
+      transform: rotate(-90deg);
+      left: auto;
+      right: 0;
+    };
+    .mat-mdc-tab-body-wrapper {
+      flex: 1 1 auto;
+    };
+    .mat-mdc-tab-body-content {
+      padding: 2.4rem;
+    };
+    .mat-mdc-tab-group.mat-tabs-with-background > .mat-mdc-tab-header {
+      border: none;
+    } 
+  }
+.mat-mdc-tab-group.mat-tabs-with-background>.mat-mdc-tab-header{
+  border: none;
+}

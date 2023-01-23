@@ -1,95 +1,94 @@
 @import url(https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap);
 
 .app-typogrpahy-levels--h1 {
-  font-family: "Nunito";
-  font-size: 96px;
+  font-family: 'Nunito';
   font-weight: 300;
-  line-height: 112.03px;
-  letter-spacing: 1.5px;
+  font-size: 4rem;
+  line-height: 5.6rem;
+  letter-spacing: -0.15rem;
 }
 .app-typogrpahy-levels--h2 {
-  font-family: "Nunito";
-  font-size: 60px;
+  font-family: 'Nunito';
   font-weight: 400;
-  line-height: 72px;
-  letter-spacing: -0.5px;
+  font-size: 3.2rem;
+  line-height: 3.84rem;
+  letter-spacing: -0.05rem;
 }
 .app-typogrpahy-levels--h3 {
   font-family: "Nunito";
-  font-size: 48px;
+  font-size: 2.8rem;
   font-weight: 500;
-  line-height: 56.02px;
-  letter-spacing: 0px;
+  line-height: 3.36rem;
+  letter-spacing: 0rem;
 }
 .app-typogrpahy-levels--h4 {
-  font-family: "Nunito";
-  font-size: 34px;
   font-weight: 600;
-  line-height: 41.99px;
-  letter-spacing: 0.25px;
+  font-size: 2.4rem;
+  line-height: 2.88rem;
+  letter-spacing: 0.025rem;
+  font-family: "Nunito";
 }
 .app-typogrpahy-levels--h5 {
-  font-family: "Nunito";
-  font-size: 24px;
   font-weight: 600;
-  line-height: 32.02px;
-  letter-spacing: 0px;
+  font-size: 2rem;
+  line-height: 3.2rem;
+  letter-spacing: 0 ;
+  font-family: 'Nunito' ;
 }
 .app-typogrpahy-levels--h6 {
-  font-family: "Nunito";
-  font-size: 20px;
   font-weight: 600;
-  line-height: 32px;
-  letter-spacing: 0.15px;
+  font-size: 1.6rem;
+  line-height: 2.24rem;
+  letter-spacing: 0.015rem ;
+  font-family: 'Nunito' ;
 }
 .app-typogrpahy-levels--subtitle-1 {
-  font-family: "Roboto";
-  font-size: 16px;
+  font-family: 'Roboto';
   font-weight: 400;
-  line-height: 28px;
-  letter-spacing: 0.15px;
+  font-size: 1.3rem;
+  line-height: 1.82rem;
+  letter-spacing: 0.015rem;
 }
 .app-typogrpahy-levels--subtitle-2 {
-  font-family: "Roboto";
-  font-size: 14px;
   font-weight: 500;
-  line-height: 21.98px;
-  letter-spacing: 0.1px;
+  font-size: 1.2rem;
+  line-height: 1.68rem;
+  letter-spacing: 0.01rem;
+  font-family: 'Roboto';
 }
 .app-typogrpahy-levels--body-1 {
-  font-family: "Roboto";
-  font-size: 16px;
+  font-family: 'Roboto';
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.15px;
+  font-size: 1.2rem;
+  line-height: 1.44rem;
+  letter-spacing: 0.017rem;
 }
 .app-typogrpahy-levels--body-2 {
-  font-family: "Roboto";
-  font-size: 14px;
+  font-family: 'Roboto';
   font-weight: 400;
-  line-height: 20.02px;
-  letter-spacing: 0.17px;
+  font-size: 1.3rem;
+  line-height: 1.69rem;
+  letter-spacing: 0.015rem;
 }
 .app-typogrpahy-levels--caption {
-  font-family: "Roboto";
-  font-size: 12px;
+  font-family: 'Roboto';
   font-weight: 400;
-  line-height: 19.92px;
-  letter-spacing: 0.4px;
+  font-size: 1rem;
+  line-height: 1.4rem;
+  letter-spacing: 0.04rem;
 }
 .app-typogrpahy-levels--button {
-  font-family: "Roboto";
-  font-size: 14px;
+  font-family: 'Roboto';
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.4px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: 0.04rem;
 }
 .app-typogrpahy-levels--overline {
-  font-family: "Roboto";
-  font-size: 12px;
+  font-family: 'Roboto';
   font-weight: 400;
-  line-height: 31.92px;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  line-height: 2.66rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
-

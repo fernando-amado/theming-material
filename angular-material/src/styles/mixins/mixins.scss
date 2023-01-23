@@ -1,0 +1,18 @@
+//mixin utilizado para establecer un redondeado a alguna de las 4 esquinas de un elemento al cual se le implemente este mixin
+@mixin bordes-radius(
+  $border-start-left,
+  $border-start-right,
+  $border-end-right,
+  $border-end-left
+) {
+  border-start-start-radius: $border-start-left;
+  border-start-end-radius: $border-start-right;
+  border-end-end-radius: $border-end-right;
+  border-end-start-radius: $border-end-left;
+};
+//mixin utilizado para aplicarle un determinado color al texto, fondo o bordes de un elemento al cual se le implemente este mixin
+@mixin bg-color-config($color, $backgroundColor, $border-color) {
+  color: $color;
+  background-color: $backgroundColor;
+  border-color: $border-color;
+};
