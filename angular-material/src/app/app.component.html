@@ -1,5 +1,5 @@
 <!-- avatar -->
-<!-- <div class="container-componet mat-elevation-z1" style="flex-direction: row; flex-wrap: wrap; width: 27%;">
+ <div class="container-componet mat-elevation-z1" style="flex-direction: row; flex-wrap: wrap; width: 27%;">
     <mat-avatar size="small" avatar="rounded">
       <img src="assets/images/imagen_prueba.jpg">
     </mat-avatar>
@@ -54,9 +54,9 @@
     <mat-avatar size="medium" avatar="circular">
       JT
     </mat-avatar>
-  </div>   -->
+  </div>   
 <!-- buttons -->
-<!-- <div class="container-componet mat-elevation-z1" style="flex-direction: row; flex-wrap: wrap; width: 24%; align-items: flex-start; justify-content: flex-start;">
+ <div class="container-componet mat-elevation-z1" style="flex-direction: row; flex-wrap: wrap; width: 24%; align-items: flex-start; justify-content: flex-start;">
     <button mat-button size="large" >button</button>
     <button mat-button >button</button>
     <button mat-button size="small" >button</button>
@@ -144,9 +144,9 @@
     <button mat-stroked-button size="large" color="warning">stroked</button>
     <button mat-stroked-button color="warning">stroked</button>
     <button mat-stroked-button size="small" color="warning">stroked</button>
-  </div>   -->
+  </div>   
 <!-- button-group -->
-<div class="container-componet mat-elevation-z1">
+ <div class="container-componet mat-elevation-z1">
     <button-group color="primary" variant="contained" size="large">
       <button mat-button>button</button>
       <button mat-button>button</button>
@@ -711,13 +711,40 @@
 
 
 
-  </div>  
+  </div>   
 <!-- ckeck-box -->
-<!-- <div class="container-componet mat-elevation-z1">
+ <div class="container-componet mat-elevation-z1" style="width: 25%; flex-direction: row; flex-wrap: wrap;">
   <app-checkbox></app-checkbox>
-</div> -->
+</div> 
+<!-- radio-buttons -->
+<div class="container-componet mat-elevation-z1" style="width: 25%; flex-direction: row; flex-wrap: wrap;">
+  <mat-radio-button value="1" color="primary" size="small" checked="true">small</mat-radio-button>
+  <mat-radio-button value="2" color="primary" checked="true">medium</mat-radio-button>
+  <mat-radio-button value="2" size="large" color="primary" checked="true">large</mat-radio-button>
+
+  <mat-radio-button value="1" color="accent" size="small" checked="true">small</mat-radio-button>
+  <mat-radio-button value="2" color="accent" checked="true">medium</mat-radio-button>
+  <mat-radio-button value="2" size="large" color="accent" checked="true">large</mat-radio-button>
+
+  <mat-radio-button value="1" color="warn" size="small" checked="true">small</mat-radio-button>
+  <mat-radio-button value="2" color="warn" checked="true" >medium</mat-radio-button>
+  <mat-radio-button value="2" size="large" color="warn" checked="true">large</mat-radio-button>
+<!-- 
+  <mat-radio-button value="1" color="success" size="small">small</mat-radio-button>
+  <mat-radio-button value="2" color="success">medium</mat-radio-button>
+  <mat-radio-button value="2" size="large" color="success">large</mat-radio-button>
+
+  <mat-radio-button value="1" color="info" size="small">small</mat-radio-button>
+  <mat-radio-button value="2" color="info">medium</mat-radio-button>
+  <mat-radio-button value="2" size="large" color="info">large</mat-radio-button>
+
+  <mat-radio-button value="1" color="warning" size="small">small</mat-radio-button>
+  <mat-radio-button value="2" color="warning">medium</mat-radio-button>
+  <mat-radio-button value="2" size="large" color="warning">large</mat-radio-button> -->
+
+</div>
 <!-- form-filed -->
-<!-- <div class="container-componet mat-elevation-z1" style="flex-direction: row; flex-wrap: wrap; align-items: flex-start; width: 80%;">
+ <div class="container-componet mat-elevation-z1" style="flex-direction: row; flex-wrap: wrap; align-items: flex-start; width: 80%;">
   <mat-form-field appearance="outline" size="small">
     <mat-label>Outline form field</mat-label>
     <input matInput placeholder="Placeholder">
@@ -725,7 +752,7 @@
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
   <mat-form-field  size="small" appearance="fill">
-    <mat-label>Outline form field</mat-label>
+    <mat-label>Fill form field</mat-label>
     <input matInput placeholder="Placeholder">
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     <mat-hint>Hint</mat-hint>
@@ -737,7 +764,7 @@
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
   <mat-form-field  size="medium" appearance="fill" >
-    <mat-label>Outline form field</mat-label>
+    <mat-label>Fill form field</mat-label>
     <input matInput placeholder="Placeholder">
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     <mat-hint>Hint</mat-hint>
@@ -749,43 +776,14 @@
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
   <mat-form-field   appearance="fill" >
-    <mat-label>Outline form field</mat-label>
+    <mat-label>Fill form field</mat-label>
     <input matInput placeholder="Placeholder">
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
     <mat-hint>Hint</mat-hint>
   </mat-form-field>
-</div> -->
-<!-- 
-  <div class="container-componet mat-elevation-z1">
-    <mat-form-field appearance="fill" size="small">
-      <mat-label>Fill form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Fill form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-    <mat-form-field appearance="outline" size="large">
-      <mat-label>Fill form field</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
-    </mat-form-field>
-  </div>
-  <div class="container-componet mat-elevation-z1">
-    <mat-checkbox size="small">small</mat-checkbox>
-    <mat-checkbox>Check me!</mat-checkbox>
-    <mat-checkbox size="large">large</mat-checkbox>
-  </div>
-  <div class="container-componet mat-elevation-z1">
-    <mat-radio-button value="1" size="small">small</mat-radio-button>
-    <mat-radio-button value="2">medium</mat-radio-button>
-    <mat-radio-button value="2" size="large">large</mat-radio-button>
-  </div>
+</div> -
+
+
   <div class="container-componet mat-elevation-z1">
     <mat-spinner size="small"></mat-spinner>
     <mat-spinner></mat-spinner>
@@ -808,135 +806,6 @@
     <mat-icon size="large" color="primary">favorite</mat-icon>
   </div>
   <div class="container-componet mat-elevation-z1">
-    <button-group color="primary" variant="contained" size="large">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" variant="contained">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" variant="contained" size="small">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-
-    <button-group
-      color="primary"
-      orientation="vertical"
-      variant="contained"
-      size="large"
-    >
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" orientation="vertical" variant="contained">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group
-      color="primary"
-      orientation="vertical"
-      variant="contained"
-      size="small"
-    >
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-  </div>
-  <div class="container-componet mat-elevation-z1">
-    <button-group color="primary" variant="text" size="large">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" variant="text">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" variant="text" size="small">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-
-    <button-group
-      color="primary"
-      orientation="vertical"
-      variant="text"
-      size="large"
-    >
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" orientation="vertical" variant="text">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group
-      color="primary"
-      orientation="vertical"
-      variant="text"
-      size="small"
-    >
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-  </div>
-  <div class="container-componet mat-elevation-z1">
-    <button-group color="primary" variant="outlined" size="large">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" variant="outlined">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" variant="outlined" size="small">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-
-    <button-group
-      color="primary"
-      orientation="vertical"
-      variant="outlined"
-      size="large"
-    >
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group color="primary" orientation="vertical" variant="outlined">
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-    <button-group
-      color="primary"
-      orientation="vertical"
-      variant="outlined"
-      size="small"
-    >
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-      <button mat-button>button</button>
-    </button-group>
-  </div>
-  <div class="container-componet mat-elevation-z1">
     <p>Body-2</p>
     <span class="mat-body-1">Body-1</span>
     <span class="mat-subtitle-1">Subtitle-1</span>
@@ -950,4 +819,4 @@
     <h5>H5</h5>
     <h6>H6</h6>
     <button mat-button>button</button>
-  </div>  -->
+  </div>  
