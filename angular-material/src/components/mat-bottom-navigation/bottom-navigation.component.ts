@@ -8,7 +8,7 @@ import { Component, Input, ElementRef, OnInit, ViewEncapsulation } from '@angula
 export class BottomNavigationComponent implements OnInit {
   constructor(private element: ElementRef<HTMLElement>) {}
   @Input() color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' ;
-  
+
   ngOnInit(){
     this.element.nativeElement.classList.add(`${this.element.nativeElement.tagName.toLocaleLowerCase()}--${this.color}`)
   }
@@ -23,7 +23,7 @@ export class bottomNavigationActionsComponents implements OnInit {
 
   @Input() label?: string;
   @Input() icon?: string;
-  
+
   ngOnInit() {}
   disabled() {
     document.querySelector('bottom-navigation-actions')?.classList.add('active')

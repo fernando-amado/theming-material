@@ -1,0 +1,125 @@
+@use "@angular/material" as mat;
+$height-small-form-field-outline: 32px;
+$height-small-form-field-fill: 32px;
+$height-medium-form-field: 45px;
+
+@function translateYLabel($height, $half, $border) {
+  @return $height/$half + $border;
+}
+
+//Form field size variants
+mat-form-field.small {
+  //outlined
+  .mdc-text-field--outlined {
+    height: $height-small-form-field-outline !important;
+    .mat-mdc{
+      &-form-field-infix {
+        padding: 0rem 0rem !important;
+        min-height: $height-small-form-field-outline;
+      }
+    }
+    .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+      transform: translateY(calc(translateYLabel($height-small-form-field-outline, 2, 4) * -1))scale(0.75) !important;
+      text-overflow: ellipsis;        
+    }
+    .mdc-text-field__input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      @include mat.typography-level($typography-global-config, "body-2" );
+    }
+  }
+  //filled
+  .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+    height: $height-small-form-field-fill !important;
+    .mat-mdc{
+      &-form-field-infix {
+        padding: 0rem 0rem !important;
+        min-height: $height-small-form-field-fill;
+      }
+    }
+    .mdc-floating-label--float-above {
+      position: absolute;
+      top: 0;
+    }
+    .mdc-text-field__input {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 4px;
+    }
+  }
+  //input 
+  .mdc-text-field__input::placeholder,.mdc-text-field__input{
+    font-family: "Roboto" !important;
+    font-weight: 400 !important;
+    font-size: 1.3rem !important;
+    line-height: 1.6rem !important;
+    letter-spacing: 0.015rem !important;
+  }
+  //floating label
+  .mdc-floating-label{
+    @include mat.typography-level($typography-global-config, "floating-label-small");
+  }
+  .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined),.mdc-text-field--outlined {
+    .mat-mdc {
+      &-form-field-flex {
+        max-height: 100%;
+      }
+      &-floating-label {
+        top: 50% !important;
+      }
+    }
+  }
+  //icons
+  .mat-icon{
+    font-size: inherit;
+    height: 100%;
+    text-align: center;
+  }
+  @include mat.typography-level($typography-global-config, "body-2");
+
+}
+mat-form-field.medium {
+  .mdc-text-field--outlined {
+    .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+      transform: translateY(
+          calc(translateYLabel($height-medium-form-field, 2, 4) * -1)
+        )
+        scale(0.75) !important;
+    }
+    .mdc-text-field__input {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+  }
+  .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+    .mdc-text-field__input {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 8px;
+    }
+  }
+  .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined),.mdc-text-field--outlined {
+    height: $height-medium-form-field !important;
+    .mat-mdc {
+      &-form-field-flex {
+        max-height: 100%;
+      }
+      &-form-field-infix {
+        padding: 0rem 0rem !important;
+        min-height: $height-medium-form-field;
+      }
+      &-floating-label {
+        top: 50% !important;
+      }
+    }
+  }
+  .mat-icon{
+    font-size: inherit;
+    height: 100%;
+    text-align: center;
+  }
+
+}
+

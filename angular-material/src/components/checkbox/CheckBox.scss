@@ -1,0 +1,17 @@
+.small{
+    // CheckBox
+    .mdc-checkbox__background {
+      width: 15px;
+      height: 15px;
+      margin: 1px 1.5px;
+    }
+}
+.large {
+  // Checkbox
+  .mdc-checkbox__background {
+    width: 21px;
+    height: 21px;
+    margin: -1px -1px;
+  }
+}
+
