@@ -21,6 +21,11 @@ import {
 import { DirectivesModule } from './directives/directives.module';
 import { CheckboxComponent } from '..//components/checkbox/checkbox.component';
 import { MAT_FAB_DEFAULT_OPTIONS } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRadioComponent } from 'src/components/mat-radio/mat-radio.component';
+import { MatIconComponent } from 'src/components/mat-icon/mat-icon.component';
+import { MatIconModule } from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   imports: [
@@ -28,11 +33,16 @@ import { MAT_FAB_DEFAULT_OPTIONS } from '@angular/material/button';
     BrowserAnimationsModule,
     MaterialModule,
     DirectivesModule,
+    MatButtonModule,
+    MatIconModule,
+    MatRadioModule
   ],
 
   exports: [DirectivesModule],
   declarations: [
+    MatRadioComponent,
     CheckboxComponent,
+    MatIconComponent,
     AppComponent,
     MatProgressBarComponent,
     MatToolbarComponent,

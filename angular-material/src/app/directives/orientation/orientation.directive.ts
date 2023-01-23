@@ -1,9 +1,9 @@
 import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
-export type Orientation = 'vertical'|'horinzontal';
+export type Orientation = 'vertical' | 'horinzontal';
 
 @Directive({
-  selector: 'mat-tab-group,button-group  [orientation]',
+  selector: '  [orientation]',
 })
 export class OrientationDirective implements OnChanges {
   constructor(private el: ElementRef<HTMLElement>) {}
@@ -11,7 +11,7 @@ export class OrientationDirective implements OnChanges {
   @Input() orientation!: Orientation;
 
   ngOnChanges() {
-  this.el.nativeElement.classList.add(`${this.orientation}`);
+    this.el.nativeElement.classList.add(`${this.orientation}`);
   }
   ngAfterViewInit(): void {
     this.el.nativeElement.classList.add(`${this.orientation}`);
