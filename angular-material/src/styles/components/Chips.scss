@@ -5,49 +5,78 @@
   @include mat.typography-level($typography-global-config, "chip-typography");
   height: auto !important ;
 }
-
-
-.mat-mdc-chip:not(.mat-mdc-chip.mat-primary) {
-  background-color: var(--mdc-chip-elevated-container-color, #e0e0e0) !important;
+//defaul padding 0
+.mat-mdc-standard-chip .mdc-evolution-chip__action--primary{
+  padding: 0px !important;
 }
 
 //colors
-.mat-mdc-chip {
-  &.mat-primary{
-    --mdc-chip-elevated-container-color: #1e62a1;
-    --mdc-chip-elevated-disabled-container-color: #1e62a1;
+mat-chip {
+  &.primary{
+    --mdc-chip-elevated-container-color: #1e62a1 !important;
   } 
-  &.mat-accent{
-    --mdc-chip-elevated-container-color: #0cbbe2;
-    --mdc-chip-elevated-disabled-container-color: #0cbbe2;
+  &.accent{
+    --mdc-chip-elevated-container-color: #0cbbe2 !important;
   } 
-  &.mat-warn{
-    --mdc-chip-elevated-container-color: #d14343;
-    --mdc-chip-elevated-disabled-container-color: #d14343;
+  &.warn{
+    --mdc-chip-elevated-container-color: #d14343 !important;
   } 
-  &.mat-success{
-    --mdc-chip-elevated-container-color: #8fc93a;
-    --mdc-chip-elevated-disabled-container-color: #8fc93a;
+  &.success{
+    --mdc-chip-elevated-container-color: #8fc93a !important;
   } 
-  &.mat-info{
-    --mdc-chip-elevated-container-color: #2d9fc5;
-    --mdc-chip-elevated-disabled-container-color: #2d9fc5;
+  &.info{
+    --mdc-chip-elevated-container-color: #2d9fc5 !important;
   } 
-  &.mat-warning{
-    --mdc-chip-elevated-container-color: #fb8500;
-    --mdc-chip-elevated-disabled-container-color: #fb8500;
+  &.warning{
+    --mdc-chip-elevated-container-color: #fb8500 !important;
   } 
-  &.mat-primary,&.mat-accent,&.mat-warn,&.mat-sucess,&.mat-info,&.mat-warning{
-    --mdc-chip-label-text-color: #fff;
+  &.primary,&.accent,&.warn,&.success,&.info,&.warning{
+    --mdc-chip-label-text-color: #fff !important;
   }
-
 }
-
+//chips variant stroked
+mat-chip.stroked{
+  &{
+    border-color: #e0e0e0 !important;
+  }
+  &.primary{
+    --mdc-chip-label-text-color:#1e62a1 !important;
+    border-color: $primary !important;
+    
+  }
+  &.accent{
+    --mdc-chip-label-text-color:#0cbbe2 !important;
+    border-color: $accent !important;
+  }
+  &.warn{
+    --mdc-chip-label-text-color:#d14343 !important;
+    border-color: $warn !important;
+  }
+  &.success{
+    --mdc-chip-label-text-color:#8fc93a !important;
+    border-color: $success !important;
+  }
+  &.info{
+    --mdc-chip-label-text-color:#2d9fc5 !important;
+    border-color: $info !important;
+  }
+  &.warning{
+    --mdc-chip-label-text-color:#fb8500 !important;
+    border-color: $warning !important;
+  }
+  &,&.primary,&.accent,&.warn,&.success,&.info,&.warning{
+    border: 1px solid;
+    --mdc-chip-elevated-container-color:transparent !important;
+   
+   
+  }
+} 
 //chip size variants
 mat-chip.small,mat-chip-option.small {
-  padding: .3rem 1rem;
+  padding: .3rem 1rem !important;
+
 }
 mat-chip.medium,mat-chip-option.medium {
-  padding: .7rem 1rem;
+  padding: .7rem 1rem !important;
 }
 

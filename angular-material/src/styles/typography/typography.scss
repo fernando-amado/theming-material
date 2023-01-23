@@ -63,6 +63,15 @@ $chip-typography:mat.define-typography-level(
   $letter-spacing: 0.016rem,
 );
 
+
+$floating-label-small:mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1rem,
+  $line-height: 1rem,
+  $letter-spacing: 0.015rem,
+);
+
 $typography-global-config: map.merge(
   mat.define-typography-config(
     $font-family: "Roboto",
@@ -140,6 +149,7 @@ $typography-global-config: map.merge(
     "button-small": $button-small,
     "button-large": $button-large,
     "chip-typography": $chip-typography,
+    "floating-label-small":$floating-label-small
   )
 );
 

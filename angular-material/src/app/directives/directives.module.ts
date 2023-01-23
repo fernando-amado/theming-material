@@ -1,13 +1,13 @@
-import { NgModule                             } from '@angular/core';
-import { CommonModule                         } from '@angular/common';
-import { IconPositionDirective                } from './Tabs/iconPosition/icon-position.directive';
-import { OrientationDirective                 } from './orientation/orientation.directive';
-import { ColorTextDirective                   } from './colorText/color-text.directive';
-import { appearanceDirective                  } from './appearance-directive/appearance';
-import { avatarVariantDirective               } from './avatar-directive/avatar-variants';
-import { VariantsDirective                    } from './variantsColor-buttonGroup/variants.directive';
-import { SizeDirective                        } from './size-directive/size.directive';
-import { VariantsColorDirective } from './variantsColor-StandardChip/variants-color.directive';          
+import { NgModule                                   } from '@angular/core';
+import { CommonModule                               } from '@angular/common';
+import { IconPositionDirective                      } from './Tabs/iconPosition/icon-position.directive';
+import { OrientationDirective                       } from './orientation/orientation.directive';
+import { ColorTextDirective                         } from './colorText/color-text.directive';
+import { appearanceDirective                        } from './appearance-directive/appearance';
+import { avatarVariantDirective                     } from './avatar-directive/avatar-variants';
+import { VariantsDirective                          } from './variantsColor-buttonGroup/variants.directive';
+import { SizeDirective                              } from './size-directive/size.directive';
+import { ColorChipsDirective, VariantChipsDirective } from './variantsColor-StandardChip/variants-color.directive';
 
 const directivas = [
   OrientationDirective,
@@ -16,11 +16,13 @@ const directivas = [
   appearanceDirective,
   avatarVariantDirective,
   VariantsDirective,
+  ColorChipsDirective,
+  VariantChipsDirective,
   SizeDirective
 ];
 
 @NgModule({
-  declarations: [directivas, VariantsColorDirective],
+  declarations: [directivas],
   imports: [CommonModule],
   exports: [directivas],
   providers: []
