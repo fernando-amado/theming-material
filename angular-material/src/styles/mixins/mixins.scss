@@ -5,10 +5,10 @@
   $border-end-right,
   $border-end-left
 ) {
-  border-start-start-radius: $border-start-left;
-  border-start-end-radius: $border-start-right;
-  border-end-end-radius: $border-end-right;
-  border-end-start-radius: $border-end-left;
+  border-start-start-radius: $border-start-left !important;
+  border-start-end-radius: $border-start-right !important;
+  border-end-end-radius: $border-end-right !important;
+  border-end-start-radius: $border-end-left !important;
 };
 //mixin utilizado para aplicarle un determinado color al texto, fondo o bordes de un elemento al cual se le implemente este mixin
 @mixin bg-color-config($color, $backgroundColor, $border-color) {
