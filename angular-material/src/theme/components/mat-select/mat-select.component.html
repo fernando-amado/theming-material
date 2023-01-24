@@ -1,0 +1,51 @@
+<!-- select -->
+<div class="container-componet mat-elevation-z1"  style="flex-direction: row;flex-wrap: wrap;align-items: flex-start; justify-content: center; width: 60%; gap: 10px; display: flex; margin: 2rem auto; padding: 1rem;">
+    <mat-form-field appearance="outline" size="small">
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" size="medium">
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" >
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" size="small">
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" size="medium">
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill" >
+      <mat-label>Favorite food</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+</div>  

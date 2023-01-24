@@ -2,7 +2,6 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-mat-spinner',
   templateUrl: './mat-spinner.component.html',
-  styleUrls: ['../..//styles/main.scss'],
  providers:[ 
 ],
 

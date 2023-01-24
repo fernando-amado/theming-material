@@ -10,7 +10,6 @@ import { MatSpinnerComponent          } from 'src/theme/components/mat-spinner/m
 import { MatChipsComponent            } from 'src/theme/components/mat-chips/mat-chips.component';
 import { MatBagdeComponent            } from 'src/theme/components/mat-bagde/mat-bagde.component';
 import { MatSlidetoggleComponent      } from 'src/theme/components/mat-slidetoggle/mat-slidetoggle.component';
-import { MatTextfieldComponent        } from 'src/theme/components/mat-textfield/input.component';
 import { MatAvatarComponent           } from 'src/theme/components/mat-avatar/mat-avatar.component';
 import { MatSliderComponent           } from 'src/theme/components/mat-slider/mat-slider.component';
 import { ButtonGroupComponent         } from 'src/theme/components/mat-buttonGroup/button-group.component';
@@ -22,6 +21,8 @@ import { AppComponent                 } from './app.component';
 import { DirectivesModule             } from 'src/theme/directives/directives.module';     
 import { CheckboxComponent            } from 'src/theme/components/checkbox/checkbox.component'; 
 import { bottomNavigationActionsComponents, BottomNavigationComponent } from '../theme/components/mat-bottom-navigation/bottom-navigation.component';  
+import { MatSelectComponent           } from 'src/theme/components/mat-select/mat-select.component';
+import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formField';
 
 @NgModule({
   imports: [
@@ -47,12 +48,14 @@ import { bottomNavigationActionsComponents, BottomNavigationComponent } from '..
     MatChipsComponent,
     MatBagdeComponent,
     MatSlidetoggleComponent,
-    MatTextfieldComponent,
+    MatFormFieldComponent,
     MatAvatarComponent,
     ButtonGroupComponent,
     MatButtonComponent,
     BottomNavigationComponent,
     bottomNavigationActionsComponents,
+    MatSelectComponent 
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
