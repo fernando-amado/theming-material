@@ -8,6 +8,7 @@ $bg-avatar-standard:mat.get-color-from-palette($grey, 400);
   height: auto !important ;
   --mdc-chip-elevated-container-color: #10184014 !important;
   --mdc-chip-elevated-disabled-container-color: #10184014;
+
 }
 //default padding 0
 .mat-mdc-standard-chip .mdc-evolution-chip__action--primary{
@@ -114,12 +115,14 @@ mat-chip.small,mat-chip-option.small {
 mat-chip.medium,mat-chip-option.medium {
   padding: .7rem 1rem !important;
 }
+//configuration icon inside chips
 mat-chip{
   &.medium,&.small{
     .mat-icon{
       font-size: inherit;
       width: auto;
       height: auto;
+      opacity: 0.5;
     }
   }
 }
