@@ -10,6 +10,7 @@ import { Size } from '../../directives/size-directive/size.directive';
 export class MatSpinnerComponent {
   @Input() 
   color?: 'primary'|'accent'|'warn'|'success'|'info'|'warning' = 'primary' ;
+  
   @Input()
   size: Size = 'small';
   public get colorOption(): string[] {
