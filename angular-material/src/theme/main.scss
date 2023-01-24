@@ -1,0 +1,26 @@
+@use "@angular/material" as mat;
+// EXTRA COLORS CONFIGURATION
+@import "./colores/extraColorConfig.scss";
+// MIXINS
+@import "./mixins/mixins.scss";
+//PALETTES
+@import "./palettes/palettes.scss";
+// TYPOGRAPHY CONFIGURATION
+@import "./typography/typography.scss";
+// BASE
+@import "./base.scss";
+// LIGHT AND DARK  THEMES
+@import "./theme.scss";
+// VARIABLES
+@import "./variables.scss";
+// PERSONZALIZACION DE COMPONENTES
+@import "./components/checkbox/CheckBox.scss";
+@import "./components/mat-avatar/Avatar.scss";
+@import "./components/mat-bottom-navigation/BottomNavegation.scss";
+@import "./components/mat-button/Buttons.scss";
+@import "./components/mat-buttonGroup/ButtonGroup.scss";
+@import "./components/mat-chips/Chips.scss";
+@import "./components/mat-icon/Icons.scss";
+@import "./components/mat-radio/RadioButton.scss";
+@import "./components/mat-slider/Slider.scss";
+@import "./components/mat-textfield/FormField.scss";

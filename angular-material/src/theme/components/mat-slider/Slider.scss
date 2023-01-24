@@ -1,0 +1,14 @@
+// Slider VARTIANT SIZES
+.small {
+  .mat-mdc-slider-visual-thumb .mat-ripple {
+    border-radius: 5rem;
+    margin: .9rem 0rem 0rem, .97rem;
+    width: 60%;
+    height: 60%;
+  }
+  .mdc-slider__thumb-knob {
+    width: .5rem !important;
+    height: .5rem !important;
+    border-width: .75rem !important;
+  }
+}

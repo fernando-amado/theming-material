@@ -1,6 +1,6 @@
 @use "sass:map";
 @use "@angular/material" as mat;
-@use "./extraColorConfig.scss" as variants;
+@use "./colores/extraColorConfig.scss" as variants;
 @import "./palettes/palettes.scss";
 
 @include mat.core();
@@ -80,7 +80,7 @@ $light-theme-variants: (
   warning: $warning-color,
 );
 .light-theme {
-  background-color: #F5F5F5;
+  background-color: $light-background-default;
   @include mat.all-component-themes($light-theme);
   @include variants.color($light-theme, $light-theme-variants);
 }

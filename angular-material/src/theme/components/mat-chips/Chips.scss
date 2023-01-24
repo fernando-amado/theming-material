@@ -1,0 +1,129 @@
+@use "@angular/material" as mat;
+$color-text-gray:mat.get-color-from-palette($grey, 700);
+$bg-avatar-standard:mat.get-color-from-palette($grey, 400);
+//configuration of border radius, bg color and typography 
+.mat-mdc-standard-chip{
+  border-radius: var(--mdc-chip-container-shape-radius, .4rem .4rem .4rem .4rem) !important;
+  @include mat.typography-level($typography-global-config, "chip-typography");
+  height: auto !important ;
+  --mdc-chip-elevated-container-color: #10184014 !important;
+  --mdc-chip-elevated-disabled-container-color: #10184014;
+
+}
+//default padding 0
+.mat-mdc-standard-chip .mdc-evolution-chip__action--primary{
+  padding: 0px !important;
+}
+.mat-mdc-chip-action-label{
+  display: flex ;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+}
+//colors
+mat-chip {
+  &.primary{
+    --mdc-chip-elevated-container-color: #1e62a1 !important;
+  } 
+  &.accent{
+    --mdc-chip-elevated-container-color: #0cbbe2 !important;
+  } 
+  &.warn{
+    --mdc-chip-elevated-container-color: #d14343 !important;
+  } 
+  &.success{
+    --mdc-chip-elevated-container-color: #8fc93a !important;
+  } 
+  &.info{
+    --mdc-chip-elevated-container-color: #2d9fc5 !important;
+  } 
+  &.warning{
+    --mdc-chip-elevated-container-color: #fb8500 !important;
+  } 
+  &.primary,&.accent,&.warn,&.success,&.info,&.warning{
+    --mdc-chip-label-text-color: #fff !important;
+  }
+}
+//chips variant stroked
+mat-chip.stroked{
+  &{
+    border-color: #e0e0e0 !important;
+  }
+  &.primary{
+    --mdc-chip-label-text-color:#1e62a1 !important;
+    border-color: $primary !important;
+    
+  }
+  &.accent{
+    --mdc-chip-label-text-color:#0cbbe2 !important;
+    border-color: $accent !important;
+  }
+  &.warn{
+    --mdc-chip-label-text-color:#d14343 !important;
+    border-color: $warn !important;
+  }
+  &.success{
+    --mdc-chip-label-text-color:#8fc93a !important;
+    border-color: $success !important;
+  }
+  &.info{
+    --mdc-chip-label-text-color:#2d9fc5 !important;
+    border-color: $info !important;
+  }
+  &.warning{
+    --mdc-chip-label-text-color:#fb8500 !important;
+    border-color: $warning !important;
+  }
+  &,&.primary,&.accent,&.warn,&.success,&.info,&.warning{
+    border: 1px solid;
+    --mdc-chip-elevated-container-color:transparent !important;
+  }
+}
+//chips wiht avatars
+mat-chip, mat-chip.stroked {
+  & mat-avatar .mdc-fab {
+    @include bg-color-config($color-text-gray ,$bg-avatar-standard , null);
+  }
+  &.primary mat-avatar .mdc-fab {
+    @include bg-color-config(null,#003972 !important, null);
+  }
+  &.accent mat-avatar .mdc-fab {
+    @include bg-color-config(null,#008BB0 !important, null);
+  }
+  &.warn mat-avatar .mdc-fab {
+    @include bg-color-config(null,#B51E1E !important, null);
+  }
+  &.success mat-avatar .mdc-fab {
+    @include bg-color-config(null,#60A918 !important, null);
+  }
+  &.info mat-avatar .mdc-fab {
+    @include bg-color-config(null,#1172A3 !important, null);
+  }
+  &.warning mat-avatar .mdc-fab {
+    @include bg-color-config(null,#F85500 !important, null);
+  }
+  &.primary,&.accent,&.warn,&.success,&.info,&.warning {
+    & mat-avatar .mdc-fab{
+      @include bg-color-config($white !important,null, null);
+    }
+  }
+}
+//chip size variants
+mat-chip.small,mat-chip-option.small {
+  padding: .3rem 1rem !important;
+}
+mat-chip.medium,mat-chip-option.medium {
+  padding: .7rem 1rem !important;
+}
+//configuration icon inside chips
+mat-chip{
+  &.medium,&.small{
+    .mat-icon{
+      font-size: inherit;
+      width: auto;
+      height: auto;
+      opacity: 0.5;
+    }
+  }
+}
+

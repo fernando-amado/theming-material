@@ -1,0 +1,195 @@
+@use "@angular/material" as mat;
+@use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+$h3: mat.define-typography-level(
+  $font-family: Nunito !important,
+  $font-size: 2.8rem,
+  $font-weight: 500,
+  $line-height: 3.36rem,
+  $letter-spacing: 0rem !important,
+);
+
+$h4: mat.define-typography-level(
+  $font-weight: 600,
+  $font-size: 2.4rem,
+  $line-height: 2.88rem,
+  $letter-spacing: 0.025rem !important,
+  $font-family: Nunito !important,
+);
+
+$h5: mat.define-typography-level(
+  $font-weight: 600,
+  $font-size: 2rem,
+  $line-height: 3.2rem,
+  $letter-spacing: 0 !important,
+  $font-family: Nunito !important,
+);
+
+$h6: mat.define-typography-level(
+  $font-weight: 600,
+  $font-size: 1.6rem,
+  $line-height: 2.24rem,
+  $letter-spacing: 0.015rem !important,
+  $font-family: Nunito !important,
+);
+
+$overline: mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1rem,
+  $line-height: 2.66rem,
+  $letter-spacing: 0.2rem,
+);
+$button-small: mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1.3rem,
+  $line-height: 1.8rem,
+  $letter-spacing: 0.02rem,
+);
+$button-large: mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 500,
+  $font-size: 1.5rem,
+  $line-height: 2.3rem,
+  $letter-spacing: 0.046rem,
+);
+$chip-typography:mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1.3rem,
+  $line-height: 1.6rem,
+  $letter-spacing: 0.016rem,
+);
+
+
+$floating-label-small:mat.define-typography-level(
+  $font-family: Roboto,
+  $font-weight: 400,
+  $font-size: 1rem,
+  $line-height: 1rem,
+  $letter-spacing: 0.015rem,
+);
+
+$typography-global-config: map.merge(
+  mat.define-typography-config(
+    $font-family: "Roboto",
+    $headline-5:
+      mat.define-typography-level(
+        $font-family: Nunito,
+        $font-weight: 300,
+        $font-size: 4rem,
+        $line-height: 5.6rem,
+        $letter-spacing: -0.15rem,
+      ),
+    $headline-6:
+      mat.define-typography-level(
+        $font-family: Nunito,
+        $font-weight: 400,
+        $font-size: 3.2rem,
+        $line-height: 3.84rem,
+        $letter-spacing: -0.05rem,
+      ),
+    $subtitle-1:
+      mat.define-typography-level(
+        $font-family: Roboto,
+        $font-weight: 400,
+        $font-size: 1.3rem,
+        $line-height: 1.82rem,
+        $letter-spacing: 0.015rem,
+      ),
+    $subtitle-2:
+      mat.define-typography-level(
+        $font-weight: 500,
+        $font-size: 1.2rem,
+        $line-height: 1.68rem,
+        $letter-spacing: 0.01rem,
+        $font-family: Roboto,
+      ),
+    $body-1:
+      mat.define-typography-level(
+        $font-family: Roboto,
+        $font-weight: 400,
+        $font-size: 1.2rem,
+        $line-height: 1.44rem,
+        $letter-spacing: 0.017rem,
+      ),
+    $body-2:
+      mat.define-typography-level(
+        $font-family: Roboto,
+        $font-weight: 400,
+        $font-size: 1.3rem,
+        $line-height: 1.69rem,
+        $letter-spacing: 0.015rem,
+      ),
+    $caption:
+      mat.define-typography-level(
+        $font-family: Roboto,
+        $font-weight: 400,
+        $font-size: 1rem,
+        $line-height: 1.4rem,
+        $letter-spacing: 0.04rem,
+      ),
+    $button:
+      mat.define-typography-level(
+        $font-family: Roboto,
+        $font-weight: 500,
+        $font-size: 1.4rem,
+        $line-height: 2rem,
+        $letter-spacing: 0.04rem,
+      ),
+  ),
+  (
+    "h3": $h3,
+    "h4": $h4,
+    "h5": $h5,
+    "h6": $h6,
+    "overline": $overline,
+    "button-small": $button-small,
+    "button-large": $button-large,
+    "chip-typography": $chip-typography,
+    "floating-label-small":$floating-label-small
+  )
+);
+
+.mat-headline-5,
+.mat-h1,
+h1,
+.mat-headline-6,
+.mat-h2,
+h2,
+.mat-subtitle-1,
+.mat-h3,
+h3,
+.mat-h4,
+h4,
+.mat-body-1,
+p,
+.mat-h5,
+h5,
+.mat-h6,
+h6 {
+  margin: 0 !important;
+}
+.mat-h3,
+h3 {
+  @include mat.typography-level($typography-global-config, "h3");
+}
+.mat-h4,
+h4 {
+  @include mat.typography-level($typography-global-config, "h4");
+}
+.mat-h5,
+h5 {
+  @include mat.typography-level($typography-global-config, "h5");
+}
+.mat-h6,
+h6 {
+  @include mat.typography-level($typography-global-config, "h6");
+}
+.mat-overline {
+  text-transform: uppercase;
+  @include mat.typography-level($typography-global-config, "overline");
+}
+@include mat.all-component-typographies($typography-global-config);
