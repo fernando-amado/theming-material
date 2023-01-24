@@ -81,30 +81,31 @@ mat-chip.stroked{
 }
 //chips wiht avatars
 mat-chip, mat-chip.stroked {
-  & mat-avatar .mdc-fab {
+  & mat-avatar {
     @include bg-color-config($color-text-gray ,$bg-avatar-standard , null);
   }
-  &.primary mat-avatar .mdc-fab {
+  &.primary mat-avatar  {
     @include bg-color-config(null,#003972 !important, null);
   }
-  &.accent mat-avatar .mdc-fab {
+  &.accent mat-avatar {
     @include bg-color-config(null,#008BB0 !important, null);
   }
-  &.warn mat-avatar .mdc-fab {
+  &.warn mat-avatar {
     @include bg-color-config(null,#B51E1E !important, null);
   }
-  &.success mat-avatar .mdc-fab {
+  &.success mat-avatar {
     @include bg-color-config(null,#60A918 !important, null);
   }
-  &.info mat-avatar .mdc-fab {
+  &.info mat-avatar {
     @include bg-color-config(null,#1172A3 !important, null);
   }
-  &.warning mat-avatar .mdc-fab {
+  &.warning mat-avatar {
     @include bg-color-config(null,#F85500 !important, null);
   }
   &.primary,&.accent,&.warn,&.success,&.info,&.warning {
-    & mat-avatar .mdc-fab{
+    & mat-avatar {
       @include bg-color-config($white !important,null, null);
+      font-size: 1.2rem !important;
     }
   }
 }
