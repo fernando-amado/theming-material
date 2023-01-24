@@ -17,6 +17,8 @@ import { MatTabsModule            } from '@angular/material/tabs';
 import { MatCheckboxModule        } from '@angular/material/checkbox';
 import { MatRadioModule           } from '@angular/material/radio';
 import { MatDividerModule         } from '@angular/material/divider';
+import { MatSelectModule          } from '@angular/material/select';
+
 
 
 const components = [
@@ -38,6 +40,7 @@ const components = [
   MatIconModule,
   MatTabsModule,
   MatDividerModule,
+  MatSelectModule
 ];
 
 @NgModule({

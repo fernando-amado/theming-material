@@ -1,15 +1,24 @@
 @use "@angular/material" as mat;
-//border radius
+$color-text-gray:mat.get-color-from-palette($grey, 700);
+$bg-avatar-standard:mat.get-color-from-palette($grey, 400);
+//configuration of border radius, bg color and typography 
 .mat-mdc-standard-chip{
   border-radius: var(--mdc-chip-container-shape-radius, .4rem .4rem .4rem .4rem) !important;
   @include mat.typography-level($typography-global-config, "chip-typography");
   height: auto !important ;
+  --mdc-chip-elevated-container-color: #10184014 !important;
+  --mdc-chip-elevated-disabled-container-color: #10184014;
 }
-//defaul padding 0
+//default padding 0
 .mat-mdc-standard-chip .mdc-evolution-chip__action--primary{
   padding: 0px !important;
 }
-
+.mat-mdc-chip-action-label{
+  display: flex ;
+  align-items: center;
+  justify-content: space-between;
+  gap: .6rem;
+}
 //colors
 mat-chip {
   &.primary{
@@ -67,16 +76,51 @@ mat-chip.stroked{
   &,&.primary,&.accent,&.warn,&.success,&.info,&.warning{
     border: 1px solid;
     --mdc-chip-elevated-container-color:transparent !important;
-   
-   
   }
-} 
+}
+//chips wiht avatars
+mat-chip, mat-chip.stroked {
+  & mat-avatar .mdc-fab {
+    @include bg-color-config($color-text-gray ,$bg-avatar-standard , null);
+  }
+  &.primary mat-avatar .mdc-fab {
+    @include bg-color-config(null,#003972 !important, null);
+  }
+  &.accent mat-avatar .mdc-fab {
+    @include bg-color-config(null,#008BB0 !important, null);
+  }
+  &.warn mat-avatar .mdc-fab {
+    @include bg-color-config(null,#B51E1E !important, null);
+  }
+  &.success mat-avatar .mdc-fab {
+    @include bg-color-config(null,#60A918 !important, null);
+  }
+  &.info mat-avatar .mdc-fab {
+    @include bg-color-config(null,#1172A3 !important, null);
+  }
+  &.warning mat-avatar .mdc-fab {
+    @include bg-color-config(null,#F85500 !important, null);
+  }
+  &.primary,&.accent,&.warn,&.success,&.info,&.warning {
+    & mat-avatar .mdc-fab{
+      @include bg-color-config($white !important,null, null);
+    }
+  }
+}
 //chip size variants
 mat-chip.small,mat-chip-option.small {
   padding: .3rem 1rem !important;
-
 }
 mat-chip.medium,mat-chip-option.medium {
   padding: .7rem 1rem !important;
+}
+mat-chip{
+  &.medium,&.small{
+    .mat-icon{
+      font-size: inherit;
+      width: auto;
+      height: auto;
+    }
+  }
 }
 
