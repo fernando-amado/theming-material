@@ -18,7 +18,6 @@ import { MatCheckboxModule        } from '@angular/material/checkbox';
 import { MatRadioModule           } from '@angular/material/radio';
 import { MatDividerModule         } from '@angular/material/divider';
 
-
 const components = [
   CommonModule,
   MatButtonModule,

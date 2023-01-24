@@ -26,9 +26,11 @@
   align-items: center;
   justify-content: center;
   color: white;
+  background-color: #D8DAE5 !important;
   box-shadow: none !important;
-  font-size: 1.3rem;
   width: $width !important;
   height: $height !important;
   border-radius: $borderRadius !important;
+  font-size: 1.3rem;
+  font-weight: 400;
 } ;
