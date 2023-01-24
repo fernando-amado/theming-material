@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'mat-avatar',
+  selector: 'avatar',
   templateUrl: './mat-avatar.component.html',
 })
 
