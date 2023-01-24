@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './mat-avatar.component.html',
 })
 
-export class MatAvatarComponent {
-
-};
+export class MatAvatarComponent {};
