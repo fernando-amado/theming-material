@@ -9,10 +9,26 @@
   border-start-end-radius: $border-start-right;
   border-end-end-radius: $border-end-right;
   border-end-start-radius: $border-end-left;
-};
+}
 //mixin utilizado para aplicarle un determinado color al texto, fondo o bordes de un elemento al cual se le implemente este mixin
 @mixin bg-color-config($color, $backgroundColor, $border-color) {
   color: $color;
   background-color: $backgroundColor;
   border-color: $border-color;
-};
+}
+// MIXIN DEFINICION DE PROPIEDADES PARA DIFERENTES VARIANTES DEL COMPONENTE AVATAR
+@mixin avatarVariantes(
+  $width,
+  $height,
+  $borderRadius
+) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: none !important;
+  font-size: 1.3rem;
+  width: $width !important;
+  height: $height !important;
+  border-radius: $borderRadius !important;
+} ;

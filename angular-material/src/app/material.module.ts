@@ -37,7 +37,7 @@ const components = [
   MatInputModule,
   MatIconModule,
   MatTabsModule,
-  MatDividerModule                     
+  MatDividerModule,
 ];
 
 @NgModule({
