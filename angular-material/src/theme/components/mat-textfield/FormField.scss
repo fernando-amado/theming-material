@@ -1,60 +1,17 @@
 @use "@angular/material" as mat;
-$height-small-form-field-outline: 19.14px;
-$height-small-form-field-fill: 32px;
-$height-medium-form-field: 45px;
+$padding-vertical-small: 8px;
+$padding-vertical-medium: 12.5px;
 
-@function translateYLabel($height, $half, $border) {
-  @return (($height/$half) + $border);
+
+
+@function translateYLabel($height,$half,$line-height, $border) {
+  @return (
+      ((($height*$half) + $line-height)/2+$border )*-1
+  );
 }
-
-mat-form-field.medium {
-  .mdc-text-field--outlined {
-    .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
-      transform: translateY(
-          calc(translateYLabel($height-medium-form-field, 2, 4) * -1)
-        )
-        scale(0.75) !important;
-    }
-    .mdc-text-field__input {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-    }
-  }
-  .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
-    .mdc-text-field__input {
-      position: absolute;
-      bottom: 0;
-      margin-bottom: 8px;
-    }
-  }
-  .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined),.mdc-text-field--outlined {
-    height: $height-medium-form-field !important;
-    .mat-mdc {
-      &-form-field-flex {
-        max-height: 100%;
-      }
-      &-form-field-infix {
-        padding: 0rem 0rem !important;
-        min-height: $height-medium-form-field;
-      }
-      &-floating-label {
-        top: 50% !important;
-      }
-    }
-  }
-  .mat-icon{
-    font-size: inherit;
-    height: 100%;
-    text-align: center;
-  }
-
-}
-
-mat-form-field.small {
+mat-form-field.small,mat-form-field.medium{
   .mat-mdc-form-field-infix{
     min-height: auto !important;
-    padding: 0.757rem 0rem !important;
   }
   .mat-icon{
       width: auto;
@@ -64,13 +21,45 @@ mat-form-field.small {
       font-size: inherit;
   }
   .mat-mdc-floating-label{
-    top:50% !important;
+      top:50% !important;
+  }
+}
+mat-form-field.small {
+  & .mdc-text-field--outlined{
+    .mat-mdc-form-field-infix{
+      padding: $padding-vertical-small 0rem !important;
+    }
+    .mdc-floating-label--float-above {
+        transform: translateY(translateYLabel($padding-vertical-small, 2, 16,6.5)) !important;
+        font-size: calc(1rem * var(--mat-mdc-form-field-floating-label-scale, 0.75)) !important;
+    }
+  }
+  & .mat-mdc-floating-label{
     @include mat.typography-level($typography-global-config, "floating-label-small");
- }
- .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
-  --mat-mdc-form-field-label-transform: translateY(-19.14px) scale(0.75) !important;
-  transform: var(--mat-mdc-form-field-label-transform) !important;
- }
+  }
+  & .mdc-text-field__input,.mat-mdc-form-field-flex {
+    line-height: 1.6rem;
+  }
  @include mat.typography-level($typography-global-config, "body-2");
 }
+mat-form-field.medium {
+  .mdc-text-field--outlined{
+    .mat-mdc-form-field-infix{
+      padding: $padding-vertical-medium 0rem !important;
+    }
+    .mdc-floating-label--float-above {
+        transform: translateY(translateYLabel($padding-vertical-medium,2,20, 8)) !important;
+        font-size: calc(1.2rem * var(--mat-mdc-form-field-floating-label-scale, 0.75))!important;
+    }
+  }
+  .mat-mdc-floating-label{
+    @include mat.typography-level($typography-global-config, "floating-label-medium");
+  }
+  .mdc-text-field__input,.mat-mdc-form-field-flex {
+    line-height: 2rem;
+  }
+}
+
+
+
 
