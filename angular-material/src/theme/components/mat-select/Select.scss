@@ -2,31 +2,25 @@
 //reposition of select component inside form field variants sizes
 mat-form-field{
     &.small,&.medium{
-        //select in outilined form-field
-        .mdc-text-field--outlined{
-            & .mat-mdc-select{
-                position: absolute;
-                bottom: 0;
-                display: flex;
-                top: 0;
-            }
-        }
-        //select in filled form-field
-        .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined){
-            & .mat-mdc-select{
-                position: absolute;
-                bottom: 0;
-                height: 55%;
-            }
-        }
-    }
-}
-//reposition of svg icon in select of the filled form-field
-mat-form-field.small{
-    .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined){
         .mat-mdc-select-arrow-wrapper{
-            align-items: center;
+            height: auto !important;
+            transform: translateY(0px) !important; 
         }
     }
+    &.small{
+        & .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+            .mat-mdc-select{
+              margin-top: 4px;
+              line-height: 16px;
+            }
+          }
+    }
+    &.medium{
+        & .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+            .mat-mdc-select{
+              margin-top: 8px;
+              line-height: 20px;
+            }
+          }
+    }
 }
-

@@ -25,7 +25,7 @@
 .mdc-button{
     &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button,&.mat-mdc-fab{
             height:auto ;
-            padding: .6rem 1.5rem;
+            padding: .6rem 22px;
             @include mat.typography-level($typography-global-config, "button-small" ) ;
         }
     &.mat-mdc-unelevated-button,&.mat-mdc-raised-button{
@@ -36,7 +36,7 @@
 }
 //sizes button
 .mdc-button{
-    &{
+    & {
         &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button,&.mat-mdc-fab{
             height:auto ;
             padding: .6rem 1rem;
