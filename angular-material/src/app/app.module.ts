@@ -25,7 +25,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioComponent } from 'src/components/mat-radio/mat-radio.component';
 import { MatIconComponent } from 'src/components/mat-icon/mat-icon.component';
 import { MatIconModule } from '@angular/material/icon';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSelectComponent } from 'src/components/mat-select/mat-select.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatTabsComponent } from 'src/components/mat-tabs/mat-tabs.component';
 
 @NgModule({
   imports: [
@@ -35,11 +40,16 @@ import {MatRadioModule} from '@angular/material/radio';
     DirectivesModule,
     MatButtonModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatTabsModule,
   ],
 
   exports: [DirectivesModule],
   declarations: [
+    MatTabsComponent,
+    MatSelectComponent,
     MatRadioComponent,
     CheckboxComponent,
     MatIconComponent,

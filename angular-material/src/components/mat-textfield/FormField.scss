@@ -20,7 +20,7 @@ mat-form-field.small {
     }
     .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
       transform: translateY(calc(translateYLabel($height-small-form-field-outline, 2, 4) * -1))scale(0.75) !important;
-      text-overflow: ellipsis;        
+      text-overflow: ellipsis;
     }
     .mdc-text-field__input {
       position: absolute;
@@ -48,7 +48,7 @@ mat-form-field.small {
       margin-bottom: 4px;
     }
   }
-  //input 
+  //input
   .mdc-text-field__input::placeholder,.mdc-text-field__input{
     font-family: "Roboto" !important;
     font-weight: 400 !important;
