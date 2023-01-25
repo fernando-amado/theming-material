@@ -4,11 +4,10 @@ import { IconPositionDirective                      } from './Tabs/iconPosition/
 import { OrientationDirective                       } from './orientation/orientation.directive';
 import { ColorTextDirective                         } from './colorText/color-text.directive';
 import { appearanceDirective                        } from './TextfiledAppearance-directive/appearance';     
-import { avatarVariantDirective                     } from './avatar-directive/avatar-variants';
+import { avatarVariantDirective                     } from './Avatar/avatar-variants';        
 import { VariantsDirective                          } from './variantsColor-buttonGroup/variants.directive';
 import { SizeDirective                              } from './size-directive/size.directive';
 import { ColorChipsDirective, VariantChipsDirective } from './variantsColor-StandardChip/variants-color.directive';
-
 const directivas = [
   OrientationDirective,
   IconPositionDirective,

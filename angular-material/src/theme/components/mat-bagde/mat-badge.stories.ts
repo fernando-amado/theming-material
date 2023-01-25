@@ -2,7 +2,7 @@ import { Meta, Story                  } from '@storybook/angular/types-6-0';
 import { moduleMetadata               } from "@storybook/angular";
 import { MatBadgeModule               } from '@angular/material/badge';
 import { MatBagdeComponent            } from './mat-bagde.component';
-import { Colors, descripcionComponent } from '../../model/modelo.model';
+import { Colors, descripcionComponent } from '../../../model/modelo.model';
 
 export default {
     title: 'Badge',
