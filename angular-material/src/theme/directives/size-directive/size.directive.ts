@@ -13,4 +13,14 @@ export class SizeDirective implements OnChanges {
   ngOnChanges() {
     this.el.nativeElement.classList.add(this.size);
   }
+
+  ngAfterViewInit(): void {
+     
+    let element = this.el.nativeElement.querySelectorAll('.mat-mdc-form-field-subscript-wrapper') 
+      element.forEach(app  => {
+        if(app.children[0].children[0].innerHTML == ""){
+          app.classList.add('display_none')
+        }
+      })
+  }
 }
