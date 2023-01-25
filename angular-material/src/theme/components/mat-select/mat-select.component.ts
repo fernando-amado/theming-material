@@ -6,20 +6,14 @@ interface Food {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: []
+  selector: 'app-mat-select',
+  templateUrl: './mat-select.component.html',
 })
-
-export class AppComponent {
-  lotsOfTabs = new Array(20).fill(0).map((_, index) => `Tab ${index}`);
-
-  
+export class MatSelectComponent {
+ 
   foods: Food[] = [
     {value: 'steak-0', viewValue: 'Steak'},
     {value: 'pizza-1', viewValue: 'Pizza'},
     {value: 'tacos-2', viewValue: 'Tacos'},
   ];
-  
 }

@@ -1,0 +1,79 @@
+@use "@angular/material" as mat;
+$padding-vertical-small: 8px;
+$padding-vertical-medium: 12.5px;
+@function translateYLabel($height,$half,$line-height, $border) {
+  @return (
+      ((($height*$half) + $line-height)/2+$border )*-1
+  );
+}
+mat-form-field.small,mat-form-field.medium{
+  .mat-mdc-form-field-infix{
+    min-height: auto !important;
+  }
+  .mat-icon{
+      width: auto;
+      height: auto;
+      padding-inline:1.2rem;
+      padding-block: 0rem;
+      font-size: inherit;
+  }
+  .mat-mdc-floating-label{
+      top:50% !important;
+  }
+}
+mat-form-field.small {
+  & .mdc-text-field--outlined{
+    .mat-mdc-form-field-infix{
+      padding: $padding-vertical-small 0rem !important;
+    }
+    .mdc-floating-label--float-above {
+      transform: translateY(translateYLabel($padding-vertical-small, 2, 16,6.5)) !important;
+      font-size: calc(1rem * var(--mat-mdc-form-field-floating-label-scale, 0.75)) !important;
+  }
+  }
+  & .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+    .mat-mdc-form-field-infix{
+      padding: calc($padding-vertical-small - .2rem) 0rem !important;
+    }
+    input{
+      margin-top: .4rem;
+    }
+  }
+  & .mat-mdc-floating-label{
+    @include mat.typography-level($typography-global-config, "floating-label-small");
+  }
+  & .mdc-text-field__input,.mat-mdc-form-field-flex {
+    line-height: 1.6rem;
+  }
+ @include mat.typography-level($typography-global-config, "body-2");
+}
+mat-form-field.medium {
+  & .mdc-text-field--outlined{
+    .mat-mdc-form-field-infix{
+      padding: $padding-vertical-medium 0rem !important;
+    }
+    .mdc-floating-label--float-above {
+      transform: translateY(translateYLabel($padding-vertical-medium, 2, 20,8)) !important;
+      font-size: calc(1.2rem * var(--mat-mdc-form-field-floating-label-scale, 0.75)) !important;
+  }
+  }
+  & .mat-mdc-text-field-wrapper:not(.mdc-text-field--outlined) {
+    .mat-mdc-form-field-infix{
+      padding: calc($padding-vertical-medium - .4rem) 0rem !important;
+    }
+    input{
+      margin-top: .8rem;
+    }
+  }
+  & .mat-mdc-floating-label{
+    @include mat.typography-level($typography-global-config, "floating-label-medium");
+  }
+  & .mdc-text-field__input,.mat-mdc-form-field-flex {
+    line-height: 2rem;
+  }
+}
+
+
+.mat-mdc-form-field-subscript-wrapper.display_none{
+  display: none !important;
+}
