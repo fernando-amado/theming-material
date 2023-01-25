@@ -1,27 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule      } from '@angular/platform-browser/animations';
-import { MatButtonModule              } from '@angular/material/button';
-import { MatIconModule                } from '@angular/material/icon';
-import { MatRadioModule               } from '@angular/material/radio';
-import { MatProgressBarComponent      } from 'src/theme/components/mat-progress-bar/mat-progress-bar.component';
-import { MatToolbarComponent          } from 'src/theme/components/mat-toolbar/mat-toolbar.component';
-import { MatSpinnerComponent          } from 'src/theme/components/mat-spinner/mat-spinner.component';
-import { MatChipsComponent            } from 'src/theme/components/mat-chips/mat-chips.component';
-import { MatBagdeComponent            } from 'src/theme/components/mat-bagde/mat-bagde.component';
-import { MatSlidetoggleComponent      } from 'src/theme/components/mat-slidetoggle/mat-slidetoggle.component';
-import { MatAvatarComponent           } from 'src/theme/components/mat-avatar/mat-avatar.component';
-import { MatSliderComponent           } from 'src/theme/components/mat-slider/mat-slider.component';
-import { ButtonGroupComponent         } from 'src/theme/components/mat-buttonGroup/button-group.component';
-import { MatButtonComponent           } from 'src/theme/components/mat-button/mat-button.component';
-import { MatRadioComponent            } from 'src/theme/components/mat-radio/mat-radio.component';
-import { MatIconComponent             } from 'src/theme/components/mat-icon/mat-icon.component';
-import { MaterialModule               } from './material.module';
-import { AppComponent                 } from './app.component';
-import { DirectivesModule             } from 'src/theme/directives/directives.module';     
-import { CheckboxComponent            } from 'src/theme/components/checkbox/checkbox.component'; 
-import { bottomNavigationActionsComponents, BottomNavigationComponent } from '../theme/components/mat-bottom-navigation/bottom-navigation.component';  
-import { MatSelectComponent           } from 'src/theme/components/mat-select/mat-select.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatProgressBarComponent } from 'src/theme/components/mat-progress-bar/mat-progress-bar.component';
+import { MatToolbarComponent } from 'src/theme/components/mat-toolbar/mat-toolbar.component';
+import { MatSpinnerComponent } from 'src/theme/components/mat-spinner/mat-spinner.component';
+import { MatChipsComponent } from 'src/theme/components/mat-chips/mat-chips.component';
+import { MatBagdeComponent } from 'src/theme/components/mat-bagde/mat-bagde.component';
+import { MatSlidetoggleComponent } from 'src/theme/components/mat-slidetoggle/mat-slidetoggle.component';
+// import { MatTextfieldComponent } from 'src/theme/components/mat-textfield/input.component';
+import { MatAvatarComponent } from 'src/theme/components/mat-avatar/mat-avatar.component';
+import { MatSliderComponent } from 'src/theme/components/mat-slider/mat-slider.component';
+import { ButtonGroupComponent } from 'src/theme/components/mat-buttonGroup/button-group.component';
+import { MatButtonComponent } from 'src/theme/components/mat-button/mat-button.component';
+import { MaterialModule } from './material.module';
+import { AppComponent } from './app.component';
+import {
+  BottomNavigationComponent,
+  bottomNavigationActionsComponents,
+} from 'src/theme/components/mat-bottom-navigation/bottom-navigation.component';
+import { DirectivesModule } from 'src/theme/directives/directives.module';
+import { CheckboxComponent } from 'src/theme/components/checkbox/checkbox.component';
+import { MAT_FAB_DEFAULT_OPTIONS } from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatRadioComponent } from 'src/theme/components/mat-radio/mat-radio.component';
+import { MatIconComponent } from 'src/theme/components/mat-icon/mat-icon.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formField';
 
 @NgModule({
@@ -32,11 +36,15 @@ import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formFi
     MatButtonModule,
     DirectivesModule,
     MatIconModule,
-    MatRadioModule
+    MatRadioModule,
+    // MatSelectModule,
+    // MatTabsModule,
   ],
-
   exports: [DirectivesModule],
   declarations: [
+    MatFormFieldComponent,
+    // MatTabsComponent,
+    // MatSelectComponent,
     MatRadioComponent,
     CheckboxComponent,
     MatIconComponent,
@@ -48,14 +56,13 @@ import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formFi
     MatChipsComponent,
     MatBagdeComponent,
     MatSlidetoggleComponent,
-    MatFormFieldComponent,
+    // MatFormFieldComponent,
     MatAvatarComponent,
     ButtonGroupComponent,
     MatButtonComponent,
     BottomNavigationComponent,
     bottomNavigationActionsComponents,
-    MatSelectComponent 
-    
+    // MatSelectComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

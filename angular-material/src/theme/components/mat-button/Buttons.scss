@@ -23,6 +23,11 @@
 }
 //riased and flat buttons
 .mdc-button{
+    &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button,&.mat-mdc-fab{
+            height:auto ;
+            padding: .6rem 22px;
+            @include mat.typography-level($typography-global-config, "button-small" ) ;
+        }
     &.mat-mdc-unelevated-button,&.mat-mdc-raised-button{
         &.mat-accent,&.mat-success,&.mat-info,&.mat-warning{
             @include bg-color-config($white !important, null, null);
@@ -31,7 +36,7 @@
 }
 //sizes button
 .mdc-button{
-    &.small{
+    & {
         &.mat-mdc-button-base,&.mat-mdc-raised-button,&.mat-mdc-outlined-button,&.mat-mdc-unelevated-button,&.mat-mdc-fab{
             height:auto ;
             padding: .6rem 1rem;

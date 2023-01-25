@@ -1,6 +1,8 @@
-import { Directive, ElementRef, Input, Component } from '@angular/core';
+import { Directive, ElementRef, Input } from '@angular/core';
 import { Size } from '../size-directive/size.directive';
+
 export type avatarVariant = 'rounded' | 'square' | 'circular';
+
 @Directive({
   selector: `mat-avatar,avatar [avatar]`,
 })

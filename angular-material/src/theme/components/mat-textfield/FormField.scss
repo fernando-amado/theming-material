@@ -1,4 +1,20 @@
 @use "@angular/material" as mat;
+// TEXTFIELD APPEAREANCE
+.default-textfield {
+  & .mdc-text-field--filled:not(.mdc-text-field--disabled),
+  .mat-mdc-form-field-focus-overlay{
+    background-color: transparent !important;
+    padding-inline: 0rem 0rem !important;
+ }
+  & .mdc-text-field .mdc-floating-label {
+    transform: translateY(10%) !important;
+  }
+  & .mdc-text-field--filled .mdc-floating-label--float-above {
+    transform: translateY(-110%) scale(0.75) !important;
+  }
+}
+
+
 $padding-vertical-small: 8px;
 $padding-vertical-medium: 12.5px;
 
