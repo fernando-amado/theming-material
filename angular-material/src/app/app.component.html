@@ -740,7 +740,7 @@ style="width: 25%; flex-direction: row; flex-wrap: wrap"
 <button mat-button>button</button>
 </div> -->
 <!-- form-field and select -->
-<div class="container-componet mat-elevation-z1" style="flex-direction: row; align-items: flex-start; justify-content: center; flex-wrap: wrap; width: 50%; gap: 7px;" >
+<div class="container-componet mat-elevation-z1" style="flex-direction: row; align-items: flex-start; justify-content: center; flex-wrap: wrap; width: 80%; gap: 7px;" >
 <mat-form-field appearance="outline" size="small" >
   <mat-label>outlined small</mat-label>
   <input matInput placeholder="Placeholder" />
@@ -801,10 +801,42 @@ style="width: 25%; flex-direction: row; flex-wrap: wrap"
     </mat-select>
   </mat-form-field>
 
+  <!-- //default -->
+  <mat-form-field appearance="outline" >
+    <mat-label> outlined default</mat-label>
+    <input matInput placeholder="Placeholder" />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+    <!-- select -->
+    <mat-form-field appearance="outline" >
+      <mat-label>select default outline</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+  <mat-form-field appearance="fill" >
+    <mat-label>filled default</mat-label>
+    <input matInput placeholder="Placeholder" />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+    <!-- select -->
+    <mat-form-field appearance="fill" >
+      <mat-label>select default fill</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  
 </div>
 
 
 
 <!-- mat-mdc-form-field-infix -->
 <!-- icon-suffix>.mat-icon : padding-inline:12px -->
+
 

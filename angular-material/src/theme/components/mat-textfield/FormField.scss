@@ -1,11 +1,10 @@
 @use "@angular/material" as mat;
 $padding-vertical-small: 8px;
 $padding-vertical-medium: 12.5px;
-@function translateYLabel($height,$half,$line-height, $border) {
-  @return (
-      ((($height*$half) + $line-height)/2+$border )*-1
-  );
-}
+
+$line-height-small:16px;
+$line-height-medium:20px;
+
 mat-form-field.small,mat-form-field.medium{
   .mat-mdc-form-field-infix{
     min-height: auto !important;
@@ -27,7 +26,7 @@ mat-form-field.small {
       padding: $padding-vertical-small 0rem !important;
     }
     .mdc-floating-label--float-above {
-      transform: translateY(translateYLabel($padding-vertical-small, 2, 16,6.5)) !important;
+      transform: translateY(calc(((($padding-vertical-small*2 ) + $line-height-small ) / 2) + 6.5px )*-1) !important;
       font-size: calc(1rem * var(--mat-mdc-form-field-floating-label-scale, 0.75)) !important;
   }
   }
@@ -43,7 +42,7 @@ mat-form-field.small {
     @include mat.typography-level($typography-global-config, "floating-label-small");
   }
   & .mdc-text-field__input,.mat-mdc-form-field-flex {
-    line-height: 1.6rem;
+    line-height: $line-height-small;
   }
  @include mat.typography-level($typography-global-config, "body-2");
 }
@@ -53,7 +52,7 @@ mat-form-field.medium {
       padding: $padding-vertical-medium 0rem !important;
     }
     .mdc-floating-label--float-above {
-      transform: translateY(translateYLabel($padding-vertical-medium, 2, 20,8)) !important;
+      transform: translateY(calc(((($padding-vertical-medium*2 ) + $line-height-medium ) / 2) + 8px )*-1) !important;
       font-size: calc(1.2rem * var(--mat-mdc-form-field-floating-label-scale, 0.75)) !important;
   }
   }
@@ -69,11 +68,9 @@ mat-form-field.medium {
     @include mat.typography-level($typography-global-config, "floating-label-medium");
   }
   & .mdc-text-field__input,.mat-mdc-form-field-flex {
-    line-height: 2rem;
+    line-height: $line-height-medium;
   }
 }
-
-
 .mat-mdc-form-field-subscript-wrapper.display_none{
   display: none !important;
 }
