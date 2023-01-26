@@ -16,21 +16,4 @@
   background-color: $backgroundColor;
   border-color: $border-color;
 }
-// MIXIN DEFINICION DE PROPIEDADES PARA DIFERENTES VARIANTES DEL COMPONENTE AVATAR
-@mixin avatarVariantes(
-  $width,
-  $height,
-  $borderRadius
-) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white !important;
-  background-color: #D8DAE5 !important;
-  box-shadow: none !important;
-  width: $width !important;
-  height: $height !important;
-  border-radius: $borderRadius !important;
-  font-size: 1.3rem;
-  font-weight: 400;
-} ;
+

@@ -37,14 +37,11 @@ import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formFi
     DirectivesModule,
     MatIconModule,
     MatRadioModule,
-    // MatSelectModule,
-    // MatTabsModule,
   ],
   exports: [DirectivesModule],
   declarations: [
     MatFormFieldComponent,
-    // MatTabsComponent,
-    // MatSelectComponent,
+
     MatRadioComponent,
     CheckboxComponent,
     MatIconComponent,
@@ -56,15 +53,13 @@ import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formFi
     MatChipsComponent,
     MatBagdeComponent,
     MatSlidetoggleComponent,
-    // MatFormFieldComponent,
-    MatAvatarComponent,
     ButtonGroupComponent,
     MatButtonComponent,
     BottomNavigationComponent,
     bottomNavigationActionsComponents,
+    MatAvatarComponent,
     // MatSelectComponent,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
