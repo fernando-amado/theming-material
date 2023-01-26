@@ -1,9 +1,9 @@
-<app-mat-spinner></app-mat-spinner>
+<!-- <app-mat-spinner></app-mat-spinner>
 <mat-avatar avatar="rounded"><img alt="avatar" src="assets/images/imagen_prueba.jpg"></mat-avatar>
 <mat-avatar avatar="circular">DZ</mat-avatar>
 <app-mat-icon></app-mat-icon>
 <app-mat-bagde></app-mat-bagde>
-<app-mat-button></app-mat-button>
+<app-mat-button></app-mat-button> -->
 <!-- buttons -->
 <!-- <div
 class="container-componet mat-elevation-z1"
@@ -633,7 +633,7 @@ style="width: 25%; flex-direction: row; flex-wrap: wrap"
 <mat-icon>cancel</mat-icon>
 </mat-chip>
 
-</div>  
+</div>   -->
 <!-- radio-buttons -->
 <!-- <div
 class="container-componet mat-elevation-z1"
@@ -745,7 +745,7 @@ style="width: 25%; flex-direction: row; flex-wrap: wrap"
 <button mat-button>button</button>
 </div> -->
 <!-- form-field and select -->
-<div class="container-componet mat-elevation-z1" style="flex-direction: row; align-items: flex-start; justify-content: center; flex-wrap: wrap; width: 80%; gap: 7px;" >
+<div class="container-componet mat-elevation-z1" style="flex-direction: row; align-items: flex-start; justify-content: flex-; flex-wrap: wrap; width: 80%; gap: 7px;" >
 <mat-form-field appearance="outline" size="small" >
   <mat-label>outlined small</mat-label>
   <input matInput placeholder="Placeholder" />
@@ -761,7 +761,7 @@ style="width: 25%; flex-direction: row; flex-wrap: wrap"
   </mat-select>
 </mat-form-field>
 
-<mat-form-field defaultAppearance size="small" >
+<mat-form-field appearance="fill" size="small" >
   <mat-label>filled small</mat-label>
   <input matInput placeholder="Placeholder" />
   <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
@@ -805,31 +805,59 @@ style="width: 25%; flex-direction: row; flex-wrap: wrap"
       </mat-option>
     </mat-select>
   </mat-form-field>
-
-  <!-- //default -->
+  <!-- standard react form-field -->
+  <mat-form-field defaultAppearance size="small" >
+    <mat-label>standart small variant defaultAparenc</mat-label>
+    <input matInput placeholder="Placeholder" />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <!-- select -->
+  <mat-form-field defaultAppearance size="small">
+    <mat-label>select small standard</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- form -->
+  <mat-form-field defaultAppearance size="medium" >
+    <mat-label>standart medium</mat-label>
+    <input matInput placeholder="Placeholder" />
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+  </mat-form-field>
+  <!-- select -->
+  <mat-form-field defaultAppearance size="medium">
+    <mat-label>select medium standadr</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <!-- //native angular form field -->
   <mat-form-field appearance="outline" >
-    <mat-label> outlined default</mat-label>
+    <mat-label> outlined native</mat-label>
     <input matInput placeholder="Placeholder" />
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
   </mat-form-field>
     <!-- select -->
     <mat-form-field appearance="outline" >
-      <mat-label>select default outline</mat-label>
+      <mat-label>select native outline</mat-label>
       <mat-select>
         <mat-option *ngFor="let food of foods" [value]="food.value">
           {{food.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
-  
   <mat-form-field appearance="fill" >
-    <mat-label>filled default</mat-label>
+    <mat-label>filled native</mat-label>
     <input matInput placeholder="Placeholder" />
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
   </mat-form-field>
     <!-- select -->
     <mat-form-field appearance="fill" >
-      <mat-label>select default fill</mat-label>
+      <mat-label>select native fill</mat-label>
       <mat-select>
         <mat-option *ngFor="let food of foods" [value]="food.value">
           {{food.viewValue}}

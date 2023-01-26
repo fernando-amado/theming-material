@@ -1,21 +1,32 @@
 @use "@angular/material" as mat;
 // TEXTFIELD APPEAREANCE
 .default-textfield {
-  & .mdc-text-field--filled:not(.mdc-text-field--disabled),
-  .mat-mdc-form-field-focus-overlay{
-    background-color: transparent !important;
-    padding-inline: 0rem 0rem !important;
- }
+  & .mdc-text-field--filled:not(.mdc-text-field--disabled),.mat-mdc-form-field-focus-overlay{
+      background-color: transparent !important;
+  }
+  .mdc-text-field{
+    padding-inline:0rem !important ;
+  }
+  .mat-mdc-form-field-icon-suffix {
+    align-self: flex-end;
+    padding: 0rem;
+  }
+  .mat-icon{
+    padding-inline:0rem !important ;
+  }
   & .mdc-text-field .mdc-floating-label {
-    transform: translateY(10%) !important;
+      transform: translateY(10%) !important;
   }
   & .mdc-text-field--filled .mdc-floating-label--float-above {
-    transform: translateY(-110%) scale(0.75) !important;
+      transform: translateY(-110%) scale(0.75) !important;
   }
+
 }
 
 
 $padding-vertical-small: 8px;
+$padding-vertical-small-standard: 9.5px;
+$padding-vertical-medium-standard: 11px;
 $padding-vertical-medium: 12.5px;
 
 $line-height-small:16px;
@@ -54,6 +65,26 @@ mat-form-field.small {
       margin-top: .4rem;
     }
   }
+  &.default-textfield {
+    .mat-mdc-form-field-infix{
+      padding-block: $padding-vertical-small-standard !important;
+    }
+    .mat-mdc-form-field-icon-suffix {
+      margin-bottom: .5rem;
+    }
+    .mdc-text-field .mdc-floating-label{
+      top: 35% !important;
+    }
+    & .mdc-text-field--filled .mdc-floating-label--float-above {
+      transform: translateY(calc(((($padding-vertical-small-standard*2 ) + $line-height-small ) / 2 - 3px ))*-1) !important;
+    }
+    input{
+      position: relative;
+      top: 2px;
+    }
+   
+  }
+  //global configuration for all variants of form field
   & .mat-mdc-floating-label{
     @include mat.typography-level($typography-global-config, "floating-label-small");
   }
@@ -80,6 +111,23 @@ mat-form-field.medium {
       margin-top: .8rem;
     }
   }
+  &.default-textfield {
+    .mat-mdc-form-field-infix{
+      padding-block: $padding-vertical-medium-standard !important;
+    }
+    .mat-mdc-form-field-icon-suffix {
+      margin-bottom: .65rem;
+    }
+    & .mdc-text-field--filled .mdc-floating-label--float-above {
+      transform: translateY(calc(((($padding-vertical-medium*2 ) + $line-height-medium ) / 2 + 3px))*-1) !important;
+    }
+    input{
+      position: relative;
+      top: 3px;
+    }
+  }
+  //global configuration for all variants of form field
+
   & .mat-mdc-floating-label{
     @include mat.typography-level($typography-global-config, "floating-label-medium");
   }
