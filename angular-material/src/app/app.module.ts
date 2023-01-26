@@ -7,7 +7,6 @@ import { MatSpinnerComponent } from 'src/theme/components/mat-spinner/mat-spinne
 import { MatChipsComponent } from 'src/theme/components/mat-chips/mat-chips.component';
 import { MatBagdeComponent } from 'src/theme/components/mat-bagde/mat-bagde.component';
 import { MatSlidetoggleComponent } from 'src/theme/components/mat-slidetoggle/mat-slidetoggle.component';
-// import { MatTextfieldComponent } from 'src/theme/components/mat-textfield/input.component';
 import { MatAvatarComponent } from 'src/theme/components/mat-avatar/mat-avatar.component';
 import { MatSliderComponent } from 'src/theme/components/mat-slider/mat-slider.component';
 import { ButtonGroupComponent } from 'src/theme/components/mat-buttonGroup/button-group.component';
@@ -41,7 +40,6 @@ import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formFi
   exports: [DirectivesModule],
   declarations: [
     MatFormFieldComponent,
-
     MatRadioComponent,
     CheckboxComponent,
     MatIconComponent,
@@ -58,7 +56,6 @@ import { MatFormFieldComponent } from 'src/theme/components/mat-textfield/formFi
     BottomNavigationComponent,
     bottomNavigationActionsComponents,
     MatAvatarComponent,
-    // MatSelectComponent,
   ],
   bootstrap: [AppComponent],
 })
